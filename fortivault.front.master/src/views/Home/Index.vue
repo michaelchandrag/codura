@@ -2,42 +2,42 @@
 import { onMounted, ref, reactive } from 'vue'
 
 onMounted(() => {
-  changeBg();
-})
 
-function changeBg() {
-  const newBackgroundUrl = `url("/assets/img/hero.png")`;
-  const styleRule = `#hero { background-image: ${newBackgroundUrl}; }`;
-  let styleElement = document.querySelector('style[data-bg="hero-bg"]');
-  if (!styleElement) {
-    styleElement = document.createElement('style');
-    styleElement.setAttribute('data-bg', 'hero-bg');
-    document.head.appendChild(styleElement);
-  }
-  if (!styleElement.innerHTML.includes(styleRule)) {
-    styleElement.innerHTML = styleRule;
-  }
-}
+})
 </script>
 
 <template>
-  <section id="hero" class="main-hero hero section p-0">
+  <section id="hero" class="main-hero hero section p-0 bg-transparent">
     <div class="container position-relative">
-      <div class="row gy-4 align-items-center justify-content-center">
-        <div class="col-lg-6 content" data-aos="fade-right" data-aos-delay="100">
-          <h2 class="ls-xs m-0">Empower Your</h2>
-          <h2 class="ls-xs m-0">Conversations with</h2>
-          <h2 class="ls-xs m-0 fw-normal">AI Excellence</h2>
-          <p class="mt-3 w-100 text-white fw-normal fs-15px hero-desc">Whether it’s work or personal, our AI helps you speak,
-            solve, and succeed effortlessly</p>
-          <router-link :to="{ name: 'feature' }" class="btn main-bg text-white fs-13px ls-xs py-2 px-3 hero-action">Get Started</router-link>
+      <div class="col-12 col-lg-8 m-auto text-center">
+        <div class="hero-text mb-5">
+          <h2 class="ls-sm fw-bold text-white fs-40px">Revolutionizing Smart Contract Security with AI</h2>
+          <p class="mt-3 w-100 text-white fw-normal fs-14px hero-desc">Our mission is to make blockchain ecosystems
+            safer
+            by providing accessible, reliable, and efficient smart contract security audits powered by cutting-edge AI
+            technology. We aim to prevent exploits and promote trust in decentralized systems</p>
         </div>
-        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-          <img src="/assets/img/hero-img.png" alt="codura">
+        <div class="hero-prompt mb-5">
+          <div class="col-12 col-lg-8 m-auto">
+            <form>
+              <div class="input-group p-2 rounded-sm">
+                <input class="form-control form-control-sm text-white fs-13px bg-transparent"
+                  placeholder="Type your Prompt" />
+                <a
+                  class="input-group-text btn btn-sm bg-green rounded-sm text-white fs-13px px-3 d-inline-flex align-items-center">Start
+                  with AI</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="pt-3">
+          <router-link :to="{ name: 'feature' }"
+            class="btn bg-transparent border rounded text-white fs-13px ls-xs hero-action d-inline-flex gap-2 align-items-center">
+            <span>Learn More</span>
+            <i class="bi bi-chevron-down"></i>
+          </router-link>
         </div>
       </div>
     </div>
   </section>
 </template>
-
-<style scoped></style>
