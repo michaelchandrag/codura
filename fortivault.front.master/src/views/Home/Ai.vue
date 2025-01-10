@@ -1,66 +1,52 @@
 <script setup>
 import { onMounted, ref, reactive } from 'vue'
 
+let msgList = ref([
+  {is_me: true, text: 'How does Fortivault ensure the security of my smart contracts?'},
+  {is_me: false, text: 'Fortivault leverages advanced artificial intelligence algorithms and blockchain auditing tools to provide unparalleled security for your smart contracts. Our AI analyzes code vulnerabilities, detects potential exploits, and offers automated fixes, ensuring your contracts are robust and future-proof. With Fortivault, you can confidently protect your digital assets and focus on innovation'},
+  {is_me: true, text: 'Can Fortivault integrate with my existing blockchain projects?'},
+  {is_me: false, text: 'Absolutely! Fortivault is designed to seamlessly integrate with major blockchain platforms, including Ethereum, Solana, Binance Smart Chain, and more. Our flexible APIs and developer-f,riendly tools ensure a smooth onboarding process, so you can enhance the security of your projects without disrupting your workflow.'},
+  {is_me: true, text: 'What makes Fortivault different from other smart contract tools?'},
+  {is_me: false, text: `Fortivault stands out by combining state-of-the-art AI with industry-leading blockchain expertise. Unlike traditional tools, we don’t just identify vulnerabilities—we fix them for you in real-time. Plus, our continuous monitoring feature ensures your contracts remain secure even after deployment. With Fortivault, you're not just securing your contracts; you're securing your future.`},
+  {is_me: true, text: 'How does Fortivault ensure the security of my smart contracts?'},
+  {is_me: false, text: 'Fortivault leverages advanced artificial intelligence algorithms and blockchain auditing tools to provide unparalleled security for your smart contracts. Our AI analyzes code vulnerabilities, detects potential exploits, and offers automated fixes, ensuring your contracts are robust and future-proof. With Fortivault, you can confidently protect your digital assets and focus on innovation'},
+  {is_me: true, text: 'How does Fortivault ensure the security of my smart contracts?'},
+  {is_me: false, text: 'Absolutely! Fortivault is designed to seamlessly integrate with major blockchain platforms, including Ethereum, Solana, Binance Smart Chain, and more. Our flexible APIs and developer-friendly tools ensure a smooth onboarding process, so you can enhance the security of your projects without disrupting your workflow.'},
+  {is_me: true, text: 'How does Fortivault ensure the security of my smart contracts?'},
+  {is_me: false, text: 'Absolutely! Fortivault is designed to seamlessly integrate with major blockchain platforms, including Ethereum, Solana, Binance Smart Chain, and more. Our flexible APIs and developer-friendly tools ensure a smooth onboarding process, so you can enhance the security of your projects without disrupting your workflow.'},
+])
 onMounted(() => {
 
 })
 </script>
 
 <template>
-  <section class="section bg-transparent first-section">
-    <div class="container section-title">
-      <div class="col-12 col-lg-8 m-auto">
-        <h3 class="text-white text-capitalize ls-xs">Core Features</h3>
-        <p class="text-light fw-normal fs-14px">Fortivault’s cutting-edge AI scans your smart contracts for
-          vulnerabilities, ensuring airtight security. Our real-time analysis helps prevent exploits and keeps your
-          assets safe</p>
-      </div>
-    </div>
+  <section class="section bg-transparent ai-section section-content">
     <div class="container">
-      <div class="col-12 col-lg-10 m-auto">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <div class="card rounded-sm feature-card h-100">
-              <div class="card-body text-start">
-                <div class="feature-icon mb-4">
-                  <img src="/assets/img/chart.png"/>
-                </div>
-                <h6 class="text-white">Smart Contract Scanning & Analysis</h6>
-                <p class="text-light fw-normal fs-13px m-0">AI-powered scanning to detect vulnerabilities like reentrancy attacks, integer overflows, and unchecked calls.</p>
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-8">
+          <div class="card rounded-sm ai-card h-100">
+            <div id="ai-message-body" class="card-body text-start">
+              <div v-for="ls in msgList" :class="{'is-me': ls.is_me}" class="ai-message-item d-flex mb-1">
+                <p class="m-0 text-white fs-11px bubble py-2 px-3 rounded-sm">{{ ls.text }}</p>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-            <div class="card rounded-sm feature-card h-100">
-              <div class="card-body text-start">
-                <div class="feature-icon mb-4">
-                  <img src="/assets/img/security.png"/>
-                </div>
-                <h6 class="text-white">Security Scoring System</h6>
-                <p class="text-light fw-normal fs-13px m-0">Assigns a security score based on risk factors and code quality</p>
-              </div>
+            <div id="ai-message-footer" class="card-footer">
+              <form>
+                  <div class="input-group bg-transparent">
+                      <input required class="form-control form-control-sm fs-12px text-white bg-transparent" placeholder="Start typing .....">
+                      <button type="submit" class="btn btn-sm text-white bg-transparent input-group-text">
+                        <img src="/assets/img/send.png"/>
+                      </button>
+                  </div>
+              </form>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <div class="card rounded-sm feature-card h-100">
-              <div class="card-body text-start">
-                <div class="feature-icon mb-4">
-                  <img src="/assets/img/presention-chart.png"/>
-                </div>
-                <h6 class="text-white">Real-Time Threat Detection</h6>
-                <p class="text-light fw-normal fs-13px m-0">Monitors live contracts and alerts for potential threats</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-            <div class="card rounded-sm feature-card h-100">
-              <div class="card-body text-start">
-                <div class="feature-icon mb-4">
-                  <img src="/assets/img/lamp-charge.png"/>
-                </div>
-                <h6 class="text-white">Educational Insights</h6>
-                <p class="text-light fw-normal fs-13px m-0">Provides fix suggestions and educates developers on smart contract best practices</p>
-              </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-left" data-aos-delay="100">
+          <div class="card rounded-sm ai-card h-100">
+            <div class="card-body text-start">
+
             </div>
           </div>
         </div>

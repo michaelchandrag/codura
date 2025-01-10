@@ -22,7 +22,8 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
 }
-#app{
+
+#app {
     background: url('/assets/img/body-bg.png') center center no-repeat;
     background-size: cover;
 }
@@ -88,7 +89,8 @@ img {
 .bg-green {
     background: #28D198 !important;
 }
-.text-green{
+
+.text-green {
     color: #28D198 !important;
 }
 
@@ -107,13 +109,89 @@ img {
 .hero-prompt .input-group input::placeholder {
     color: #ffffffe3;
 }
-.first-section{
-    padding-top:6rem !important
+
+.first-section {
+    padding-top: 6rem !important
 }
-.feature-card{
+
+.feature-card {
     background: #00000066;
     border: none;
 }
-#footer{
+
+#footer {
     background: #00000066 !important;
+}
+
+.ai-card {
+    background: #00000066;
+    border: none;
+}
+
+.section-content {
+    min-height: 80vh;
+}
+
+.ai-section {
+    padding-top: 5rem !important
+}
+
+#ai-message-body {
+    height: 75vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+#ai-message-body::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
+}
+
+#ai-message-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0px;
+}
+
+#ai-message-body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0px;
+}
+
+#ai-message-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#ai-message-footer {
+    background: #00000099;
+}
+
+#ai-message-footer .input-group {
+    background: #FFFFFF1A;
+    backdrop-filter: blur(40px);
+    border: none;
+}
+
+#ai-message-footer .input-group input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#ai-message-footer .input-group input::placeholder {
+    color: #ffffffe3;
+}
+
+.ai-message-item{
+    justify-content: flex-start;
+}
+.ai-message-item.is-me{
+    justify-content: flex-end;
+}
+.ai-message-item .bubble{
+    max-width: 95%;
+}
+.ai-message-item.is-me .bubble{
+    background: #00000099;
 }

@@ -7,7 +7,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="section bg-transparent first-section">
+  <section class="section bg-transparent first-section section-content">
     <div class="container section-title">
       <div class="col-12 col-lg-8 m-auto">
         <h3 class="text-white text-capitalize ls-xs">Core Features</h3>
