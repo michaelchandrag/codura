@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref, reactive } from 'vue'
 
+let prompText = ref('')
 onMounted(() => {
 
 })
@@ -21,9 +22,9 @@ onMounted(() => {
           <div class="col-12 col-lg-8 m-auto">
             <form>
               <div class="input-group p-2 rounded-sm">
-                <input required class="form-control form-control-sm text-white fs-13px bg-transparent"
+                <input required v-model="prompText" class="form-control form-control-sm text-white fs-13px bg-transparent"
                   placeholder="Type your Prompt" />
-                <router-link :to="{ name: 'ai' }"
+                <router-link :to="{ name: 'ai', query:{text: prompText} }"
                   class="input-group-text btn btn-sm bg-green rounded-sm text-white fs-13px px-3 d-inline-flex align-items-center">Start
                   with AI</router-link>
               </div>
