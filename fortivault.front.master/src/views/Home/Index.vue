@@ -10,7 +10,7 @@ onMounted(() => {
 <template>
   <section id="hero" class="main-hero hero section p-0 bg-transparent">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-12 col-lg-8 m-auto text-center">
+      <div class="col-12 col-lg-8 m-auto text-center has-bg-container">
         <div class="hero-text mb-5">
           <h2 class="ls-sm fw-bold text-white fs-40px">Revolutionizing Smart Contract Security with AI</h2>
           <p class="mt-3 w-100 text-white fw-normal fs-14px hero-desc">Our mission is to make blockchain ecosystems
