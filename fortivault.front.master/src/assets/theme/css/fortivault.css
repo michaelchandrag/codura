@@ -136,34 +136,15 @@ img {
     padding-top: 5rem !important
 }
 
-#ai-message-body {
-    height: 75vh;
+#ai-message-body, #ai-history-body {
+    height: 70vh;
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
 }
 
-#ai-message-body::-webkit-scrollbar {
-    width: 0px !important;
-    height: 0px !important;
-}
-
-#ai-message-body::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 0px;
-}
-
-#ai-message-body::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 0px;
-}
-
-#ai-message-body::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-#ai-message-footer {
+#ai-message-footer, #ai-message-header {
     background: #00000099;
 }
 
@@ -193,5 +174,12 @@ img {
     max-width: 95%;
 }
 .ai-message-item.is-me .bubble{
+    background: #00000099;
+}
+
+#ai-history-header {
+    background: #00000099;
+}
+.ai-history-item{
     background: #00000099;
 }
