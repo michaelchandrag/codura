@@ -461,6 +461,9 @@ section,
 .lh-md {
     line-height: 20px !important;
 }
+.lh-normal {
+    line-height: normal !important;
+}
 
 table th,
 table td {

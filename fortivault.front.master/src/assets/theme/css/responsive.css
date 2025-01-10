@@ -1,5 +1,8 @@
 /* Responsif untuk Tablet */
 @media (max-width: 768px) {
+    #navmenu-center{
+        display: none;
+    }
     .custom-carousel .carousel-img.is-banner {
         height: auto;
     }
@@ -8,15 +11,12 @@
         max-width: 100%;
         border-radius: 5px;
     }
-    #hero{
-        padding-top: 6rem !important;
-    }
 }
 
 /* Responsif untuk Smartphone */
 @media (max-width: 480px) {
-    #hero{
-        padding-top: 6rem !important;
+    #navmenu-center{
+        display: none;
     }
     .main-hero, .second-hero{
         height: auto !important;

@@ -37,7 +37,6 @@ img {
     background: #02061733;
     box-shadow: 0px 8px 10px -6px #0000001A !important;
     box-shadow: 0px 20px 25px -5px #0000001A !important;
-    backdrop-filter: blur(40px) !important;
 }
 
 #hero:before,
