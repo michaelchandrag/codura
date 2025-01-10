@@ -33,7 +33,7 @@ img {
 }
 
 #header {
-    background: #02061733 !important;
+    background: #02061733;
     box-shadow: 0px 8px 10px -6px #0000001A !important;
     box-shadow: 0px 20px 25px -5px #0000001A !important;
     backdrop-filter: blur(40px) !important;
@@ -56,7 +56,7 @@ img {
 
 .scrolled .header,
 .scroll-top {
-    background: linear-gradient(rgb(78 36 175), #10061E) !important;
+    background: #012a23 !important;
 }
 
 .bg-dark {
@@ -113,4 +113,7 @@ img {
 .feature-card{
     background: #00000066;
     border: none;
+}
+#footer{
+    background: #00000066 !important;
 }

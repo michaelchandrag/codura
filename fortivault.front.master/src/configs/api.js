@@ -5,8 +5,8 @@ import store from '@/configs/store'
 
 const is_production = true
 export const api_url = is_production
-  ? 'http://localhost/codura.api'
-  : 'http://localhost/codura.api'
+  ? 'http://localhost/fotivault.api'
+  : 'http://localhost/fotivault.api'
 
 function getHeaderData(attribute = null) {
   const stateAuth = store.getters.stateAuth

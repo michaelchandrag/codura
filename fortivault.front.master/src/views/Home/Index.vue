@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
   <section id="hero" class="main-hero hero section p-0 bg-transparent">
-    <div class="container position-relative">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
       <div class="col-12 col-lg-8 m-auto text-center">
         <div class="hero-text mb-5">
           <h2 class="ls-sm fw-bold text-white fs-40px">Revolutionizing Smart Contract Security with AI</h2>
@@ -21,11 +21,11 @@ onMounted(() => {
           <div class="col-12 col-lg-8 m-auto">
             <form>
               <div class="input-group p-2 rounded-sm">
-                <input class="form-control form-control-sm text-white fs-13px bg-transparent"
+                <input required class="form-control form-control-sm text-white fs-13px bg-transparent"
                   placeholder="Type your Prompt" />
-                <a
+                <router-link :to="{ name: 'ai' }"
                   class="input-group-text btn btn-sm bg-green rounded-sm text-white fs-13px px-3 d-inline-flex align-items-center">Start
-                  with AI</a>
+                  with AI</router-link>
               </div>
             </form>
           </div>
