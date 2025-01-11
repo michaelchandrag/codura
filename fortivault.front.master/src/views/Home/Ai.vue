@@ -2,7 +2,7 @@
 import { onMounted, ref, reactive, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { postMessage } from '@/controllers';
-import { sleep } from '@/helpers';
+import { sleep, showAlert } from '@/helpers';
 import store from '@/configs/store';
 import VsModal from "@vuesimple/vs-modal";
 

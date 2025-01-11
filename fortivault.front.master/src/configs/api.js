@@ -9,7 +9,7 @@ export const api_url = is_production
   : 'http://localhost/fotivault.api'
 
 const openAiConfig = {
-  key: '',
+  key: import.meta.env.VITE_OPENAI_API_KEY,
   url: 'https://api.openai.com/v1/chat/completions',
 }
 
