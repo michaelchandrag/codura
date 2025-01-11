@@ -9,7 +9,7 @@ export const api_url = is_production
   : 'http://localhost/fotivault.api'
 
 const openAiConfig = {
-  key: import.meta.env.VITE_OPENAI_API_KEY,
+  key: import.meta.env.VITE_BOT_API_KEY,
   url: 'https://api.openai.com/v1/chat/completions',
 }
 
@@ -167,7 +167,7 @@ export const sendMessageToOpenAI = async (messages) => {
       {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${openAiConfig.key}`,
+          Authorization: `Bearer ${atob(openAiConfig.key)}`,
         },
       }
     );
