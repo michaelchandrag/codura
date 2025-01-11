@@ -888,3 +888,6 @@ table td {
     max-width: 100%;
     height: auto;
 }
+.vs-modal__close-button button{
+    top:15px !important;
+}

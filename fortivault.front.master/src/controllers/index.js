@@ -1,3 +1,8 @@
-import { fetchData } from '@/configs/api'
-import { sleep, showAlert, loadingAlert, confirmAlert } from '@/helpers'
-import store from '@/configs/store'
+import { fetchData, sendMessageToOpenAI } from '@/configs/api'
+
+export const postMessage = async (message) => {
+    const result = await sendMessageToOpenAI(message);
+    if(result){
+        return result;
+    }
+}

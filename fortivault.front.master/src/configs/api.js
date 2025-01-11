@@ -8,6 +8,11 @@ export const api_url = is_production
   ? 'http://localhost/fotivault.api'
   : 'http://localhost/fotivault.api'
 
+const openAiConfig = {
+  key: '',
+  url: 'https://api.openai.com/v1/chat/completions',
+}
+
 function getHeaderData(attribute = null) {
   const stateAuth = store.getters.stateAuth
   const api_public_secret = '';
@@ -150,3 +155,24 @@ export async function downloadBlob(blob, fileName = 'file') {
   link.click()
   link.remove()
 }
+
+export const sendMessageToOpenAI = async (messages) => {
+  try {
+    const response = await axios.post(
+      openAiConfig.url,
+      {
+        model: 'gpt-4o',
+        messages: messages,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${openAiConfig.key}`,
+        },
+      }
+    );
+    return {success: true, msg:'Message ready', respone: response.data.choices[0].message.content}
+  } catch (error) {
+    return {success: false, msg:'Failed send message', respone: error}
+  }
+};
