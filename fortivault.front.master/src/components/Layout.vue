@@ -11,7 +11,7 @@ const route = useRoute();
   <main class="main">
     <router-view></router-view>
   </main>
-  <Footer v-if="!['home','ai'].includes(route.name)"></Footer>
+  <Footer></Footer>
   <a
     href="#"
     id="scroll-top"

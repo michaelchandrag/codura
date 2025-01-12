@@ -16,7 +16,7 @@ import { company } from '@/models';
               <a class="rounded-sm fs-18px" v-if="company.fb" target="_blank" :href="company.fb"><i class="bi bi-facebook"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.ig" target="_blank" :href="company.ig"><i class="bi bi-instagram"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.tw" target="_blank" :href="company.tw"><i class="bi bi-twitter-x"></i></a>
-              <a class="rounded-sm fs-18px" v-if="company.tw" target="_blank" :href="company.linkedin"><i class="bi bi-linkedin"></i></a>
+              <a class="rounded-sm fs-18px" v-if="company.linkedin" target="_blank" :href="company.linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
