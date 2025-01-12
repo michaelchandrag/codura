@@ -8,7 +8,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="main-hero hero section p-0 bg-transparent">
+  <section id="hero" class="main-hero hero section bg-transparent first-section">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
       <div class="col-12 col-lg-8 m-auto text-center has-bg-container">
         <div class="hero-text mb-5">
@@ -21,8 +21,8 @@ onMounted(() => {
         <div class="hero-text mb-5">
           <h2 class="ls-sm fw-bold text-white fs-40px">Get Started (BETA Version)</h2>
 
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center" data-aos="fade-right" data-aos-delay="100">
+          <div class="col-lg-6">
             <div class="card rounded-sm feature-card h-100">
               <div class="card-body text-start">
                 <h6 class="text-white">1. Sign Up</h6>
@@ -30,7 +30,7 @@ onMounted(() => {
               </div>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <div class="col-lg-6">
             <div class="card rounded-sm feature-card h-100">
               <div class="card-body text-start">
                 <h6 class="text-white">2. Run a Basic Scan through our AI chat box</h6>
@@ -38,7 +38,7 @@ onMounted(() => {
               </div>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <div class="col-lg-6">
             <div class="card rounded-sm feature-card h-100">
               <div class="card-body text-start">
                 <h6 class="text-white">3. Unlock Advanced Features</h6>
@@ -46,7 +46,7 @@ onMounted(() => {
               </div>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <div class="col-lg-6">
             <div class="card rounded-sm feature-card h-100">
               <div class="card-body text-start">
                 <h6 class="text-white">4. Receive Security Reports</h6>
@@ -57,7 +57,7 @@ onMounted(() => {
         </div>
 
         </div>
-        <div class="hero-prompt mb-5">
+        <div class="hero-prompt mb-4">
           <div class="col-12 col-lg-8 m-auto">
             <form>
               <div class="input-group p-2 rounded-sm">
