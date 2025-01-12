@@ -16,12 +16,13 @@ import { company } from '@/models';
               <a class="rounded-sm fs-18px" v-if="company.fb" target="_blank" :href="company.fb"><i class="bi bi-facebook"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.ig" target="_blank" :href="company.ig"><i class="bi bi-instagram"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.tw" target="_blank" :href="company.tw"><i class="bi bi-twitter-x"></i></a>
+              <a class="rounded-sm fs-18px" v-if="company.tw" target="_blank" :href="company.github"><i class="bi bi-github"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.linkedin" target="_blank" :href="company.linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 footer-links mb-0">
-          <h4>Support</h4>
+          <!-- <h4>Support</h4>
           <ul>
             <li>
               <i class="bi bi-chevron-right pe-2"></i>
@@ -35,10 +36,10 @@ import { company } from '@/models';
               <i class="bi bi-chevron-right pe-2"></i>
               <router-link :to="{ name: 'home' }">Contact</router-link>
             </li>
-          </ul>
+          </ul> -->
         </div>
         <div class="col-lg-3 col-md-3 footer-links mb-0">
-          <h4>Legal</h4>
+          <!-- <h4>Legal</h4>
           <ul>
             <li>
               <i class="bi bi-chevron-right pe-2"></i>
@@ -52,7 +53,7 @@ import { company } from '@/models';
               <i class="bi bi-chevron-right pe-2"></i>
               <router-link :to="{ name: 'home' }">Privacy Policy</router-link>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>

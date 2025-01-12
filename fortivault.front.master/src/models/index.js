@@ -11,5 +11,6 @@ export const company = {
     ig: '',
     fb: '',
     tw: 'https://x.com/fortivault87827',
+    github: 'https://github.com/sbymaster/fortivault',
     linkedin: '',
 };
