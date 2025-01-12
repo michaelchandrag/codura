@@ -18,6 +18,45 @@ onMounted(() => {
             by providing accessible, reliable, and efficient smart contract security audits powered by cutting-edge AI
             technology. We aim to prevent exploits and promote trust in decentralized systems</p>
         </div>
+        <div class="hero-text mb-5">
+          <h2 class="ls-sm fw-bold text-white fs-40px">Get Started (BETA Version)</h2>
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="card rounded-sm feature-card h-100">
+              <div class="card-body text-start">
+                <h6 class="text-white">1. Sign Up</h6>
+                <p class="text-light fw-normal fs-13px m-0">Create your account and connect your Web3 wallet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="card rounded-sm feature-card h-100">
+              <div class="card-body text-start">
+                <h6 class="text-white">2. Run a Basic Scan through our AI chat box</h6>
+                <p class="text-light fw-normal fs-13px m-0">Test your smart contract for free.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="card rounded-sm feature-card h-100">
+              <div class="card-body text-start">
+                <h6 class="text-white">3. Unlock Advanced Features</h6>
+                <p class="text-light fw-normal fs-13px m-0">Stake your tokens for premium audits.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="card rounded-sm feature-card h-100">
+              <div class="card-body text-start">
+                <h6 class="text-white">4. Receive Security Reports</h6>
+                <p class="text-light fw-normal fs-13px m-0">Get a comprehensive security score and fix recommendations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
         <div class="hero-prompt mb-5">
           <div class="col-12 col-lg-8 m-auto">
             <form>
