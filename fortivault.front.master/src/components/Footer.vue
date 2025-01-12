@@ -5,14 +5,14 @@ import { company } from '@/models';
 <template>
   <footer id="footer" class="footer dark-background">
     <div class="container footer-top pb-3">
-      <div class="row gy-4 justify-content-between">
-        <div class="col-lg-4 col-md-12 footer-about mt-1">
-          <router-link :to="{ name: 'home' }" class="d-flex align-items-center">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-12 col-md-12 footer-about mt-1">
+          <router-link :to="{ name: 'home' }" class="d-flex align-items-center justify-content-center">
             <img class="lg" src="/assets/img/fortivault-icon.png" />
           </router-link>
           <div class="footer-contact pt-4">
-            <h4 class="m-0 fw-normal fs-14px ls-xs">Follow Us :</h4>
-            <div class="social-links d-flex">
+            <h4 class="m-0 fw-normal fs-14px ls-xs text-center">Follow Us :</h4>
+            <div class="social-links d-flex justify-content-center">
               <a class="rounded-sm fs-18px" v-if="company.fb" target="_blank" :href="company.fb"><i class="bi bi-facebook"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.ig" target="_blank" :href="company.ig"><i class="bi bi-instagram"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.tw" target="_blank" :href="company.tw"><i class="bi bi-twitter-x"></i></a>
@@ -21,7 +21,7 @@ import { company } from '@/models';
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-3 footer-links mb-0">
+        <div class="col-lg-3 col-md-3 footer-links mb-0 d-none">
           <!-- <h4>Support</h4>
           <ul>
             <li>
@@ -38,7 +38,7 @@ import { company } from '@/models';
             </li>
           </ul> -->
         </div>
-        <div class="col-lg-3 col-md-3 footer-links mb-0">
+        <div class="col-lg-3 col-md-3 footer-links mb-0 d-none">
           <!-- <h4>Legal</h4>
           <ul>
             <li>
