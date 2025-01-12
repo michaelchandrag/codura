@@ -10,5 +10,6 @@ export const company = {
     yt:'',
     ig:'',
     fb:'',
-    tw:'',
+    tw:'https://x.com/CoduraTech',
+    linkedin:'',
 };

@@ -1,23 +1,11 @@
 <script setup>
 import { onMounted, ref, reactive } from 'vue'
+import {scrollToElement, sleep } from  '@/helpers'
 
-onMounted(() => {
-  changeBg();
+onMounted( async () => {
+  await sleep(200)
+  scrollToElement('section-feature', 100);
 })
-
-function changeBg() {
-  const newBackgroundUrl = `url("/assets/img/hero.png")`;
-  const styleRule = `#hero { background-image: ${newBackgroundUrl}; }`;
-  let styleElement = document.querySelector('style[data-bg="hero-bg"]');
-  if (!styleElement) {
-    styleElement = document.createElement('style');
-    styleElement.setAttribute('data-bg', 'hero-bg');
-    document.head.appendChild(styleElement);
-  }
-  if (!styleElement.innerHTML.includes(styleRule)) {
-    styleElement.innerHTML = styleRule;
-  }
-}
 </script>
 
 <template>
@@ -30,7 +18,7 @@ function changeBg() {
           <h2 class="ls-xs m-0 fw-normal">AI Excellence</h2>
           <p class="mt-3 w-100 text-white fw-normal fs-15px hero-desc">Whether it’s work or personal, our AI helps you speak,
             solve, and succeed effortlessly</p>
-            <router-link :to="{ name: 'home' }" class="btn main-bg text-white fs-13px ls-xs py-2 px-3 hero-action">Get Started</router-link>
+            <a @click.prevent="scrollToElement('section-feature', 100)" class="btn main-bg text-white fs-13px ls-xs py-2 px-3 hero-action">Get Started</a>
         </div>
         <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
           <img src="/assets/img/hero-img.png" alt="codura">
@@ -39,7 +27,7 @@ function changeBg() {
     </div>
   </section>
   <div class="section-body">
-    <section class="section">
+    <section id="section-feature" class="section">
       <div class="container section-title">
         <h3 class="text-white text-capitalize ls-xs">Key Features</h3>
         <p class="text-semi-white fw-normal fs-15px">Discover how Codura transforms your daily tasks with intelligent
@@ -132,9 +120,4 @@ function changeBg() {
   </div>
 </template>
 
-<style scoped>
-.section-body {
-  background: #10061E url('/assets/img/body-bg.png') center center no-repeat;
-  background-size: cover;
-}
-</style>
+<style scoped></style>

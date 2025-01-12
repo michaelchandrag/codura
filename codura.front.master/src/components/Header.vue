@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+import { defineProps } from 'vue'
+const { routeName } = defineProps({
+  routeName: { type: String, default: 'home' },
+})
+</script>
 
 <template>
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -15,7 +20,7 @@
           <li>
             <a class="fs-14px" href="#">Docs</a>
           </li>
-          <li class="action"><router-link :to="{ name: 'feature' }"
+          <li class="action"><router-link :to="{ name: routeName == 'feature' ? 'home' : 'feature' }"
               class="btn btn-sm to-auth py-1 px-3 rounded-sm 14px">Get Started</router-link></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

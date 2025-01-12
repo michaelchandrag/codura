@@ -34,6 +34,7 @@ img {
 }
 
 #hero {
+    background-image: url('/assets/img/hero.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -81,16 +82,25 @@ img {
     color: #9AA7B6;
 }
 
+.section-body {
+    background: #10061E url('/assets/img/body-bg.png') center center no-repeat;
+    background-size: cover;
+}
+
 .section-body section {
     background: transparent !important;
 }
 
 .main-hero {
-    min-height: 100vh !important;
-    height: 100vh !important;
+    min-height: 95vh !important;
+    height: 95vh !important;
 }
 
 .second-hero {
     min-height: 80vh !important;
     height: 85vh !important;
+}
+
+#footer {
+    background: #000000 !important;
 }

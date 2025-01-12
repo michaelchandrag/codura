@@ -176,3 +176,18 @@ export function getYoutubeId(url) {
   const match = url.match(regex)
   return match ? match[1] : null
 }
+export function scrollToElement(id, space = 0) {
+  const element = document.getElementById(id);
+  if (element) {
+    const offset = space;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  } else {
+    return;
+  }
+}

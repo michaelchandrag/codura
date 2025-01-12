@@ -1,14 +1,17 @@
 <script setup>
-import Header from './Header'
-import Footer from './Footer'
+import { useRoute  } from 'vue-router';
+import Header from './Header';
+import Footer from './Footer';
+
+const route = useRoute();
 </script>
 
 <template>
-  <Header></Header>
+  <Header :routeName="route.name"></Header>
   <main class="main">
     <router-view></router-view>
   </main>
-  <!--<Footer></Footer>-->
+  <Footer></Footer>
   <a
     href="#"
     id="scroll-top"

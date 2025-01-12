@@ -2,22 +2,8 @@
 import { onMounted, ref, reactive } from 'vue'
 
 onMounted(() => {
-  changeBg();
-})
 
-function changeBg() {
-  const newBackgroundUrl = `url("/assets/img/hero.png")`;
-  const styleRule = `#hero { background-image: ${newBackgroundUrl}; }`;
-  let styleElement = document.querySelector('style[data-bg="hero-bg"]');
-  if (!styleElement) {
-    styleElement = document.createElement('style');
-    styleElement.setAttribute('data-bg', 'hero-bg');
-    document.head.appendChild(styleElement);
-  }
-  if (!styleElement.innerHTML.includes(styleRule)) {
-    styleElement.innerHTML = styleRule;
-  }
-}
+})
 </script>
 
 <template>
