@@ -20,11 +20,11 @@ let addressToCopy = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
             by providing accessible, reliable, and efficient smart contract security audits powered by cutting-edge AI
             technology. We aim to prevent exploits and promote trust in decentralized systems</p>
         </div>
-        <div class="hero-text mb-5">
+        <!-- <div class="hero-text mb-5">
           <h2 class="ls-sm fw-bold text-white fs-40px">CA:</h2>
           <p class="mt-3 w-100 text-white fw-normal fs-24px hero-desc">{{addressToCopy}}</p>
           <div class="btn btn-lg bg-green py-1 px-3 rounded fs-24px 14px" @click="copyToClipboard(addressToCopy)"><b>Click Here to Copy CA!</b></div>
-        </div>
+        </div> -->
         <div class="hero-text mb-5">
           <h2 class="ls-sm fw-bold text-white fs-40px">Get Started (BETA Version)</h2>
           <div class="row gy-4 justify-content-center" data-aos="fade-right" data-aos-delay="100">
