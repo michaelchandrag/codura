@@ -1,0 +1,16 @@
+export const company = {
+    name: 'ORACIUM',
+    alias: 'ORACIUM',
+    slug: 'oracium',
+    phone: '',
+    phone_label: '',
+    email: '',
+    address: '',
+    wa: '',
+    yt: '',
+    ig: '',
+    fb: '',
+    tw: 'https://x.com/fortivault87827',
+    github: 'https://github.com/sbymaster/fortivault',
+    linkedin: '',
+};
