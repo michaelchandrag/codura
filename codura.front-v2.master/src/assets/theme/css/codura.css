@@ -39,10 +39,12 @@ img {
     max-height: 100%;
 }
 
-#header {
-    background: #02061733;
+#header .header-content{
     box-shadow: 0px 8px 10px -6px #0000001A !important;
     box-shadow: 0px 20px 25px -5px #0000001A !important;
+    background: #0000001A;
+    border: 1px solid #4ED97D;
+    border-radius: 80px;
 }
 
 #hero:before,
@@ -59,8 +61,12 @@ img {
 .hero img {
     position: relative !important;
 }
-
-.scrolled .header,
+.scrolled .header{
+    background:transparent !important;
+}
+.scrolled .header .header-content{
+    background: #012a23 !important;
+}
 .scroll-top {
     background: #012a23 !important;
 }
