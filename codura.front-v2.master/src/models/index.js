@@ -10,7 +10,7 @@ export const company = {
     yt: '',
     ig: '',
     fb: '',
-    tw: 'https://x.com/fortivault87827',
+    tw: 'https://x.com/CoduraTech',
     github: 'https://github.com/sbymaster/codura',
     linkedin: '',
 };
