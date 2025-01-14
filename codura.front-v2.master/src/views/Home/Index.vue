@@ -66,29 +66,29 @@ let addressToCopy = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
     <div class="container">
       <div class="why-list mt-2">
         <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle fs-16px lh-normal text-green"></i>
+          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
           <p class="text-light fw-normal fs-14px m-0 ls-xs">
             <strong>Code Submission</strong>: Users submit their smart contract code either by direct input or file
             upload.
           </p>
         </div>
         <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle fs-16px lh-normal text-green"></i>
+          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
           <p class="text-light fw-normal fs-14px m-0 ls-xs"><strong>AI-Powered Analysis</strong> The AI engine performs
             a comprehensive audit, detecting gas inefficiencies, security risks, and deviations from best practices.</p>
         </div>
         <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle fs-16px lh-normal text-green"></i>
+          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
           <p class="text-light fw-normal fs-14px m-0 ls-xs"><strong>Optimization Insights</strong> The system generates
             detailed, actionable insights accompanied by AI-suggested code refinements.</p>
         </div>
         <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle fs-16px lh-normal text-green"></i>
+          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
           <p class="text-light fw-normal fs-14px m-0 ls-xs"><strong>Decentralized Review</strong> Optional peer
             validation allows the development community to verify the AI findings, promoting transparency and trust.</p>
         </div>
         <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle fs-16px lh-normal text-green"></i>
+          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
           <p class="text-light fw-normal fs-14px m-0 ls-xs"><strong>Deployment-Ready Output</strong> After implementing
             the enhancements, the optimized smart contract is exportable and prepared for secure on-chain deployment.
           </p>

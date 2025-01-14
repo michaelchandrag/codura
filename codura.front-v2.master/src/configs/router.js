@@ -17,6 +17,19 @@ const routes = [
     component: () => import('@/views/Home/Index.vue')
   },
   {
+    path: '/about',
+    alias: '/about-us',
+    name: 'about',
+    meta: {
+      is_ready: true,
+      require_auth: false,
+      is_auth: false,
+      title: 'CODURA | ABOUT',
+      description: ''
+    },
+    component: () => import('@/views/Page/About.vue')
+  },
+  {
     path: '/feature',
     alias: '/features',
     name: 'feature',

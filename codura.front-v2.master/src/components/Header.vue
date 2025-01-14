@@ -18,7 +18,7 @@ const { routeName } = defineProps({
             <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li>
-            <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">About</router-link>
+            <router-link :class="{'text-green': routeName == 'about'}" class="fs-13px" :to="{ name: 'about' }">About</router-link>
           </li>
           <li>
             <router-link :class="{'text-green': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
@@ -28,13 +28,13 @@ const { routeName } = defineProps({
       <nav id="navmenu" class="navmenu">
         <ul>
           <li class="d-xl-none">
-            <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+            <router-link class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li class="d-xl-none">
-            <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">About</router-link>
+            <router-link class="fs-13px" :to="{ name: 'about' }">About</router-link>
           </li>
           <li class="d-xl-none">
-            <router-link :class="{'text-green': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
+            <router-link  class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
           </li>
           <li class="action"><router-link :to="{ name: 'ai' }"
               class="btn btn-sm bg-green py-1 px-3 rounded fs-13px 14px">Start with AI</router-link></li>
