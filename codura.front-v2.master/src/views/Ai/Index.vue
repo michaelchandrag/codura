@@ -63,13 +63,6 @@ const sendMessage = async () => {
     content: msg.content,
   }));
 
-  //tester
-  /*messages.value.push({ role: 'assistant', content: 'halo' });
-  chat.value = '';
-  saveChatHistory();
-  isSending.value = false;
-  chat.value = '';*/
-
   const result = await postMessage(messagesForAPI);
   if (result) {
     if (result.success) {
@@ -88,7 +81,6 @@ const saveChatHistory = async () => {
       title: `Chat ${histories.value.length + 1}`,
       messages: messages.value,
     };
-    //histories.value.push(newHistory);
     await store.commit('addChatHistory', newHistory);
     is_history.value = histories.value.length;
   } else {
@@ -97,7 +89,6 @@ const saveChatHistory = async () => {
 };
 
 const updateChatHistory = async () => {
-  //histories.value[`${is_history.value}`].messages = messages.value;
   await store.commit('updateChatMessageHistory', {
     key: is_history.value,
     messages: messages.value,
@@ -121,7 +112,6 @@ const closeModalTitle = () => {
   modal_change_title.value.close();
 };
 const processChangeTitle = async () => {
-  //histories[history_change_title.index] = history_change_title.title;
   await store.commit('updateChatTitleHistory', {
     key: history_change_title.index,
     title: history_change_title.title,
@@ -162,15 +152,19 @@ const processChangeTitle = async () => {
             </div>
             <div id="ai-message-body" ref="chatbox" class="card-body text-start px-2 py-3">
               <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
-                <p class="m-0 text-white fs-12px ls-xs bubble py-2 px-3 rounded-sm fw-300">{{ msg.content }}</p>
+                <div class="py-2 px-3">
+                  <p :class="{ 'py-2 px-3': msg.role == 'user' }"
+                    class="m-0 text-white fs-12px ls-xs ws-100 bubble rounded-sm full fw-300">{{ msg.content }}</p>
+                </div>
               </div>
             </div>
             <div id="ai-message-footer" class="card-footer">
               <form @submit.prevent="sendMessage">
                 <div class="input-group bg-transparent">
-                  <input v-model="chat" required class="form-control form-control-sm fs-12px text-white bg-transparent fw-300"
+                  <input v-model="chat" required
+                    class="form-control form-control-sm fs-12px text-white bg-transparent fw-300"
                     placeholder="Start typing .....">
-                  <button type="submit" :disabled="isSending" :class="{'disabled' : isSending}"
+                  <button type="submit" :disabled="isSending" :class="{ 'disabled': isSending }"
                     class="btn btn-sm text-white bg-transparent input-group-text">
                     <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary" role="status"></span>
                     <img v-else src="/assets/img/send.png" />
