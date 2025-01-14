@@ -1,7 +1,8 @@
 <script setup>
 import { onMounted, ref, reactive, watch } from 'vue'
-import { copyToClipboard } from '@/controllers';
+import { copyToClipboard } from '@/helpers';
 
+let keyCA = ref('9kEcnFj9vwjUkjdsL89fGhKloP76qseTuv7')
 let isSending = ref(false);
 let messages = ref([
   { role: 'system', content: `Codura is your AI-powered coding assistant, here to help you write, optimize, and debug code effortlessly. Whether you're building from scratch or refining your project, just type your prompt and watch Codura turn your ideas into reality` }
@@ -25,9 +26,8 @@ let addressToCopy = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
           </div>
           <div class="hero-prompt">
             <div class="input-group p-2 rounded-sm bg-white">
-              <div class="form-control form-control-sm fs-13px bg-transparent border-0 ls-sm">9kEcnFj9vwjUkjdsL89fGhKloP76qseTuv7</div>
-              <a
-                class="input-group-text btn btn-sm bg-green rounded-sm text-white fs-13px px-3 d-inline-flex align-items-center gap-2">
+              <div class="form-control form-control-sm fs-13px bg-transparent border-0 ls-sm">{{ keyCA }}</div>
+              <a @click.prevent="copyToClipboard(keyCA)" class="input-group-text btn btn-sm bg-green rounded-sm text-white fs-13px px-3 d-inline-flex align-items-center gap-2">
                 <i class="bi bi-copy"></i>
                 <span>Copy CA</span>
               </a>
@@ -35,7 +35,7 @@ let addressToCopy = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
           </div>
         </div>
         <div class="col-12 col-lg-5">
-          <div class="card rounded-sm ai-card h-100">
+          <div class="card rounded-sm ai-card h-100" data-aos="fade-left" data-aos-delay="100">
             <div id="ai-message-body" ref="chatbox" class="is-prompt card-body text-start px-2 py-3">
               <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
                 <p class="m-0 text-white fs-12px ls-xs ws-100 bubble py-2 px-3 rounded-sm full fw-300">{{ msg.content }}</p>
@@ -44,7 +44,7 @@ let addressToCopy = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
             <div id="ai-message-footer" class="card-footer">
               <form @submit.prevent="sendMessage">
                 <div class="input-group bg-transparent">
-                  <input v-model="chat" required class="form-control form-control-sm fs-12px text-white bg-transparent fw-200"
+                  <input v-model="chat" required class="form-control form-control-sm fs-12px text-white bg-transparent fw-300"
                     placeholder="Start Typing your prompt ...">
                   <button type="submit" :disabled="isSending" :class="{'disabled' : isSending}"
                     class="btn btn-sm text-white bg-transparent input-group-text">

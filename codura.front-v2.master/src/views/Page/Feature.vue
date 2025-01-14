@@ -57,7 +57,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section class="section bg-transparent pb-2">
+    <section class="section bg-transparent pb-2" data-aos="fade-up" data-aos-delay="100">
       <div class="container section-title pb-2 text-start">
         <h3 class="text-white text-capitalize ls-xs">Who is this for?</h3>
       </div>
@@ -84,7 +84,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section class="section bg-transparent">
+    <section class="section bg-transparent" data-aos="fade-up" data-aos-delay="100">
       <div class="container section-title pb-2 text-start">
         <h3 class="text-white text-capitalize ls-xs">Quickstart</h3>
       </div>

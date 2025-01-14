@@ -26,6 +26,7 @@ body {
 main {
     background: url('/assets/img/body-bg.png') center center no-repeat;
     background-size: cover;
+    min-height: 60vh;
 }
 
 main.is-home {
@@ -137,7 +138,7 @@ img {
 }
 
 .ai-section {
-    padding-top: 5rem !important
+    padding-top: 6rem !important
 }
 
 #ai-message-body, #ai-history-body {

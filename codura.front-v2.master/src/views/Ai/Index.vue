@@ -2,7 +2,6 @@
 import { onMounted, ref, reactive, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { postMessage } from '@/controllers';
-import { sleep, showAlert } from '@/helpers';
 import store from '@/configs/store';
 import VsModal from "@vuesimple/vs-modal";
 
@@ -77,8 +76,6 @@ const sendMessage = async () => {
       messages.value.push({ role: 'assistant', content: result.respone });
       chat.value = '';
       saveChatHistory();
-    } else {
-      showAlert({ type: 'warning', text: result.msg });
     }
     isSending.value = false;
   }
@@ -137,35 +134,10 @@ const processChangeTitle = async () => {
   <section class="section bg-transparent ai-section section-content">
     <div class="container">
       <div class="row gy-4 justify-content-center">
-        <div class="col-lg-8">
-          <div class="card rounded-sm ai-card h-100">
-            <div id="ai-message-header" class="card-header d-flex justify-content-between align-items-center">
-              <h6 class="m-0 text-white">Conversation</h6>
-            </div>
-            <div id="ai-message-body" ref="chatbox" class="card-body text-start">
-              <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
-                <p class="m-0 text-white fs-11px bubble py-2 px-3 rounded-sm">{{ msg.content }}</p>
-              </div>
-            </div>
-            <div id="ai-message-footer" class="card-footer">
-              <form @submit.prevent="sendMessage">
-                <div class="input-group bg-transparent">
-                  <input v-model="chat" required class="form-control form-control-sm fs-12px text-white bg-transparent"
-                    placeholder="Start typing .....">
-                  <button type="submit" :disabled="isSending" :class="{'disabled' : isSending}"
-                    class="btn btn-sm text-white bg-transparent input-group-text">
-                    <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary" role="status"></span>
-                    <img v-else src="/assets/img/send.png" />
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4" data-aos="fade-left" data-aos-delay="100">
+        <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
           <div class="card rounded-sm ai-card h-100">
             <div id="ai-history-header" class="card-header d-flex justify-content-between align-items-center">
-              <h6 class="m-0 text-white">History</h6>
+              <h6 class="m-0 text-white fw-400 ls-xs">History</h6>
             </div>
             <div id="ai-history-body" class="card-body text-start">
               <div v-for="(his, idh) in histories" :key="his.key"
@@ -180,6 +152,31 @@ const processChangeTitle = async () => {
                       class="text-white bi bi-chevron-right"></i></a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card rounded-sm ai-card h-100">
+            <div id="ai-message-header" class="card-header d-flex justify-content-between align-items-center">
+              <h6 class="m-0 text-white fw-400 ls-xs">Conversation</h6>
+            </div>
+            <div id="ai-message-body" ref="chatbox" class="card-body text-start px-2 py-3">
+              <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
+                <p class="m-0 text-white fs-12px ls-xs bubble py-2 px-3 rounded-sm fw-300">{{ msg.content }}</p>
+              </div>
+            </div>
+            <div id="ai-message-footer" class="card-footer">
+              <form @submit.prevent="sendMessage">
+                <div class="input-group bg-transparent">
+                  <input v-model="chat" required class="form-control form-control-sm fs-12px text-white bg-transparent fw-300"
+                    placeholder="Start typing .....">
+                  <button type="submit" :disabled="isSending" :class="{'disabled' : isSending}"
+                    class="btn btn-sm text-white bg-transparent input-group-text">
+                    <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary" role="status"></span>
+                    <img v-else src="/assets/img/send.png" />
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

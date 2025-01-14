@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
   <div class="section-content">
-    <section class="section bg-transparent first-section pb-2">
+    <section class="section bg-transparent first-section pb-2" data-aos="fade-down" data-aos-delay="100">
       <div class="container section-title pb-4 text-start">
         <h3 class="text-white text-capitalize ls-xs">About Us</h3>
         <p class="text-light fw-normal fs-14px">The AI Smart Contract Code Optimizer is a decentralized, AI-powered
@@ -52,7 +52,7 @@ onMounted(() => {
       </div>
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-lg-7">
+          <div class="col-12 col-lg-7" data-aos="fade-right" data-aos-delay="100">
             <div class="d-flex align-items-start gap-3 mb-3">
               <span class="badge bg-green fw-300">1</span>
               <p class="text-light fw-normal fs-14px m-0 ls-xs">A developer uploads a Solidity smart contract for an
@@ -83,7 +83,7 @@ onMounted(() => {
                 blockchain deployment with improved cost-efficiency</p>
             </div>
           </div>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4" data-aos="fade-left" data-aos-delay="100">
             <div class="workflow-img">
                 <img src="/assets/img/workflow.png"/>
             </div>
@@ -91,7 +91,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section class="section bg-transparent">
+    <section class="section bg-transparent" data-aos="fade-up" data-aos-delay="100">
       <div class="container section-title pb-2 text-start">
         <h3 class="text-white text-capitalize ls-xs">Why We Stand Out?</h3>
       </div>
