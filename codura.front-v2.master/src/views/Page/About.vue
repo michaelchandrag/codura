@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
   <div class="section-content">
-    <section class="section bg-transparent first-section">
+    <section class="section bg-transparent first-section pb-2">
       <div class="container section-title pb-4 text-start">
         <h3 class="text-white text-capitalize ls-xs">About Us</h3>
         <p class="text-light fw-normal fs-14px">The AI Smart Contract Code Optimizer is a decentralized, AI-powered
@@ -46,7 +46,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section class="section bg-transparent pb-2">
+    <section class="section bg-transparent pb-0">
       <div class="container section-title pb-2 text-start">
         <h3 class="text-white text-capitalize ls-xs">Codura Workflow</h3>
       </div>

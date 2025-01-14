@@ -13,7 +13,7 @@ let addressToCopy = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
 </script>
 
 <template>
-  <section id="hero" class="main-hero hero section bg-transparent first-section">
+  <section id="hero" class="main-hero hero section bg-transparent first-section pb-2">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4 align-items-center justify-content-between">
         <div class="col-12 col-lg-6">

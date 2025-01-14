@@ -40,7 +40,7 @@ const routes = [
       title: 'CODURA | FEATURE',
       description: ''
     },
-    component: () => import('@/views/Home/Feature.vue')
+    component: () => import('@/views/Page/Feature.vue')
   },
   {
     path: '/ai',
