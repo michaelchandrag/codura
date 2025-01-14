@@ -1,7 +1,7 @@
 export const company = {
-    name: 'FORTIVAULT',
-    alias: 'FORTIVAULT',
-    slug: 'fortivault',
+    name: 'CODURA',
+    alias: 'Codura',
+    slug: 'codura',
     phone: '',
     phone_label: '',
     email: '',
@@ -11,6 +11,6 @@ export const company = {
     ig: '',
     fb: '',
     tw: 'https://x.com/fortivault87827',
-    github: 'https://github.com/sbymaster/fortivault',
+    github: 'https://github.com/sbymaster/codura',
     linkedin: '',
 };

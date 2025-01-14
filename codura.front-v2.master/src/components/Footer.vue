@@ -8,7 +8,7 @@ import { company } from '@/models';
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">
           <router-link :to="{ name: 'home' }" class="d-flex align-items-center justify-content-center">
-            <img class="lg" src="/assets/img/fortivault-icon.png" />
+            <img class="lg" src="/assets/img/codura.png" />
           </router-link>
           <div class="footer-contact pt-4">
             <h4 class="m-0 fw-normal fs-14px ls-xs text-center">Follow Us :</h4>

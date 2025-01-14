@@ -8,7 +8,7 @@ const route = useRoute();
 
 <template>
   <Header :routeName="route.name"></Header>
-  <main class="main">
+  <main :class="{'is-home' : route.name == 'home'}" class="main">
     <router-view></router-view>
   </main>
   <Footer></Footer>

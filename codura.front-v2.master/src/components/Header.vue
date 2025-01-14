@@ -9,13 +9,16 @@ const { routeName } = defineProps({
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <router-link :to="{ name: 'home' }" class="logo d-flex align-items-center">
-        <img src="/assets/img/fortivault.png" class="lg p-1" alt="fortivault" />
-        <!-- <h1 class="sitename">FORTIVAULT</h1> -->
+        <img src="/assets/img/codura.png" class="lg p-1" alt="codura" />
+        <!-- <h1 class="sitename">codura</h1> -->
       </router-link>
       <nav id="navmenu-center" class="navmenu">
         <ul>
           <li>
             <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+          </li>
+          <li>
+            <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">About</router-link>
           </li>
           <li>
             <router-link :class="{'text-green': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
@@ -26,6 +29,9 @@ const { routeName } = defineProps({
         <ul>
           <li class="d-xl-none">
             <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+          </li>
+          <li class="d-xl-none">
+            <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">About</router-link>
           </li>
           <li class="d-xl-none">
             <router-link :class="{'text-green': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>

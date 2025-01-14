@@ -23,13 +23,13 @@ body {
     scrollbar-color: #888 #f1f1f1;
 }
 
-#app {
+main {
     background: url('/assets/img/body-bg.png') center center no-repeat;
     background-size: cover;
 }
 
-.has-bg-container {
-    background: url('/assets/img/container.png') center center no-repeat;
+main.is-home {
+    background: url('/assets/img/body-bg-main.png') center center no-repeat;
     background-size: cover;
 }
 
@@ -175,7 +175,11 @@ img {
     justify-content: flex-end;
 }
 .ai-message-item .bubble{
+    width: auto;
     max-width: 95%;
+}
+.ai-message-item .bubble.full{
+    max-width: 100%;
 }
 .ai-message-item.is-me .bubble{
     background: #00000099;
@@ -186,4 +190,8 @@ img {
 }
 .ai-history-item{
     background: #00000099;
+}
+
+#ai-message-body.is-prompt{
+    height: 250px !important;
 }

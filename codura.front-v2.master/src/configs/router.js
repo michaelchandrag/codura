@@ -11,7 +11,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FORTIVAULT',
+      title: 'CODURA',
       description: ''
     },
     component: () => import('@/views/Home/Index.vue')
@@ -24,7 +24,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FORTIVAULT | FEATURE',
+      title: 'CODURA | FEATURE',
       description: ''
     },
     component: () => import('@/views/Home/Feature.vue')
@@ -37,7 +37,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FORTIVAULT | AI',
+      title: 'CODURA | AI',
       description: ''
     },
     component: () => import('@/views/Home/Ai.vue')
@@ -50,7 +50,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FORTIVAULT | 404',
+      title: 'CODURA | 404',
       description:
         'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.'
     },
@@ -108,14 +108,14 @@ router.afterEach((to, from) => {
     } else {
       metaDescription.setAttribute(
         'content',
-        'FORTIVAULT'
+        'CODURA'
       )
     }
   } else {
     const description = document.createElement('meta')
     description.name = 'description'
     description.content =
-      to.meta.description || 'FORTIVAULT'
+      to.meta.description || 'CODURA'
     document.head.appendChild(description)
   }
 })
