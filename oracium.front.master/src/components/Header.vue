@@ -9,8 +9,8 @@ const { routeName } = defineProps({
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <router-link :to="{ name: 'home' }" class="logo d-flex align-items-center">
-        <img src="/assets/img/oracium.png" class="md" alt="oracium" />
-        <!-- <h1 class="sitename">ORACIUM</h1> -->
+        <img src="/assets/img/oracium.png" class="md2 p-1" alt="oracium" />
+        <!-- <h1 class="sitename">oracium</h1> -->
       </router-link>
       <nav id="navmenu-center" class="navmenu">
         <ul>
@@ -18,26 +18,26 @@ const { routeName } = defineProps({
             <router-link :class="{'is-active': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li>
-            <a :class="{'is-active': routeName == 'about'}" class="fs-13px" href="#">About</a>
+            <router-link :class="{'is-active': routeName == 'about'}" class="fs-13px" :to="{ name: 'home' }">About</router-link>
           </li>
           <li>
-            <a :class="{'is-active': routeName == 'feature'}" class="fs-13px" href="#">Feature</a>
+            <router-link :class="{'is-active': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
           </li>
         </ul>
       </nav>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li class="d-xl-none">
-            <router-link class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+            <router-link :class="{'is-active': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li class="d-xl-none">
-            <a class="fs-13px" href="#">About</a>
+            <router-link :class="{'is-active': routeName == 'about'}" class="fs-13px" :to="{ name: 'home' }">about</router-link>
           </li>
           <li class="d-xl-none">
-            <a class="fs-13px" href="#">Feature</a>
+            <router-link :class="{'is-active': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
           </li>
-          <li class="action"><router-link :to="{ name: 'home' }"
-              class="btn btn-sm bg-orange py-1 px-3 rounded fs-13px 14px text-white">Start with AI</router-link></li>
+          <li class="action"><router-link :to="{ name: 'ai' }"
+              class="btn btn-sm text-white bg-app py-2 px-3 rounded fs-13px 14px">Start with AI</router-link></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

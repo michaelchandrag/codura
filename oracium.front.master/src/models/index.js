@@ -1,7 +1,7 @@
 export const company = {
-    name: 'ORACIUM',
-    alias: 'ORACIUM',
-    slug: 'oracium',
+    name: 'FORTIVAULT',
+    alias: 'FORTIVAULT',
+    slug: 'fortivault',
     phone: '',
     phone_label: '',
     email: '',
@@ -10,7 +10,7 @@ export const company = {
     yt: '',
     ig: '',
     fb: '',
-    tw: '#',
-    github: '#',
+    tw: 'https://x.com/fortivault87827',
+    github: 'https://github.com/sbymaster/fortivault',
     linkedin: '',
 };

@@ -5,7 +5,7 @@
 :root {
     --line-clamp-3: 3;
     --line-clamp-2: 2;
-    --main-color: #00000066;
+    --main-color: #4ED97D66;
 }
 
 h1,
@@ -34,9 +34,9 @@ h6 {
     position: relative;
 }
 
-/*
 #hero:before {
     transform: translateX(-50%) translateY(10px) rotate(0deg);
+    /*background: #3c40c9;*/
     background-image: linear-gradient(to right, black, red);
     opacity: .7;
 }
@@ -44,7 +44,7 @@ h6 {
 .hero::after {
     background-position: center center;
     background-repeat: no-repeat;
-}*/
+}
 
 #hero .overlay {
     position: absolute;

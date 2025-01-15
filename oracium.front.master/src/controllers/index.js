@@ -7,15 +7,3 @@ export const postMessage = async (message) => {
         return result;
     }
 }
-
-export const copyToClipboard = async (value) => {
-    try {
-        await navigator.clipboard.writeText(value);
-        console.log('Text copied to clipboard:', value);
-        showAlert({ type: 'success', text: 'Success Copy CA' });
-        return true;
-    } catch (error) {
-        console.error('Failed to copy text to clipboard:', error);
-        return false;
-    }
-};
