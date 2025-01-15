@@ -461,6 +461,7 @@ section,
 .lh-md {
     line-height: 20px !important;
 }
+
 .lh-normal {
     line-height: normal !important;
 }
@@ -884,10 +885,11 @@ table td {
     }
 }
 
-.img-gallery{
+.img-gallery {
     max-width: 100%;
     height: auto;
 }
-.vs-modal__close-button button{
-    top:15px !important;
+
+.vs-modal__close-button button {
+    top: 15px !important;
 }

@@ -5,7 +5,7 @@ import AlertContent from '@/components/AlertContent';
 <template>
     <div class="page-title dark-background bg-transparent">
         <div class="container position-relative">
-            <h1>4 0 4</h1>
+            <h1 class="text-app">4 0 4</h1>
             <nav class="breadcrumbs">
                 <ol>
                     <li><router-link :to="{ name: 'home' }">Home</router-link></li>

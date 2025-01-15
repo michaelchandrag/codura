@@ -11,7 +11,7 @@ const route = useRoute();
   <main class="main">
     <router-view></router-view>
   </main>
-  <Footer></Footer>
+  <Footer v-if="route.name != 'ai'"></Footer>
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center rounded"><i
       class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>

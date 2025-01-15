@@ -64,6 +64,13 @@ img {
     color: var(--app-color) !important;
 }
 
+.navmenu li.action a:hover {
+    background: transparent !important;
+    color: var(--app-color) !important;
+    border: 1px solid #FF8A43 !important;
+}
+
+
 #hero:before,
 #hero:after {
     display: none !important;
@@ -164,7 +171,32 @@ img {
 }
 
 .ai-section {
-    padding-top: 5rem !important
+    padding-top: 3rem !important;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.ai-section .container-ai {
+    height: 95vh;
+    width: 100%;
+    max-width: 100%;
+}
+
+.ai-section .container-ai .content-ai {
+    height: 100%;
+}
+
+.ai-section .container-ai .content-ai .card {
+    border-radius: 0px;
+}
+
+.ai-section .card-conversation {
+    position: relative;
+    background: #ECF0F1;
+}
+
+.ai-content-header {
+    border-bottom: 1px solid #D9D9D9;
 }
 
 #ai-message-body,
@@ -178,7 +210,11 @@ img {
 
 #ai-message-footer,
 #ai-message-header {
-    background: #00000099;
+    background: transparent;
+}
+
+#ai-message-footer {
+    background: #ECF0F1;
 }
 
 #ai-message-footer .input-group {
@@ -191,10 +227,6 @@ img {
     border: none;
     outline: none;
     box-shadow: none;
-}
-
-#ai-message-footer .input-group input::placeholder {
-    color: #ffffffe3;
 }
 
 .ai-message-item {
@@ -210,7 +242,7 @@ img {
 }
 
 .ai-message-item.is-me .bubble {
-    background: #00000099;
+    background: #FFFFFF;
 }
 
 #ai-history-header {
@@ -218,13 +250,14 @@ img {
 }
 
 .ai-history-item {
-    background: #00000099;
+    background: transparent;
 }
 
 .bg-app {
     background: var(--app-color) !important;
 }
-.bg-app-lighter{
+
+.bg-app-lighter {
     background: #FF8A4326;
 }
 
@@ -238,4 +271,31 @@ img {
 
 .custom-input-group {
     overflow-wrap: anywhere !important;
+}
+
+.ai-message-item code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.ai-message-item pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 4px;
+    font-size: 11px;
+    overflow-x: auto;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+    display: inline-block;
+}
+
+.ai-message-item code.attribute{
+    display: inline;
+    padding: 1px 2px;
 }

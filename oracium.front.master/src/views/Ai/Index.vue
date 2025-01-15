@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, reactive, watch } from 'vue';
+import { onMounted, ref, reactive, watch, nextTick } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { postMessage } from '@/controllers';
 import { sleep, showAlert } from '@/helpers';
@@ -20,6 +20,7 @@ let modal_change_title = ref(null);
 const chatbox = ref(null);
 let chat = ref('');
 let isSending = ref(false);
+const typingSpeed = ref(50);
 
 onMounted(async () => {
   //await store.commit('destroyChatHistory');
@@ -37,10 +38,6 @@ onMounted(async () => {
   scrollToBottom();
 });
 
-watch(messages, () => {
-  scrollToBottom();
-});
-
 const removeQuery = () => {
   if (Object.keys(route.query).length > 0) {
     router.replace({ path: route.path });
@@ -48,9 +45,11 @@ const removeQuery = () => {
 };
 
 const scrollToBottom = () => {
-  if (chatbox.value) {
-    chatbox.value.scrollTop = chatbox.value.scrollHeight;
-  }
+  nextTick(() => {
+    if (chatbox.value) {
+      chatbox.value.scrollTop = chatbox.value.scrollHeight;
+    }
+  });
 };
 
 const sendMessage = async () => {
@@ -58,31 +57,41 @@ const sendMessage = async () => {
 
   isSending.value = true;
   messages.value.push({ role: 'user', content: chat.value });
+  scrollToBottom();
 
-  const messagesForAPI = messages.value.slice(-2).map((msg) => ({
+  const messagesForAPI = messages.value.slice(-1).map((msg) => ({
     role: msg.role,
     content: msg.content,
   }));
 
-  //tester
-  /*messages.value.push({ role: 'assistant', content: 'halo' });
-  chat.value = '';
-  saveChatHistory();
-  isSending.value = false;
-  chat.value = '';*/
-
   const result = await postMessage(messagesForAPI);
   if (result) {
     if (result.success) {
-      messages.value.push({ role: 'assistant', content: result.respone });
       chat.value = '';
-      saveChatHistory();
+      await addMessage({ role: 'assistant', content: result.respone })
     } else {
       showAlert({ type: 'warning', text: result.msg });
     }
     isSending.value = false;
   }
 };
+
+const addMessage = async (newMsg) => {
+  const index = messages.value.length;
+  messages.value.push({ ...newMsg, content: "" });
+  scrollToBottom();
+  await typeMessage(newMsg, index);
+  await saveChatHistory();
+}
+
+async function typeMessage(msg, index) {
+  const fullText = msg.content;
+  messages.value[index].content = "";
+  for (let i = 0; i < fullText.length; i++) {
+    messages.value[index].content += fullText[i];
+    await new Promise((resolve) => setTimeout(resolve, typingSpeed.value));
+  }
+}
 
 const saveChatHistory = async () => {
   if (is_history.value == -1) {
@@ -91,7 +100,6 @@ const saveChatHistory = async () => {
       title: `Chat ${histories.value.length + 1}`,
       messages: messages.value,
     };
-    //histories.value.push(newHistory);
     await store.commit('addChatHistory', newHistory);
     is_history.value = histories.value.length;
   } else {
@@ -100,7 +108,6 @@ const saveChatHistory = async () => {
 };
 
 const updateChatHistory = async () => {
-  //histories.value[`${is_history.value}`].messages = messages.value;
   await store.commit('updateChatMessageHistory', {
     key: is_history.value,
     messages: messages.value,
@@ -110,6 +117,7 @@ const updateChatHistory = async () => {
 const selectHistory = async (key) => {
   is_history.value = key;
   messages.value = histories.value[`${is_history.value}`].messages;
+  scrollToBottom();
 };
 const changeTitleHistory = async (key) => {
   history_change_title.index = key;
@@ -124,62 +132,85 @@ const closeModalTitle = () => {
   modal_change_title.value.close();
 };
 const processChangeTitle = async () => {
-  //histories[history_change_title.index] = history_change_title.title;
   await store.commit('updateChatTitleHistory', {
     key: history_change_title.index,
     title: history_change_title.title,
   });
   closeModalTitle();
 }
+
+const formatRespone = (content) => {
+  const escapedContent = content
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;'); 
+  const formattedBlocks = escapedContent.replace(
+    /```(.*?)\n([\s\S]*?)```/g,
+    (_, language, code) => {
+      return `<pre><code class="language-${language}">${code.trim()}</code></pre>`;
+    }
+  );
+  const formattedInline = formattedBlocks.replace(
+    /`([^`]+)`/g,
+    '<code class="attribute">$1</code>'
+  );
+  return formattedInline.replace(/\n/g, '<br>');
+};
 </script>
 
 <template>
   <section class="section bg-transparent ai-section section-content">
-    <div class="container">
-      <div class="row gy-4 justify-content-center">
-        <div class="col-lg-8">
-          <div class="card rounded-sm ai-card h-100">
-            <div id="ai-message-header" class="card-header d-flex justify-content-between align-items-center">
-              <h6 class="m-0 text-white">Conversation</h6>
+    <div class="container container-ai py-1">
+      <div class="row gy-4 justify-content-center content-ai">
+        <div class="col-lg-3 p-0">
+          <div class="card h-100 border-0">
+            <div
+              class="ai-content-header card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
+              <h6 class="m-0 text-app-dark">History</h6>
             </div>
-            <div id="ai-message-body" ref="chatbox" class="card-body text-start">
-              <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
-                <p class="m-0 text-white fs-11px bubble py-2 px-3 rounded-sm">{{ msg.content }}</p>
+            <div id="ai-history-body" class="card-body text-start">
+              <div v-for="(his, idh) in histories" :key="his.key"
+                class="ai-history-item d-flex mb-1 align-items-center justify-content-between py-1 px-2 rounded-sm">
+                <a href="#" @click.prevent="selectHistory(idh)" class="ps-1 ws-75">
+                  <p class="m-0 text-app-dark fs-12px">{{ his.title }}</p>
+                </a>
+                <div class="d-inline-flex gap-1 ws-20">
+                  <a href="#" @click.prevent="changeTitleHistory(idh)" class="btn btn-sm"><i
+                      class="text-app-dark bi bi-pencil"></i></a>
+                  <a @click.prevent="selectHistory(idh)" href="#" class="btn btn-sm"><i
+                      class="text-app-dark bi bi-chevron-right"></i></a>
+                </div>
               </div>
             </div>
-            <div id="ai-message-footer" class="card-footer">
+          </div>
+        </div>
+        <div class="col-lg-9 p-0">
+          <div class="card h-100 card-conversation border-0">
+            <div
+              class="px-5 ai-content-header card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
+              <h6 class="m-0 text-app-dark">Ask Anything</h6>
+            </div>
+            <div id="ai-message-body" ref="chatbox" class="card-body text-start px-5">
+              <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
+                <p :class="{ 'px-3': msg.role == 'user' }" class="m-0 text-app-dark fs-12px bubble py-2 rounded-sm" v-html="formatRespone(msg.content)"></p>
+              </div>
+            </div>
+            <div id="ai-message-footer" class="card-footer py-4 border-0 px-5">
               <form @submit.prevent="sendMessage">
-                <div class="input-group bg-transparent">
-                  <input v-model="chat" required class="form-control form-control-sm fs-12px text-white bg-transparent"
-                    placeholder="Start typing .....">
-                  <button type="submit" :disabled="isSending" :class="{'disabled' : isSending}"
+                <div class="input-group input-group-lg rounded-sm bg-white shadow">
+                  <a class="btn btn-sm text-white bg-transparent input-group-text">
+                    <img src="/assets/img/add.png" />
+                  </a>
+                  <input v-model="chat" required
+                    class="ps-0 form-control form-control-sm fs-12px text-app-dark bg-transparent"
+                    placeholder="Start typing your prompt .....">
+                  <button type="submit" :disabled="isSending" :class="{ 'disabled': isSending }"
                     class="btn btn-sm text-white bg-transparent input-group-text">
                     <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary" role="status"></span>
                     <img v-else src="/assets/img/send.png" />
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4" data-aos="fade-left" data-aos-delay="100">
-          <div class="card rounded-sm ai-card h-100">
-            <div id="ai-history-header" class="card-header d-flex justify-content-between align-items-center">
-              <h6 class="m-0 text-white">History</h6>
-            </div>
-            <div id="ai-history-body" class="card-body text-start">
-              <div v-for="(his, idh) in histories" :key="his.key"
-                class="ai-history-item d-flex mb-1 align-items-center justify-content-between py-1 px-2 rounded-sm">
-                <a href="#" @click.prevent="selectHistory(idh)" class="ps-1 ws-75">
-                  <p class="m-0 text-white fs-12px">{{ his.title }}</p>
-                </a>
-                <div class="d-inline-flex gap-1 ws-20">
-                  <a href="#" @click.prevent="changeTitleHistory(idh)" class="btn btn-sm"><i
-                      class="text-white bi bi-pencil"></i></a>
-                  <a @click.prevent="selectHistory(idh)" href="#" class="btn btn-sm"><i
-                      class="text-white bi bi-chevron-right"></i></a>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -53,7 +53,7 @@ const routes = [
       title: 'ORACIUM | AI',
       description: ''
     },
-    component: () => import('@/views/Home/Ai.vue')
+    component: () => import('@/views/Ai/Index.vue')
   },
   {
     path: '/404',
