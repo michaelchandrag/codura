@@ -18,7 +18,7 @@ const { routeName } = defineProps({
             <router-link :class="{'is-active': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li>
-            <router-link :class="{'is-active': routeName == 'about'}" class="fs-13px" :to="{ name: 'home' }">About</router-link>
+            <router-link :class="{'is-active': routeName == 'about'}" class="fs-13px" :to="{ name: 'about' }">About</router-link>
           </li>
           <li>
             <router-link :class="{'is-active': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
@@ -31,7 +31,7 @@ const { routeName } = defineProps({
             <router-link :class="{'is-active': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li class="d-xl-none">
-            <router-link :class="{'is-active': routeName == 'about'}" class="fs-13px" :to="{ name: 'home' }">about</router-link>
+            <router-link :class="{'is-active': routeName == 'about'}" class="fs-13px" :to="{ name: 'about' }">about</router-link>
           </li>
           <li class="d-xl-none">
             <router-link :class="{'is-active': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>

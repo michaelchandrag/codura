@@ -11,10 +11,23 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FORTIVAULT',
+      title: 'ORACIUM',
       description: ''
     },
     component: () => import('@/views/Home/Index.vue')
+  },
+  {
+    path: '/about',
+    alias: '/about-us',
+    name: 'about',
+    meta: {
+      is_ready: true,
+      require_auth: false,
+      is_auth: false,
+      title: 'ORACIUM | ABOUT',
+      description: ''
+    },
+    component: () => import('@/views/Page/About.vue')
   },
   {
     path: '/feature',
@@ -24,10 +37,10 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FORTIVAULT | FEATURE',
+      title: 'ORACIUM | FEATURE',
       description: ''
     },
-    component: () => import('@/views/Home/Feature.vue')
+    component: () => import('@/views/Page/Feature.vue')
   },
   {
     path: '/ai',
@@ -37,7 +50,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FORTIVAULT | AI',
+      title: 'ORACIUM | AI',
       description: ''
     },
     component: () => import('@/views/Home/Ai.vue')
@@ -50,7 +63,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FORTIVAULT | 404',
+      title: 'ORACIUM | 404',
       description:
         'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.'
     },
@@ -108,14 +121,14 @@ router.afterEach((to, from) => {
     } else {
       metaDescription.setAttribute(
         'content',
-        'FORTIVAULT'
+        'ORACIUM'
       )
     }
   } else {
     const description = document.createElement('meta')
     description.name = 'description'
     description.content =
-      to.meta.description || 'FORTIVAULT'
+      to.meta.description || 'ORACIUM'
     document.head.appendChild(description)
   }
 })

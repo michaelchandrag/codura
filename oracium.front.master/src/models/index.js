@@ -13,4 +13,5 @@ export const company = {
     tw: 'https://x.com/fortivault87827',
     github: 'https://github.com/sbymaster/fortivault',
     linkedin: '',
+    key_ca: '7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump',
 };

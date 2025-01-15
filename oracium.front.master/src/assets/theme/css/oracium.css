@@ -1,6 +1,6 @@
 :root {
     --app-color: #FF8A43;
-    --app-text-dark:#212C4D;
+    --app-text-dark: #212C4D;
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +28,7 @@ body {
     scrollbar-color: #888 #f1f1f1;
 }
 
-.page.has-bg {
+#app {
     background: url('/assets/img/body-bg.png') center center no-repeat;
     background-size: cover;
 }
@@ -53,11 +53,14 @@ img {
     max-height: 45px !important;
 }
 
-.navmenu a{
+.navmenu a {
     color: #B4876B;
     font-weight: 500;
 }
-.navmenu a.is-active, .navmenu a:hover, .navmenu a:active{
+
+.navmenu a.is-active,
+.navmenu a:hover,
+.navmenu a:active {
     color: var(--app-color) !important;
 }
 
@@ -76,9 +79,10 @@ img {
     position: relative !important;
 }
 
-.scrolled .header{
+.scrolled .header {
     background: var(--app-color);
 }
+
 .scroll-top {
     background: var(--app-color) !important;
 }
@@ -115,6 +119,14 @@ img {
 
 .text-green {
     color: #28D198 !important;
+}
+
+.page-title {
+    padding: 100px 0 40px 0;
+}
+
+.page-title:before {
+    background: transparent !important;
 }
 
 .hero-prompt .input-group {
@@ -209,15 +221,21 @@ img {
     background: #00000099;
 }
 
-.bg-app{
+.bg-app {
     background: var(--app-color) !important;
 }
-.text-app{
+.bg-app-lighter{
+    background: #FF8A4326;
+}
+
+.text-app {
     color: var(--app-color) !important;
 }
-.text-app-dark{
+
+.text-app-dark {
     color: var(--app-text-dark) !important
 }
-.custom-input-group{
+
+.custom-input-group {
     overflow-wrap: anywhere !important;
 }
