@@ -1,3 +1,7 @@
+:root {
+    --orange-color: #FBB138;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -18,19 +22,9 @@
 }
 
 body {
-    background: #0F172A;
+    background: #000000;
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
-}
-
-#app {
-    background: url('/assets/img/body-bg.png') center center no-repeat;
-    background-size: cover;
-}
-
-.has-bg-container {
-    background: url('/assets/img/container.png') center center no-repeat;
-    background-size: cover;
 }
 
 img {
@@ -39,9 +33,18 @@ img {
 }
 
 #header {
-    background: #02061733;
+    background: #ffffff;
     box-shadow: 0px 8px 10px -6px #0000001A !important;
     box-shadow: 0px 20px 25px -5px #0000001A !important;
+}
+.navmenu a{
+    color: var(--orange-color);
+}
+.navmenu a.is-active{
+    color: #d79427;
+}
+#navmenu li.action a:hover, #navmenu li.action a:active {
+    background: #d79427;
 }
 
 #hero:before,
@@ -50,7 +53,8 @@ img {
 }
 
 #hero {
-    background-size: 100% 100%;
+    background: url('/assets/img/hero-shape-left.png');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -61,11 +65,7 @@ img {
 
 .scrolled .header,
 .scroll-top {
-    background: #012a23 !important;
-}
-
-.bg-dark {
-    background: #0F172A !important;
+    background: #261b09 !important;
 }
 
 .text-semi-white {
@@ -186,4 +186,17 @@ img {
 }
 .ai-history-item{
     background: #00000099;
+}
+
+.bg-orange{
+    background: var(--orange-color);
+}
+.text-orange{
+    color: var(--orange-color);
+}
+.btn-try{
+    background: linear-gradient(90deg, #ED6C4E -15.9%, #E24391 29.03%, #6E53E8 100%);
+}
+.bg-card-secondary{
+    background: #1A1D1E;
 }
