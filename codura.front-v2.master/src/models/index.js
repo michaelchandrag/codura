@@ -11,6 +11,6 @@ export const company = {
     ig: '',
     fb: '',
     tw: 'https://x.com/CoduraTech',
-    github: 'https://github.com/sbymaster/codura',
+    github: 'https://github.com/bfpapamain/codura',
     linkedin: '',
 };

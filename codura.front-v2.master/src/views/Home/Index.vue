@@ -73,7 +73,7 @@ const saveChatHistory = async () => {
               Performance of
               Smart Contracts with Decentralized AI-Powered Insights</p>
           </div>
-          <div class="hero-prompt">
+          <!-- <div class="hero-prompt">
             <div class="input-group p-2 rounded-sm bg-white">
               <div class="form-control form-control-sm fs-13px bg-transparent border-0 ls-sm">{{ keyCA }}</div>
               <a @click.prevent="copyToClipboard(keyCA)"
@@ -82,7 +82,7 @@ const saveChatHistory = async () => {
                 <span>Copy CA</span>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="col-12 col-lg-5">
           <div class="card rounded-sm ai-card h-100" data-aos="fade-left" data-aos-delay="100">
