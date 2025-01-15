@@ -117,6 +117,7 @@ const updateChatHistory = async () => {
 const selectHistory = async (key) => {
   is_history.value = key;
   messages.value = histories.value[`${is_history.value}`].messages;
+  show_history.value = false;
   scrollToBottom();
 };
 const changeTitleHistory = async (key) => {
@@ -156,17 +157,23 @@ const formatRespone = (content) => {
   );
   return formattedInline.replace(/\n/g, '<br>');
 };
+
+const show_history = ref(false)
+function showHistory(){
+  show_history.value = !show_history.value;
+}
 </script>
 
 <template>
   <section class="section bg-transparent ai-section section-content">
     <div class="container container-ai py-1">
       <div class="row gy-4 justify-content-center content-ai">
-        <div class="col-lg-3 p-0">
+        <div class="col-lg-3 p-0 ai-history-sidebar" :class="{'is-show': show_history}" >
           <div class="card h-100 border-0">
             <div
               class="ai-content-header card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
               <h6 class="m-0 text-app-dark">History</h6>
+              <a @click.prevent="showHistory();" class="d-xl-none d-lg-none btn btn-sm py-0 px-2">Close</a>
             </div>
             <div id="ai-history-body" class="card-body text-start">
               <div v-for="(his, idh) in histories" :key="his.key"
@@ -189,6 +196,7 @@ const formatRespone = (content) => {
             <div
               class="px-5 ai-content-header card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
               <h6 class="m-0 text-app-dark">Ask Anything</h6>
+              <a @click.prevent="showHistory();" class="d-xl-none d-lg-none btn btn-sm py-0 px-2">History</a>
             </div>
             <div id="ai-message-body" ref="chatbox" class="card-body text-start px-5">
               <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">

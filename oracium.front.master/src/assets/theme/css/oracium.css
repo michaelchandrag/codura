@@ -46,7 +46,6 @@ img {
     background: #FFFFFF;
     box-shadow: 0px 8px 10px -6px #0000001A;
     box-shadow: 0px 20px 25px -5px #0000001A;
-    backdrop-filter: blur(40px)
 }
 
 .header .logo img.md2 {
@@ -177,7 +176,7 @@ img {
 }
 
 .ai-section .container-ai {
-    height: 95vh;
+    height: 98vh;
     width: 100%;
     max-width: 100%;
 }
