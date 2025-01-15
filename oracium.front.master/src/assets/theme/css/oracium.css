@@ -39,6 +39,10 @@ img {
 }
 .navmenu a{
     color: var(--orange-color);
+    font-weight: 500;
+}
+.navmenu a:hover, .navmenu a:active{
+    color: #d79427 !important;
 }
 .navmenu a.is-active{
     color: #d79427;
@@ -52,18 +56,66 @@ img {
     display: none !important;
 }
 
-#hero {
-    background: url('/assets/img/hero-shape-left.png');
+.hero {
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.hero::before {
+    content: '';
+    background: url(/assets/img/hero-shape-left.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 60%;
+}
+
+.hero::after {
+    content: '';
+    background: url(/assets/img/hero-shape-right.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 3%;
+    right: 0;
+    width: 50%;
+    height: 60%;
+}
+
+footer::after {
+    content: '';
+    background: url(/assets/img/footer-shape.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
 }
 
 .hero img {
     position: relative !important;
 }
 
-.scrolled .header,
+.main-hero .container{
+    position: relative;
+    z-index: 9;
+}
+
+.scrolled .header {
+    background: #000000 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .scroll-top {
     background: #261b09 !important;
 }
@@ -79,11 +131,6 @@ img {
 .section-body section {
     background: transparent !important;
 }
-
-/*.main-hero {
-    min-height: 95vh !important;
-    height: 95vh !important;
-}*/
 
 .second-hero {
     min-height: 80vh !important;
@@ -199,4 +246,11 @@ img {
 }
 .bg-card-secondary{
     background: #1A1D1E;
+}
+.main-hero {
+    padding-top: 8rem !important;
+}
+.footer .footer-newsletter{
+    position: relative;
+    z-index: 9;
 }
