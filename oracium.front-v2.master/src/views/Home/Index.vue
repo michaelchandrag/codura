@@ -25,12 +25,17 @@ onMounted(() => {
           <h2 class="ls-sm fw-bold text-app hero-h2-sub fs-40px d-flex align-items-center justify-content-center">
             <span class="hero-h2-sub-first">Governance with</span>
             <span class="rolling-text hero-h2-sub-second text-app-linier d-inline-block">
-                <span class="rolling-text-line d-block" v-for="(text, index) in heroSubTexts" :key="index">{{ text }}</span>
+              <span class="rolling-text-line d-block" v-for="(text, index) in heroSubTexts" :key="index">{{ text
+                }}</span>
             </span>
           </h2>
-          <p class="mt-3 w-100 text-white fw-normal fs-15px hero-desc text-white">Oracium combines advanced AI and
-            on-chain analysis to revolutionize decision-making for DAOs and decentralized protocols, providing real-time
-            governance intelligence and fostering transparent, efficient, and informed choices.</p>
+          <div class="col-12 col-lg-10 m-auto">
+            <p class="mt-0 w-100 text-white fw-normal fs-15px ls-xs hero-desc text-white">Oracium combines advanced AI
+              and
+              on-chain analysis to revolutionize decision-making for DAOs and decentralized protocols, providing
+              real-time
+              governance intelligence and fostering transparent, efficient, and informed choices.</p>
+          </div>
         </div>
         <div class="hero-prompt mb-4">
           <div class="col-12 col-lg-8 m-auto">
@@ -46,7 +51,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="copy-ca">
-          <div class="col-12 col-lg-8 m-auto">
+          <div class="col-12 col-lg-6 m-auto">
             <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
               <div
                 class="form-control form-control-sm fs-11px ls-xs bg-transparent border-0 text-start ps-3 text-white">{{
