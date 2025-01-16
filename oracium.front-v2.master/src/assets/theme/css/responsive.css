@@ -38,6 +38,14 @@
     .ai-message-sidebar {
         padding: 0px !important;
     }
+
+    .hero-h2-sub{
+        display: block !important;
+    }
+
+    .hero-h2-sub-second.rolling-text .rolling-text-line {
+        text-align: center !important;
+    }
 }
 
 /* Responsif untuk Smartphone */
@@ -102,6 +110,14 @@
 
     .ai-message-sidebar {
         padding: 0px !important;
+    }
+
+    .hero-h2-sub{
+        display: block !important;
+    }
+
+    .hero-h2-sub-second.rolling-text .rolling-text-line {
+        text-align: center !important;
     }
 }
 

@@ -22,9 +22,9 @@ onMounted(() => {
       <div class="col-12 col-lg-10 m-auto text-center">
         <div class="hero-text mb-5">
           <h2 class="ls-sm fw-bold text-app fs-40px mb-0">Empowering Decentralized</h2>
-          <h2 class="ls-sm fw-bold text-app fs-40px d-flex align-items-center justify-content-center">
+          <h2 class="ls-sm fw-bold text-app hero-h2-sub fs-40px d-flex align-items-center justify-content-center">
             <span class="hero-h2-sub-first">Governance with</span>
-            <span class="rolling-text hero-h2-sub text-app-linier d-inline-block">
+            <span class="rolling-text hero-h2-sub-second text-app-linier d-inline-block">
                 <span class="rolling-text-line d-block" v-for="(text, index) in heroSubTexts" :key="index">{{ text }}</span>
             </span>
           </h2>

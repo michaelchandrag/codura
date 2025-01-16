@@ -360,25 +360,31 @@ img {
     border: none;
 }
 
+.hero-h2-sub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero-h2-sub-first{
     margin-right: 0.8rem;
 }
 
-.hero-h2-sub {
+.hero-h2-sub-second {
     font-weight: 800;
 }
 
-.hero-h2-sub.rolling-text {
+.hero-h2-sub-second.rolling-text {
     height: 60px;
     overflow: hidden;
 }
 
-.hero-h2-sub.rolling-text .rolling-text-line {
+.hero-h2-sub-second.rolling-text .rolling-text-line {
     text-align: left;
     line-height: 60px;
 }
 
-.hero-h2-sub.rolling-text .rolling-text-line:first-child {
+.hero-h2-sub-second.rolling-text .rolling-text-line:first-child {
     animation: rollingTextHero2 10s infinite;
 }
 
