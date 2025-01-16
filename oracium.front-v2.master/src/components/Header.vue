@@ -37,7 +37,7 @@ const { routeName } = defineProps({
             <router-link :class="{'is-active': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
           </li>
           <li class="action"><router-link :to="{ name: 'ai' }"
-              class="btn btn-sm text-white bg-app py-2 px-3 rounded fs-13px 14px">Start with AI</router-link></li>
+              class="btn btn-sm text-white bg-app py-1 px-3 rounded fs-13px 14px">Start with AI</router-link></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

@@ -3,7 +3,7 @@ import { company } from '@/models';
 </script>
 
 <template>
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer dark-background">
     <div class="container footer-top pb-3">
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">

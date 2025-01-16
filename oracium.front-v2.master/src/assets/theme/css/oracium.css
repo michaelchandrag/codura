@@ -33,6 +33,18 @@ body {
     background-size: cover;
 }
 
+#app-content {
+    background-size: cover;
+}
+
+#app-content.has-bg-home {
+    background: url('/assets/img/home-bg.png') center center no-repeat;
+}
+
+#app-content.has-bg-page {
+    background: url('/assets/img/page-bg.png') center center no-repeat;
+}
+
 .has-bg-container {
     background-size: cover;
 }
@@ -43,9 +55,7 @@ img {
 }
 
 #header {
-    background: #FFFFFF;
-    box-shadow: 0px 8px 10px -6px #0000001A;
-    box-shadow: 0px 20px 25px -5px #0000001A;
+    background: transparent;
 }
 
 .header .logo img.md2 {
@@ -53,7 +63,7 @@ img {
 }
 
 .navmenu a {
-    color: #B4876B;
+    color: #FFFFFF;
     font-weight: 500;
 }
 
@@ -86,7 +96,7 @@ img {
 }
 
 .scrolled .header {
-    background: var(--app-color);
+    background: #091128 !important;
 }
 
 .scroll-top {
@@ -268,6 +278,13 @@ img {
     color: var(--app-text-dark) !important
 }
 
+.text-app-linier {
+    background: linear-gradient(90.53deg, #EE7E59 2.31%, #EE3A5D 50.49%, #EE8D59 98.68%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .custom-input-group {
     overflow-wrap: anywhere !important;
 }
@@ -294,7 +311,7 @@ img {
     display: inline-block;
 }
 
-.ai-message-item code.attribute{
+.ai-message-item code.attribute {
     display: inline;
     padding: 1px 2px;
 }

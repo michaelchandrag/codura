@@ -12,7 +12,8 @@ const routes = [
       require_auth: false,
       is_auth: false,
       title: 'ORACIUM',
-      description: ''
+      description: '',
+      has_bg: 'home',
     },
     component: () => import('@/views/Home/Index.vue')
   },
@@ -25,7 +26,8 @@ const routes = [
       require_auth: false,
       is_auth: false,
       title: 'ORACIUM | ABOUT',
-      description: ''
+      description: '',
+      has_bg: 'page',
     },
     component: () => import('@/views/Page/About.vue')
   },
@@ -38,7 +40,8 @@ const routes = [
       require_auth: false,
       is_auth: false,
       title: 'ORACIUM | FEATURE',
-      description: ''
+      description: '',
+      has_bg: 'page',
     },
     component: () => import('@/views/Page/Feature.vue')
   },
@@ -51,7 +54,8 @@ const routes = [
       require_auth: false,
       is_auth: false,
       title: 'ORACIUM | AI',
-      description: ''
+      description: '',
+      has_bg: null,
     },
     component: () => import('@/views/Ai/Index.vue')
   },
@@ -65,7 +69,8 @@ const routes = [
       is_auth: false,
       title: 'ORACIUM | 404',
       description:
-        'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.'
+        'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.',
+      has_bg: null,
     },
     component: () => import('@/views/Page/404.vue')
   }
