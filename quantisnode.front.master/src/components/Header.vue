@@ -1,5 +1,7 @@
 <script setup>
 import { defineProps } from 'vue'
+import logoPath from "/assets/img/quantisnode-logo.png";
+
 const { routeName } = defineProps({
   routeName: { type: String, default: 'home' },
 })
@@ -8,20 +10,20 @@ const { routeName } = defineProps({
 <template>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-content container-fluid container-xl position-relative d-flex align-items-center justify-content-between px-5">
-      <router-link :to="{ name: 'home' }" class="logo d-flex align-items-center">
-        <img src="/assets/img/codura.png" class="lg p-1" alt="codura" />
-        <!-- <h1 class="sitename">codura</h1> -->
-      </router-link>
       <nav id="navmenu-center" class="navmenu">
+        <router-link :to="{ name: 'home' }" class="logo d-flex align-items-center">
+          <img :src="logoPath" class="lg p-1" alt="QuantisNode" />
+          <!-- <h1 class="sitename">codura</h1> -->
+        </router-link>
         <ul>
           <li>
-            <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+            <router-link :class="{'active': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li>
-            <router-link :class="{'text-green': routeName == 'about'}" class="fs-13px" :to="{ name: 'about' }">About</router-link>
+            <router-link :class="{'active': routeName == 'about'}" class="fs-13px" :to="{ name: 'about' }">About</router-link>
           </li>
           <li>
-            <router-link :class="{'text-green': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
+            <router-link :class="{'active': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
           </li>
         </ul>
       </nav>

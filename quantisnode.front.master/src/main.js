@@ -5,6 +5,8 @@ import '@/assets/theme/css/codura'
 import '@/assets/theme/css/responsive'
 import { initScripts } from '@/assets/theme/script'
 import VueLazyload from 'vue3-lazyload';
+import { gsap } from "gsap";
+
 
 // Route
 import Layout from '@/components/Layout'
@@ -12,6 +14,7 @@ import store from '@/configs/store'
 import router from '@/configs/router'
 
 const app = createApp(Layout)
+app.config.globalProperties.$gsap = gsap;
 app.use(store)
 app.use(router)
 

@@ -9,6 +9,8 @@ onMounted(() => {
 <template>
   <div class="section-content">
     <section class="section bg-transparent first-section pb-2" data-aos="fade-down" data-aos-delay="100">
+      <div class="particle left"></div>
+      <div class="particle right"></div>
       <div class="container section-title pb-4 text-start">
         <h3 class="text-white text-capitalize ls-xs">About Us</h3>
         <p class="text-light fw-normal fs-14px">The AI Smart Contract Code Optimizer is a decentralized, AI-powered
@@ -48,7 +50,7 @@ onMounted(() => {
     </section>
     <section class="section bg-transparent pb-0">
       <div class="container section-title pb-2 text-start">
-        <h3 class="text-white text-capitalize ls-xs">Quantis NodeWorkflow</h3>
+        <h3 class="text-white text-capitalize ls-xs">Quantis Node Workflow</h3>
       </div>
       <div class="container">
         <div class="row align-items-center justify-content-between">

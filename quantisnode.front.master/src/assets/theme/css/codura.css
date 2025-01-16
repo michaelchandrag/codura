@@ -24,9 +24,32 @@ body {
 }
 
 main {
-    background: url('/assets/img/body-bg.png') center center no-repeat;
+    background: #111022;
+    background-image: url('/assets/img/particle-1.png');
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
     background-size: cover;
-    min-height: 60vh;
+    background-repeat: no-repeat;
+    z-index: 999;
+}
+
+.particle.left {
+    top: 20px;
+    left: 20px;
+    background-image: url('/assets/img/particle-1.png');
+}
+
+.particle.right {
+    top: 20px;
+    right: 20px;
+    background-image: url('/assets/img/particle-2.png');
 }
 
 main.is-home {
@@ -40,11 +63,7 @@ img {
 }
 
 #header .header-content{
-    box-shadow: 0px 8px 10px -6px #0000001A !important;
-    box-shadow: 0px 20px 25px -5px #0000001A !important;
-    background: #0000001A;
-    border: 1px solid #4ED97D;
-    border-radius: 80px;
+    position: static;
 }
 
 #hero:before,
@@ -65,7 +84,14 @@ img {
     background:transparent !important;
 }
 .scrolled .header .header-content{
-    background: #012a23 !important;
+    background: rgba(17, 16, 33, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    color: #ffffff; 
 }
 .scroll-top {
     background: #012a23 !important;
@@ -103,6 +129,10 @@ img {
 
 .text-green {
     color: #28D198 !important;
+}
+
+.text-red {
+    color: #F21111!important;
 }
 
 .hero-prompt .input-group {

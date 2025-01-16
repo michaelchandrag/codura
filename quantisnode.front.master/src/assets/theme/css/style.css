@@ -1,5 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Belanosima:wght@400;600;700&display=swap');
 @import 'aos/dist/aos.css';
 @import 'glightbox/dist/css/glightbox.min.css';
 @import 'swiper/swiper-bundle.css';
@@ -7,8 +8,9 @@
 /* Fonts */
 :root {
     --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --heading-font: "Raleway", sans-serif;
-    --nav-font: "Poppins", sans-serif;
+    --heading-font: "Belanosima", serif;
+    --body-font: "Aldrich", serif;
+    --nav-font: "Aldrich", serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -31,6 +33,8 @@
 :root {
     --nav-color: #ffffff;
     /* The default color of the main navmenu links */
+    --nav-active:#F21111;
+    /* Applied to main navmenu links when they are active */
     --nav-hover-color: #68a4c4;
     /* Applied to main navmenu links when they are hovered over or active */
     --nav-mobile-background-color: #ffffff;
@@ -69,7 +73,7 @@
 body {
     color: var(--default-color);
     background-color: var(--background-color);
-    font-family: var(--default-font);
+    font-family: var(--heading-font);
 }
 
 a {
@@ -90,7 +94,7 @@ h4,
 h5,
 h6 {
     color: var(--heading-color);
-    font-family: var(--heading-font);
+    font-family: var(--heading-font)!important;
 }
 
 /* PHP Email Form Messages
@@ -311,9 +315,9 @@ h6 {
     .navmenu li:hover>a,
     .navmenu .active,
     .navmenu .active:focus {
-        /*color: var(--nav-hover-color);*/
-        color: #FFFFFF;
-        /*font-weight: bold;*/
+        color: var(--nav-active);
+        text-decoration: underline;
+        text-underline-offset: 6px;
     }
 
     .navmenu .dropdown ul {

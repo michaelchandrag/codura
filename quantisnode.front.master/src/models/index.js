@@ -1,7 +1,7 @@
 export const company = {
-    name: 'CODURA',
-    alias: 'Codura',
-    slug: 'codura',
+    name: 'Quantis Node',
+    alias: 'Quantis Node',
+    slug: 'quantisnode',
     phone: '',
     phone_label: '',
     email: '',
