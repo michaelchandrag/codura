@@ -9,7 +9,7 @@ let keyCA = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
 let isSending = ref(false);
 let histories_length = ref(0);
 let messages = ref([
-  { role: 'system', content: `Codura is your AI-powered coding assistant, here to help you write, optimize, and debug code effortlessly. Whether you're building from scratch or refining your project, just type your prompt and watch Codura turn your ideas into reality` }
+  { role: 'system', content: `Quantis Node is your AI-powered coding assistant, here to help you write, optimize, and debug code effortlessly. Whether you're building from scratch or refining your project, just type your prompt and watch Quantis Node turn your ideas into reality` }
 ]);
 
 const chatbox = ref(null);

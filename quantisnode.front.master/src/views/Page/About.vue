@@ -48,7 +48,7 @@ onMounted(() => {
     </section>
     <section class="section bg-transparent pb-0">
       <div class="container section-title pb-2 text-start">
-        <h3 class="text-white text-capitalize ls-xs">Codura Workflow</h3>
+        <h3 class="text-white text-capitalize ls-xs">Quantis NodeWorkflow</h3>
       </div>
       <div class="container">
         <div class="row align-items-center justify-content-between">

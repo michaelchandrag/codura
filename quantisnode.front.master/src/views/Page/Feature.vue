@@ -12,7 +12,7 @@ onMounted(() => {
       <div class="container section-title pb-4">
         <div class="col-12 col-lg-8 m-auto">
           <h3 class="text-white text-capitalize ls-xs">Core Features</h3>
-          <p class="text-light fw-normal fs-14px">Discover how Codura transforms your daily tasks with intelligent
+          <p class="text-light fw-normal fs-14px">Discover how Quantis Nodetransforms your daily tasks with intelligent
             assistance</p>
         </div>
       </div>
