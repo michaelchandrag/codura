@@ -8,7 +8,7 @@ import PageTitle from '@/components/PageTitle';
         <div class="container">
             <div class="row gy-4 justify-content-center">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                    <div class="card rounded-sm border-0 h-100 bg-transparent">
+                    <div class="card rounded-sm border-0 h-100 bg-transparent card-hover">
                         <div class="card-body text-start">
                             <h3 class="text-app">About Oracium</h3>
                             <p class="text-white fw-normal fs-13px m-0">Oracium (AI Governance Oracle) is a
@@ -20,7 +20,7 @@ import PageTitle from '@/components/PageTitle';
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                    <div class="card rounded-sm border-0 h-100 bg-transparent">
+                    <div class="card rounded-sm border-0 h-100 bg-transparent card-hover">
                         <div class="card-body text-start">
                             <h3 class="text-app">What Is?</h3>
                             <p class="text-white fw-normal fs-13px m-0">Oracium is an AI-driven oracle service that
@@ -32,7 +32,7 @@ import PageTitle from '@/components/PageTitle';
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                    <div class="card rounded-sm border-0 h-100 bg-transparent">
+                    <div class="card rounded-sm border-0 h-100 bg-transparent card-hover">
                         <div class="card-body text-start">
                             <h3 class="text-app">Blockchain Technology</h3>
                             <p class="text-white fw-normal fs-13px m-0">Oracium operates on a decentralized oracle
@@ -43,7 +43,7 @@ import PageTitle from '@/components/PageTitle';
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                    <div class="card rounded-sm border-0 h-100 bg-transparent">
+                    <div class="card rounded-sm border-0 h-100 bg-transparent card-hover">
                         <div class="card-body text-start">
                             <h3 class="text-app">AI Technology</h3>
                             <p class="text-white fw-normal fs-13px m-0">Oracium leverages machine learning algorithms

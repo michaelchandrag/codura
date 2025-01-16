@@ -422,3 +422,8 @@ img {
         margin-top: 0px;
     }
 }
+
+.card-hover:hover, .card-hover:active{
+    background: #0A0E1799 !important;
+    border: 1px solid #FF8A43 !important;
+}
