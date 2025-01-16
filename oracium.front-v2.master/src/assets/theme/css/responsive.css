@@ -13,23 +13,30 @@
         border-radius: 5px;
     }
 
-    .ai-content-header, #ai-message-body, #ai-message-footer {
+    .ai-content-header,
+    #ai-message-body,
+    #ai-message-footer {
         padding-right: 1rem !important;
         padding-left: 1rem !important;
     }
 
-    .ai-history-sidebar{
+    .ai-history-sidebar {
         display: none;
     }
 
-    .ai-history-sidebar.is-show{
+    .ai-history-sidebar.is-show {
         position: fixed;
-        top: 3%;
+        top: 5%;
         left: 0;
         width: 95%;
         z-index: 99;
         height: 95vh;
         display: block;
+        padding: 0px !important;
+    }
+
+    .ai-message-sidebar {
+        padding: 0px !important;
     }
 }
 
@@ -71,28 +78,31 @@
         height: 500px;
     }
 
-    .ai-content-header, #ai-message-body, #ai-message-footer {
+    .ai-content-header,
+    #ai-message-body,
+    #ai-message-footer {
         padding-right: 1rem !important;
         padding-left: 1rem !important;
     }
 
-    .ai-history-sidebar{
+    .ai-history-sidebar {
         display: none;
     }
 
-    .ai-history-sidebar.is-show{
+    .ai-history-sidebar.is-show {
         position: fixed;
-        top: 3%;
+        top: 5%;
         left: 0;
         width: 95%;
         z-index: 99;
         height: 95vh;
         display: block;
+        padding: 0px !important;
+    }
+
+    .ai-message-sidebar {
+        padding: 0px !important;
     }
 }
 
-@media (max-width: 1199px) {
-    .mobile-nav-toggle {
-        color: #212C4D;
-    }
-}
+@media (max-width: 1199px) {}

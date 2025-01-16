@@ -168,51 +168,51 @@ function showHistory(){
   <section class="section bg-transparent ai-section section-content">
     <div class="container container-ai py-1">
       <div class="row gy-4 justify-content-center content-ai">
-        <div class="col-lg-3 p-0 ai-history-sidebar" :class="{'is-show': show_history}" >
-          <div class="card h-100 border-0">
+        <div class="col-lg-3 p-0 ps-5 ai-history-sidebar" :class="{'is-show': show_history}" >
+          <div class="card border-0">
             <div
-              class="ai-content-header card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
-              <h6 class="m-0 text-app-dark">History</h6>
-              <a @click.prevent="showHistory();" class="d-xl-none d-lg-none btn btn-sm py-0 px-2">Close</a>
+              class="ai-content-header border-0 card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
+              <h6 class="m-0 text-white ls-xs">History</h6>
+              <a @click.prevent="showHistory();" class="d-xl-none d-lg-none btn btn-sm py-0 px-2 text-white">Close</a>
             </div>
             <div id="ai-history-body" class="card-body text-start">
               <div v-for="(his, idh) in histories" :key="his.key"
                 class="ai-history-item d-flex mb-1 align-items-center justify-content-between py-1 px-2 rounded-sm">
                 <a href="#" @click.prevent="selectHistory(idh)" class="ps-1 ws-75">
-                  <p class="m-0 text-app-dark fs-12px">{{ his.title }}</p>
+                  <p class="m-0 text-white fs-12px">{{ his.title }}</p>
                 </a>
-                <div class="d-inline-flex gap-1 ws-20">
+                <div class="d-inline-flex gap-1 ws-25">
                   <a href="#" @click.prevent="changeTitleHistory(idh)" class="btn btn-sm"><i
-                      class="text-app-dark bi bi-pencil"></i></a>
+                      class="text-white bi bi-pencil"></i></a>
                   <a @click.prevent="selectHistory(idh)" href="#" class="btn btn-sm"><i
-                      class="text-app-dark bi bi-chevron-right"></i></a>
+                      class="text-white bi bi-chevron-right"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-9 p-0">
+        <div class="col-lg-9 p-0 ps-5 ai-message-sidebar">
           <div class="card h-100 card-conversation border-0">
             <div
-              class="px-5 ai-content-header card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
-              <h6 class="m-0 text-app-dark">Ask Anything</h6>
-              <a @click.prevent="showHistory();" class="d-xl-none d-lg-none btn btn-sm py-0 px-2">History</a>
+              class="ai-content-header card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
+              <h6 class="m-0 text-white ls-xs">Ask Anything</h6>
+              <a @click.prevent="showHistory();" class="d-xl-none d-lg-none btn btn-sm py-0 px-2 text-white">History</a>
             </div>
-            <div id="ai-message-body" ref="chatbox" class="card-body text-start px-5">
+            <div id="ai-message-body" ref="chatbox" class="card-body text-start pe-5">
               <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
-                <p :class="{ 'px-3': msg.role == 'user' }" class="m-0 text-app-dark fs-12px bubble py-2 rounded-sm" v-html="formatRespone(msg.content)"></p>
+                <p :class="{ 'px-3': msg.role == 'user' }" class="m-0 text-white fs-12px bubble py-2 rounded-sm" v-html="formatRespone(msg.content)"></p>
               </div>
             </div>
-            <div id="ai-message-footer" class="card-footer py-4 border-0 px-5">
+            <div id="ai-message-footer" class="card-footer py-4 border-0 bg-transparent pe-5">
               <form @submit.prevent="sendMessage">
-                <div class="input-group input-group-lg rounded-sm bg-white shadow">
+                <div class="input-group input-group-lg rounded-sm shadow">
                   <a class="btn btn-sm text-white bg-transparent input-group-text">
                     <img src="/assets/img/add.png" />
                   </a>
-                  <input v-model="chat" required
-                    class="ps-0 form-control form-control-sm fs-12px text-app-dark bg-transparent"
+                  <input id="ai-message-prompt" v-model="chat" required
+                    class="ps-0 form-control form-control-sm fs-12px text-white bg-transparent"
                     placeholder="Start typing your prompt .....">
-                  <button type="submit" :disabled="isSending" :class="{ 'disabled': isSending }"
+                  <button id="ai-send-message" type="submit" :disabled="isSending" :class="{ 'disabled': isSending }"
                     class="btn btn-sm text-white bg-transparent input-group-text">
                     <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary" role="status"></span>
                     <img v-else src="/assets/img/send.png" />
