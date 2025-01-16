@@ -1,5 +1,6 @@
 :root {
     --app-color: #FF8A43;
+    --app-color-light: #F2C383;
     --app-text-dark: #212C4D;
 }
 
@@ -266,6 +267,10 @@ img {
     background: var(--app-color) !important;
 }
 
+.bg-app-light {
+    background: var(--app-color-light) !important;
+}
+
 .bg-app-lighter {
     background: #FF8A4326;
 }
@@ -276,6 +281,10 @@ img {
 
 .text-app-dark {
     color: var(--app-text-dark) !important
+}
+
+.text-app-light {
+    color: var(--app-color-light) !important
 }
 
 .text-app-linier {
