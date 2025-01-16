@@ -4,18 +4,30 @@ import { copyToClipboard } from '@/helpers';
 import { company } from '@/models';
 
 let prompText = ref('')
+
+const heroSubTexts = [
+  "AI-Driven Insights",
+  "Cognitive Intelligence",
+  "Algorithmic Foresight",
+];
+
 onMounted(() => {
 
 })
-let addressToCopy = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
 </script>
 
 <template>
   <section id="hero" class="main-hero hero section bg-transparent first-section">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-12 col-lg-8 m-auto text-center has-bg-container">
+      <div class="col-12 col-lg-10 m-auto text-center">
         <div class="hero-text mb-5">
-          <h2 class="ls-sm fw-bold text-app fs-40px">Empowering Decentralized Governance with <span class="text-app-linier fw-bold fw-800">AI-Driven Insights</span></h2>
+          <h2 class="ls-sm fw-bold text-app fs-40px mb-0">Empowering Decentralized</h2>
+          <h2 class="ls-sm fw-bold text-app fs-40px d-flex align-items-center justify-content-center">
+            <span class="hero-h2-sub-first">Governance with</span>
+            <span class="rolling-text hero-h2-sub text-app-linier d-inline-block">
+                <span class="rolling-text-line d-block" v-for="(text, index) in heroSubTexts" :key="index">{{ text }}</span>
+            </span>
+          </h2>
           <p class="mt-3 w-100 text-white fw-normal fs-15px hero-desc text-white">Oracium combines advanced AI and
             on-chain analysis to revolutionize decision-making for DAOs and decentralized protocols, providing real-time
             governance intelligence and fostering transparent, efficient, and informed choices.</p>
@@ -36,7 +48,9 @@ let addressToCopy = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
         <div class="copy-ca">
           <div class="col-12 col-lg-8 m-auto">
             <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
-              <div class="form-control form-control-sm fs-11px ls-xs bg-transparent border-0 text-start ps-3 text-white">{{ company.key_ca }}</div>
+              <div
+                class="form-control form-control-sm fs-11px ls-xs bg-transparent border-0 text-start ps-3 text-white">{{
+                  company.key_ca }}</div>
               <a @click.prevent="copyToClipboard(keyCA)"
                 class="input-group-text btn btn-sm bg-transparent rounded-sm text-app fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
                 <i class="bi bi-copy"></i>

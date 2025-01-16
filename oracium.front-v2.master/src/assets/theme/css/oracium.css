@@ -46,6 +46,25 @@ body {
     background: url('/assets/img/page-bg.png') center center no-repeat;
 }
 
+#app-content.has-bg-home {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    animation: zoomIn 10s linear infinite;
+}
+
+@keyframes zoomIn {
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 200%;
+    }
+}
+
 .has-bg-container {
     background-size: cover;
 }
@@ -68,7 +87,7 @@ img {
     font-weight: 500;
 }
 
-.mobile-nav-active .navmenu a{
+.mobile-nav-active .navmenu a {
     color: var(--app-text-dark);
 }
 
@@ -259,7 +278,7 @@ img {
     background: #00000099;
 }
 
-.ai-history-sidebar .card{
+.ai-history-sidebar .card {
     background: #0A0E17;
     height: 95%;
     border-radius: 8px;
@@ -295,7 +314,7 @@ img {
 
 .text-app-linier {
     background: linear-gradient(90.53deg, #EE7E59 2.31%, #EE3A5D 50.49%, #EE8D59 98.68%);
-    -webkit-background-clip:text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
@@ -331,11 +350,70 @@ img {
     padding: 1px 2px;
 }
 
-#ai-message-prompt::placeholder{
+#ai-message-prompt::placeholder {
     color: #9AA7B6;
 }
 
-#ai-send-message:hover, #ai-send-message:active{
+#ai-send-message:hover,
+#ai-send-message:active {
     outline: none;
     border: none;
+}
+
+.hero-h2-sub-first{
+    margin-right: 0.8rem;
+}
+
+.hero-h2-sub {
+    font-weight: 800;
+}
+
+.hero-h2-sub.rolling-text {
+    height: 60px;
+    overflow: hidden;
+}
+
+.hero-h2-sub.rolling-text .rolling-text-line {
+    text-align: left;
+    line-height: 60px;
+}
+
+.hero-h2-sub.rolling-text .rolling-text-line:first-child {
+    animation: rollingTextHero2 10s infinite;
+}
+
+@keyframes rollingTextHero2 {
+    0% {
+        margin-top: 0px;
+    }
+    10% {
+        margin-top: 0px;
+    }
+    20% {
+        margin-top: 0px;
+    }
+    30% {
+        margin-top: 0px;
+    }
+    40% {
+        margin-top: -60px;
+    }
+    50% {
+        margin-top: -60px;
+    }
+    60% {
+        margin-top: -120px;
+    }
+    70% {
+        margin-top: -120px;
+    }
+    80% {
+        margin-top: -60px;
+    }
+    90% {
+        margin-top: -60px;
+    }
+    100% {
+        margin-top: 0px;
+    }
 }
