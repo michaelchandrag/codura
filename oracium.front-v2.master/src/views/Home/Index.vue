@@ -50,7 +50,7 @@ onMounted(() => {
             </form>
           </div>
         </div>
-        <div class="copy-ca">
+        <div v-if="company.key_ca !== ''" class="copy-ca">
           <div class="col-12 col-lg-6 m-auto">
             <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
               <div

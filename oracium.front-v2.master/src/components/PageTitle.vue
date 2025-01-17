@@ -12,7 +12,7 @@ const { title } = defineProps({
   <div class="page-title dark-background bg-transparent">
     <div class="container position-relative">
       <h1 class="text-capitalize text-app">{{ title }}</h1>
-      <div class="copy-ca">
+      <div v-if="company.key_ca !== ''" class="copy-ca">
         <div class="col-12 col-lg-6 m-auto">
           <div class="input-group p-1 rounded-sm align-items-center justify-content-center custom-input-group bg-app-lighter">
             <div class="form-control form-control-sm fs-11px ls-xs bg-transparent text-white border-0 text-start ps-3">{{ company.key_ca }}

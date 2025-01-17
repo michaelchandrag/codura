@@ -13,5 +13,5 @@ export const company = {
     tw: 'https://x.com/OraciumAI',
     github: 'https://github.com/sbymaster/oracium.xyz',
     linkedin: '',
-    key_ca: '7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump',
+    key_ca: '',
 };
