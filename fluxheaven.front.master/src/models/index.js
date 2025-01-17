@@ -25,10 +25,10 @@ export const featureList = [
 ];
 
 export const howItWorkList = [
-    {title:'Connect Your Web3 Wallet', icon:'wallet', description:'Engage securely with a non-custodial wallet integration.'},
-    {title:'Define Strategy Parameters', icon:'strategi', description:'Configure custom trigger logic and smart contract conditions.'},
-    {title:'Automate and Track', icon:'track', description:'Let the AI engine manage and optimize trade execution in real-time.'},
-    {title:'Maximize Yield', icon:'yield', description:'Achieve higher capital efficiency with minimal manual intervention.'},
+    {title:'Connect Your Web3 Wallet', icon:'wallet', description:'Engage securely with a non-custodial wallet integration.', line: true},
+    {title:'Define Strategy Parameters', icon:'strategi', description:'Configure custom trigger logic and smart contract conditions.', line: true},
+    {title:'Automate and Track', icon:'track', description:'Let the AI engine manage and optimize trade execution in real-time.', line: true},
+    {title:'Maximize Yield', icon:'yield', description:'Achieve higher capital efficiency with minimal manual intervention.', line: false},
 ];
 
 export const whyChooseList = [

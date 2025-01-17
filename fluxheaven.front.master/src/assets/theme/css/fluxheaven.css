@@ -70,7 +70,7 @@ img {
 .navmenu a:hover,
 .navmenu a:active {
     color: var(--app-color) !important;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.9) 300%, white);
+    background: linear-gradient(to bottom, #1D1D1F, #575782 250%, white);
     border-radius: 80px;
 }
 
@@ -292,4 +292,20 @@ img {
     position: absolute;
     top: 0;
     z-index: -1;
+}
+
+.work-line{
+    position: relative;
+}
+.work-line .icon{
+    color: #FFFFFF80;
+    position: relative;
+}
+
+.work-line .icon.has-line:after{
+    content: '';
+    border: 1px solid #FFFFFF80;
+    position: absolute;
+    width: 94%;
+    top: 45%;
 }

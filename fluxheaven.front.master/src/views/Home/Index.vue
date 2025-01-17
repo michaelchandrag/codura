@@ -68,12 +68,17 @@ onMounted(() => {
         </div>
         <div class="container">
           <div class="row gy-4 justify-content-center">
-            <div v-for="(work, idw) in howItWorkList" :key="idw" class="col-lg-3" data-aos="fade-right"
+            <div v-for="(work, idw) in howItWorkList" :key="idw" class="col-lg-3 p-0" data-aos="fade-right"
               data-aos-delay="100">
               <div class="card rounded-sm feature-card h-100 bg-transparent">
-                <div class="card-body text-center">
-                  <div v-if="work.icon" class="feature-icon mb-4">
+                <div class="card-body text-center px-0">
+                  <div v-if="work.icon" class="feature-icon">
                     <img :src="`/assets/img/${work.icon}.png`" />
+                  </div>
+                  <div class="work-line py-3">
+                    <div :class="{'has-line' : work.line}" class="icon">
+                      <i :class="[idw == 0 ? 'bi-record-circle' : 'bi-circle']" class="icon bi"></i>
+                    </div>
                   </div>
                   <div class="text-white fs-13px ls-xs fw-bold mb-2">{{ work.title }}</div>
                   <p class="text-light fw-300 fs-12px ls-xs m-0">{{ work.description }}</p>
