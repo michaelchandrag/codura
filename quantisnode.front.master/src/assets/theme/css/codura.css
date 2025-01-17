@@ -21,34 +21,29 @@ body {
     background: #0F172A;
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
+    top:0;
 }
 
 main {
-    background: #111022;
-    background-image: url('/assets/img/particle-1.png');
-    position: relative;
-    height: 100%;
-    overflow: hidden;
+    background: #111022 url('/assets/img/particle-1.png') top left no-repeat;
+    background-size:30%;
+    top: 0;
+    background-blend-mode:lighten;
+    overflow:hidden;
 }
 
 .particle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-size: cover;
+    position:absolute;
+    width: 50%;
+    height: 100%;
+    background-size: 70%;
+    background-position: top right;
     background-repeat: no-repeat;
-    z-index: 999;
-}
-
-.particle.left {
-    top: 20px;
-    left: 20px;
-    background-image: url('/assets/img/particle-1.png');
 }
 
 .particle.right {
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 0;
     background-image: url('/assets/img/particle-2.png');
 }
 

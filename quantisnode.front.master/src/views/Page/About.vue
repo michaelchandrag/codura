@@ -9,7 +9,6 @@ onMounted(() => {
 <template>
   <div class="section-content">
     <section class="section bg-transparent first-section pb-2 mt-5" data-aos="fade-down" data-aos-delay="100">
-      <div class="particle left"></div>
       <div class="particle right"></div>
       <div class="container px-4 px-md-3">
         <div
