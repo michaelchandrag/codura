@@ -54,7 +54,7 @@ main {
 
 main.is-home {
     background: #111022 url('/assets/img/body-bg.gif') center center no-repeat;
-    background-size:contain;
+    background-size:70%;
     background-blend-mode:lighten;
 }
 

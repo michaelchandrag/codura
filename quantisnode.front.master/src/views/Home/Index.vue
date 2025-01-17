@@ -48,6 +48,9 @@ onMounted(() => {
               data-driven insights, advanced automation tools,
               and robust security features
             </p>
+            <router-link class="fs-13px btn btn-danger" :to="{ name: 'feature' }">
+              Getting Started
+            </router-link>
           </div>
         </div>
       </div>
