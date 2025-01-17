@@ -39,9 +39,9 @@ export const whyChooseList = [
 ];
 
 export const faqList = [
-    {title:'What makes your platform uniquen', icon:'', description:'Advanced predictive models and historical data analysis for optimal decision-making.'},
-    {title:'Do I need coding skills to use the platform?', icon:'', description:'Audited smart contracts fortified with multi-layered security mechanisms.'},
-    {title:'Which blockchains are supported?', icon:'', description:'Designed for both power users and DeFi newcomers with a simplified experience'},
-    {title:'How does the platform ensure security?', icon:'', description:'Cross-chain liquidity and automation across multiple blockchains.'},
-    {title:'What is AI-powered alpha generation?', icon:'', description:'Cross-chain liquidity and automation across multiple blockchains.'},
+    {title:'What makes your platform uniquen', content:'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.'},
+    {title:'Do I need coding skills to use the platform?', content:'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.'},
+    {title:'Which blockchains are supported?', content:'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.'},
+    {title:'How does the platform ensure security?', content:'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.'},
+    {title:'What is AI-powered alpha generation?', content:'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.'},
 ];
