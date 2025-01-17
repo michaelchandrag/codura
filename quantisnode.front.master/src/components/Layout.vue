@@ -1,13 +1,15 @@
 <script setup>
 import { useRoute  } from 'vue-router';
 import Header from './Header';
+import HeaderAI from './HeaderAI'
 import Footer from './Footer';
 
 const route = useRoute();
 </script>
 
 <template>
-  <Header :routeName="route.name"></Header>
+  <Header v-if="route.name !== 'ai'" :routeName="route.name" />
+  <HeaderAI v-else />
   <main :class="{'is-home' : route.name == 'home'}" class="main">
     <router-view></router-view>
   </main>

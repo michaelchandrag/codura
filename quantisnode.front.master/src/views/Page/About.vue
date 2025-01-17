@@ -12,17 +12,22 @@ onMounted(() => {
       <div class="particle left"></div>
       <div class="particle right"></div>
       <div class="container px-4 px-md-3">
-        <div class="row gy-4 justify-content-center px-4 mb-0" style="border:1px solid #6D6A6A;border-radius:16px;padding:0;" data-aos="fade-center" data-aos-delay="100">
+        <div
+          class="row gy-1 justify-content-between align-items-center px-4"
+          style="border: 1px solid #6D6A6A; border-radius: 16px; margin-top: 5px;"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >          
           <div class="col-lg-7">
-            <h3 class="text-red text-capitalize ls-xs mt-4">About Us</h3>
+            <h3 class="text-red text-capitalize ls-xs mt-4 fs-16px">About Us</h3>
             <h5 class="text-white mb-5">AI-Powered DeFi Intelligence on the Solana Blockchain</h5>
             <p class="text-light fw-normal fs-16px">Quantis Node redefines decentralized finance by integrating state-of-the-art 
               AI models with the Solana blockchain, creating an intelligent node for enhanced financial decision-making. 
               Our platform empowers users with real-time, data-driven insights and advanced automation tools, optimizing security and efficiency in the DeFi landscape.
             </p>
           </div>
-          <div class="col-lg-5">
-            <img src="../../../public/assets/img/ai.gif" style="height: 350px;width: auto;" />
+          <div class="col-lg-4">
+            <img src="../../../public/assets/img/cube.gif" style="height:325px;width: auto;" />
           </div>
         </div>
       </div>
@@ -72,5 +77,3 @@ onMounted(() => {
     </section>
   </div>
 </template>
-
-<style scoped></style>

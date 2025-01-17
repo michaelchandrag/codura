@@ -11,7 +11,7 @@ const { routeName } = defineProps({
     <div class="header-content container-fluid container-xl d-flex align-items-center justify-content-center text-center">
       <nav id="navmenu-center" class="navmenu d-flex flex-column align-items-center">
         <router-link :to="{ name: 'home' }" class="logo d-flex align-items-center">
-          <img src="../../../assets/img/quantisnode-logo-header.png" class="lg p-1" alt="QuantisNode" />
+          <img src="../../../assets/img/quantisnode-logo-fix.png" class="lg p-1" alt="QuantisNode" />
           <!-- <h1 class="sitename">codura</h1> -->
         </router-link>
         <ul>

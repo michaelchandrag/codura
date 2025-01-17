@@ -8,9 +8,9 @@ import { company } from '@/models';
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">
           <router-link :to="{ name: 'home' }" class="d-flex align-items-center justify-content-center">
-            <img src="../../../assets/img/quantisnode-logo.png" class="lg" alt="QuantisNode" />
+            <img src="../../../assets/img/quantisnode-logo-fix.png" style="height:50px;" alt="QuantisNode" />
           </router-link>
-          <div class="footer-contact pt-4">
+          <div class="footer-contact pt-2">
             <h4 class="m-0 fw-normal fs-14px ls-xs text-center">Follow Us :</h4>
             <div class="social-links d-flex justify-content-center">
               <a class="rounded-sm fs-18px" v-if="company.fb" target="_blank" :href="company.fb"><i class="bi bi-facebook"></i></a>
@@ -38,31 +38,7 @@ import { company } from '@/models';
             </li>
           </ul> -->
         </div>
-        <div class="col-lg-3 col-md-3 footer-links mb-0 d-none">
-          <!-- <h4>Legal</h4>
-          <ul>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Terms of Service</router-link>
-            </li>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Refung Policy</router-link>
-            </li>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Privacy Policy</router-link>
-            </li>
-          </ul> -->
-        </div>
       </div>
-    </div>
-    <div class="container copyright text-center">
-      <p class="ls-xs">
-        © <span>{{ new Date().getFullYear() }}</span>
-        <strong class="px-1 sitename">{{ `${company.name}.` }}</strong>
-        <span class="sitename">All rights reserved.</span>
-      </p>
     </div>
   </footer>
 </template>
