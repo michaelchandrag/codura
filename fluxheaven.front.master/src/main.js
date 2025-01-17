@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import '@/assets/theme/css/style'
 import '@/assets/theme/css/custom'
-import '@/assets/theme/css/oracium'
+import '@/assets/theme/css/fluxheaven'
 import '@/assets/theme/css/responsive'
 import { initScripts } from '@/assets/theme/script'
 import VueLazyload from 'vue3-lazyload';

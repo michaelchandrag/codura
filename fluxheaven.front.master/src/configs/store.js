@@ -6,7 +6,7 @@ export default new Vuex.Store({
   modules: { session },
   plugins: [
     createPersistedState({
-      key: 'OraciumSession',
+      key: 'FluxHeavenSession',
       storage: window.sessionStorage,
       paths: ['session'],
       getState: (key, storage) => {
