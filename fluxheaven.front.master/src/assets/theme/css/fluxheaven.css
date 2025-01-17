@@ -267,7 +267,7 @@ img {
 }
 
 #accordionFaq .accordion-button {
-    background: #131314;
+    background: transparent;
     box-shadow: none;
 }
 
@@ -282,4 +282,14 @@ img {
 
 .accordion-button:not(.collapsed)::after {
     background-image: url('/assets/img/minus.png');
+}
+
+.preview-img{
+    position: relative;
+}
+
+.bg-preview{
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }

@@ -8,9 +8,9 @@ import { company } from '@/models';
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">
           <router-link :to="{ name: 'home' }" class="d-flex align-items-center justify-content-center">
-            <img class="lg" src="/assets/img/fluxheaven.png" />
+            <img class="lg" src="/assets/img/fluxheaven-logo.png" />
           </router-link>
-          <div class="footer-contact pt-4">
+          <div class="footer-contact pt-3">
             <h4 class="m-0 fw-normal fs-14px ls-xs text-center">Follow Us :</h4>
             <div class="social-links d-flex justify-content-center">
               <a class="rounded-sm fs-18px" v-if="company.fb" target="_blank" :href="company.fb"><i

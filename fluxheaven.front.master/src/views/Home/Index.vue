@@ -21,7 +21,10 @@ onMounted(() => {
       </div>
       <div class="container bg-transparent">
         <div class="preview-img">
-          <img src="/assets/img/preview.png" />
+          <img class="p-5 img" src="/assets/img/preview.png" />
+          <div class="bg-preview">
+            <img src="/assets/img/bg-preview.png" />
+          </div>
         </div>
       </div>
     </div>
