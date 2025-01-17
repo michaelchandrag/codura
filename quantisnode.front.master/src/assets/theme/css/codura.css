@@ -53,8 +53,9 @@ main {
 }
 
 main.is-home {
-    background: url('/assets/img/body-bg-main.png') center center no-repeat;
-    background-size: cover;
+    background: #111022 url('/assets/img/body-bg.gif') center center no-repeat;
+    background-size:contain;
+    background-blend-mode:lighten;
 }
 
 img {
@@ -161,7 +162,7 @@ img {
 }
 
 #footer {
-    background: #00000066 !important;
+    background: #111022 !important;
 }
 
 .ai-card {

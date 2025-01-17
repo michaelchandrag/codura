@@ -1,6 +1,5 @@
 <script setup>
 import { defineProps } from 'vue'
-import logoPath from "/assets/img/quantisnode-logo.png";
 
 const { routeName } = defineProps({
   routeName: { type: String, default: 'home' },
@@ -9,10 +8,10 @@ const { routeName } = defineProps({
 
 <template>
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-content container-fluid container-xl position-relative d-flex align-items-center justify-content-between px-5">
-      <nav id="navmenu-center" class="navmenu">
+    <div class="header-content container-fluid container-xl d-flex align-items-center justify-content-center text-center">
+      <nav id="navmenu-center" class="navmenu d-flex flex-column align-items-center">
         <router-link :to="{ name: 'home' }" class="logo d-flex align-items-center">
-          <img :src="logoPath" class="lg p-1" alt="QuantisNode" />
+          <img src="../../../assets/img/quantisnode-logo-header.png" class="lg p-1" alt="QuantisNode" />
           <!-- <h1 class="sitename">codura</h1> -->
         </router-link>
         <ul>
@@ -25,9 +24,12 @@ const { routeName } = defineProps({
           <li>
             <router-link :class="{'active': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
           </li>
+          <li class="action"><router-link :to="{ name: 'ai' }"
+              class="btn btn-sm bg-green py-1 px-3 rounded fs-13px 14px">Start with AI</router-link>
+          </li>
         </ul>
       </nav>
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu d-flex flex-column align-items-center">
         <ul>
           <li class="d-xl-none">
             <router-link class="fs-13px" :to="{ name: 'home' }">Home</router-link>
@@ -38,8 +40,9 @@ const { routeName } = defineProps({
           <li class="d-xl-none">
             <router-link  class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
           </li>
-          <li class="action"><router-link :to="{ name: 'ai' }"
-              class="btn btn-sm bg-green py-1 px-3 rounded fs-13px 14px">Start with AI</router-link></li>
+          <li class="action d-lg-none"><router-link :to="{ name: 'ai' }"
+              class="btn btn-sm bg-green py-1 px-3 rounded fs-13px 14px">Start with AI</router-link>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

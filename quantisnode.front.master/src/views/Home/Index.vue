@@ -33,19 +33,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="main-hero hero section bg-transparent first-section pb-2 d-flex align-items-center">
-    <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+  <section
+    id="hero"
+    class="main-hero hero section bg-transparent first-section d-flex align-items-center justify-content-center text-center vh-100 mt-5"
+  >
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4 justify-content-center">
         <div class="col-12 col-lg-8">
           <div class="hero-text mb-5">
-            <h2 class="ls-sm fw-bold text-white fs-50px mb-2">The Future of DeFi, Powered</h2>
+            <h2 class="ls-sm fw-bold text-white fs-50px mt-12 mb-2">The Future of DeFi, Powered</h2>
             <h2 class="ls-sm fw-bold text-white fs-50px">by <span ref="typingText" class="text-red">AI Insights</span></h2>
-            <p class="mt-5 w-100 text-white fw-normal ls-xs fs-16px hero-desc">Harness the power of cutting-edge AI and the Solana blockchain to transform decentralized finance. Quantis Node delivers real-time, 
-              data-driven insights, advanced automation tools, 
-              and robust security features</p>
+            <p class="mt-5 text-white fw-normal ls-xs fs-16px hero-desc">
+              Harness the power of cutting-edge AI and the Solana blockchain to transform decentralized finance. Quantis Node delivers real-time,
+              data-driven insights, advanced automation tools,
+              and robust security features
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+

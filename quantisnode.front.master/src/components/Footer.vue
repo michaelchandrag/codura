@@ -1,6 +1,5 @@
 <script setup>
 import { company } from '@/models';
-import logoPath from "@/assets/img/quantisnode-logo.png";
 </script>
 
 <template>
@@ -9,7 +8,7 @@ import logoPath from "@/assets/img/quantisnode-logo.png";
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">
           <router-link :to="{ name: 'home' }" class="d-flex align-items-center justify-content-center">
-            <img :src="logoPath" class="lg" alt="QuantisNode" />
+            <img src="../../../assets/img/quantisnode-logo.png" class="lg" alt="QuantisNode" />
           </router-link>
           <div class="footer-contact pt-4">
             <h4 class="m-0 fw-normal fs-14px ls-xs text-center">Follow Us :</h4>
