@@ -123,7 +123,7 @@ const processChangeTitle = async () => {
 <template>
   <section class="section bg-transparent ai-section section-content">
     <div class="container">
-      <div class="row gy-4 justify-content-center">
+      <div class="row gy-4 justify-content-center mt-5">
         <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
           <div class="card rounded-sm ai-card h-100">
             <div id="ai-history-header" class="card-header d-flex justify-content-between align-items-center">

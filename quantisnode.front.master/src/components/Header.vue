@@ -24,9 +24,9 @@ const { routeName } = defineProps({
           <li>
             <router-link :class="{'active': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
           </li>
-          <li class="action"><router-link :to="{ name: 'ai' }"
+          <!-- <li class="action"><router-link :to="{ name: 'ai' }"
               class="btn btn-sm bg-green py-1 px-3 rounded fs-13px 14px">Start with AI</router-link>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <nav id="navmenu" class="navmenu d-flex flex-column align-items-center">

@@ -27,7 +27,7 @@ main {
     background: #111022;
     background-image: url('/assets/img/particle-1.png');
     position: relative;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -161,6 +161,12 @@ img {
     border: 2px solid #28D198
 }
 
+.about-card {
+    background: #0000001A;
+    border:1px solid #6D6A6A;
+    border-radius: 16px;
+}
+
 #footer {
     background: #111022 !important;
 }
@@ -171,7 +177,7 @@ img {
 }
 
 .section-content {
-    min-height: 80vh;
+    min-height: 180vh;
 }
 
 .ai-section {

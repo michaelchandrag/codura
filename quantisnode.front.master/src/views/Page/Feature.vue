@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
   <div class="section-content">
-    <section class="section bg-transparent first-section pb-2">
+    <section class="section bg-transparent first-section pb-2 mt-5">
       <div class="container section-title pb-4">
         <div class="col-12 col-lg-8 m-auto">
           <h3 class="text-white text-capitalize ls-xs">Core Features</h3>
