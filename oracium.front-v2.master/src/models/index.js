@@ -10,8 +10,8 @@ export const company = {
     yt: '',
     ig: '',
     fb: '',
-    tw: 'https://x.com/fortivault87827',
-    github: 'https://github.com/sbymaster/oracium',
+    tw: 'https://x.com/OraciumAI',
+    github: 'https://github.com/sbymaster/oracium.xyz',
     linkedin: '',
     key_ca: '7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump',
 };
