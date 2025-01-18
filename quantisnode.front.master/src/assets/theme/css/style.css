@@ -71,11 +71,18 @@
 /*--------------------------------------------------------------
   # General Styling & Shared Classes
   --------------------------------------------------------------*/
-body {
-    /* color: var(--default-color);
-    background-color: var(--background-color); */
-    font-family: var(--heading-font);
-}
+/* body {
+   color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--heading-font); 
+} */
+
+main {
+    display: flow-root!important;
+    color: var(--default-color);
+     background-color: var(--background-color);
+     font-family: var(--heading-font); 
+ }
 
 a {
     color: var(--accent-color);

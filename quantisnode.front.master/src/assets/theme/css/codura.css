@@ -17,19 +17,22 @@
     background: #555;
 }
 
-body {
+/* body {
     background: #0F172A;
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
     top:0;
-}
+} */
 
 main {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+    top:0;
     background: #111022 url('/assets/img/particle-1.png') top left no-repeat;
     background-size:30%;
     top: 0;
     background-blend-mode:lighten;
-    overflow:hidden;
+    overflow:visible;
 }
 
 .particle {
