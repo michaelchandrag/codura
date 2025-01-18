@@ -322,7 +322,7 @@ img {
     position: relative;
 }
 
-.work-item:hover .is-icon{
+.work-item:hover .is-icon, .work-item:active .is-icon{
     text-shadow: 
     0px 0px 5px rgba(255, 255, 255, 1),
     0px 0px 10px rgba(255, 255, 255, 0.9),
@@ -338,4 +338,9 @@ img {
     position: absolute;
     width: 95%;
     top: 45%;
+    display: none;
+}
+
+.work-row:hover .icon.has-line::after, .work-row:active .icon.has-line::after{
+    display: inline;
 }

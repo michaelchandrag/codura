@@ -69,7 +69,7 @@ const changeHoveredLine = (index) => {
           <p class="text-light fw-normal fs-16px ls-xs">From Wallet Connection to Optimized Yield</p>
         </div>
         <div class="container">
-          <div class="row gy-4 justify-content-center">
+          <div class="work-row row gy-4 justify-content-center">
             <div v-for="(work, idw) in howItWorkList" :key="idw" class="col-lg-3 p-0" data-aos="fade-right"
               data-aos-delay="100">
               <div class="work-item card rounded-sm h-100 bg-transparent">
