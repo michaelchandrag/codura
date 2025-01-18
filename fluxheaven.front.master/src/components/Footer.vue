@@ -19,7 +19,7 @@ import { company } from '@/models';
                   class="bi bi-instagram"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.tw" target="_blank" :href="company.tw"><i
                   class="bi bi-twitter-x"></i></a>
-              <a class="rounded-sm fs-18px" v-if="company.tw" target="_blank" :href="company.github"><i
+              <a class="rounded-sm fs-18px" v-if="company.github" target="_blank" :href="company.github"><i
                   class="bi bi-github"></i></a>
               <a class="rounded-sm fs-18px" v-if="company.linkedin" target="_blank" :href="company.linkedin"><i
                   class="bi bi-linkedin"></i></a>
