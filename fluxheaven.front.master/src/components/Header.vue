@@ -22,13 +22,13 @@ const changeMenu = (menu) => {
       <nav id="navmenu-center" class="navmenu">
         <ul class="gap-3">
           <li>
-            <router-link @click.prevent="changeMenu('home')" :class="{'is-active': is_menu == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+            <router-link @click.prevent="changeMenu('home')" :class="{'is-active': is_menu == 'home'}" class="fs-13px" :to="{ name: 'home' }">HOME</router-link>
           </li>
           <li>
-            <a @click.prevent="changeMenu('feature')" :class="{'is-active': is_menu == 'feature'}" class="fs-13px" href="#">Feature</a>
+            <a @click.prevent="changeMenu('feature')" :class="{'is-active': is_menu == 'feature'}" class="fs-13px" href="#">FEATURE</a>
           </li>
           <li>
-            <a @click.prevent="changeMenu('faq')" :class="{'is-active': is_menu == 'faq'}" class="fs-13px" href="#">Faq</a>
+            <a @click.prevent="changeMenu('faq')" :class="{'is-active': is_menu == 'faq'}" class="fs-13px" href="#">FAQ</a>
           </li>
         </ul>
       </nav>
