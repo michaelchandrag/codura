@@ -2,9 +2,14 @@
 import { onMounted, ref, reactive } from 'vue'
 import { featureList, howItWorkList, whyChooseList, faqList } from '@/models'
 
+let hoverdLine = ref(0)
 onMounted(() => {
 
 })
+
+const changeHoveredLine = (index) => {
+  hoverdLine.value = index;
+}
 </script>
 
 <template>
@@ -19,17 +24,14 @@ onMounted(() => {
             efficiency through cutting-edge, AI-enhanced automation solutions.</p>
         </div>
       </div>
-      <div class="container bg-transparent">
-        <div class="preview-img">
-          <img class="p-5 img" src="/assets/img/preview.png" />
-          <div class="bg-preview">
-            <img src="/assets/img/bg-preview.png" />
-          </div>
+      <div class="container bg-transparent pt-3">
+        <div class="preview-img p-2">
+          <img src="/assets/img/preview.png" />
         </div>
       </div>
     </div>
   </section>
-  <section class="section bg-transparent">
+  <section id="section-feature" class="section bg-transparent">
     <div class="col-12 col-lg-8 m-auto">
       <div class="container section-title pb-4">
         <h6 class="text-app text-capitalize ls-xs">KEY FEATURES</h6>
@@ -59,7 +61,7 @@ onMounted(() => {
     <div class="section-bg">
       <img src="/assets/img/bg-section.png" />
     </div>
-    <section class="section bg-transparent">
+    <section id="section-work" class="section bg-transparent">
       <div class="col-12 col-lg-10 m-auto">
         <div class="container section-title pb-4">
           <h6 class="text-app text-capitalize ls-xs">HOW IT WORKS?</h6>
@@ -70,14 +72,16 @@ onMounted(() => {
           <div class="row gy-4 justify-content-center">
             <div v-for="(work, idw) in howItWorkList" :key="idw" class="col-lg-3 p-0" data-aos="fade-right"
               data-aos-delay="100">
-              <div class="card rounded-sm feature-card h-100 bg-transparent">
-                <div class="card-body text-center px-0">
+              <div class="work-item card rounded-sm h-100 bg-transparent">
+                <div @mouseover="changeHoveredLine(idw)" @mouseout="changeHoveredLine(0)" class="card-body text-center px-0">
                   <div v-if="work.icon" class="feature-icon">
                     <img :src="`/assets/img/${work.icon}.png`" />
                   </div>
                   <div class="work-line py-3">
-                    <div :class="{'has-line' : work.line}" class="icon">
-                      <i :class="[idw == 0 ? 'bi-record-circle' : 'bi-circle']" class="icon bi"></i>
+                    <div :class="{ 'has-line': work.line }" class="icon">
+                      <span class="is-icon">
+                        <i :class="[idw == hoverdLine ? 'bi-record-circle' : 'bi-circle']" class="bi"></i>
+                      </span>
                     </div>
                   </div>
                   <div class="text-white fs-13px ls-xs fw-bold mb-2">{{ work.title }}</div>
@@ -89,7 +93,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section class="section bg-transparent">
+    <section id="section-choose" class="section bg-transparent">
       <div class="col-12 col-lg-10 m-auto">
         <div class="container section-title pb-4">
           <div class="row align-items-baseline justify-content-between">
@@ -119,7 +123,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section class="section bg-transparent">
+    <section id="section-faq" class="section bg-transparent">
       <div class="col-12 col-lg-8 m-auto">
         <div class="container section-title pb-4">
           <h6 class="text-app text-capitalize ls-xs">FAQ</h6>

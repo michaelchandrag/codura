@@ -37,11 +37,11 @@ body {
     color: var(--app-color) !important;
 }
 
-.section-has-bg{
+.section-has-bg {
     position: relative;
 }
 
-.section-bg{
+.section-bg {
     position: absolute;
     top: 0;
     height: 100%;
@@ -81,8 +81,8 @@ img {
     border: 1px solid var(--app-color) !important;
 }
 
-#hero:before,
-#hero:after {
+#hero::before,
+#hero::after {
     display: none !important;
 }
 
@@ -159,6 +159,12 @@ img {
 .feature-card {
     background: #00000066;
     border: none;
+}
+
+.feature-card:hover, .feature-card:active{
+    -webkit-box-shadow: 2px 2px 61px 3px rgba(87, 87, 130, 1);
+    -moz-box-shadow: 2px 2px 61px 3px rgba(87, 87, 130, 1);
+    box-shadow: 2px 2px 61px 3px rgba(87, 87, 130, 1);
 }
 
 #footer {
@@ -266,6 +272,13 @@ img {
     background: #131314;
 }
 
+.why-choose-item:hover,
+.why-choose-item:active {
+    -webkit-box-shadow: 0px 0px 30px -9px rgb(255 255 255);
+    -moz-box-shadow: 0px 0px 30px -9px rgb(255 255 255);
+    box-shadow: 0px 0px 30px -9px rgb(255 255 255);
+}
+
 #accordionFaq .accordion-button {
     background: transparent;
     box-shadow: none;
@@ -284,28 +297,45 @@ img {
     background-image: url('/assets/img/minus.png');
 }
 
-.preview-img{
+.preview-img {
     position: relative;
+    -webkit-box-shadow: 2px 2px 61px 3px rgba(87, 87, 130, 1);
+    -moz-box-shadow: 2px 2px 61px 3px rgba(87, 87, 130, 1);
+    box-shadow: 2px 2px 61px 3px rgba(87, 87, 130, 1);
+    background: #FFFFFF4D;
+    border-radius: 18px;
 }
 
-.bg-preview{
+.bg-preview {
+    display: none;
     position: absolute;
     top: 0;
     z-index: -1;
 }
 
-.work-line{
+.work-line {
     position: relative;
 }
-.work-line .icon{
+
+.work-line .icon {
     color: #FFFFFF80;
     position: relative;
 }
 
-.work-line .icon.has-line:after{
+.work-item:hover .is-icon{
+    text-shadow: 
+    0px 0px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgba(255, 255, 255, 0.9),
+    0px 0px 20px rgba(255, 255, 255, 0.8),
+    0px 0px 30px rgba(255, 255, 255, 0.7),
+    0px 0px 40px rgba(255, 255, 255, 0.6),
+    0px 0px 50px rgba(255, 255, 255, 0.5);
+}
+
+.work-line .icon.has-line::after {
     content: '';
     border: 1px solid #FFFFFF80;
     position: absolute;
-    width: 94%;
+    width: 95%;
     top: 45%;
 }
