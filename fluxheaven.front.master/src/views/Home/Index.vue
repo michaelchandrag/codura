@@ -29,9 +29,8 @@ const changeHoveredLine = (index) => {
         <div v-if="company.key_ca" class="copy-ca">
           <div class="col-12 col-lg-6 m-auto">
             <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
-              <div
-                class="form-control form-control-sm fs-12px ls-sm bg-transparent border-0 text-start text-white">{{
-                  company.key_ca }}</div>
+              <div class="form-control form-control-sm fs-12px ls-sm bg-transparent border-0 text-start text-white">{{
+                company.key_ca }}</div>
               <a @click.prevent="copyToClipboard(company.key_ca)"
                 class="input-group-text btn btn-sm bg-transparent rounded-sm text-app fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
                 <i class="bi bi-copy"></i>
@@ -41,14 +40,14 @@ const changeHoveredLine = (index) => {
           </div>
         </div>
       </div>
-      <div class="container bg-transparent pt-3 d-flex align-items-center justify-content-center pb-4">
+      <div class="container bg-transparent pt-3 d-flex align-items-center justify-content-center pb-5">
         <div class="preview-img p-2">
           <img src="/assets/img/preview.png" />
         </div>
       </div>
     </div>
   </section>
-  <section id="section-feature" class="section bg-transparent">
+  <section id="section-feature" class="section bg-transparent pt-0">
     <div class="col-12 col-lg-8 m-auto">
       <div class="container section-title pb-4">
         <h6 class="text-app text-capitalize ls-xs">KEY FEATURES</h6>
@@ -102,8 +101,10 @@ const changeHoveredLine = (index) => {
                       </span>
                     </div>
                   </div>
-                  <div class="text-white fs-13px ls-xs fw-bold mb-2">{{ work.title }}</div>
-                  <p class="text-light fw-300 fs-12px ls-xs m-0">{{ work.description }}</p>
+                  <div class="px-3">
+                    <div class="text-white fs-13px ls-xs fw-bold mb-2">{{ work.title }}</div>
+                    <p class="text-light fw-300 fs-12px ls-xs m-0">{{ work.description }}</p>
+                  </div>
                 </div>
               </div>
             </div>

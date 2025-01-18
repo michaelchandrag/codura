@@ -27,14 +27,17 @@ onMounted(async () => {
     histories.value = stateHistory;
   } else {
     if (defaultMessageHistories.length) {
+      let isDefaultHistory = [];
       defaultMessageHistories.forEach(async (his, idx) => {
         const newHistory = {
           key: `chat-default-${Date.now()}`,
           title: his,
           messages: [],
         };
+        isDefaultHistory.push(newHistory);
         await store.commit('addChatHistory', newHistory);
       })
+      histories.value = isDefaultHistory;
     }
   }
 
@@ -191,8 +194,7 @@ async function clearHistory() {
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar" :class="{ 'is-show': show_history }">
           <div class="ai-logo mb-2">
-            <router-link :to="{ name: 'home' }"><img
-                src="/assets/img/fluxheaven-logo.png" /></router-link>
+            <router-link :to="{ name: 'home' }"><img src="/assets/img/fluxheaven-logo.png" /></router-link>
           </div>
           <div class="card border-0 ai-history-content">
             <div class="ai-search p-3">
