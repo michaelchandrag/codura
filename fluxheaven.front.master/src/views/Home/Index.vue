@@ -41,7 +41,7 @@ const changeHoveredLine = (index) => {
       </div>
       <div class="container">
         <div class="row gy-4 justify-content-center">
-          <div v-for="(feature, idf) in featureList" :key="idf" class="col-lg-4" data-aos="fade-right"
+          <div v-for="(feature, idf) in featureList" :key="idf" class="col-lg-4" data-aos="fade-up"
             data-aos-delay="100">
             <div class="feature-item card rounded-sm feature-card h-100">
               <div class="card-body text-center">

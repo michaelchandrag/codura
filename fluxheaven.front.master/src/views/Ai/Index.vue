@@ -224,7 +224,7 @@ async function clearHistory() {
                   class="d-xl-none d-lg-none btn btn-sm py-0 px-2 text-white fs-11px">History</a>
               </div>
             </div>
-            <div id="ai-message-body" ref="chatbox" class="card-body text-start pe-5">
+            <div id="ai-message-body" ref="chatbox" class="card-body text-start">
               <div v-if="!messages.length">
                 <div class="col-lg-8 m-auto">
                   <h6 class="text-center text-white mb-3 p-2">What can I help with?</h6>
