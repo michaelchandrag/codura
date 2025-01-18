@@ -8,8 +8,8 @@ onMounted(() => {
 
 <template>
   <div class="section-content">
+    <div class="particle right"></div>
     <section class="section bg-transparent first-section pb-2 mt-5" data-aos="fade-down" data-aos-delay="100">
-      <div class="particle right"></div>
       <div class="container px-4 px-md-3">
         <div
           class="row gy-1 justify-content-between align-items-center px-4"
