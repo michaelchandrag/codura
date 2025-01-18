@@ -1,6 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Belanosima:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import 'aos/dist/aos.css';
 @import 'glightbox/dist/css/glightbox.min.css';
 @import 'swiper/swiper-bundle.css';
@@ -11,6 +12,7 @@
     --heading-font: "Belanosima", serif;
     --body-font: "Aldrich", serif;
     --nav-font: "Aldrich", serif;
+    --ai-convo-font: "Rubik", serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */

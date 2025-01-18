@@ -125,7 +125,7 @@ const processChangeTitle = async () => {
     <div class="container">
       <div class="row gy-4 justify-content-center mt-5">
         <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-          <div class="card rounded-sm ai-card h-100">
+          <div class="card rounded-sm ai-card h-100 ai-font">
             <div id="ai-history-header" class="card-header d-flex justify-content-between align-items-center">
               <h6 class="m-0 text-white fw-400 ls-xs">History</h6>
             </div>
@@ -148,7 +148,7 @@ const processChangeTitle = async () => {
         <div class="col-lg-8">
           <div class="card rounded-sm ai-card h-100">
             <div id="ai-message-header" class="card-header d-flex justify-content-between align-items-center">
-              <h6 class="m-0 text-white fw-400 ls-xs">Conversation</h6>
+              <h6 class="m-0 text-white fw-400 ls-xs">Ask Anything</h6>
             </div>
             <div id="ai-message-body" ref="chatbox" class="card-body text-start px-2 py-3">
               <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
