@@ -7,11 +7,11 @@ const route = useRoute();
 </script>
 
 <template>
-  <Header :routeName="route.name"></Header>
+  <Header v-if="route.name != 'ai'" :routeName="route.name"></Header>
   <main class="main">
     <router-view></router-view>
   </main>
-  <Footer></Footer>
+  <Footer v-if="route.name != 'ai'"></Footer>
   <a
     href="#"
     id="scroll-top"

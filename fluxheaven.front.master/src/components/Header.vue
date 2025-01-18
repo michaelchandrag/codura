@@ -43,7 +43,7 @@ const changeMenu = (menu) => {
           <li class="d-xl-none">
             <a @click.prevent="changeMenu('faq')" class="fs-13px" href="#">Faq</a>
           </li>
-          <li class="action"><router-link :to="{ name: 'home' }"
+          <li class="action"><router-link :to="{ name: 'ai' }"
               class="btn btn-sm bg-app rounded fs-13px 14px text-white">Getting Started</router-link></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

@@ -17,6 +17,19 @@ const routes = [
     component: () => import('@/views/Home/Index.vue')
   },
   {
+    path: '/ai',
+    alias: '/chatbot',
+    name: 'ai',
+    meta: {
+      is_ready: true,
+      require_auth: false,
+      is_auth: false,
+      title: 'FLUXHEAVEN | AI',
+      description: ''
+    },
+    component: () => import('@/views/Ai/Index.vue')
+  },
+  {
     path: '/404',
     alias: '/pagenotfound',
     name: '404',
