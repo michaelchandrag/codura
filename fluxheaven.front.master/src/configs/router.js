@@ -11,7 +11,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FLUXHEAVEN',
+      title: 'FLUXHAVEN',
       description: ''
     },
     component: () => import('@/views/Home/Index.vue')
@@ -24,7 +24,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FLUXHEAVEN | AI',
+      title: 'FLUXHAVEN | AI',
       description: ''
     },
     component: () => import('@/views/Ai/Index.vue')
@@ -37,7 +37,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'FLUXHEAVEN | 404',
+      title: 'FLUXHAVEN | 404',
       description:
         'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.'
     },
@@ -95,14 +95,14 @@ router.afterEach((to, from) => {
     } else {
       metaDescription.setAttribute(
         'content',
-        'FLUXHEAVEN'
+        'FLUXHAVEN'
       )
     }
   } else {
     const description = document.createElement('meta')
     description.name = 'description'
     description.content =
-      to.meta.description || 'FLUXHEAVEN'
+      to.meta.description || 'FLUXHAVEN'
     document.head.appendChild(description)
   }
 })

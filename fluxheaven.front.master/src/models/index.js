@@ -1,6 +1,6 @@
 export const company = {
-    name: 'FLUXHEAVEN',
-    alias: 'fluxheaven',
+    name: 'FLUXHAVEN',
+    alias: 'fluxhaven',
     slug: 'flux-heaven',
     phone: '',
     phone_label: '',
