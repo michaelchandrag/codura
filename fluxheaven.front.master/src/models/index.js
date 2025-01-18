@@ -11,7 +11,7 @@ export const company = {
     ig: '',
     fb: '',
     tw: 'https://x.com/FluxHavenAI',
-    github: '#',
+    github: 'https://github.com/bfpapamain/fluxhaven.live',
     linkedin: '',
 };
 
