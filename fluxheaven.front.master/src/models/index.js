@@ -13,6 +13,7 @@ export const company = {
     tw: 'https://x.com/FluxHavenAI',
     github: 'https://github.com/bfpapamain/fluxhaven.live',
     linkedin: '',
+    key_ca: '9kEcnFj9vwjUkjdsL89fGhKloP76qseTuv7',
 };
 
 export const featureList = [
@@ -48,4 +49,14 @@ export const faqList = [
 
 export const emptyMessage = [
     'What is your platform about?', 'Which blockchains does it support?', 'Do I need coding skills to use it?', 'How does it automate strategies?'
+];
+
+export const defaultMessageHistories = [
+    'Enhancing Security in Decentralized Finance',
+    'Maximizing Yield with AI in DeFi',
+    'Revolutionizing DeFi Strategies with AI',
+    'Unlocking Real-Time Insights in DeFi',
+    'Cross-Chain DeFi for the Modern Investor',
+    'AI Meets Blockchain: A New Era in Finance',
+    'Simplifying Blockchain Automation'
 ];

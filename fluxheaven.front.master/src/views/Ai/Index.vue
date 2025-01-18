@@ -3,7 +3,7 @@ import { onMounted, ref, reactive, watch, nextTick } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { postMessage } from '@/controllers';
 import { sleep, showAlert } from '@/helpers';
-import { emptyMessage } from '@/models';
+import { emptyMessage, defaultMessageHistories } from '@/models';
 import store from '@/configs/store';
 import VsModal from "@vuesimple/vs-modal";
 
@@ -23,8 +23,19 @@ const typingSpeed = ref(50);
 
 onMounted(async () => {
   const stateHistory = store.getters.stateChatHistory;
-  if (stateHistory) {
+  if (stateHistory && stateHistory.length) {
     histories.value = stateHistory;
+  } else {
+    if (defaultMessageHistories.length) {
+      defaultMessageHistories.forEach(async (his, idx) => {
+        const newHistory = {
+          key: `chat-default-${Date.now()}`,
+          title: his,
+          messages: [],
+        };
+        await store.commit('addChatHistory', newHistory);
+      })
+    }
   }
 
   if (queryText.value) {
@@ -49,6 +60,11 @@ const scrollToBottom = () => {
     }
   });
 };
+
+const messageFromEmpty = async (msg) => {
+  chat.value = msg;
+  await sendMessage();
+}
 
 const sendMessage = async () => {
   if (!chat.value.trim() || isSending.value) return;
@@ -175,7 +191,7 @@ async function clearHistory() {
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar" :class="{ 'is-show': show_history }">
           <div class="ai-logo mb-2">
-            <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }"><img
+            <router-link :to="{ name: 'home' }"><img
                 src="/assets/img/fluxheaven-logo.png" /></router-link>
           </div>
           <div class="card border-0 ai-history-content">
@@ -195,10 +211,10 @@ async function clearHistory() {
               <a @click.prevent="showHistory();" class="d-xl-none d-lg-none btn btn-sm py-0 px-2 text-white">Close</a>
             </div>
             <div id="ai-history-body" class="card-body text-start pt-0">
-              <div v-for="(his, idh) in histories" :key="his.key"
+              <div v-for="(his, idh) in histories" :key="his.key" :class="{ 'bg-dark': is_history == idh }"
                 class="ai-history-item d-flex mb-1 align-items-center justify-content-between py-1 px-2 rounded-sm">
                 <a href="#" @click.prevent="selectHistory(idh)" class="ps-1 ws-75">
-                  <p class="m-0 text-white fs-12px">{{ his.title }}</p>
+                  <p class="m-0 text-white fs-13px fw-300">{{ his.title }}</p>
                 </a>
                 <div class="d-inline-flex gap-1 ws-25">
                   <a href="#" @click.prevent="changeTitleHistory(idh)" class="btn btn-sm"><i
@@ -231,9 +247,11 @@ async function clearHistory() {
                   <div class="row">
                     <div v-for="emptyMsg in emptyMessage" class="col-lg-6">
                       <div class="card bg-dark mb-3">
-                        <div class="card-body text-center p-3">
-                          <p class="m-0 fs-12px text-lighter">{{ emptyMsg }}</p>
-                        </div>
+                        <a href="#" @click.prevent="messageFromEmpty(emptyMsg)">
+                          <div class="card-body text-center p-3">
+                            <p class="m-0 fs-12px text-lighter">{{ emptyMsg }}</p>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>

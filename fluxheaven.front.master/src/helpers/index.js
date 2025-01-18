@@ -192,3 +192,11 @@ export function scrollToElement(id, space = 0) {
     return;
   }
 }
+export const copyToClipboard = async (value) => {
+  try {
+    await navigator.clipboard.writeText(value);
+    showAlert({ type: 'success', text: 'Text copied to clipboard!' });
+  } catch (err) {
+    showAlert({ type: 'error', text: 'Failed to copy text. Please try again.' });
+  }
+};

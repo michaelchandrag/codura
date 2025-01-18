@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref, reactive } from 'vue'
-import { featureList, howItWorkList, whyChooseList, faqList } from '@/models'
+import { company, featureList, howItWorkList, whyChooseList, faqList } from '@/models'
+import { copyToClipboard } from '@/helpers';
 
 let hoverdLine = ref(0)
 onMounted(() => {
@@ -24,7 +25,23 @@ const changeHoveredLine = (index) => {
             efficiency through cutting-edge, AI-enhanced automation solutions.</p>
         </div>
       </div>
-      <div class="container bg-transparent pt-3">
+      <div class="container bg-transparent mb-5">
+        <div v-if="company.key_ca" class="copy-ca">
+          <div class="col-12 col-lg-6 m-auto">
+            <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
+              <div
+                class="form-control form-control-sm fs-12px ls-sm bg-transparent border-0 text-start text-white">{{
+                  company.key_ca }}</div>
+              <a @click.prevent="copyToClipboard(company.key_ca)"
+                class="input-group-text btn btn-sm bg-transparent rounded-sm text-app fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
+                <i class="bi bi-copy"></i>
+                <span>Copy CA</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container bg-transparent pt-3 d-flex align-items-center justify-content-center pb-4">
         <div class="preview-img p-2">
           <img src="/assets/img/preview.png" />
         </div>
@@ -73,7 +90,8 @@ const changeHoveredLine = (index) => {
             <div v-for="(work, idw) in howItWorkList" :key="idw" class="col-lg-3 p-0" data-aos="fade-right"
               data-aos-delay="100">
               <div class="work-item card rounded-sm h-100 bg-transparent">
-                <div @mouseover="changeHoveredLine(idw)" @mouseout="changeHoveredLine(0)" class="card-body text-center px-0">
+                <div @mouseover="changeHoveredLine(idw)" @mouseout="changeHoveredLine(0)"
+                  class="card-body text-center px-0">
                   <div v-if="work.icon" class="feature-icon">
                     <img :src="`/assets/img/${work.icon}.png`" />
                   </div>

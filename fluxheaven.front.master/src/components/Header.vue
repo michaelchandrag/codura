@@ -19,7 +19,7 @@ const changeMenu = (menu) => {
         <img src="/assets/img/fluxheaven.png" class="lg" alt="fluxheaven" />
         <!-- <h1 class="sitename">fluxheaven</h1> -->
       </router-link>
-      <nav id="navmenu-center" class="navmenu">
+      <nav id="navmenu-center" class="navmenu ps-6">
         <ul class="gap-3">
           <li>
             <router-link @click.prevent="changeMenu('home')" :class="{'is-active': is_menu == 'home'}" class="fs-13px" :to="{ name: 'home' }">HOME</router-link>

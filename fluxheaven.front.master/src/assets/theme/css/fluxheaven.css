@@ -31,6 +31,10 @@ body {
     scrollbar-color: #888 #f1f1f1;
 }
 
+.ps-6{
+    padding-left: 5rem !important;
+}
+
 .bg-dark {
     background: #020203 !important;
 }
@@ -124,10 +128,6 @@ img {
     background-position: center center;
 }
 
-.hero img {
-    position: relative !important;
-}
-
 .main-hero .container {
     position: relative;
     z-index: 9;
@@ -216,7 +216,7 @@ img {
     min-height: 80vh;
 }
 
-.ai-section{
+.ai-section {
     min-height: 100vh;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -293,8 +293,7 @@ img {
     color: var(--app-dark-lighter) !important;
 }
 
-#ai-send-message:hover,
-#ai-send-message:active {
+#ai-send-message {
     border: none !important;
     outline: none !important;
 }
@@ -359,6 +358,7 @@ img {
 }
 
 .preview-img {
+    width: fit-content;
     position: relative;
     -webkit-box-shadow: 2px 2px 61px 3px rgba(87, 87, 130, 1);
     -moz-box-shadow: 2px 2px 61px 3px rgba(87, 87, 130, 1);
@@ -406,4 +406,8 @@ img {
 .work-row:hover .icon.has-line::after,
 .work-row:active .icon.has-line::after {
     display: inline;
+}
+
+.custom-input-group {
+    overflow-wrap: anywhere !important;
 }
