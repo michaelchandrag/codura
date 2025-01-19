@@ -21,11 +21,85 @@ let chat = ref('');
 let isSending = ref(false);
 
 onMounted(async () => {
-  //await store.commit('destroyChatHistory');
-  const stateHistory = store.getters.stateChatHistory;
-  if (stateHistory) {
-    histories.value = stateHistory;
-  }
+  histories.value = [
+    {
+      key: "static-1",
+      title: "Introduction to Quantis Node",
+      messages: [
+        { role: "system", content: "Welcome! How can we assist you today?" },
+        { role: "user", content: "Introduction to Quantis Node." }
+      ],
+      isStatic: true,
+      hasSent: false,
+    },
+    {
+      key: "static-2",
+      title: "Exploring Quantis Node’s Key Features",
+      messages: [
+        { role: "system", content: "Welcome! How can we assist you today?" },
+        { role: "user", content: "Exploring Quantis Node’s Key Features." }
+      ],
+      isStatic: true,
+      hasSent: false,
+    },
+    {
+      key: "static-3",
+      title: "Quantis Node vs Traditional Oracle Services",
+      messages: [
+        { role: "system", content: "Welcome! How can we assist you today?" },
+        { role: "user", content: "Quantis Node vs Traditional Oracle Services." }
+
+      ],
+      isStatic: true,
+      hasSent: false,
+    },
+    {
+      key: "static-4",
+      title: "Using Quantis Node Across Multiple Blockchains",
+      messages: [
+        { role: "system", content: "Welcome! How can we assist you today?" },
+        { role: "user", content: "Using Quantis Node Across Multiple Blockchains." }
+
+      ],
+      isStatic: true,
+      hasSent: false,
+    },
+    {
+      key: "static-5",
+      title: "Understanding Proposal Scoring in Quantis Node",
+      messages: [
+        { role: "system", content: "Welcome! How can we assist you today?" },
+        { role: "user", content: "Understanding Proposal Scoring in Quantis Node." }
+
+      ],
+      isStatic: true,
+      hasSent: false,
+    },
+    {
+      key: "static-6",
+      title: "Enhancing DAO Decision-Making with Quantis Node’s AI",
+      messages: [
+        { role: "system", content: "Welcome! How can we assist you today?" },
+        { role: "user", content: "Enhancing DAO Decision-Making with Quantis Node’s AI." }
+
+      ],
+      isStatic: true,
+      hasSent: false,
+    },
+    {
+      key: "static-7",
+      title: "Addressing Governance Risks Through Quantis Node",
+      messages: [
+        { role: "system", content: "Welcome! How can we assist you today?" },
+        { role: "user", content: "Addressing Governance Risks Through Quantis Node." }
+
+      ],
+      isStatic: true,
+      hasSent: false,
+    },
+    ...histories.value,
+    ...store.getters.stateChatHistory,
+  ];
 
   if (queryText.value) {
     chat.value = queryText.value;
@@ -35,6 +109,7 @@ onMounted(async () => {
   removeQuery();
   scrollToBottom();
 });
+
 
 watch(messages, () => {
   scrollToBottom();
@@ -96,15 +171,45 @@ const updateChatHistory = async () => {
 }
 
 const selectHistory = async (key) => {
+  const selectedHistory = histories.value[key];
+
+  if (!selectedHistory || isSending.value) return;
+
   is_history.value = key;
-  messages.value = histories.value[`${is_history.value}`].messages;
+
+  const filteredContents = [
+    "Introduction to Quantis Node.",
+    "Exploring Quantis Node’s Key Features.",
+    "Quantis Node vs Traditional Oracle Services.",
+    "Using Quantis Node Across Multiple Blockchains.",
+    "Understanding Proposal Scoring in Quantis Node.",
+    "Enhancing DAO Decision-Making with Quantis Node’s AI.",
+    "Addressing Governance Risks Through Quantis Node."
+  ];
+  messages.value = selectedHistory.messages.filter(
+    (msg) => !(msg.role === "user" && filteredContents.includes(msg.content))
+  );
+
+
+  if (selectedHistory.isStatic && !selectedHistory.hasSent) {
+    const userMessage = selectedHistory.messages.find(msg => msg.role === "user");
+    if (userMessage && userMessage.content) {
+      chat.value = userMessage.content;
+      selectedHistory.hasSent = true;
+      await sendMessage(); 
+    }
+  }
 };
+
 const changeTitleHistory = async (key) => {
+  const history = histories.value[key];
+  if (history.isStatic) return; 
+
   history_change_title.index = key;
   history_change_title.title = histories.value[key].title;
   openModalTitle();
 };
-const openModalTitle = (index) => {
+const openModalTitle = () => {
   modal_change_title.value.open();
 };
 
@@ -112,24 +217,34 @@ const closeModalTitle = () => {
   modal_change_title.value.close();
 };
 const processChangeTitle = async () => {
-  await store.commit('updateChatTitleHistory', {
-    key: history_change_title.index,
-    title: history_change_title.title,
-  });
+  const index = history_change_title.index;
+  
+  if (index !== null && index >= 0) {
+    histories.value[index].title = history_change_title.title;
+
+    await store.commit('updateChatTitleHistory', {
+      key: histories.value[index].key,
+      title: history_change_title.title,
+    });
+  }
+
   closeModalTitle();
-}
+};
+
 </script>
 
 <template>
   <section class="section bg-transparent ai-section section-content">
     <div class="container">
-      <div class="row gy-4 justify-content-center mt-5">
+      <div class="row gy-2 justify-content-center mt-1">
         <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
           <div class="card rounded-sm ai-card h-100 ai-font">
             <div id="ai-history-header" class="card-header d-flex justify-content-between align-items-center">
               <h6 class="m-0 text-white fw-400 ls-xs">History</h6>
             </div>
-            <div id="ai-history-body" class="card-body text-start">
+
+            <!-- BACKUP OLD CHAT HISTORY -->
+            <!-- <div id="ai-history-body" class="card-body text-start">
               <div v-for="(his, idh) in histories" :key="his.key"
                 class="ai-history-item d-flex mb-1 align-items-center justify-content-between py-1 px-2 rounded-sm">
                 <a href="#" @click.prevent="selectHistory(idh)" class="ps-1 ws-75">
@@ -142,6 +257,37 @@ const processChangeTitle = async () => {
                       class="text-white bi bi-chevron-right"></i></a>
                 </div>
               </div>
+            </div> -->
+            <!-- end_card chat history -->
+
+            <div id="ai-history-body" class="card-body text-start">
+              <div 
+                v-for="(his, idh) in histories" 
+                :key="his.key" 
+                class="ai-history-item d-flex mb-1 align-items-center justify-content-between py-1 px-2 rounded-sm"
+              >
+              <a 
+                href="#" 
+                @click.prevent="selectHistory(idh)" 
+                class="ps-1 ws-75"
+              >
+                <p class="m-0 text-white fs-12px">{{ his.title }}</p>
+              </a>
+
+                <div class="d-inline-flex gap-1 ws-20">
+                  <a 
+                    v-if="!his.isStatic" 
+                    href="#" 
+                    @click.prevent="changeTitleHistory(idh)" 
+                    class="btn btn-sm"
+                  >
+                    <i class="text-white bi bi-pencil"></i>
+                  </a>
+                  <a @click.prevent="selectHistory(idh)" href="#" class="btn btn-sm">
+                    <i class="text-white bi bi-chevron-right"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -151,7 +297,12 @@ const processChangeTitle = async () => {
               <h6 class="m-0 text-white fw-400 ls-xs">Ask Anything</h6>
             </div>
             <div id="ai-message-body" ref="chatbox" class="card-body text-start px-2 py-3">
-              <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex mb-1">
+              <div 
+                v-for="(msg, idx) in messages" 
+                :key="`message-${idx}`" 
+                :class="{ 'is-me': msg.role == 'user' }" 
+                class="ai-message-item d-flex mb-1"
+              >
                 <div class="py-2 px-3">
                   <p :class="{ 'py-2 px-3': msg.role == 'user' }"
                     class="m-0 text-white fs-12px ls-xs ws-100 bubble rounded-sm full fw-300">{{ msg.content }}</p>
@@ -161,13 +312,18 @@ const processChangeTitle = async () => {
             <div id="ai-message-footer" class="card-footer">
               <form @submit.prevent="sendMessage">
                 <div class="input-group bg-transparent">
-                  <input v-model="chat" required
-                    class="form-control form-control-sm fs-12px text-white bg-transparent fw-300"
-                    placeholder="Start typing .....">
+                  <p><span class="position-absolute top-50 start-0 translate-middle-y fs-16px ms-2" style="color:#FF8A43">+</span></p>
+                  <input 
+                    v-model="chat" 
+                    required
+                    class="form-control form-control-sm fs-16px text-white bg-transparent fw-300"
+                    placeholder="Start typing ....."
+                    style="text-indent: 20px;"
+                  >
                   <button type="submit" :disabled="isSending" :class="{ 'disabled': isSending }"
                     class="btn btn-sm text-white bg-transparent input-group-text">
                     <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary" role="status"></span>
-                    <img v-else src="/assets/img/send.png" />
+                    <img v-else src="/assets/img/send.svg" />
                   </button>
                 </div>
               </form>

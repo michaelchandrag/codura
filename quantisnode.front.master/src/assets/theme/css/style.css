@@ -2898,3 +2898,11 @@ section,
   .swal2-html-container {
     font-size: 1em !important;
   }
+
+  .icon-send {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    object-fit: contain;
+  }
+  
