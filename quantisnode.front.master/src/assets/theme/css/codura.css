@@ -52,11 +52,29 @@ main {
     background-image: url('/assets/img/particle-2.png');
 }
 
-main.is-home {
+/* main.is-home {
     background: #111022 url('/assets/img/body-bg.gif') center center no-repeat;
     background-size:70%;
-    background-blend-mode:lighten;
+    background-blend-mode:darken;
+} */
+
+main.is-home {
+    background: #111022!important;
 }
+
+main.is-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111022 url('/assets/img/body-bg.gif') center center no-repeat;
+    background-blend-mode: lighten;
+    background-size: cover;
+    filter: brightness(0.53);
+}
+
 
 img {
     max-width: 100%;
