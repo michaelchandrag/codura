@@ -150,25 +150,29 @@ const sendMessage = async () => {
 };
 
 const saveChatHistory = async () => {
-  if (is_history.value == -1) {
+  if (is_history.value === -1) {
     const newHistory = {
       key: `chat-${Date.now()}`,
       title: `Chat ${histories.value.length + 1}`,
-      messages: messages.value,
+      messages: [...messages.value],
     };
     await store.commit('addChatHistory', newHistory);
-    is_history.value = histories.value.length;
+    histories.value.push(newHistory);
+    is_history.value = histories.value.length - 1;
   } else {
-    updateChatHistory();
+    await updateChatHistory();
   }
 };
 
 const updateChatHistory = async () => {
-  await store.commit('updateChatMessageHistory', {
-    key: is_history.value,
-    messages: messages.value,
-  });
-}
+  if (is_history.value >= 0) {
+    histories.value[is_history.value].messages = [...messages.value];
+    await store.commit('updateChatMessageHistory', {
+      key: histories.value[is_history.value].key,
+      messages: [...messages.value],
+    });
+  }
+};
 
 const selectHistory = async (key) => {
   const selectedHistory = histories.value[key];
@@ -196,7 +200,7 @@ const selectHistory = async (key) => {
     if (userMessage && userMessage.content) {
       chat.value = userMessage.content;
       selectedHistory.hasSent = true;
-      await sendMessage(); 
+      await sendMessage();
     }
   }
 };
