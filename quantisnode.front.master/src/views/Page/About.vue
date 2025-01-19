@@ -12,7 +12,7 @@ onMounted(() => {
     <section class="section bg-transparent first-section pb-2 mt-5" data-aos="fade-down" data-aos-delay="100">
       <div class="container px-4 px-md-3">
         <div
-          class="row gy-1 justify-content-between align-items-center px-4"
+          class="row gy-1 justify-content-between align-items-left px-4"
           style="border: 1px solid #6D6A6A; border-radius: 16px; margin-top: 5px;"
           data-aos="fade-up"
           data-aos-delay="100"
