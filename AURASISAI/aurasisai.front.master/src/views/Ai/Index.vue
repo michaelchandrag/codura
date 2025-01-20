@@ -203,12 +203,12 @@ async function clearHistory() {
 </script>
 
 <template>
-  <section class="section bg-transparent ai-section section-content p-0">
+  <section class="section bg-white ai-section section-content p-0">
     <div class="container-ai px-3">
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar p-0" :class="{ 'is-show': show_history }">
           <div class="ai-history-header mb-2 d-flex align-items-center justify-content-between px-4 pt-2">
-            <router-link :to="{ name: 'home' }"><img src="/assets/img/aegesix.png" /></router-link>
+            <router-link class="bg-dark rounded-sm p-1" :to="{ name: 'home' }"><img src="/assets/img/aurasisai-icon.png" /></router-link>
             <a @click.prevent="addNewChat" class="btn btn-sm rounded text-white px-3"><i class="bi bi-plus"></i><span class="fs-13px">New
                 Chat</span></a>
             <a @click.prevent="setShowSearch" class="btn btn-sm rounded text-white"><i class="bi bi-search"></i></a>

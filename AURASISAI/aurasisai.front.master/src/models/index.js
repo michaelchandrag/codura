@@ -1,7 +1,7 @@
 export const company = {
-    name: 'AEGISIX',
-    alias: 'aegisix',
-    slug: 'aegisix',
+    name: 'AURASISAI',
+    alias: 'AurasisAI',
+    slug: 'aurasis-ai',
     phone: '',
     phone_label: '',
     email: '',
@@ -13,33 +13,66 @@ export const company = {
     tw: '#',
     github: '#',
     linkedin: '',
-    key_ca: '',
+    key_ca: '9kEcnFj9vwjUkjdsL89fGhKloP76qseTuv7',
 };
 
 export const featureList = [
-    { title: 'Parametric Risk Assessment', icon: 'risk', description: `Harnessing deep learning models and predictive analytics to quantify, segment, and dynamically recalibrate risk metrics for DeFi protocols, wallets, and multi-chain` },
-    { title: 'Autonomous Claim Execution', icon: 'claim', description: `Smart contract-based claim validation leverages decentralized oracles and on-chain telemetry to ensure instantaneous and immutable resolutions.` },
-    { title: 'Dynamic Coverage Pricing', icon: 'pricing', description: `Adaptive algorithms leverage stochastic modeling to optimize premium-to-risk ratios, aligning coverage with real-time market volatility` },
-    { title: 'Cross-Chain Coverage Interoperability', icon: 'chain', description: `Our multi-protocol architecture facilitates seamless protection across heterogeneous blockchain ecosystems, including EVM-compatible and non-EVM chains` },
-    { title: 'Machine-Learning-Powered Portfolio Safeguards', icon: 'learning', description: `AI-driven simulations analyze liquidation probabilities, impermanent loss trajectories, and systemic vulnerabilities to construct resilient safety nets for liquidity providers` },
-    { title: 'Decentralized Governance Framework', icon: 'desentralized', description: `Aegisix's tokenized ecosystem empowers stakeholders to influence policy upgrades, risk recalibration algorithms, and fund allocations through consensus-driven governance
-` },
+    {
+        icon: 'module',
+        title: `Composable Modular Framework`,
+        description: [
+            `Aurasis.Ai offers plug-and-play modules for lending, borrowing, trading, and more, adaptable to any business need.`,
+            `Aurasis.Ai offers plug-and-play modules for lending, borrowing, trading, and more, adaptable to any business need.`
+        ]
+    },
+    {
+        icon: 'driven',
+        title: `AI-Driven Optimization`,
+        description: [
+            `Our AI algorithms analyze market trends and user behavior to optimize module performance, ensuring maximum efficiency and profitability`,
+            `Real-time adjustments to ensure optimal resource allocation and strategy execution`
+        ]
+    },
+    {
+        icon: 'chain',
+        title: `Cross-Chain Integration`,
+        description: [
+            `Native support for multi-chain connectivity, including Ethereum, Solana, and Layer 2 solutions`,
+            `AI-powered routing to determine the most efficient blockchain for each transaction`
+        ]
+    },
+    {
+        icon: 'code',
+        title: `Developer-Centric Tools`,
+        description: [
+            `Comprehensive SDKs and APIs designed for rapid integration and customization`,
+            `AI-based debugging and error detection tools to accelerate development `
+        ]
+    },
+    {
+        icon: 'archive-add',
+        title: `Regulatory Compliance`,
+        description: [
+            `Built-in support for KYC/AML and regulatory monitoring to ensure global compliance.`,
+            `Tailored compliance solutions for institutional partners.`
+        ]
+    },
 ];
 
 export const potentialList = [
-    { title: 'Protocol Exploit Hedging', description: 'Safeguard deployed capital against zero-day vulnerabilities and governance manipulation risks with AI-curated exploit coverage'},
-    { title: 'Liquidation Shielding for Leveraged Trades', description: 'Mitigate margin-call exposure with collateralization buffers dynamically reweighted via predictive AI models'},
-    { title: 'Impermanent Loss Mitigation for LPs', description: 'Enable liquidity providers to neutralize volatile pair imbalances with algorithmic underwriting tailored to pool-specific dynamics'},
-    { title: 'Smart Wallet Defense', description: 'Protect digital assets against phishing vectors, private key breaches, and unauthorized transactions using heuristic anomaly detection'},
-    { title: 'Multi-Chain Market Integrity', description: 'Cover cross-chain operational risks, including bridge failures and asset de-pegging scenarios, with holistic policy mechanisms'},
+    { title: 'Enterprise FinTech Integration', icon: '', description: `Embed DeFi-powered savings accounts, loans, or staking rewards into traditional financial applications, making decentralized finance accessible to millions of users` },
+    { title: 'E-Commerce and Loyalty Programs', icon: '', description: `Enable crypto-based rewards and tokenized loyalty programs that leverage DeFi functionalities like staking and lending` },
+    { title: 'Gaming and Virtual Economies', icon: '', description: `Seamlessly integrate DeFi primitives into game economies, allowing players to lend, borrow, and trade in-game assets` },
+    { title: 'DAO Treasury Management', icon: '', description: `Provide DAOs with smart treasury management tools that optimize returns while adhering to governance policies` },
+    { title: 'Decentralized Insurance', icon: '', description: `Facilitate the creation of DeFi-based insurance policies with risk modeling and automated payouts driven by AI` },
 ];
 
 export const keyDifferentList = [
-    { title: 'Neural-Network Risk Stratification', icon: '', description: 'Our AI models employ clustering and gradient-boosted decision trees to deliver granular, probabilistic risk stratification for DeFi instruments' },
-    { title: 'Zero-Latency Claims Validation', icon: '', description: 'Real-time oracle feeds and event-driven smart contracts ensure frictionless execution of claims, with zero human intervention' },
-    { title: 'Holistic Coverage Dynamics', icon: '', description: 'Beyond static insurance models, Aegisix deploys modular and composable risk matrices that adapt to evolving market conditions' },
-    { title: 'Decentralized Risk Liquidity Architecture', icon: '', description: 'Multi-party staking pools are tokenized for hyper-efficient capital allocation, enabling transparent ROI distribution for underwriters' },
-    { title: 'Technological Scalability', icon: '', description: 'Aegisix operates on a sharded, multi-chain architecture, ensuring optimal throughput and decentralized execution efficiency' },
+    { title: 'Unified Abstraction Layer', icon: '', description: `A single interface to access and integrate multiple DeFi protocols, reducing the complexity of multi-chain interactions` },
+    { title: 'AI-Powered Adaptability', icon: '', description: `Advanced AI models that continuously learn and adapt to market dynamics, offering real-time optimization across DeFi modules` },
+    { title: 'End-to-End Security', icon: '', description: `Multi-layered security infrastructure, including real-time contract auditing and anomaly detection` },
+    { title: 'No-Code Integration', icon: '', description: `Businesses can deploy DeFi solutions without technical expertise, dramatically lowering the barrier to entry` },
+    { title: 'Scalable Infrastructure', icon: '', description: `Designed to handle high transaction volumes and large user bases, ensuring smooth operation under all conditions` },
 ];
 
 export const emptyMessage = [

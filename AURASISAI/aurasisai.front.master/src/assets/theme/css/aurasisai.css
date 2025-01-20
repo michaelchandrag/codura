@@ -1,10 +1,13 @@
 :root {
     --orange-color: #FBB138;
     --dark-color: #000000;
-    --app-color: #28D198;
+    --app-color: #F60D0D;
+    --app-color-light: #B0A9A9;
     --app-dark-lighter: #313D52;
     --app-dark-light: #1D1D1F;
-    --app-font: 'IBMPlexMono', sans-serif;
+    --app-dark-transparent: #0000004D;
+    --app-border: #FFFFFF80;
+    --app-font: 'InstrumentSans', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -30,16 +33,30 @@ body {
     font-family: var(--app-font);
     font-weight: normal;
     font-style: normal;
-    background: #FFFFFF;
+    background: var(--dark-color);
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, div, a, li, input, button, textarea, button{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a,
+li,
+input,
+button,
+textarea,
+button {
     font-family: var(--app-font);
 }
 
-.ps-6{
+.ps-6 {
     padding-left: 5rem !important;
 }
 
@@ -59,7 +76,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, li, input, button, textarea, button{
     color: var(--dark-color);
 }
 
-.bg-light{
+.bg-light {
     background: #313D5226 !important;
 }
 
@@ -78,6 +95,12 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, li, input, button, textarea, button{
 .no-shadow {
     box-shadow: none !important;
     outline: none !important;
+}
+
+.no-border{
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .border-light {
@@ -100,13 +123,13 @@ img {
 }
 
 #header {
-    background: transparent;
+    background: var(--app-dark-transparent);
     padding: 0.5rem 0 !important;
 }
 
 .navmenu a {
     font-family: var(--app-font);
-    color: var(--app-dark-light);
+    color: var(--app-color-light);
     font-weight: 500;
     padding-top: .5rem !important;
     padding-bottom: .5rem !important;
@@ -117,7 +140,7 @@ img {
 .navmenu a.is-active,
 .navmenu a:hover,
 .navmenu a:active {
-    color: var(--dark-color) !important;
+    color: #FFFFFF !important;
 }
 
 #navmenu li.action a {
@@ -129,6 +152,10 @@ img {
 #navmenu li.action a:active {
     color: #ffffff !important;
     background: var(--dark-color) !important;
+}
+
+#navmenu li a.social {
+    padding: 0.25rem .5rem !important;
 }
 
 #hero::before,
@@ -148,8 +175,15 @@ img {
     z-index: 9;
 }
 
+.hero-bg-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 .scrolled .header {
-    background: #ffffff !important;
+    background: var(--dark-color) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -167,6 +201,18 @@ img {
 
 .text-lighter:hover {
     color: #ffffff !important;
+}
+
+.border-app {
+    border: 2px solid var(--app-border);
+}
+
+ul.decimal li {
+    list-style: decimal !important;
+}
+
+.rounded-sm2{
+    border-radius: 16px !important;
 }
 
 .section-body section {
@@ -207,16 +253,31 @@ img {
 }
 
 .feature-card {
-    background: var(--app-dark-lighter);
-    border: none;
+    background: #131314;
+    border: 2px solid var(--app-border);
+    transition: box-shadow 0.2s ease-in-out;
 }
 
-.feature-card:hover, .feature-card:active {
-    background: var(--dark-color)
+.feature-card:hover,
+.feature-card:active {
+    background: var(--dark-color);
+    animation: shadow-move 0.5s forwards;
 }
 
-.feature-card:hover .card-body, .feature-card:active .card-body{
-    background: url('/assets/img/bg-try.png') center center no-repeat !important;
+@keyframes shadow-move {
+    0% {
+        box-shadow: 20px 0px 30px rgba(246, 13, 13, 0.5); /* Shadow ke kanan */
+    }
+    50% {
+        box-shadow: 10px 10px 30px rgba(246, 13, 13, 0.5); /* Shadow mendekat */
+    }
+    100% {
+        box-shadow: 0px 0px 30px rgba(246, 13, 13, 0.7); /* Shadow di tengah */
+    }
+}
+
+.has-content-bg{
+    background: url('/assets/img/bg-content.png') center center no-repeat !important;
     background-size: cover !important;
 }
 
@@ -240,11 +301,12 @@ img {
     padding-bottom: 1rem;
 }
 
-.ai-history-header .btn{
+.ai-history-header .btn {
     background: linear-gradient(90deg, #313D52 0%, #000000 100%);
 }
 
-#ai-message-body, #ai-message-footer{
+#ai-message-body,
+#ai-message-footer {
     background: #F1F5F9;
 }
 
@@ -304,7 +366,9 @@ img {
     background: transparent;
 }
 
-.ai-history-item.bg-dark a, .ai-history-item.bg-dark i, .ai-history-item.bg-dark p {
+.ai-history-item.bg-dark a,
+.ai-history-item.bg-dark i,
+.ai-history-item.bg-dark p {
     color: #ffffff !important;
 }
 
@@ -322,7 +386,7 @@ img {
     color: var(--app-dark-lighter) !important;
 }
 
-.ai-action-message{
+.ai-action-message {
     border: none !important;
     outline: none !important;
     background: #313D52;
@@ -350,7 +414,7 @@ img {
 .main-hero {
     background: url('/assets/img/bg-hero.png') center center no-repeat;
     background-size: 100% 100%;
-    padding-top: 6rem !important;
+    padding-top: 8rem !important;
 }
 
 .footer .footer-newsletter {
@@ -442,28 +506,33 @@ img {
     overflow-wrap: anywhere !important;
 }
 
-#section-try .card-body{
+#section-try .card-body {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    background: url('/assets/img/bg-try.png') center center no-repeat !important;
-    background-size: cover;
 }
 
-.try-request button{
-    background: #EE3A3A;
-}
-.try-request button:hover, .try-request button:active{
-    color: #EE3A3A !important;
-    background: transparent;
+.try-request button, .try-request input{
     border: none;
     box-shadow: none;
     outline: none;
 }
 
-.different-item:hover, .different-item:active{
+.try-request button:hover,
+.try-request button:active {
+    color: var(--app-color) !important;
+    background: transparent !important;
+}
+
+.different-item:hover,
+.different-item:active {
     box-shadow: 0 0.5rem 1rem rgb(159 30 30 / 15%) !important;
 }
 
-.potential-item:hover .potential-badge, .potential-item:active .potential-badge{
+.potential-item:hover .potential-badge,
+.potential-item:active .potential-badge {
     background: linear-gradient(to bottom, #313D52 70%, #FF6A6A 85%, #EE3A3A);
+}
+
+.different-option{
+    border: 1px solid #FFFFFF4D
 }
