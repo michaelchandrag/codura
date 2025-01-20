@@ -1,43 +1,50 @@
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, ref } from 'vue'
+import { scrollToElement } from '@/helpers'
+
 const { routeName } = defineProps({
   routeName: { type: String, default: 'home' },
 })
+let is_menu = ref('home');
+const changeMenu = (menu) => {
+  is_menu.value = menu;
+  scrollToElement(`section-${menu}`, 100);
+}
 </script>
 
 <template>
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-content container-fluid container-xl position-relative d-flex align-items-center justify-content-between px-5">
-      <router-link :to="{ name: 'home' }" class="logo d-flex align-items-center">
-        <img src="/assets/img/codura.png" class="lg p-1" alt="codura" />
-        <!-- <h1 class="sitename">codura</h1> -->
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }" class="logo d-flex align-items-center">
+        <img src="/assets/img/aegesix.png" class="lg" alt="aegesix" />
+        <!-- <h1 class="sitename">aegesix</h1> -->
       </router-link>
-      <nav id="navmenu-center" class="navmenu">
-        <ul>
+      <nav id="navmenu-center" class="navmenu ps-6">
+        <ul class="gap-3">
           <li>
-            <router-link :class="{'text-green': routeName == 'home'}" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+            <router-link @click.prevent="changeMenu('home')" :class="{'is-active': is_menu == 'home'}" class="fs-13px" :to="{ name: 'home' }">HOME</router-link>
           </li>
           <li>
-            <router-link :class="{'text-green': routeName == 'about'}" class="fs-13px" :to="{ name: 'about' }">About</router-link>
+            <a @click.prevent="changeMenu('about')" :class="{'is-active': is_menu == 'about'}" class="fs-13px" href="#">ABOUT</a>
           </li>
           <li>
-            <router-link :class="{'text-green': routeName == 'feature'}" class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
+            <a @click.prevent="changeMenu('feature')" :class="{'is-active': is_menu == 'feature'}" class="fs-13px" href="#">FEATURE</a>
           </li>
         </ul>
       </nav>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li class="d-xl-none">
-            <router-link class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+            <router-link @click.prevent="changeMenu('home')" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li class="d-xl-none">
-            <router-link class="fs-13px" :to="{ name: 'about' }">About</router-link>
+            <a @click.prevent="changeMenu('about')" class="fs-13px" href="#">About</a>
           </li>
           <li class="d-xl-none">
-            <router-link  class="fs-13px" :to="{ name: 'feature' }">Features</router-link>
+            <a @click.prevent="changeMenu('feature')" class="fs-13px" href="#">Feature</a>
           </li>
           <li class="action"><router-link :to="{ name: 'ai' }"
-              class="btn btn-sm bg-green py-1 px-3 rounded fs-13px 14px">Start with AI</router-link></li>
+              class="btn btn-sm bg-transparent rounded fs-13px 14px">Try Demo Version</router-link></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

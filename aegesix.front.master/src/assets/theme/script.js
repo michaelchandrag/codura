@@ -17,7 +17,7 @@ export function initScripts() {
   function toggleScrolled() {
     const selectBody = document.querySelector('body')
     const selectHeader = document.querySelector('#header')
-    if (selectHeader) {
+    if(selectHeader){
       if (
         !selectHeader.classList.contains('scroll-up-sticky') &&
         !selectHeader.classList.contains('sticky-top') &&
@@ -38,7 +38,7 @@ export function initScripts() {
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle')
 
-  if (mobileNavToggleBtn) {
+  if(mobileNavToggleBtn){
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle)
   }
   function mobileNavToogle() {

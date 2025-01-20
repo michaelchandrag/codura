@@ -11,36 +11,10 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'CODURA',
+      title: 'AEGESIX',
       description: ''
     },
     component: () => import('@/views/Home/Index.vue')
-  },
-  {
-    path: '/about',
-    alias: '/about-us',
-    name: 'about',
-    meta: {
-      is_ready: true,
-      require_auth: false,
-      is_auth: false,
-      title: 'CODURA | ABOUT',
-      description: ''
-    },
-    component: () => import('@/views/Page/About.vue')
-  },
-  {
-    path: '/feature',
-    alias: '/features',
-    name: 'feature',
-    meta: {
-      is_ready: true,
-      require_auth: false,
-      is_auth: false,
-      title: 'CODURA | FEATURE',
-      description: ''
-    },
-    component: () => import('@/views/Page/Feature.vue')
   },
   {
     path: '/ai',
@@ -50,7 +24,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'CODURA | AI',
+      title: 'AEGESIX | AI',
       description: ''
     },
     component: () => import('@/views/Ai/Index.vue')
@@ -63,7 +37,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'CODURA | 404',
+      title: 'AEGESIX | 404',
       description:
         'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.'
     },
@@ -121,14 +95,14 @@ router.afterEach((to, from) => {
     } else {
       metaDescription.setAttribute(
         'content',
-        'CODURA'
+        'AEGESIX'
       )
     }
   } else {
     const description = document.createElement('meta')
     description.name = 'description'
     description.content =
-      to.meta.description || 'CODURA'
+      to.meta.description || 'AEGESIX'
     document.head.appendChild(description)
   }
 })

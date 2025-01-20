@@ -1,109 +1,180 @@
 <script setup>
-import { onMounted, ref, reactive, watch } from 'vue'
-import { postMessage } from '@/controllers';
-import store from '@/configs/store';
+import { onMounted, ref, reactive } from 'vue'
+import { company, featureList, potentialList, keyDifferentList } from '@/models'
 import { copyToClipboard } from '@/helpers';
 
-let keyCA = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
-
-let isSending = ref(false);
-let histories_length = ref(0);
-let messages = ref([
-  { role: 'system', content: `Codura is your AI-powered coding assistant, here to help you write, optimize, and debug code effortlessly. Whether you're building from scratch or refining your project, just type your prompt and watch Codura turn your ideas into reality` }
-]);
-
-const chatbox = ref(null);
-let chat = ref('');
-
+let hoverdLine = ref(0)
 onMounted(() => {
-  histories_length.value = store.getters.stateChatHistory.length;
-  scrollToBottomChat();
+
 })
-watch(messages, () => {
-  scrollToBottomChat();
-});
 
-const scrollToBottomChat = () => {
-  if (chatbox.value) {
-    chatbox.value.scrollTop = chatbox.value.scrollHeight;
-  }
-};
-
-const sendMessage = async () => {
-  if (!chat.value.trim() || isSending.value) return;
-
-  isSending.value = true;
-  messages.value.push({ role: 'user', content: chat.value });
-
-  const messagesForAPI = messages.value.slice(-2).map((msg) => ({
-    role: msg.role,
-    content: msg.content,
-  }));
-
-  const result = await postMessage(messagesForAPI);
-  if (result) {
-    if (result.success) {
-      messages.value.push({ role: 'assistant', content: result.respone });
-      chat.value = '';
-      saveChatHistory();
-    }
-    isSending.value = false;
-  }
-};
-
-const saveChatHistory = async () => {
-  const newHistory = {
-    key: `chat-${Date.now()}`,
-    title: `Chat ${histories_length.value + 1}`,
-    messages: messages.value,
-  };
-  await store.commit('addChatHistory', newHistory);
-};
-
+const changeHoveredLine = (index) => {
+  hoverdLine.value = index;
+}
 </script>
 
 <template>
-  <section id="hero" class="main-hero hero section bg-transparent first-section pb-2">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="row gy-4 align-items-center justify-content-between">
-        <div class="col-12 col-lg-6">
-          <div class="hero-text mb-5">
-            <h2 class="ls-sm fw-bold text-white fs-50px">AI Smart Contract Code Optimizer</h2>
-            <p class="mt-3 w-100 text-white fw-normal ls-xs fs-16px hero-desc">Boost Security, Efficiency, and
-              Performance of
-              Smart Contracts with Decentralized AI-Powered Insights</p>
+  <section class="main-hero hero section bg-transparent">
+    <div class="col-12 col-lg-10 m-auto">
+      <div class="container position-relative text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-7">
+            <div class="hero-text text-start">
+              <h2 class="ls-sm fw-bold text-dark fs-30px mb-4">Parametrically Insuring DeFi's Future with Autonomous
+                Intelligence.</h2>
+              <p class="w-100 text-dark fw-normal fs-14px hero-desc ls-xs m-0">Empowering the DeFi ecosystem with
+                cutting-edge AI and blockchain technology to deliver real-time, adaptive risk management solutions that
+                safeguard liquidity, secure capital, and optimize protocol integrity for a more resilient financial
+                future</p>
+              <div v-if="company.key_ca"
+                class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group mt-4 border">
+                <div class="form-control form-control-sm fs-12px ls-sm bg-transparent border-0 text-start text-dark">{{
+                  company.key_ca }}</div>
+                <a @click.prevent="copyToClipboard(company.key_ca)"
+                  class="input-group-text btn btn-sm bg-transparent rounded-sm text-dark fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
+                  <i class="bi bi-copy"></i>
+                  <span>Copy CA</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="hero-prompt">
-            <div class="input-group p-2 rounded-sm bg-white">
-              <div class="form-control form-control-sm fs-13px bg-transparent border-0 ls-sm">{{ keyCA }}</div>
-              <a @click.prevent="copyToClipboard(keyCA)"
-                class="input-group-text btn btn-sm bg-green rounded-sm text-white fs-13px px-3 d-inline-flex align-items-center gap-2">
-                <i class="bi bi-copy"></i>
-                <span>Copy CA</span>
-              </a>
+          <div class="col-lg-5">
+            <div class="hero-img">
+              <img src="/assets/img/hero-img.gif" />
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-5">
-          <div class="card rounded-sm ai-card h-100" data-aos="fade-left" data-aos-delay="100">
-            <div id="ai-message-body" ref="chatbox" class="is-prompt card-body text-start px-2 py-3">
-              <div v-for="msg in messages" :class="{ 'is-me': msg.role == 'user' }" class="ai-message-item d-flex">
-                <div class="py-2 px-3">
-                  <p :class="{'py-2 px-3': msg.role == 'user'}" class="m-0 text-white fs-12px ls-xs ws-100 bubble rounded-sm full fw-300">{{ msg.content }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-about" class="section bg-transparent pt-0 pb-0">
+    <div class="col-12 col-lg-10 m-auto">
+      <div class="container section-title p-0">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-5">
+            <div class="about-img">
+              <img src="/assets/img/about-img.gif" />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="about-info text-start">
+              <span class="badge text-dark bg-light py-2 px-3 rounded mb-4">About Us</span>
+              <h6 class="text-dark fw-bold text-capitalize ls-xs">AI-powered, adaptive risk management for DeFi.</h6>
+              <p class="text-dark fw-normal fs-13px ls-xs">Aegisix redefines decentralized risk management by converging
+                advanced AI algorithms with trustless blockchain infrastructure. Our protocol empowers users with
+                dynamic,
+                real-time, and adaptive coverage mechanisms that mitigate financial uncertainties across an evolving
+                DeFi
+                ecosystem. By leveraging predictive analytics and machine learning, Aegisix secures capital, safeguards
+                liquidity, and optimizes protocol integrity with precision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-feature" class="section bg-transparent pt-0">
+    <div class="col-12 col-lg-10 m-auto">
+      <div class="container section-title pb-4">
+        <div class="col-lg-8 m-auto">
+          <h5 class="text-dark fw-bold text-capitalize ls-xs">FEATURES</h5>
+          <p class="text-dark fw-normal fs-13px">Advanced AI and blockchain-powered features delivering adaptive risk
+            management, seamless claims, and cross-chain protection for a secure DeFi ecosystem</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+          <div v-for="(feature, idf) in featureList" :key="idf" class="col-lg-4" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="feature-item card rounded-sm feature-card h-100">
+              <div class="card-body text-center">
+                <div v-if="feature.icon" class="feature-icon mb-4">
+                  <img :src="`/assets/img/${feature.icon}.png`" />
                 </div>
+                <h6 class="text-white fw-bold text-capitalize fs-14px mb-2">{{ feature.title }}</h6>
+                <p class="text-light fw-300 fs-12px m-0">{{ feature.description }}</p>
               </div>
             </div>
-            <div id="ai-message-footer" class="card-footer">
-              <form @submit.prevent="sendMessage">
-                <div class="input-group bg-transparent">
-                  <input v-model="chat" required
-                    class="form-control form-control-sm fs-12px text-white bg-transparent fw-300"
-                    placeholder="Start Typing your prompt ...">
-                  <button type="submit" :disabled="isSending" :class="{ 'disabled': isSending }"
-                    class="btn btn-sm text-white bg-transparent input-group-text">
-                    <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary" role="status"></span>
-                    <img v-else src="/assets/img/send.png" />
-                  </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-potential" class="section bg-transparent">
+    <div class="col-12 col-lg-10 m-auto">
+      <div class="container section-title pb-4">
+        <div class="col-lg-8 m-auto">
+          <h5 class="text-dark fw-bold text-capitalize ls-xs">POTENTIAL USECASE</h5>
+          <p class="text-dark fw-normal fs-13px">Comprehensive AI-driven solutions to mitigate risks across protocols,
+            trades, liquidity pools, wallets, and multi-chain operations</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-lg-9 m-auto">
+          <div v-for="(potential, idp) in potentialList" :key="idp" class="potential-item d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="potential-badge bg-dark-lighter d-inline-flex align-items-center ws-5 justify-content-center rounded-sm hs-40px">
+              <span class="badge fs-14px fw-bold">{{ idp + 1 }}</span>
+            </div>
+            <div class="potential-info ws-95 ps-3">
+              <h6 class="text-dark fw-bold text-capitalize fs-14px mb-1">{{ potential.title }}</h6>
+              <p class="text-dark fw-300 fs-12px m-0">{{ potential.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-different" class="section bg-transparent">
+    <div class="col-12 col-lg-10 m-auto">
+      <div class="container section-title pb-4">
+        <div class="col-lg-8 m-auto">
+          <h5 class="text-dark fw-bold text-capitalize ls-xs">KEY DIFFERENT</h5>
+          <p class="text-dark fw-normal fs-13px">Innovative AI, real-time claims, adaptive coverage, and scalable
+            architecture redefining DeFi risk management</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row gy-4 justify-content-start">
+          <div v-for="(different, idd) in keyDifferentList" :key="idd" class="col-lg-6" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="different-item card rounded-sm h-100 border-0 shadow">
+              <div class="card-body text-start">
+                <div v-if="different.icon" class="feature-icon mb-4">
+                  <img :src="`/assets/img/${different.icon}.png`" />
+                </div>
+                <h6 class="text-dark fw-bold text-capitalize fs-14px mb-2">{{ different.title }}</h6>
+                <p class="text-dark fw-300 fs-12px m-0">{{ different.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-try" class="section bg-transparent pb-5">
+    <div class="col-12 col-lg-10 m-auto">
+      <div class="container">
+        <div class="card border-0 bg-dark rounded-md">
+          <div class="card-body">
+            <div class="section-title pb-4">
+              <div class="col-lg-7 m-auto">
+                <h5 class="text-white fw-bold text-capitalize ls-xs">TRY DEMO VERSION</h5>
+                <p class="text-white fw-normal fs-13px">Sign up to experience the future of DeFi coverage. Enter your
+                  email to access the beta dashboard of Aegisix. The demo is launching soon</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 m-auto try-request">
+              <form>
+                <div class="input-group input-group-lg bg-white rounded-sm">
+                  <input required class="form-control bg-transparent no-shadow fs-12px"
+                    placeholder="Enter your email address">
+                  <button type="submit" class="input-group-text text-white btn btn-sm fs-12px">Send Request</button>
                 </div>
               </form>
             </div>
@@ -112,41 +183,5 @@ const saveChatHistory = async () => {
       </div>
     </div>
   </section>
-  <section class="section bg-transparent">
-    <div class="container section-title pb-2 text-start">
-      <h3 class="text-white text-capitalize ls-sm">How it Works?</h3>
-    </div>
-    <div class="container">
-      <div class="why-list mt-2">
-        <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
-          <p class="text-light fw-normal fs-14px m-0 ls-xs">
-            <strong>Code Submission</strong>: Users submit their smart contract code either by direct input or file
-            upload.
-          </p>
-        </div>
-        <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
-          <p class="text-light fw-normal fs-14px m-0 ls-xs"><strong>AI-Powered Analysis</strong> The AI engine performs
-            a comprehensive audit, detecting gas inefficiencies, security risks, and deviations from best practices.</p>
-        </div>
-        <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
-          <p class="text-light fw-normal fs-14px m-0 ls-xs"><strong>Optimization Insights</strong> The system generates
-            detailed, actionable insights accompanied by AI-suggested code refinements.</p>
-        </div>
-        <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
-          <p class="text-light fw-normal fs-14px m-0 ls-xs"><strong>Decentralized Review</strong> Optional peer
-            validation allows the development community to verify the AI findings, promoting transparency and trust.</p>
-        </div>
-        <div class="d-flex align-items-start gap-3 mb-2">
-          <i class="bi bi-check-circle-fill fs-16px lh-normal text-green"></i>
-          <p class="text-light fw-normal fs-14px m-0 ls-xs"><strong>Deployment-Ready Output</strong> After implementing
-            the enhancements, the optimized smart contract is exportable and prepared for secure on-chain deployment.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+
 </template>

@@ -177,6 +177,21 @@ export function getYoutubeId(url) {
   return match ? match[1] : null
 }
 
+export function scrollToElement(id, space = 0) {
+  const element = document.getElementById(id);
+  if (element) {
+    const offset = space;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  } else {
+    return;
+  }
+}
 export const copyToClipboard = async (value) => {
   try {
     await navigator.clipboard.writeText(value);
