@@ -3,6 +3,7 @@ import { onMounted, ref, reactive, watch } from 'vue'
 import { postMessage } from '@/controllers';
 import store from '@/configs/store';
 import { copyToClipboard } from '@/helpers';
+import { company } from '@/models';
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 
@@ -50,7 +51,21 @@ onMounted(() => {
             </p>
             <router-link class="fs-13px btn btn-danger" :to="{ name: 'ai' }">
               Getting Started
-            </router-link>
+            </router-link>      
+          </div>
+          <div v-if="company.key_ca" class="copy-ca">
+            <div class="col-12 col-lg-6 m-auto">
+              <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
+                <div
+                  class="form-control form-control-sm fs-11px ls-xs bg-transparent border-0 text-start ps-3 text-white">{{
+                    company.key_ca }}</div>
+                <a @click.prevent="copyToClipboard(company.key_ca)"
+                  class="input-group-text btn btn-sm bg-transparent rounded-sm text-app fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
+                  <i class="bi bi-copy"></i>
+                  <span>Copy CA</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
