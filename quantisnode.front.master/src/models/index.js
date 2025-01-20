@@ -10,8 +10,8 @@ export const company = {
     yt: '',
     ig: '',
     fb: '',
-    tw: 'https://x.com/CoduraTech',
-    github: 'https://github.com/bfpapamain/codura',
+    tw: 'https://x.com/quantisnode',
+    github: 'https://github.com/sbymaster/quantisnode.xyz',
     linkedin: '',
     key_ca: '',
 };
