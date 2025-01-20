@@ -1,0 +1,16 @@
+export const company = {
+    name: 'ORACIUM',
+    alias: 'ORACIUM',
+    slug: 'oracium',
+    phone: '',
+    phone_label: '',
+    email: '',
+    address: '',
+    wa: '',
+    yt: '',
+    ig: '',
+    fb: '',
+    tw: '#',
+    github: '#',
+    linkedin: '',
+};
