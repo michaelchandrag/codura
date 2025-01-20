@@ -50,7 +50,7 @@ const changeHoveredLine = (index) => {
 
   <section id="section-about" class="section bg-transparent pt-0 pb-0">
     <div class="col-12 col-lg-10 m-auto">
-      <div class="container section-title p-0">
+      <div class="container section-title">
         <div class="row align-items-center justify-content-between">
           <div class="col-lg-5">
             <div class="about-img">

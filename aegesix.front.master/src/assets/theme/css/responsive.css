@@ -96,6 +96,11 @@
         display: none !important;
     }
 
+    .container-ai{
+        padding: 0px !important;
+        padding-top: 1rem !important;
+    }
+
     .ai-history-sidebar {
         display: none;
     }
@@ -109,6 +114,7 @@
         height: 95vh;
         display: block;
         padding: 0px !important;
+        background: #FFFFFF;
     }
 
     .ai-message-sidebar{
@@ -128,6 +134,9 @@
 @media (max-width: 1199px) {
     .mobile-nav-active .navmenu>ul {
         display: block;
-        background: #000000;
+        background: #ffffff;
+    }
+    .mobile-nav-toggle {
+        color: #000000;
     }
 }

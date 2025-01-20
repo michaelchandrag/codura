@@ -127,9 +127,8 @@ img {
 
 #navmenu li.action a:hover,
 #navmenu li.action a:active {
-    color: var(--app-color) !important;
-    background: transparent !important;
-    border: 1px solid var(--app-color) !important;
+    color: #ffffff !important;
+    background: var(--dark-color) !important;
 }
 
 #hero::before,
@@ -241,6 +240,14 @@ img {
     padding-bottom: 1rem;
 }
 
+.ai-history-header .btn{
+    background: linear-gradient(90deg, #313D52 0%, #000000 100%);
+}
+
+#ai-message-body, #ai-message-footer{
+    background: #F1F5F9;
+}
+
 #ai-message-body,
 #ai-history-body {
     height: 70vh;
@@ -250,7 +257,6 @@ img {
     scrollbar-color: #888 #f1f1f1;
 }
 
-#ai-message-footer,
 #ai-message-header {
     background: #00000099;
 }
@@ -285,7 +291,7 @@ img {
     max-width: 95%;
 }
 
-.ai-message-item.is-me .bubble {
+.ai-message-item .bubble {
     background: #ffffff;
     color: #000000 !important;
 }
@@ -298,13 +304,17 @@ img {
     background: transparent;
 }
 
+.ai-history-item.bg-dark a, .ai-history-item.bg-dark i, .ai-history-item.bg-dark p {
+    color: #ffffff !important;
+}
+
 .ai-history-content,
 .card-conversation {
-    background: #131314;
+    background: transparent;
 }
 
 #ai-message-footer .input-group {
-    background: #020203;
+    background: #ffffff;
 }
 
 #ai-message-prompt::placeholder,
@@ -312,9 +322,13 @@ img {
     color: var(--app-dark-lighter) !important;
 }
 
-#ai-send-message {
+.ai-action-message{
     border: none !important;
     outline: none !important;
+    background: #313D52;
+    border-radius: 80px;
+    width: 40px;
+    height: 40px;
 }
 
 .bg-orange {
