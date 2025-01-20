@@ -68,23 +68,25 @@ onMounted(() => {
                 Innovative AI Tools for Smarter, Safer, and Cost-Efficient Blockchain Solutions.
               </p>           
             </div>
-            <div class="d-flex align-items-start gap-3 mb-2">
-              <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
-              <p class="text-light fw-normal fs-16px m-0 ls-xs">
-                Decentralized Protocol Governance: Community-driven decision-making for the protocol’s evolution.
-              </p>
-            </div>
-            <div class="d-flex align-items-start gap-3 mb-2">
-              <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
-              <p class="text-light fw-normal fs-14px m-0 ls-xs">
-                AI-Optimized Yield Strategies: AI-enhanced investment strategies for maximizing returns while managing risk.
-              </p>
-            </div>
-            <div class="d-flex align-items-start gap-3 mb-2">
-              <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
-              <p class="text-light fw-normal fs-14px m-0 ls-xs">
-                Zero-Trust Security Architecture: Advanced security frameworks ensuring transaction integrity and data protection.
-              </p>
+            <div class="col-lg-10">
+              <div class="d-flex align-items-start gap-3 mb-2">
+                <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
+                <p class="text-light fw-normal fs-16px m-0 ls-xs">
+                  Decentralized Protocol Governance: Community-driven decision-making for the protocol’s evolution.
+                </p>
+              </div>
+              <div class="d-flex align-items-start gap-3 mb-2">
+                <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
+                <p class="text-light fw-normal fs-14px m-0 ls-xs">
+                  AI-Optimized Yield Strategies: AI-enhanced investment strategies for maximizing returns while managing risk.
+                </p>
+              </div>
+              <div class="d-flex align-items-start gap-3 mb-2">
+                <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
+                <p class="text-light fw-normal fs-14px m-0 ls-xs">
+                  Zero-Trust Security Architecture: Advanced security frameworks ensuring transaction integrity and data protection.
+                </p>
+              </div>
             </div>
           </div>
         </div>
