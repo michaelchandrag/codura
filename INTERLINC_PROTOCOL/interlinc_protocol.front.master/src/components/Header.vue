@@ -37,7 +37,7 @@ const changeMenu = (menu) => {
               href="#">Use Case</a>
           </li>
           <li>
-            <a @click.prevent="changeMenu('differentiator')" :class="{ 'is-active': is_menu == 'differentiator' }" class="fs-13px"
+            <a @click.prevent="changeMenu('different')" :class="{ 'is-active': is_menu == 'different' }" class="fs-13px"
               href="#">Differentiators</a>
           </li>
         </ul>
@@ -54,7 +54,7 @@ const changeMenu = (menu) => {
             <a @click.prevent="changeMenu('usecase')" class="fs-13px" href="#">Use Case</a>
           </li>
           <li class="d-xl-none">
-            <a @click.prevent="changeMenu('differentiator')" class="fs-13px" href="#">Differentiators</a>
+            <a @click.prevent="changeMenu('different')" class="fs-13px" href="#">Differentiators</a>
           </li>
           <li class="action">
             <router-link :to="{ name: 'ai' }" class="btn btn-sm rounded actived-orange fs-13px py-1 px-2 14px border rounded">

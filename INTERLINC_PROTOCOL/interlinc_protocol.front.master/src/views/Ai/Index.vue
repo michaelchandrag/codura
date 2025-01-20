@@ -203,63 +203,45 @@ async function clearHistory() {
 </script>
 
 <template>
-  <section class="section bg-white ai-section section-content p-0">
+  <section class="section bg-dark ai-section section-content p-0">
     <div class="container-ai px-3">
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar p-0" :class="{ 'is-show': show_history }">
           <div class="ai-history-header mb-2 d-flex align-items-center justify-content-between px-4 pt-2">
-            <router-link class="bg-dark rounded-sm p-1" :to="{ name: 'home' }"><img src="/assets/img/aurasisai-icon.png" /></router-link>
-            <a @click.prevent="addNewChat" class="btn btn-sm rounded text-white px-3"><i class="bi bi-plus"></i><span class="fs-13px">New
-                Chat</span></a>
-            <a @click.prevent="setShowSearch" class="btn btn-sm rounded text-white"><i class="bi bi-search"></i></a>
+            <router-link class="bg-dark rounded-sm p-1" :to="{ name: 'home' }">
+              <img class="p-3" src="/assets/img/interlinc.png" />
+            </router-link>
           </div>
           <div class="card border-0 ai-history-content">
-            <div v-if="show_search" class="ai-search p-3">
-              <form>
-                <div class="input-group m-0 rounded-sm bg-transparent border shadow">
-                  <span class="input-group-text bg-transparent text-dark-lighter border-0"><i
-                      class="bi bi-search"></i></span>
-                  <input class="ps-0 fs-12px form-control form-control-md bg-transparent border-0 no-shadow text-dark"
-                    placeholder="Search...">
-                </div>
-              </form>
-            </div>
             <div
               class="ai-content-header border-0 card-header bg-transparent py-3 d-flex justify-content-between align-items-center">
-              <h6 class="m-0 text-dark fs-11px fw-300 ls-xs text-uppercase">Your conversations</h6>
               <div class="d-inline-flex gap-2">
-                <a @click.prevent="clearHistory();" class="btn btn-sm py-0 px-2 text-primary fs-11px">Clear All</a>
                 <a @click.prevent="showHistory();" class="d-xl-none d-lg-none btn btn-sm py-0 px-2 text-dark">Close</a>
               </div>
             </div>
             <div id="ai-history-body" class="card-body text-start pt-0">
-              <div v-for="(his, idh) in histories" :key="his.key" :class="{ 'bg-dark': is_history == idh }"
+              <div v-for="(his, idh) in histories" :key="his.key" :class="{ 'bg-white': is_history == idh }"
                 class="ai-history-item d-flex mb-1 align-items-center justify-content-between py-1 px-0 rounded-sm">
-                <div class="d-inline-flex gap-1 ws-5 ps-1">
-                  <i class="bi bi-chat-dots"></i>
-                </div>
-                <a href="#" @click.prevent="selectHistory(idh)" class="ps-3 ws-70">
-                  <p class="m-0 text-dark fs-12px">{{ his.title }}</p>
+                <a href="#" @click.prevent="selectHistory(idh)" class="ps-2 ws-75">
+                  <p class="m-0 text-white fs-12px">{{ his.title }}</p>
                 </a>
                 <div class="d-inline-flex gap-1 ws-25">
                   <a href="#" @click.prevent="changeTitleHistory(idh)" class="btn btn-sm"><i
-                      class="text-dark bi bi-pencil"></i></a>
+                      class="text-white bi bi-pencil"></i></a>
                   <a @click.prevent="selectHistory(idh)" href="#" class="btn btn-sm"><i
-                      class="text-dark bi bi-chevron-right"></i></a>
+                      class="text-white bi bi-chevron-right"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-9 ai-message-sidebar p-0">
-          <div class="card h-100 card-conversation border-0">
+          <div class="card h-100 card-conversation border-0 rounded py-3 px-2">
             <div
-              class="ai-content-header card-header bg-transparent py-3 d-flex justify-content-between align-items-center border-light">
-              <h6 class="m-0 text-dark ls-xs">Ask Anything</h6>
+              class="ai-content-header card-header bg-white py-3 d-flex justify-content-between align-items-center border-light">
+              <a @click.prevent="addNewChat" class="btn btn-sm rounded text-dark border px-3 gap-1 d-inline-flex align-items-center fs-16px"><i class="bi bi-plus text-warning"></i><span class="fs-13px">New
+                Chat</span></a>
               <div class="d-inline-flex gap-3">
-                <a class="btn btn-sm py-1 px-1 text-dark fs-11px border">
-                  <img src="/assets/img/bookmark.png" />
-                </a>
                 <a class="btn btn-sm py-1 px-1 text-dark fs-11px border">
                   <img src="/assets/img/share.png" />
                 </a>
@@ -295,18 +277,18 @@ async function clearHistory() {
                   <div class="input-group input-group-lg rounded-md py-2 shadow">
                     <div class="input-group-text border-0 bg-transparent">
                       <a :disabled="isSending" :class="{ 'disabled': isSending }" class="text-dark">
-                        <img src="/assets/img/attach-circle.png" />
+                        <i class="bi bi-plus-circle"></i>
                       </a>
                     </div>
                     <input id="ai-message-prompt" v-model="chat" required
                       class="form-control form-control-sm fs-12px text-dark ps-0 bg-transparent"
-                      placeholder="What’s in your mind?...">
+                      placeholder="Start typing your prompt ...">
                     <div class="input-group-text border-0 bg-transparent">
                       <button id="ai-send-message" type="submit" :disabled="isSending"
-                        :class="{ 'disabled': isSending }" class="text-dark ai-action-message">
+                        :class="{ 'disabled': isSending }" class="text-white bg-warning ai-action-message rounded-sm">
                         <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary"
                           role="status"></span>
-                        <img v-else src="/assets/img/send-2.png" />
+                          <i v-else class="bi bi-arrow-up"></i>
                       </button>
                     </div>
                   </div>

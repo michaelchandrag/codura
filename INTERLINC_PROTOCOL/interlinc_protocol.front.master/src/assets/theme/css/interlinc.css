@@ -379,6 +379,12 @@ ul.decimal li {
     color: #ffffff !important;
 }
 
+.ai-history-item.bg-white a,
+.ai-history-item.bg-white i,
+.ai-history-item.bg-white p {
+    color: var(--dark-color) !important;
+}
+
 .ai-history-content,
 .card-conversation {
     background: transparent;
@@ -396,10 +402,6 @@ ul.decimal li {
 .ai-action-message {
     border: none !important;
     outline: none !important;
-    background: #313D52;
-    border-radius: 80px;
-    width: 40px;
-    height: 40px;
 }
 
 .actived-orange:hover, .actived-orange:active{
