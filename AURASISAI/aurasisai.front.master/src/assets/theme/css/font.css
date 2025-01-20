@@ -17,7 +17,7 @@
 /* Condensed Fonts */
 @font-face {
   font-family: 'InstrumentSansCondensed';
-  src: url('/assets/fonts/static/InstrumentSans Condensed-Bold.ttf') format('truetype');
+  src: url('/assets/fonts/static/InstrumentSans_Condensed-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: bold;
 }

@@ -134,9 +134,6 @@
 @media (max-width: 1199px) {
     .mobile-nav-active .navmenu>ul {
         display: block;
-        background: #ffffff;
-    }
-    .mobile-nav-toggle {
-        color: #000000;
+        background: #000000;
     }
 }
