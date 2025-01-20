@@ -1,36 +1,36 @@
 <script setup>
-import { onMounted, ref, reactive, watch } from 'vue'
-import { postMessage } from '@/controllers';
-import store from '@/configs/store';
-import { copyToClipboard } from '@/helpers';
-import { company } from '@/models';
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
+  import { onMounted, ref, reactive, watch } from 'vue'
+  import { postMessage } from '@/controllers';
+  import store from '@/configs/store';
+  import { copyToClipboard } from '@/helpers';
+  import { company } from '@/models';
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
 
-gsap.registerPlugin(TextPlugin);
+  gsap.registerPlugin(TextPlugin);
 
-const typingText = ref(null);
+  const typingText = ref(null);
 
 
-// let keyCA = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
+  // let keyCA = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
 
-onMounted(() => {
-  const textElement = typingText.value;
+  onMounted(() => {
+    const textElement = typingText.value;
 
-  gsap.fromTo(
-    textElement,
-    { 
-      text: "" 
-    },
-    {
-      text: "AI Insights",
-      duration: 2,
-      ease: "power1.inOut",
-      repeat: -1,
-      repeatDelay: 1,
-    }
-  );
-})
+    gsap.fromTo(
+      textElement,
+      { 
+        text: "" 
+      },
+      {
+        text: "AI Insights",
+        duration: 2,
+        ease: "power1.inOut",
+        repeat: -1,
+        repeatDelay: 1,
+      }
+    );
+  })
 </script>
 
 <template>
@@ -53,14 +53,14 @@ onMounted(() => {
               Getting Started
             </router-link>      
           </div>
-          <div v-if="company.key_ca" class="copy-ca">
+          <div v-if="company.key_ca" class="copy-ca mb-5">
             <div class="col-12 col-lg-6 m-auto">
               <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
                 <div
-                  class="form-control form-control-sm fs-11px ls-xs bg-transparent border-0 text-start ps-3 text-white">{{
+                  class="form-control form-control-sm fs-11px ls-xs bg-transparent border-1 text-start ps-3 text-white">{{
                     company.key_ca }}</div>
                 <a @click.prevent="copyToClipboard(company.key_ca)"
-                  class="input-group-text btn btn-sm bg-transparent rounded-sm text-app fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
+                  class="input-group-text btn btn-sm bg-white rounded-right rounded-sm text-app fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
                   <i class="bi bi-copy"></i>
                   <span>Copy CA</span>
                 </a>
@@ -72,4 +72,19 @@ onMounted(() => {
     </div>
   </section>
 </template>
+<style scoped>
+  .rounded-right {
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .text-app {
+    color: #5c1e20;
+
+    &:hover {
+      color: #111021;
+    }
+  }
+</style>
 

@@ -13,5 +13,5 @@ export const company = {
     tw: 'https://x.com/CoduraTech',
     github: 'https://github.com/bfpapamain/codura',
     linkedin: '',
-    key_ca: '',
+    key_ca: '2312asdasd',
 };
