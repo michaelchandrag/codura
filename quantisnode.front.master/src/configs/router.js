@@ -11,7 +11,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'CODURA',
+      title: 'QUANTIS NODE',
       description: ''
     },
     component: () => import('@/views/Home/Index.vue')
@@ -24,7 +24,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'CODURA | ABOUT',
+      title: 'QUANTIS NODE | ABOUT',
       description: ''
     },
     component: () => import('@/views/Page/About.vue')
@@ -37,7 +37,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'CODURA | FEATURE',
+      title: 'QUANTIS NODE | FEATURE',
       description: ''
     },
     component: () => import('@/views/Page/Feature.vue')
@@ -50,7 +50,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'CODURA | AI',
+      title: 'QUANTIS NODE | AI',
       description: ''
     },
     component: () => import('@/views/Ai/Index.vue')
@@ -63,7 +63,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'CODURA | 404',
+      title: 'QUANTIS NODE | 404',
       description:
         'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.'
     },
@@ -121,14 +121,14 @@ router.afterEach((to, from) => {
     } else {
       metaDescription.setAttribute(
         'content',
-        'CODURA'
+        'QUANTIS NODE'
       )
     }
   } else {
     const description = document.createElement('meta')
     description.name = 'description'
     description.content =
-      to.meta.description || 'CODURA'
+      to.meta.description || 'QUANTIS NODE'
     document.head.appendChild(description)
   }
 })
