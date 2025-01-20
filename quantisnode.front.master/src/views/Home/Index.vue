@@ -12,7 +12,7 @@
   const typingText = ref(null);
 
 
-  // let keyCA = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
+  let keyCA = ref('7nu8ZgCMWgpdSN75bVoMedLckf17Mv4oZ7j1Ce6tpump')
 
   onMounted(() => {
     const textElement = typingText.value;
@@ -53,13 +53,13 @@
               Getting Started
             </router-link>      
           </div>
-          <div v-if="company.key_ca" class="copy-ca mb-5">
-            <div class="col-12 col-lg-6 m-auto">
+          <div v-if="keyCA" class="copy-ca mb-5">
+            <div class="col-12 col-lg-7 m-auto">
               <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
                 <div
                   class="form-control form-control-sm fs-11px ls-xs bg-transparent border-1 text-start ps-3 text-white">{{
-                    company.key_ca }}</div>
-                <a @click.prevent="copyToClipboard(company.key_ca)"
+                    keyCA }}</div>
+                <a @click.prevent="copyToClipboard(keyCA)"
                   class="input-group-text btn btn-sm bg-white rounded-right rounded-sm text-app fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
                   <i class="bi bi-copy"></i>
                   <span>Copy CA</span>
