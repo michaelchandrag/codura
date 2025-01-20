@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps, onMounted, ref, reactive } from 'vue'
-import { featureList, potentialList, keyDifferentList } from '@/models'
+import { featureList, useCaseList, keyDifferentList } from '@/models'
 import { copyToClipboard, showAlert } from '@/helpers';
 
 const { company } = defineProps({
@@ -87,13 +87,36 @@ const changeDifferentOption = (option = '') => {
 
   <section id="section-different" class="section bg-transparent has-content-bg is-relative py-5">
     <div class="col-12 col-lg-10 m-auto">
-      <div class="container section-title pb-4">
+      <div class="container section-title pb-5">
         <div class="col-lg-8 m-auto">
           <h5 class="text-white fw-bold text-uppercase ls-xs">POTENTIAL USE CASES</h5>
           <p class="text-light fw-300 fs-14px">Revolutionizing DeFi Applications with Interlinc Protocol</p>
         </div>
       </div>
-      <div class="container"></div>
+      <div class="container my-4 is-relative">
+        <div v-for="(usecase, idu) in useCaseList" :key="idu" :class="{ 'row-reverse': usecase.position == 'left' }"
+          class="d-flex align-items-center pb-5 justify-content-between">
+          <div :class="{ 'text-end': usecase.position == 'right' }" class="ws-45">
+            <div :class="usecase.position"  class="px-5 usecase-number is-relative">
+              <span class="badge usecase-item rounded fs-18px fw-300">{{ idu + 1 }}</span>
+            </div>
+          </div>
+          <div :class="{'case-line' : idu == 0}" class="usecase-space ws-10 text-center p-0">
+            <span class="icon"><i class="bi bi-circle-fill"></i></span>
+          </div>
+          <div class="ws-45 p-0">
+            <div class="usecase-item card rounded-sm">
+              <div class="card-body text-start">
+                <div v-if="usecase.icon" class="feature-icon mb-4">
+                  <img :src="`/assets/img/${usecase.icon}.png`" />
+                </div>
+                <div class="text-white fs-12px ls-xs fw-500 mb-2">{{ usecase.title }}</div>
+                <p class="text-light fw-300 fs-11px ls-xs m-0">{{ usecase.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -143,9 +166,10 @@ const changeDifferentOption = (option = '') => {
         <div class="row align-items-baseline justify-content-between">
           <div class="col-12 col-lg-5 text-start">
             <h5 class="text-white text-capitalize ls-xs">KEY DIFFERENTIATORS</h5>
-            <p class="text-light fw-300 fs-14px">Elevate your tokenization experience with Noveris, where cutting-edge innovation meets trustless decentralization.</p>
+            <p class="text-light fw-300 fs-14px">Elevate your tokenization experience with Noveris, where cutting-edge
+              innovation meets trustless decentralization.</p>
             <div class="different-img mt-4 p-4">
-              <img src="/assets/img/different.gif"/>
+              <img src="/assets/img/different.gif" />
             </div>
           </div>
           <div class="col-12 col-lg-6">
@@ -178,7 +202,8 @@ const changeDifferentOption = (option = '') => {
         <div class="section-title pb-4">
           <div class="col-lg-7 m-auto">
             <h5 class="text-dark fw-bold text-capitalize ls-xs">TRY DEMO VERSION</h5>
-            <p class="text-dark fw-300 fs-14px">Be the first to experience Interlinc Protocol. Enter your email to access our forthcoming demo and join the liquidity revolution</p>
+            <p class="text-dark fw-300 fs-14px">Be the first to experience Interlinc Protocol. Enter your email to
+              access our forthcoming demo and join the liquidity revolution</p>
           </div>
         </div>
         <div class="col-12 col-lg-5 m-auto try-request">

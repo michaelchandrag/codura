@@ -49,12 +49,11 @@ export const featureList = [
     },
 ];
 
-export const potentialList = [
-    { title: 'Enterprise FinTech Integration', icon: '', description: `Embed DeFi-powered savings accounts, loans, or staking rewards into traditional financial applications, making decentralized finance accessible to millions of users` },
-    { title: 'E-Commerce and Loyalty Programs', icon: '', description: `Enable crypto-based rewards and tokenized loyalty programs that leverage DeFi functionalities like staking and lending` },
-    { title: 'Gaming and Virtual Economies', icon: '', description: `Seamlessly integrate DeFi primitives into game economies, allowing players to lend, borrow, and trade in-game assets` },
-    { title: 'DAO Treasury Management', icon: '', description: `Provide DAOs with smart treasury management tools that optimize returns while adhering to governance policies` },
-    { title: 'Decentralized Insurance', icon: '', description: `Facilitate the creation of DeFi-based insurance policies with risk modeling and automated payouts driven by AI` },
+export const useCaseList = [
+    { position:'right', title: 'High-Frequency Arbitrage Systems', icon: '', description: `Deploy Interlinc’s instantaneous liquidity insights for latency-sensitive arbitrage opportunities spanning multi-chain pools` },
+    { position:'left', title: 'Composable Yield Strategies', icon: '', description: `Yield aggregators can utilize Interlinc to seamlessly reallocate assets across high-yield pools, informed by DEFAI’s predictive analytics.` },
+    { position:'right', title: 'Institutional Liquidity Portals', icon: '', description: `Institutions gain programmatic access to aggregated cross-chain liquidity with enterprise-grade security and compliance features` },
+    { position:'left', title: 'Strategic DeFi Allocation Tools', icon: '', description: `Portfolio rebalancers can automate strategic asset distribution, leveraging Interlinc’s deep liquidity metrics` },
 ];
 
 export const keyDifferentList = [

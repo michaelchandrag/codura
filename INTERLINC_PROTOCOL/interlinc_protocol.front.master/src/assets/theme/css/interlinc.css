@@ -568,3 +568,49 @@ ul.decimal li {
     bottom: 0;
     z-index: -1;
 }
+
+.usecase-item{
+    background: #16161E;
+    border: 1px solid #F6BA5180;
+}
+
+.row-reverse{
+    flex-direction: row-reverse;
+}
+
+.usecase-space .icon{
+    color: #D4D4D480;
+}
+
+.usecase-number.right::after{
+    content: '';
+    border: 1px solid #D4D4D480;
+    width: 19%;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 0;
+    z-index: -1;
+}
+
+.usecase-number.left::before{
+    content: '';
+    border: 1px solid #D4D4D480;
+    width: 19%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 0;
+    z-index: -1;
+}
+
+.case-line::after{
+    content: '';
+    border: 1px solid #D4D4D480;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    height: 100%;
+}
