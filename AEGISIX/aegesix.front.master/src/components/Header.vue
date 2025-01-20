@@ -2,8 +2,9 @@
 import { defineProps, ref } from 'vue'
 import { scrollToElement } from '@/helpers'
 
-const { routeName } = defineProps({
+const { routeName, company } = defineProps({
   routeName: { type: String, default: 'home' },
+  company: { type: Object, default: {} },
 })
 let is_menu = ref('home');
 const changeMenu = (menu) => {

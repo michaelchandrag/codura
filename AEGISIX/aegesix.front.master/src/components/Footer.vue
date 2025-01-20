@@ -1,19 +1,14 @@
 <script setup>
-import { onMounted, ref, reactive } from 'vue'
-import { company } from '@/models';
-import { getInfo } from '@/controllers';
+import { defineProps, onMounted, ref, reactive } from 'vue'
 
-let companyInfo = ref(company)
-onMounted(() => {
-  fetchInfo();
+const { company } = defineProps({
+  company: { type: Object, default: {} },
 })
 
-const fetchInfo = async () => {
-  const result = await getInfo();
-  if(result && result.success && result.data){
-    companyInfo.value = { ...company, ...result.data };
-  }
-}
+onMounted(() => {
+
+})
+
 </script>
 
 <template>
@@ -24,9 +19,9 @@ const fetchInfo = async () => {
           <div class="footer-contact pt-3">
             <h4 class="m-0 fw-normal fs-14px ls-xs text-center">Follow Us :</h4>
             <div class="social-links d-flex justify-content-center">
-              <a class="rounded-sm fs-18px" v-if="companyInfo.twitter_url || companyInfo.tw" target="_blank" :href="companyInfo.twitter_url || companyInfo.tw"><i
+              <a class="rounded-sm fs-18px" v-if="company.twitter_url || company.tw" target="_blank" :href="company.twitter_url || company.tw"><i
                   class="bi bi-twitter-x"></i></a>
-              <a class="rounded-sm fs-18px" v-if="companyInfo.github_url || companyInfo.github" target="_blank" :href="companyInfo.github_url || companyInfo.github"><i
+              <a class="rounded-sm fs-18px" v-if="company.github_url || company.github" target="_blank" :href="company.github_url || company.github"><i
                   class="bi bi-github"></i></a>
             </div>
           </div>

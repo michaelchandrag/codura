@@ -1,21 +1,16 @@
 <script setup>
-import { onMounted, ref, reactive } from 'vue'
-import { company, featureList, potentialList, keyDifferentList } from '@/models'
+import { defineProps, onMounted, ref, reactive } from 'vue'
+import { featureList, potentialList, keyDifferentList } from '@/models'
 import { copyToClipboard, showAlert } from '@/helpers';
-import { getInfo } from '@/controllers';
 
-let companyInfo = ref(company)
-const try_request = reactive({email:''})
-onMounted(() => {
-  fetchInfo();
+const { company } = defineProps({
+  company: { type: Object, default: {} },
 })
 
-const fetchInfo = async () => {
-  const result = await getInfo();
-  if(result && result.success && result.data){
-    companyInfo.value = { ...company, ...result.data };
-  }
-}
+const try_request = reactive({email:''})
+onMounted(() => {
+
+})
 
 const sendRequestTry = () => {
   showAlert({type: 'success', title:'Thanks You!', text:'Information has been send successfully.'});
@@ -35,11 +30,11 @@ const sendRequestTry = () => {
                 cutting-edge AI and blockchain technology to deliver real-time, adaptive risk management solutions that
                 safeguard liquidity, secure capital, and optimize protocol integrity for a more resilient financial
                 future</p>
-              <div v-if="companyInfo.key_ca"
+              <div v-if="company.key_ca"
                 class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group mt-4 border">
                 <div class="form-control form-control-sm fs-12px ls-sm bg-transparent border-0 text-start text-dark">{{
-                  companyInfo.key_ca }}</div>
-                <a @click.prevent="copyToClipboard(companyInfo.key_ca)"
+                  company.key_ca }}</div>
+                <a @click.prevent="copyToClipboard(company.key_ca)"
                   class="input-group-text btn btn-sm bg-transparent rounded-sm text-dark fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
                   <i class="bi bi-copy"></i>
                   <span>Copy CA</span>
