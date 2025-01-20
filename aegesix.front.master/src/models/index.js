@@ -1,7 +1,7 @@
 export const company = {
-    name: 'AEGESIX',
-    alias: 'Aegesix',
-    slug: 'aegesix',
+    name: 'AEGISIX',
+    alias: 'aegisix',
+    slug: 'aegisix',
     phone: '',
     phone_label: '',
     email: '',

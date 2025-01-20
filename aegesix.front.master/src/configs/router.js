@@ -11,7 +11,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'AEGESIX',
+      title: 'AEGISIX',
       description: ''
     },
     component: () => import('@/views/Home/Index.vue')
@@ -24,7 +24,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'AEGESIX | AI',
+      title: 'AEGISIX | AI',
       description: ''
     },
     component: () => import('@/views/Ai/Index.vue')
@@ -37,7 +37,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'AEGESIX | 404',
+      title: 'AEGISIX | 404',
       description:
         'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.'
     },
