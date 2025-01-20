@@ -1,6 +1,6 @@
 :root {
-    --orange-color: #FBB138;
-    --dark-color: #02020A;
+    --orange-color: #F6BA51;
+    --dark-color: #000000;
     --app-color: #F60D0D;
     --app-color-light: #B0A9A9;
     --app-dark-lighter: #313D52;
@@ -162,7 +162,7 @@ img {
 #navmenu li.action a:hover,
 #navmenu li.action a:active {
     color: #ffffff !important;
-    background: var(--dark-color) !important;
+    background: var(--orange-color) !important;
 }
 
 #navmenu li a.social {
@@ -402,6 +402,11 @@ ul.decimal li {
     height: 40px;
 }
 
+.actived-orange:hover, .actived-orange:active{
+    background: var(--orange-color) !important;
+    color: #FFFFFF;
+}
+
 .bg-orange {
     background: var(--orange-color);
 }
@@ -539,7 +544,19 @@ ul.decimal li {
 
 .different-item:hover,
 .different-item:active {
-    box-shadow: 0 0.5rem 1rem rgb(159 30 30 / 15%) !important;
+    border: 1px solid #ffffff;
+}
+
+.different-item .different-title, .different-item .different-desc{
+    transition: font-size 0.3s ease-in-out;
+}
+
+.different-item:hover .different-title, .different-item:active .different-title{
+    font-size: 14px !important;
+}
+
+.different-item:hover .different-desc, .different-item:active .different-desc{
+    font-size: 13px !important;
 }
 
 .potential-item:hover .potential-badge,
@@ -574,6 +591,31 @@ ul.decimal li {
     border: 1px solid #F6BA5180;
 }
 
+.usecase-item:hover, .usecase-item:active{
+    border: 1px solid #D4D4D480
+}
+
+.usecase-item.badge:hover, .usecase-item.badge:active{
+    background: linear-gradient(
+        to bottom, 
+        #16161E 85%,
+        rgba(255, 215, 0, 0.5) 95%,
+        rgba(255, 215, 0, 0) 100%
+    );
+}
+
+.usecase-item .usecase-title, .usecase-item .usecase-desc{
+    transition: font-size 0.3s ease-in-out;
+}
+
+.usecase-item:hover .usecase-title, .usecase-item:active .usecase-title{
+    font-size: 13px !important;
+}
+
+.usecase-item:hover .usecase-desc, .usecase-item:active .usecase-desc{
+    font-size: 12px !important;
+}
+
 .row-reverse{
     flex-direction: row-reverse;
 }
@@ -591,6 +633,7 @@ ul.decimal li {
     top: 50%;
     right: 0;
     z-index: -1;
+    display: none;
 }
 
 .usecase-number.left::before{
@@ -602,6 +645,7 @@ ul.decimal li {
     top: 50%;
     left: 0;
     z-index: -1;
+    display: none;
 }
 
 .case-line::after{
@@ -613,4 +657,33 @@ ul.decimal li {
     left: 50%;
     z-index: -1;
     height: 100%;
+}
+
+.usecase-row:hover .usecase-number.left::before, .usecase-row:hover .usecase-number.right::after{
+    display: block;
+}
+
+.usecase-row:active .usecase-number.left::before, .usecase-row:hover .usecase-number.right::after{
+    display: block;
+}
+
+.usecase-row:hover .usecase-title, .usecase-row:active .usecase-title{
+    font-size: 13px !important;
+}
+
+.usecase-row:hover .usecase-desc, .usecase-row:active .usecase-desc{
+    font-size: 12px !important;
+}
+
+.usecase-row:hover .usecase-item, .usecase-row:active .usecase-item{
+    border: 1px solid #D4D4D480;
+}
+
+.usecase-row:hover .usecase-item.badge, .usecase-row:active .usecase-item.badge{
+    background: linear-gradient(
+        to bottom, 
+        #16161E 85%,
+        rgba(255, 215, 0, 0.5) 95%,
+        rgba(255, 215, 0, 0) 100%
+    );
 }

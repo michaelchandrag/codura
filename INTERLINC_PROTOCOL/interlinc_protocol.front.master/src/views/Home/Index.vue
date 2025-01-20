@@ -85,7 +85,7 @@ const changeDifferentOption = (option = '') => {
     </div>
   </section>
 
-  <section id="section-different" class="section bg-transparent has-content-bg is-relative py-5">
+  <section id="section-usecase" class="section bg-transparent has-content-bg is-relative py-5">
     <div class="col-12 col-lg-10 m-auto">
       <div class="container section-title pb-5">
         <div class="col-lg-8 m-auto">
@@ -95,7 +95,7 @@ const changeDifferentOption = (option = '') => {
       </div>
       <div class="container my-4 is-relative">
         <div v-for="(usecase, idu) in useCaseList" :key="idu" :class="{ 'row-reverse': usecase.position == 'left' }"
-          class="d-flex align-items-center pb-5 justify-content-between">
+          class="usecase-row d-flex align-items-center pb-5 justify-content-between">
           <div :class="{ 'text-end': usecase.position == 'right' }" class="ws-45">
             <div :class="usecase.position"  class="px-5 usecase-number is-relative">
               <span class="badge usecase-item rounded fs-18px fw-300">{{ idu + 1 }}</span>
@@ -110,8 +110,8 @@ const changeDifferentOption = (option = '') => {
                 <div v-if="usecase.icon" class="feature-icon mb-4">
                   <img :src="`/assets/img/${usecase.icon}.png`" />
                 </div>
-                <div class="text-white fs-12px ls-xs fw-500 mb-2">{{ usecase.title }}</div>
-                <p class="text-light fw-300 fs-11px ls-xs m-0">{{ usecase.description }}</p>
+                <div class="usecase-title text-white fs-12px ls-xs fw-500 mb-2">{{ usecase.title }}</div>
+                <p class="usecase-desc text-light fw-300 fs-11px ls-xs m-0">{{ usecase.description }}</p>
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ const changeDifferentOption = (option = '') => {
               </div>
               <p class="text-dark fw-300 fs-13px ls-xs">Step into the future of liquidity aggregation with Interlinc
                 Protocol — where innovation meets sophistication.</p>
-              <a class="btn btn-sm py-1 px-3 fs-13px text-white bg-dark-light rounded mt-4"><span class="me-2">Explor
+              <a class="btn btn-sm py-1 px-3 fs-13px text-white bg-dark-light rounded mt-4 actived-orange"><span class="me-2">Explor
                   Now</span><i class="bi bi-arrow-up-right"></i></a>
             </div>
           </div>
@@ -181,8 +181,8 @@ const changeDifferentOption = (option = '') => {
                     <div v-if="different.icon" class="feature-icon mb-4">
                       <img :src="`/assets/img/${different.icon}.png`" />
                     </div>
-                    <div class="text-white fs-13px ls-xs fw-500 mb-2">{{ different.title }}</div>
-                    <p class="text-light fw-300 fs-12px ls-xs m-0">{{ different.description }}</p>
+                    <div class="different-title text-white fs-13px ls-xs fw-500 mb-2">{{ different.title }}</div>
+                    <p class="different-desc text-light fw-300 fs-12px ls-xs m-0">{{ different.description }}</p>
                   </div>
                 </div>
               </div>

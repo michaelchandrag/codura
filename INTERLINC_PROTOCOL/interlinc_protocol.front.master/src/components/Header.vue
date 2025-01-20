@@ -57,7 +57,7 @@ const changeMenu = (menu) => {
             <a @click.prevent="changeMenu('differentiator')" class="fs-13px" href="#">Differentiators</a>
           </li>
           <li class="action">
-            <router-link :to="{ name: 'ai' }" class="btn btn-sm rounded fs-13px py-1 px-2 14px border rounded">
+            <router-link :to="{ name: 'ai' }" class="btn btn-sm rounded actived-orange fs-13px py-1 px-2 14px border rounded">
               <span class="me-1">Try Demo Version</span>
               <i class="bi bi-arrow-up-right"></i>
             </router-link>
