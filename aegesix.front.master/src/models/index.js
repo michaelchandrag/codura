@@ -1,0 +1,16 @@
+export const company = {
+    name: 'AEGESIX',
+    alias: 'Aegesix',
+    slug: 'aegesix',
+    phone: '',
+    phone_label: '',
+    email: '',
+    address: '',
+    wa: '',
+    yt: '',
+    ig: '',
+    fb: '',
+    tw: '#',
+    github: '#',
+    linkedin: '',
+};
