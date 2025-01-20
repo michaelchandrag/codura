@@ -5,7 +5,7 @@ import store from '@/configs/store'
 
 const is_production = true
 export const api_url = is_production
-  ? 'http://localhost/fotivault.api'
+  ? 'https://api.botfood.id/api/v1/solana/aegisix'
   : 'http://localhost/fotivault.api'
 
 const openAiConfig = {
@@ -73,9 +73,10 @@ export async function fetchData(
   method = 'get',
   url = '',
   data = null,
-  attribute = null
+  attribute = null,
+  is_main = false
 ) {
-  if (!url) {
+  if (!url && !is_main) {
     return handleResponseData(null, 'error')
   }
 
@@ -85,6 +86,9 @@ export async function fetchData(
 
   let fetchCall
   switch (method) {
+    case 'getMain':
+      fetchCall = getMain(url, setHeader)
+      break
     case 'get':
       fetchCall = getData(url, setHeader)
       break
@@ -119,6 +123,10 @@ export async function fetchData(
   } else {
     return handleResponseData(null, 'error')
   }
+}
+
+export function getMain(url, header = '') {
+  return axios.get(`${api_url}`)
 }
 
 export function getData(url, header = '') {
@@ -171,8 +179,8 @@ export const sendMessageToOpenAI = async (messages) => {
         },
       }
     );
-    return {success: true, msg:'Message ready', respone: response.data.choices[0].message.content}
+    return { success: true, msg: 'Message ready', respone: response.data.choices[0].message.content }
   } catch (error) {
-    return {success: false, msg:'Failed send message', respone: error}
+    return { success: false, msg: 'Failed send message', respone: error }
   }
 };

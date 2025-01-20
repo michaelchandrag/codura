@@ -452,6 +452,13 @@ img {
 .try-request button{
     background: #EE3A3A;
 }
+.try-request button:hover, .try-request button:active{
+    color: #EE3A3A !important;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
 
 .different-item:hover, .different-item:active{
     box-shadow: 0 0.5rem 1rem rgb(159 30 30 / 15%) !important;

@@ -1,15 +1,24 @@
 <script setup>
 import { onMounted, ref, reactive } from 'vue'
 import { company, featureList, potentialList, keyDifferentList } from '@/models'
-import { copyToClipboard } from '@/helpers';
+import { copyToClipboard, showAlert } from '@/helpers';
+import { getInfo } from '@/controllers';
 
-let hoverdLine = ref(0)
+let companyInfo = ref(company)
+const try_request = reactive({email:''})
 onMounted(() => {
-
+  fetchInfo();
 })
 
-const changeHoveredLine = (index) => {
-  hoverdLine.value = index;
+const fetchInfo = async () => {
+  const result = await getInfo();
+  if(result && result.success && result.data){
+    companyInfo.value = { ...company, ...result.data };
+  }
+}
+
+const sendRequestTry = () => {
+  showAlert({type: 'success', title:'Thanks You!', text:'Information has been send successfully.'});
 }
 </script>
 
@@ -26,11 +35,11 @@ const changeHoveredLine = (index) => {
                 cutting-edge AI and blockchain technology to deliver real-time, adaptive risk management solutions that
                 safeguard liquidity, secure capital, and optimize protocol integrity for a more resilient financial
                 future</p>
-              <div v-if="company.key_ca"
+              <div v-if="companyInfo.key_ca"
                 class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group mt-4 border">
                 <div class="form-control form-control-sm fs-12px ls-sm bg-transparent border-0 text-start text-dark">{{
-                  company.key_ca }}</div>
-                <a @click.prevent="copyToClipboard(company.key_ca)"
+                  companyInfo.key_ca }}</div>
+                <a @click.prevent="copyToClipboard(companyInfo.key_ca)"
                   class="input-group-text btn btn-sm bg-transparent rounded-sm text-dark fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
                   <i class="bi bi-copy"></i>
                   <span>Copy CA</span>
@@ -170,9 +179,9 @@ const changeHoveredLine = (index) => {
               </div>
             </div>
             <div class="col-12 col-lg-5 m-auto try-request">
-              <form>
+              <form @submit.prevent="sendRequestTry()">
                 <div class="input-group input-group-lg bg-white rounded-sm">
-                  <input required class="form-control bg-transparent no-shadow fs-12px"
+                  <input required type="email" v-model="try_request.email" class="form-control bg-transparent no-shadow fs-12px"
                     placeholder="Enter your email address">
                   <button type="submit" class="input-group-text text-white btn btn-sm fs-12px">Send Request</button>
                 </div>

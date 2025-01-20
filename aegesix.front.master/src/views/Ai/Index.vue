@@ -102,8 +102,6 @@ const sendMessage = async () => {
     if (result.success) {
       chat.value = '';
       await addMessage({ role: 'assistant', content: result.respone })
-    } else {
-      showAlert({ type: 'warning', text: result.msg });
     }
     isSending.value = false;
   }
