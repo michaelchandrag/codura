@@ -7,9 +7,9 @@ import { company } from '@/models';
     <div class="container footer-top pb-3">
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">
-          <router-link :to="{ name: 'home' }" class="d-flex align-items-center justify-content-center">
+          <!-- <router-link :to="{ name: 'home' }" class="d-flex align-items-center justify-content-center">
             <img src="../../../assets/img/quantisnode-logo-fix.png" style="height:50px;" alt="QuantisNode" />
-          </router-link>
+          </router-link> -->
           <div class="footer-contact pt-2">
             <h4 class="m-0 fw-normal fs-14px ls-xs text-center">Follow Us :</h4>
             <div class="social-links d-flex justify-content-center">
@@ -20,23 +20,6 @@ import { company } from '@/models';
               <a class="rounded-sm fs-18px" v-if="company.linkedin" target="_blank" :href="company.linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-3 footer-links mb-0 d-none">
-          <!-- <h4>Support</h4>
-          <ul>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Walkthrough</router-link>
-            </li>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Blog</router-link>
-            </li>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Contact</router-link>
-            </li>
-          </ul> -->
         </div>
       </div>
     </div>

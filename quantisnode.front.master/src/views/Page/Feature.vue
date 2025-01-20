@@ -10,7 +10,7 @@ onMounted(() => {
   <div class="section-content">
     <div class="particle right"></div>
     <section class="section bg-transparent first-section pb-2 mt-5">
-      <div class="container section-title pb-4" style="left: 0!important;">
+      <div class="container section-title pb-4" style="left: 0!important;" data-aos="fade-right" data-aos-delay="100">
         <div class="col-12 col-lg-8 text-start">
           <h3 class="text-red text-capitalize ls-xs mt-4 fs-16px">Our Features</h3>
           <p class="text-light fw-normal fs-14px">
@@ -70,20 +70,20 @@ onMounted(() => {
             </div>
             <div class="col-lg-10">
               <div class="d-flex align-items-start gap-3 mb-2">
-                <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
+                <i class="bi bi-check-circle-fill fs-24px lh-normal text-red"></i>
                 <p class="text-light fw-normal fs-16px m-0 ls-xs">
                   Decentralized Protocol Governance: Community-driven decision-making for the protocol’s evolution.
                 </p>
               </div>
               <div class="d-flex align-items-start gap-3 mb-2">
-                <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
-                <p class="text-light fw-normal fs-14px m-0 ls-xs">
+                <i class="bi bi-check-circle-fill fs-24px lh-normal text-red"></i>
+                <p class="text-light fw-normal fs-16px m-0 ls-xs">
                   AI-Optimized Yield Strategies: AI-enhanced investment strategies for maximizing returns while managing risk.
                 </p>
               </div>
               <div class="d-flex align-items-start gap-3 mb-2">
-                <i class="bi bi-check-circle-fill fs-16px lh-normal text-red"></i>
-                <p class="text-light fw-normal fs-14px m-0 ls-xs">
+                <i class="bi bi-check-circle-fill fs-24px lh-normal text-red"></i>
+                <p class="text-light fw-normal fs-16px m-0 ls-xs">
                   Zero-Trust Security Architecture: Advanced security frameworks ensuring transaction integrity and data protection.
                 </p>
               </div>

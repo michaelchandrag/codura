@@ -83,7 +83,7 @@
 main {
     display: flow-root!important;
     color: var(--default-color);
-     background-color: var(--background-color);
+     /* background-color: var(--background-color); */
      font-family: var(--heading-font); 
  }
 
@@ -257,10 +257,12 @@ text-app {
     --default-color: #ffffff;
     --heading-color: #ffffff;
     color: var(--default-color);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     padding: 15px 0;
     transition: all 0.5s;
     z-index: 997;
+    position:absolute!important;
+    margin-top: 20px;
 }
 
 .header .logo {
@@ -530,7 +532,7 @@ text-app {
   --------------------------------------------------------------*/
 .footer {
     color: var(--default-color);
-    background-color: #1e5647;
+    /* background-color: #1e5647; */
     font-size: 14px;
     position: relative;
 }
@@ -545,12 +547,12 @@ text-app {
 }
 
 .footer .footer-newsletter .newsletter-form {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: 15px;
     padding: 6px 8px;
     position: relative;
     border-radius: 4px;
-    background-color: var(--surface-color);
+    /* background-color: var(--surface-color); */
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -566,7 +568,7 @@ text-app {
     border: 0;
     padding: 4px;
     width: 100%;
-    background-color: var(--surface-color);
+    /* background-color: var(--surface-color); */
     color: var(--default-color);
 }
 
@@ -814,7 +816,7 @@ text-app {
 section,
 .section {
     color: var(--default-color);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     padding: 60px 0;
     scroll-margin-top: 90px;
     overflow: clip;
@@ -884,6 +886,10 @@ section,
     overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
     position: relative;
     background-color: transparent;
 }
@@ -895,7 +901,7 @@ section,
     top: 0;
     width: 130%;
     height: 95%;
-    background: linear-gradient(to right, color-mix(in srgb, var(--background-color), transparent 90%), var(--background-color));
+    /* background: linear-gradient(to right, color-mix(in srgb, var(--background-color), transparent 90%), var(--background-color)); */
     background-size: cover;
     z-index: 0;
     border-radius: 0 0 50% 50%;
@@ -952,6 +958,7 @@ section,
 
 .hero p {
     width: 80%;
+    text-align: center!important;
     margin: 0 auto 30px auto;
     color: color-mix(in srgb, var(--default-color), transparent 20%);
     animation: fadeInDown 1s both 0.2s;
@@ -1015,7 +1022,7 @@ section,
 
 @media (min-width: 1024px) {
     .hero p {
-        width: 60%;
+        width: 80%;
     }
 
     .hero .carousel-control-prev,

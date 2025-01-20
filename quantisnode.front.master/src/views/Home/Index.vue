@@ -40,27 +40,27 @@
   >
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4 justify-content-center">
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-lg-8 text-center">
           <div class="hero-text mb-5">
-            <h2 class="ls-sm fw-bold text-white fs-50px mt-12 mb-2">The Future of DeFi, Powered</h2>
-            <h2 class="ls-sm fw-bold text-white fs-50px">by <span ref="typingText" class="text-red">AI Insights</span></h2>
-            <p class="mt-5 text-white fw-normal ls-xs fs-16px hero-desc">
+            <h2 class="ls-sm fw-bold text-white fs-36px mt-4 mb-2">The Future of DeFi, Powered</h2>
+            <h2 class="ls-sm fw-bold text-white fs-36px">by <span ref="typingText" class="text-red">AI Insights</span></h2>
+            <p class="mt-5 text-white text-center fw-normal ls-xs fs-16px hero-desc ">
               Harness the power of cutting-edge AI and the Solana blockchain to transform decentralized finance. Quantis Node delivers real-time,
               data-driven insights, advanced automation tools,
               and robust security features
             </p>
-            <router-link class="fs-13px btn btn-danger" :to="{ name: 'ai' }">
-              Getting Started
+            <router-link class="fs-16px btn btn-danger" :to="{ name: 'ai' }">
+             Getting Started
             </router-link>      
           </div>
           <div v-if="keyCA" class="copy-ca mb-5">
-            <div class="col-12 col-lg-7 m-auto">
+            <div class="col-12 col-lg-8 m-auto">
               <div class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group">
                 <div
-                  class="form-control form-control-sm fs-11px ls-xs bg-transparent border-1 text-start ps-3 text-white">{{
+                  class="form-control form-control-sm fs-13px ls-xs bg-transparent border-1 text-start ps-3 text-white">{{
                     keyCA }}</div>
                 <a @click.prevent="copyToClipboard(keyCA)"
-                  class="input-group-text btn btn-sm bg-white rounded-right rounded-sm text-app fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
+                  class="input-group-text btn btn-sm bg-white rounded-right rounded-sm text-app fw-bold fs-13px px-3 d-inline-flex align-items-center gap-2">
                   <i class="bi bi-copy"></i>
                   <span>Copy CA</span>
                 </a>
@@ -70,6 +70,7 @@
         </div>
       </div>
     </div>
+    
   </section>
 </template>
 <style scoped>
@@ -85,6 +86,13 @@
     &:hover {
       color: #111021;
     }
+  }
+  .btn-danger {
+    background: #F21111!important;
+    border-radius: 8px;
+    padding:10px;
+    letter-spacing: 1.5px;
+    font-family:"Aldrich", serif;
   }
 </style>
 

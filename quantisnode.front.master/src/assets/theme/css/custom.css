@@ -24,11 +24,12 @@ h6 {
 
 .header .logo img.lg {
     max-height: 64px !important;
+    margin-bottom: -20px!important;
 }
 
-.scrolled .header {
+/* .scrolled .header {
     background-color: var(--main-color);
-}
+} */
 
 #hero {
     position: relative;

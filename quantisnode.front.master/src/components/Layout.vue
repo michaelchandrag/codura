@@ -10,10 +10,10 @@ const route = useRoute();
 <template>
   <Header v-if="route.name !== 'ai'" :routeName="route.name" />
   <HeaderAI v-else />
-  <main :class="{'is-home' : route.name == 'home'}" class="main">
+  <main :class="{'is-home': route.name === 'home', 'not-home': route.name !== 'home'}" class="main">
     <router-view></router-view>
   </main>
-  <Footer></Footer>
+  <Footer :id="route.name === 'home' ? 'footer-home' : 'footer'" />
   <a
     href="#"
     id="scroll-top"
