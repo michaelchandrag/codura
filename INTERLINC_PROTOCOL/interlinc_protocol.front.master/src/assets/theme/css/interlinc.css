@@ -1,10 +1,10 @@
 :root {
     --orange-color: #FBB138;
-    --dark-color: #000000;
+    --dark-color: #02020A;
     --app-color: #F60D0D;
     --app-color-light: #B0A9A9;
     --app-dark-lighter: #313D52;
-    --app-dark-light: #1D1D1F;
+    --app-dark-light: #20201E;
     --app-dark-transparent: #0000004D;
     --app-border: #FFFFFF80;
     --app-font: 'Helvetica Neue', sans-serif;
@@ -56,8 +56,16 @@ button {
     font-family: var(--app-font);
 }
 
+.is-relative{
+    position: relative;
+}
+
 .ps-6 {
     padding-left: 5rem !important;
+}
+
+.bg-white-app{
+    background: #FAFAFA !important;
 }
 
 .bg-dark {
@@ -123,7 +131,7 @@ img {
 }
 
 #header {
-    background: var(--app-dark-transparent);
+    background: transparent;
     padding: 0.5rem 0 !important;
 }
 
@@ -144,8 +152,11 @@ img {
 }
 
 #navmenu li.action a {
-    color: var(--dark-color);
-    border: 1px solid var(--dark-color)
+    background: #20201E;
+    padding-top: .25rem !important;
+    padding-bottom: .25rem !important;
+    padding-right: .75rem !important;
+    padding-left: .75rem !important;
 }
 
 #navmenu li.action a:hover,
@@ -180,6 +191,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 99;
 }
 
 .scrolled .header {
@@ -279,11 +291,6 @@ ul.decimal li {
 .has-content-bg{
     background: url('/assets/img/bg-content.png') center center no-repeat !important;
     background-size: cover !important;
-}
-
-#footer {
-    background: var(--dark-color) !important;
-    border-radius: 64px 64px 0px 0px !important;
 }
 
 .ai-card {
@@ -411,12 +418,6 @@ ul.decimal li {
     background: #1A1D1E;
 }
 
-.main-hero {
-    background: url('/assets/img/bg-hero.png') center center no-repeat;
-    background-size: 100% 100%;
-    padding-top: 8rem !important;
-}
-
 .footer .footer-newsletter {
     position: relative;
     z-index: 9;
@@ -511,6 +512,14 @@ ul.decimal li {
     padding-bottom: 4rem;
 }
 
+.try-request .input-group{
+    background: #31313B !important;
+}
+
+.try-request input::placeholder{
+    color: var(--app-color-light);
+}
+
 .try-request button, .try-request input{
     border: none;
     box-shadow: none;
@@ -521,6 +530,11 @@ ul.decimal li {
 .try-request button:active {
     color: var(--app-color) !important;
     background: transparent !important;
+}
+
+.different-item{
+    background: #16161E;
+    border: 1px solid #F6BA5180;
 }
 
 .different-item:hover,
@@ -535,4 +549,22 @@ ul.decimal li {
 
 .different-option{
     border: 1px solid #FFFFFF4D
+}
+
+.hero-animation{
+    position: relative;
+}
+
+.hero-animation .logo{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.different-shape{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }

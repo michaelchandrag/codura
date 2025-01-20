@@ -18,44 +18,34 @@ export const company = {
 
 export const featureList = [
     {
-        icon: 'module',
-        title: `Composable Modular Framework`,
-        description: [
-            `Aurasis.Ai offers plug-and-play modules for lending, borrowing, trading, and more, adaptable to any business need.`,
-            `Aurasis.Ai offers plug-and-play modules for lending, borrowing, trading, and more, adaptable to any business need.`
-        ]
+        icon: '',
+        title: `Algorithmic Liquidity Aggregation`,
+        description: `Harness decentralized AI to dynamically converge liquidity from heterogeneous chains, ensuring ultra-low slippage, deep market depth, and optimal execution parameters.`
     },
     {
-        icon: 'driven',
-        title: `AI-Driven Optimization`,
-        description: [
-            `Our AI algorithms analyze market trends and user behavior to optimize module performance, ensuring maximum efficiency and profitability`,
-            `Real-time adjustments to ensure optimal resource allocation and strategy execution`
-        ]
+        icon: '',
+        title: `Multi-Protocol Synergy`,
+        description: `Interlinc interfaces natively with Ethereum, Solana, Binance Smart Chain, Avalanche, and emerging protocols, ensuring seamless multi-chain operability.`
     },
     {
-        icon: 'chain',
-        title: `Cross-Chain Integration`,
-        description: [
-            `Native support for multi-chain connectivity, including Ethereum, Solana, and Layer 2 solutions`,
-            `AI-powered routing to determine the most efficient blockchain for each transaction`
-        ]
+        icon: '',
+        title: `Abstracted Cross-Chain Infrastructure`,
+        description: `Engineered with modular abstraction layers, Interlinc integrates disparate blockchains into a seamless, unified operational interface.`
     },
     {
-        icon: 'code',
-        title: `Developer-Centric Tools`,
-        description: [
-            `Comprehensive SDKs and APIs designed for rapid integration and customization`,
-            `AI-based debugging and error detection tools to accelerate development `
-        ]
+        icon: '',
+        title: `Zero-Knowledge Security Modules`,
+        description: `Employs advanced zk-proof mechanisms to enhance transaction confidentiality while maintaining verifiability.`
     },
     {
-        icon: 'archive-add',
-        title: `Regulatory Compliance`,
-        description: [
-            `Built-in support for KYC/AML and regulatory monitoring to ensure global compliance.`,
-            `Tailored compliance solutions for institutional partners.`
-        ]
+        icon: '',
+        title: `Gas Efficiency Algorithms`,
+        description: `Proprietary gas optimization heuristics intelligently route transactions, minimizing on-chain overhead and maximizing cost-efficiency`
+    },
+    {
+        icon: '',
+        title: `Developer-Centric SDKs`,
+        description: `Comprehensive, scalable SDKs facilitate integration of Interlinc’s liquidity engine into external dApps, driving innovation across the DeFi ecosystem`
     },
 ];
 
@@ -68,11 +58,11 @@ export const potentialList = [
 ];
 
 export const keyDifferentList = [
-    { title: 'Unified Abstraction Layer', icon: '', description: `A single interface to access and integrate multiple DeFi protocols, reducing the complexity of multi-chain interactions` },
-    { title: 'AI-Powered Adaptability', icon: '', description: `Advanced AI models that continuously learn and adapt to market dynamics, offering real-time optimization across DeFi modules` },
-    { title: 'End-to-End Security', icon: '', description: `Multi-layered security infrastructure, including real-time contract auditing and anomaly detection` },
-    { title: 'No-Code Integration', icon: '', description: `Businesses can deploy DeFi solutions without technical expertise, dramatically lowering the barrier to entry` },
-    { title: 'Scalable Infrastructure', icon: '', description: `Designed to handle high transaction volumes and large user bases, ensuring smooth operation under all conditions` },
+    { title: 'DEFAI-Driven Execution', icon: '', description: `At the heart of Interlinc is a decentralized AI core that drives adaptive liquidity orchestration, enabling unparalleled market ` },
+    { title: 'Holistic Decentralization', icon: '', description: `Fully trustless architecture ensures autonomous operation, fortified by immutable smart contract infrastructure.` },
+    { title: 'Fragmentation Eradication', icon: '', description: `Interlinc unifies siloed liquidity pools into a singularly accessible framework, eliminating cross-chain inefficiencies.` },
+    { title: 'Quantum Gas Optimization', icon: '', description: `Employing state-of-the-art algorithms to achieve hyper-efficient gas utilization, significantly reducing transaction costs.` },
+    { title: 'DAO-Governed Ecosystem', icon: '', description: `Protocol evolution is governed by its community, ensuring Interlinc remains aligned with user priorities and decentralized ethos.` },
 ];
 
 export const emptyMessage = [

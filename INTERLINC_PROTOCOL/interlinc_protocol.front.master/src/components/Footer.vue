@@ -12,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer bg-white-app">
     <div class="container footer-top pb-3">
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">
@@ -63,7 +63,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="container copyright text-center">
-      <p class="ls-xs fs-12px">
+      <p class="ls-xs fs-12px text-dark">
         © <span>{{ new Date().getFullYear() }}</span>
         <span class="px-1 sitename">{{ `${company.name}.` }}</span>
         <span class="sitename">All rights reserved.</span>
