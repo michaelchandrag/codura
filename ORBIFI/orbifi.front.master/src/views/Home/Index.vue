@@ -24,7 +24,7 @@ const sendRequestTry = () => {
         <div class="row align-items-center justify-content-between">
           <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100">
             <div class="hero-text text-start">
-              <h2 class="ls-sm fw-bold text-white fs-35px mb-4">Weaving the Future of Decentralized AI-Driven Finance
+              <h2 class="ls-sm fw-bold text-white fs-30px mb-4">Weaving the Future of Decentralized AI-Driven Finance
               </h2>
               <p class="w-100 text-white fw-normal fs-14px hero-desc ls-xs m-0">Empowering DeFi with AI-driven tools and
                 infrastructure, OrbiFi simplifies complexity, enhances security, and enables intelligent, scalable, and
@@ -51,7 +51,7 @@ const sendRequestTry = () => {
     </div>
   </section>
 
-  <section id="section-about" class="section bg-white-lighter mt-5 pt-0 pb-0">
+  <section id="section-about" class="section bg-white-lighter mt-5 pt-0 pb-0 border-bottom">
     <div class="col-12 col-lg-10 m-auto">
       <div class="container">
         <div class="row align-items-center justify-content-between">
@@ -80,7 +80,7 @@ const sendRequestTry = () => {
     </div>
   </section>
 
-  <section id="section-feature" class="section bg-white-light pt-0">
+  <section id="section-feature" class="section bg-white-light">
     <div class="col-12 col-lg-10 m-auto">
       <div class="container">
         <div class="row align-items-center justify-content-between">
@@ -167,7 +167,7 @@ const sendRequestTry = () => {
                   <img :src="`/assets/img/${different.icon}.png`" />
                 </div>
                 <h6 class="text-white fw-bold text-capitalize ls-xs mb-3">{{ different.title }}</h6>
-                <div class="card-body-content text-white fs-13px ls-xs fw-normal" v-html="different.content"></div>
+                <div class="card-body-content text-white fs-12px ls-xs fw-normal" v-html="different.content"></div>
               </div>
             </div>
           </div>

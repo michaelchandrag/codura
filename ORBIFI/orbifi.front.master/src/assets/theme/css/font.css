@@ -2,7 +2,7 @@
 /* Font-face untuk LexendDeca Variable */
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
+  src: url('/assets/fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
@@ -10,63 +10,63 @@
 /* Font-face untuk LexendDeca Static */
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-Thin.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-ExtraLight.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-Light.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-Regular.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-Medium.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-SemiBold.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-Bold.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-ExtraBold.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'LexendDeca';
-  src: url('/fonts/static/LexendDeca-Black.ttf') format('truetype');
+  src: url('/assets/fonts/static/LexendDeca-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
 }

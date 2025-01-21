@@ -4,6 +4,21 @@
         display: none;
     }
 
+    .main-hero,
+    .second-hero {
+        height: auto !important;
+    }
+
+    .main-hero h2,
+    .second-hero h2 {
+        font-size: 30px !important;
+    }
+
+    .main-hero p.hero-desc,
+    .second-hero p.hero-desc {
+        font-size: 15px !important;
+    }
+
     .custom-carousel .carousel-img.is-banner {
         height: auto;
     }
@@ -13,12 +28,25 @@
         border-radius: 5px;
     }
 
+    .choose-img {
+        margin: auto;
+    }
+
+    .choose-img .video-wrapper {
+        height: 500px;
+    }
+
     .preview-img .img {
         padding: 1.3rem !important;
     }
 
     .work-line .icon.has-line::after {
         display: none !important;
+    }
+
+    .container-ai{
+        padding: 0px !important;
+        padding-top: 1rem !important;
     }
 
     .ai-history-sidebar {
@@ -34,6 +62,7 @@
         height: 95vh;
         display: block;
         padding: 0px !important;
+        background: #000000;
     }
 
     .ai-message-sidebar{
@@ -114,7 +143,7 @@
         height: 95vh;
         display: block;
         padding: 0px !important;
-        background: #FFFFFF;
+        background: #000000;
     }
 
     .ai-message-sidebar{
