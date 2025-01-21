@@ -17,7 +17,7 @@ onMounted(() => {
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">
           <div class="footer-contact pt-3">
-            <h4 class="m-0 fw-normal fs-14px ls-xs text-center">Follow Us :</h4>
+            <h4 class="m-0 fw-normal fs-13px ls-xs text-center">Follow Us :</h4>
             <div class="social-links d-flex justify-content-center">
               <a class="rounded-sm fs-18px" v-if="company.twitter_url || company.tw" target="_blank" :href="company.twitter_url || company.tw"><i
                   class="bi bi-twitter-x"></i></a>

@@ -16,30 +16,68 @@ export const company = {
     key_ca: '#',
 };
 
+const featureContent = `<div>
+  <h3 class="fs-16px">Our Proprietary Smart Contract Framework</h3>
+  <p>Integrates machine learning algorithms to:</p>
+  <ul>
+    <li>Automate code vulnerability assessments, ensuring smart contracts are fortified against exploits.</li>
+    <li>Perform real-time gas optimization, enabling cost-efficient deployments.</li>
+    <li>Generate predictive analytics for dynamic contract behaviors, including liquidity provisioning and tokenomics modeling.</li>
+  </ul>
+</div>`;
 export const featureList = [
-    { title: 'Parametric Risk Assessment', icon: 'risk', description: `Harnessing deep learning models and predictive analytics to quantify, segment, and dynamically recalibrate risk metrics for DeFi protocols, wallets, and multi-chain` },
-    { title: 'Autonomous Claim Execution', icon: 'claim', description: `Smart contract-based claim validation leverages decentralized oracles and on-chain telemetry to ensure instantaneous and immutable resolutions.` },
-    { title: 'Dynamic Coverage Pricing', icon: 'pricing', description: `Adaptive algorithms leverage stochastic modeling to optimize premium-to-risk ratios, aligning coverage with real-time market volatility` },
-    { title: 'Cross-Chain Coverage Interoperability', icon: 'chain', description: `Our multi-protocol architecture facilitates seamless protection across heterogeneous blockchain ecosystems, including EVM-compatible and non-EVM chains` },
-    { title: 'Machine-Learning-Powered Portfolio Safeguards', icon: 'learning', description: `AI-driven simulations analyze liquidation probabilities, impermanent loss trajectories, and systemic vulnerabilities to construct resilient safety nets for liquidity providers` },
-    { title: 'Decentralized Governance Framework', icon: 'desentralized', description: `Aegisix's tokenized ecosystem empowers stakeholders to influence policy upgrades, risk recalibration algorithms, and fund allocations through consensus-driven governance
-` },
+    { title: 'AI-Powered Smart Contract Framework', icon: '', content: featureContent },
+    { title: 'Decentralized Compute Layer for AI', icon: '', content: featureContent },
+    { title: 'AI-Orchestrated Cross-Chain Middleware', icon: '', content: featureContent },
+    { title: 'Data Indexing and Intelligence Layer', icon: '', content: featureContent },
+    { title: 'Developer-Centric Tooling', icon: '', content: featureContent },
 ];
 
-export const potentialList = [
-    { title: 'Protocol Exploit Hedging', description: 'Safeguard deployed capital against zero-day vulnerabilities and governance manipulation risks with AI-curated exploit coverage'},
-    { title: 'Liquidation Shielding for Leveraged Trades', description: 'Mitigate margin-call exposure with collateralization buffers dynamically reweighted via predictive AI models'},
-    { title: 'Impermanent Loss Mitigation for LPs', description: 'Enable liquidity providers to neutralize volatile pair imbalances with algorithmic underwriting tailored to pool-specific dynamics'},
-    { title: 'Smart Wallet Defense', description: 'Protect digital assets against phishing vectors, private key breaches, and unauthorized transactions using heuristic anomaly detection'},
-    { title: 'Multi-Chain Market Integrity', description: 'Cover cross-chain operational risks, including bridge failures and asset de-pegging scenarios, with holistic policy mechanisms'},
+const useCaseContent = `<div>
+  <h3 class="fs-16px">Our Proprietary Smart Contract Framework</h3>
+  <p>Integrates machine learning algorithms to:</p>
+  <ul>
+    <li>Automate code vulnerability assessments, ensuring smart contracts are fortified against exploits.</li>
+    <li>Perform real-time gas optimization, enabling cost-efficient deployments.</li>
+    <li>Generate predictive analytics for dynamic contract behaviors, including liquidity provisioning and tokenomics modeling.</li>
+  </ul>
+</div>`;
+export const useCaseList = [
+    { title: 'Autonomous DeFi Operations', icon: '', content: useCaseContent },
+    { title: 'Decentralized Treasury Management', icon: '', content: useCaseContent },
+    { title: 'Risk Management and Insurance', icon: '', content: useCaseContent },
+    { title: 'Compliance and Audit Automation', icon: '', content: useCaseContent },
 ];
 
 export const keyDifferentList = [
-    { title: 'Neural-Network Risk Stratification', icon: '', description: 'Our AI models employ clustering and gradient-boosted decision trees to deliver granular, probabilistic risk stratification for DeFi instruments' },
-    { title: 'Zero-Latency Claims Validation', icon: '', description: 'Real-time oracle feeds and event-driven smart contracts ensure frictionless execution of claims, with zero human intervention' },
-    { title: 'Holistic Coverage Dynamics', icon: '', description: 'Beyond static insurance models, Aegisix deploys modular and composable risk matrices that adapt to evolving market conditions' },
-    { title: 'Decentralized Risk Liquidity Architecture', icon: '', description: 'Multi-party staking pools are tokenized for hyper-efficient capital allocation, enabling transparent ROI distribution for underwriters' },
-    { title: 'Technological Scalability', icon: '', description: 'Aegisix operates on a sharded, multi-chain architecture, ensuring optimal throughput and decentralized execution efficiency' },
+    {
+        title: 'AI-Native Infrastructure', icon: '', content: `<p>
+    Unlike traditional platforms retrofitting AI into existing systems, OrbiFi is architected from the ground up to support AI-native functionalities. This ensures:
+  </p>
+  <ul>
+    <li>Seamless integration of predictive algorithms for risk, yield, and liquidity management.</li>
+    <li>Comprehensive support for AI model deployment in decentralized environments.</li>
+  </ul>` },
+    {
+        title: 'Interoperable and Scalable Middleware', icon: '', content: `<p>OrbiFi’s middleware supports:</p>
+  <ul>
+    <li>Cross-chain operability with multi-protocol compatibility.</li>
+    <li>Scalability to handle high-frequency DeFAI applications without performance bottlenecks.</li>
+  </ul>` },
+    {
+        title: 'Community-Governed Ecosystem', icon: '', content: `<p>The OrbiFi network is governed by its community, leveraging:</p>
+  <ul>
+    <li>A decentralized governance model where stakeholders influence development priorities.</li>
+    <li>Incentive mechanisms rewarding contributions to AI models, compute power, and infrastructure maintenance.</li>
+  </ul>` },
+    {
+        title: 'Developer-First Design', icon: '', content: `<p>
+    With modular SDKs, API documentation, and simulation environments, OrbiFi ensures developers can:
+  </p>
+  <ul>
+    <li>Rapidly prototype and deploy AI-driven solutions.</li>
+    <li>Seamlessly integrate our tools into existing workflows with minimal friction.</li>
+  </ul>` },
 ];
 
 export const emptyMessage = [
