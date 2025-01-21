@@ -13,7 +13,7 @@ export const company = {
     tw: '#',
     github: '#',
     linkedin: '',
-    key_ca: '',
+    key_ca: '#',
 };
 
 export const featureList = [

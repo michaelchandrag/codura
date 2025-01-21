@@ -7,13 +7,13 @@ const { company } = defineProps({
   company: { type: Object, default: {} },
 })
 
-const try_request = reactive({email:''})
+const try_request = reactive({ email: '' })
 onMounted(() => {
 
 })
 
 const sendRequestTry = () => {
-  showAlert({type: 'success', title:'Thanks You!', text:'Information has been send successfully.'});
+  showAlert({ type: 'success', title: 'Thanks You!', text: 'Information has been send successfully.' });
 }
 </script>
 
@@ -30,15 +30,15 @@ const sendRequestTry = () => {
                 cutting-edge AI and blockchain technology to deliver real-time, adaptive risk management solutions that
                 safeguard liquidity, secure capital, and optimize protocol integrity for a more resilient financial
                 future</p>
-              <div v-if="company.key_ca"
-                class="input-group p-0 rounded-sm align-items-center justify-content-center custom-input-group mt-4 border">
-                <div class="form-control form-control-sm fs-12px ls-sm bg-transparent border-0 text-start text-dark">{{
-                  company.key_ca }}</div>
-                <a @click.prevent="copyToClipboard(company.key_ca)"
-                  class="input-group-text btn btn-sm bg-transparent rounded-sm text-dark fw-bold fs-12px px-3 d-inline-flex align-items-center gap-2">
-                  <i class="bi bi-copy"></i>
-                  <span>Copy CA</span>
-                </a>
+              <div v-if="company.key_ca" class="col-lg-8 mt-5">
+                <div class="input-group input-group-lg bg-white rounded-sm">
+                  <input disabled :value="company.key_ca" class="form-control bg-transparent no-shadow fs-12px ls-xs">
+                  <a @click.prevent="copyToClipboard(company.key_ca)"
+                    class="input-group-text bg-dark text-white btn btn-sm fs-12px d-inline-flex align-items-center gap-2">
+                    <i class="bi bi-copy"></i>
+                    <span class="fw-300">Copy CA</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -118,7 +118,8 @@ const sendRequestTry = () => {
       </div>
       <div class="container">
         <div class="col-lg-9 m-auto">
-          <div v-for="(potential, idp) in potentialList" :key="idp" class="potential-item d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="100">
+          <div v-for="(potential, idp) in potentialList" :key="idp"
+            class="potential-item d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="100">
             <div
               class="potential-badge bg-dark-lighter d-inline-flex align-items-center ws-5 justify-content-center rounded-sm hs-40px">
               <span class="badge fs-14px fw-bold">{{ idp + 1 }}</span>
@@ -176,8 +177,8 @@ const sendRequestTry = () => {
             <div class="col-12 col-lg-5 m-auto try-request">
               <form @submit.prevent="sendRequestTry()">
                 <div class="input-group input-group-lg bg-white rounded-sm">
-                  <input required type="email" v-model="try_request.email" class="form-control bg-transparent no-shadow fs-12px"
-                    placeholder="Enter your email address">
+                  <input required type="email" v-model="try_request.email"
+                    class="form-control bg-transparent no-shadow fs-12px" placeholder="Enter your email address">
                   <button type="submit" class="input-group-text text-white btn btn-sm fs-12px">Send Request</button>
                 </div>
               </form>
