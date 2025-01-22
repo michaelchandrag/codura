@@ -87,6 +87,10 @@ img {
     max-height: 100%;
 }
 
+img.lg{
+    max-height: 64px;
+}
+
 #header {
     background: transparent;
     padding: 1rem 0 !important;

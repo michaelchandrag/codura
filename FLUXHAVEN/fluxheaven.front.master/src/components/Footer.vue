@@ -63,9 +63,9 @@ import { company } from '@/models';
       </div>
     </div>
     <div class="container copyright text-center">
-      <p class="ls-xs">
+      <p class="ls-xs fs-12px">
         © <span>{{ new Date().getFullYear() }}</span>
-        <strong class="px-1 sitename">{{ `${company.name}.` }}</strong>
+        <span class="px-1 sitename">{{ `${company.name}.` }}</span>
         <span class="sitename">All rights reserved.</span>
       </p>
     </div>

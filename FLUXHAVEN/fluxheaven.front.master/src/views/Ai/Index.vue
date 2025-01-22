@@ -194,7 +194,7 @@ async function clearHistory() {
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar" :class="{ 'is-show': show_history }">
           <div class="ai-logo mb-2">
-            <router-link :to="{ name: 'home' }"><img src="/assets/img/fluxheaven-logo.png" /></router-link>
+            <router-link :to="{ name: 'home' }"><img src="/assets/img/fluxheaven-logo@2x.png" class="lg" /></router-link>
           </div>
           <div class="card border-0 ai-history-content">
             <div class="ai-search p-3">

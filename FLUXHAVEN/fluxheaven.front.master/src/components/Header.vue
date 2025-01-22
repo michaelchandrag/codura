@@ -16,7 +16,7 @@ const changeMenu = (menu) => {
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }" class="logo d-flex align-items-center">
-        <img src="/assets/img/fluxheaven.png" class="lg" alt="fluxheaven" />
+        <img src="/assets/img/fluxheaven-lg.png" class="lg" alt="fluxheaven" />
         <!-- <h1 class="sitename">fluxheaven</h1> -->
       </router-link>
       <nav id="navmenu-center" class="navmenu ps-6">
