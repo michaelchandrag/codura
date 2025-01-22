@@ -42,37 +42,6 @@ export const useCaseList = [
     { title: 'Compliance and Audit Automation', icon: '', content: useCaseContent },
 ];
 
-export const keyDifferentList = [
-    {
-        title: 'AI-Native Infrastructure', icon: '', content: `<p>
-    Unlike traditional platforms retrofitting AI into existing systems, OrbiFi is architected from the ground up to support AI-native functionalities. This ensures:
-  </p>
-  <ul>
-    <li>Seamless integration of predictive algorithms for risk, yield, and liquidity management.</li>
-    <li>Comprehensive support for AI model deployment in decentralized environments.</li>
-  </ul>` },
-    {
-        title: 'Interoperable and Scalable Middleware', icon: '', content: `<p>OrbiFi’s middleware supports:</p>
-  <ul>
-    <li>Cross-chain operability with multi-protocol compatibility.</li>
-    <li>Scalability to handle high-frequency DeFAI applications without performance bottlenecks.</li>
-  </ul>` },
-    {
-        title: 'Community-Governed Ecosystem', icon: '', content: `<p>The OrbiFi network is governed by its community, leveraging:</p>
-  <ul>
-    <li>A decentralized governance model where stakeholders influence development priorities.</li>
-    <li>Incentive mechanisms rewarding contributions to AI models, compute power, and infrastructure maintenance.</li>
-  </ul>` },
-    {
-        title: 'Developer-First Design', icon: '', content: `<p>
-    With modular SDKs, API documentation, and simulation environments, OrbiFi ensures developers can:
-  </p>
-  <ul>
-    <li>Rapidly prototype and deploy AI-driven solutions.</li>
-    <li>Seamlessly integrate our tools into existing workflows with minimal friction.</li>
-  </ul>` },
-];
-
 export const emptyMessage = [
     'What is your platform about?', 'Which blockchains does it support?', 'Do I need coding skills to use it?', 'How does it automate strategies?'
 ];

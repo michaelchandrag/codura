@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps, onMounted, ref, reactive } from 'vue'
-import { featureList, useCaseList, keyDifferentList } from '@/models'
+import { featureList } from '@/models'
 import { copyToClipboard, showAlert } from '@/helpers';
 
 const { company } = defineProps({
@@ -108,9 +108,8 @@ const sendRequestTry = () => {
               </div>
               <p class="text-white fw-300 fs-13px">Step into the future of liquidity aggregation with Interlinc Protocol
                 — where innovation meets sophistication.</p>
-              <a
-                class="btn btn-sm bg-orange d-inline-flex align-items-center rounded px-3 py-2 gap-1 text-white fs-13px"><span>Join
-                  Beta Version</span><i class="bi bi-arrow-up-right"></i></a>
+              <router-link :to="{ name: 'ai' }" class="custom-button btn btn-sm bg-orange d-inline-flex align-items-center rounded px-3 py-2 gap-1 text-white fs-13px"><span>Join
+                  Beta Version</span><i class="bi bi-arrow-up-right"></i></router-link>
             </div>
           </div>
           <div class="col-lg-6">

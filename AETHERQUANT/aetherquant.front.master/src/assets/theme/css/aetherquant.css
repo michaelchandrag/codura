@@ -163,7 +163,7 @@ img.lg {
     color: var(--orange-color) !important;
 }
 
-#navmenu li.action a {
+#navmenu li.action a, .custom-button {
     color: var(--white-color);
     border: none;
     padding-top: .45rem !important;
@@ -173,7 +173,7 @@ img.lg {
 }
 
 #navmenu li.action a:hover,
-#navmenu li.action a:active {
+#navmenu li.action a:active, .custom-button:hover, .custom-button:active {
     color: var(--orange-color) !important;
     background: transparent !important;
     border: 1px solid var(--orange-color);
@@ -202,7 +202,8 @@ img.lg {
 }
 
 .scroll-top {
-    background: var(--dark-color) !important;
+    background: var(--app-color) !important;
+    border: 1px solid var(--orange-color);
 }
 
 .text-semi-white {
