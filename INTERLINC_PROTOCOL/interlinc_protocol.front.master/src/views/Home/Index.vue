@@ -23,7 +23,7 @@ const changeDifferentOption = (option = '') => {
 </script>
 
 <template>
-  <section class="main-hero hero section bg-transparent pb-0">
+  <section class="main-hero hero section bg-transparent pb-5">
     <div class="hero-bg-2">
       <img src="/assets/img/bg-hero.png" />
     </div>
@@ -32,7 +32,7 @@ const changeDifferentOption = (option = '') => {
         <div class="hero-text text-center">
           <div class="hero-animation mt-4">
             <img src="/assets/img/logo-animation.gif" />
-            <img class="logo" src="/assets/img/interlinc.png" />
+            <img class="logo" src="/assets/img/interlinc-lg.png" />
           </div>
           <h2 class="ls-sm fw-bold text-white fs-30px mb-4">Seamless Liquidity Convergence, DEFAI Engineered</h2>
           <div class="col-lg-10 m-auto">
@@ -47,7 +47,7 @@ const changeDifferentOption = (option = '') => {
     </div>
   </section>
 
-  <section v-if="company.key_ca" id="section-ca" class="section bg-transparent pb-5" data-aos="fade-down" data-aos-delay="100">
+  <section v-if="company.key_ca" id="section-ca" class="section bg-transparent pb-5 pt-0" data-aos="fade-down" data-aos-delay="100">
     <div class="col-lg-5 m-auto">
       <div class="container position-relative text-center mb-5">
         <div class="input-group input-group-lg bg-white rounded-sm">

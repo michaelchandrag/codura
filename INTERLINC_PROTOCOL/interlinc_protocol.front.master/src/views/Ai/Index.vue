@@ -207,9 +207,9 @@ async function clearHistory() {
     <div class="container-ai px-3">
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar p-0" :class="{ 'is-show': show_history }">
-          <div class="ai-history-header mb-2 d-flex align-items-center justify-content-between px-4 pt-2">
-            <router-link class="bg-dark rounded-sm p-1" :to="{ name: 'home' }">
-              <img class="p-3" src="/assets/img/interlinc.png" />
+          <div class="ai-history-header mb-2 d-flex align-items-center justify-content-center px-4 pt-3">
+            <router-link class="bg-dark rounded-sm p-0" :to="{ name: 'home' }">
+              <img class="lg" src="/assets/img/interlinc@4x.png" />
             </router-link>
           </div>
           <div class="card border-0 ai-history-content">
