@@ -138,7 +138,7 @@ img {
     max-height: 100%;
 }
 
-img.lg{
+img.lg {
     max-height: 64px;
 }
 
@@ -149,33 +149,34 @@ img.lg{
 
 .navmenu a {
     font-family: var(--app-font);
-    color: #B7ACAC;
+    color: var(--white-color-light);
     font-weight: 500;
     padding-top: .5rem !important;
     padding-bottom: .5rem !important;
-    padding-right: 1rem !important;
-    padding-left: 1rem !important;
+    padding-right: .75rem !important;
+    padding-left: .75rem !important;
 }
 
 .navmenu a.is-active,
 .navmenu a:hover,
 .navmenu a:active {
-    color: #ffffff !important;
+    color: var(--orange-color) !important;
 }
 
 #navmenu li.action a {
-    color: var(--dark-color);
-    border: 1px solid var(--dark-color);
-    padding-top: .25rem !important;
-    padding-bottom: .25rem !important;
+    color: var(--white-color);
+    border: none;
+    padding-top: .45rem !important;
+    padding-bottom: .45rem !important;
     padding-right: 1rem !important;
     padding-left: 1rem !important;
 }
 
 #navmenu li.action a:hover,
 #navmenu li.action a:active {
-    color: var(--dark-color) !important;
-    background: var(--orange-color) !important;
+    color: var(--orange-color) !important;
+    background: transparent !important;
+    border: 1px solid var(--orange-color);
 }
 
 #hero::before,
@@ -196,7 +197,7 @@ img.lg{
 }
 
 .scrolled .header {
-    background: var(--dark-color) !important;
+    background: var(--app-color) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -264,8 +265,7 @@ img.lg{
 }
 
 #footer {
-    background: url('/assets/img/footer-bg.png') center center no-repeat !important;
-    background-size: cover;
+    background: transparent !important;
 }
 
 .ai-card {
@@ -397,6 +397,10 @@ img.lg{
     color: var(--orange-color);
 }
 
+.border-orange {
+    border: 1px solid var(--orange-color);
+}
+
 .btn-try {
     background: linear-gradient(90deg, #ED6C4E -15.9%, #E24391 29.03%, #6E53E8 100%);
 }
@@ -406,10 +410,8 @@ img.lg{
 }
 
 .main-hero {
-    background-color: var(--app-dark-light) !important;
-    background: url(/assets/img/bg-hero.png) top right no-repeat;
-    background-size: unset;
-    padding-top: 6rem !important;
+    background-color: transparent !important;
+    padding-top: 8rem !important;
 }
 
 .footer .footer-newsletter {
@@ -538,7 +540,7 @@ img.lg{
 }
 
 .try-request button {
-    background: var(--app-color);
+    background: var(--orange-color);
 }
 
 .try-request button:hover,
@@ -565,7 +567,32 @@ img.lg{
     background-size: cover;
 }
 
+.has-bg-shape {
+    background: url('/assets/img/bg-shape.png') center center no-repeat !important;
+    background-size: cover;
+}
+
 .bottom-shadow {
     border: 1px solid #E8ECEF !important;
     box-shadow: 0px 12px 40px -12px #0000000F !important;
+}
+
+.has-space-vertical::before {
+    content: '';
+    height: 100%;
+    border: 1px solid #DADADA4D;
+    position: absolute;
+    left: 0;
+}
+
+.is-relative {
+    position: relative;
+}
+
+.car-fade-top {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-fade-top:hover {
+    transform: translateY(-10px);
 }
