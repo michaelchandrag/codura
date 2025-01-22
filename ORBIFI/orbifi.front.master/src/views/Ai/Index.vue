@@ -207,9 +207,9 @@ async function clearHistory() {
     <div class="container-ai px-3">
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar p-0" :class="{ 'is-show': show_history }">
-          <div class="ai-history-header mb-2 d-flex align-items-center justify-content-center">
+          <div class="ai-history-header mb-2 pt-2 d-flex align-items-center justify-content-center">
             <router-link class="bg-dark rounded-sm p-1" :to="{ name: 'home' }">
-              <img class="p-3" src="/assets/img/orbifi-icon.png" />
+              <img class="lg" src="/assets/img/orbifi-lg.png" />
             </router-link>
           </div>
           <div class="card border-0 ai-history-content">
