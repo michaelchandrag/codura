@@ -97,7 +97,7 @@ button {
     outline: none !important;
 }
 
-.no-border{
+.no-border {
     border: none;
     box-shadow: none;
     outline: none;
@@ -120,6 +120,14 @@ button {
 img {
     max-width: 100%;
     max-height: 100%;
+}
+
+img.lg {
+    max-height: 64px;
+}
+
+.header .logo img.lg {
+    max-width: 200px;
 }
 
 #header {
@@ -175,7 +183,7 @@ img {
     z-index: 9;
 }
 
-.hero-bg-2{
+.hero-bg-2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -211,7 +219,7 @@ ul.decimal li {
     list-style: decimal !important;
 }
 
-.rounded-sm2{
+.rounded-sm2 {
     border-radius: 16px !important;
 }
 
@@ -266,17 +274,22 @@ ul.decimal li {
 
 @keyframes shadow-move {
     0% {
-        box-shadow: 20px 0px 30px rgba(246, 13, 13, 0.5); /* Shadow ke kanan */
+        box-shadow: 20px 0px 30px rgba(246, 13, 13, 0.5);
+        /* Shadow ke kanan */
     }
+
     50% {
-        box-shadow: 10px 10px 30px rgba(246, 13, 13, 0.5); /* Shadow mendekat */
+        box-shadow: 10px 10px 30px rgba(246, 13, 13, 0.5);
+        /* Shadow mendekat */
     }
+
     100% {
-        box-shadow: 0px 0px 30px rgba(246, 13, 13, 0.7); /* Shadow di tengah */
+        box-shadow: 0px 0px 30px rgba(246, 13, 13, 0.7);
+        /* Shadow di tengah */
     }
 }
 
-.has-content-bg{
+.has-content-bg {
     background: url('/assets/img/bg-content.png') center center no-repeat !important;
     background-size: cover !important;
 }
@@ -511,7 +524,8 @@ ul.decimal li {
     padding-bottom: 4rem;
 }
 
-.try-request button, .try-request input{
+.try-request button,
+.try-request input {
     border: none;
     box-shadow: none;
     outline: none;
@@ -533,6 +547,6 @@ ul.decimal li {
     background: linear-gradient(to bottom, #313D52 70%, #FF6A6A 85%, #EE3A3A);
 }
 
-.different-option{
+.different-option {
     border: 1px solid #FFFFFF4D
 }
