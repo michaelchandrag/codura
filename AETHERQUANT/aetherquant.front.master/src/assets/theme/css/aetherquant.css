@@ -1,7 +1,7 @@
 :root {
-    --app-color: #2060A6;
+    --app-color: #01002A;
     --app-color-light: #AFD3FA;
-    --app-color-gradient: linear-gradient(100.87deg, #2060A6 -25.11%, rgba(3, 25, 38, 0.3) 44.88%, #2060A6 114.87%);
+    --app-color-gradient: linear-gradient(100.87deg, #01002A -25.11%, rgba(3, 25, 38, 0.3) 44.88%, #2060A6 114.87%);
     --dark-color: #000000;
     --app-dark-lighter: #1D1D1F;
     --app-dark-light: #141316;
@@ -9,7 +9,7 @@
     --white-color: #FFFFFF;
     --white-color-light: #FAFAFA;
     --white-color-lighter: #F8F9FB;
-    --app-font: 'LexendDeca', sans-serif;
+    --app-font: 'Rubik', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -35,7 +35,7 @@ body {
     font-family: var(--app-font);
     font-weight: normal;
     font-style: normal;
-    background: var(--dark-color);
+    background: var(--app-color);
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
 }

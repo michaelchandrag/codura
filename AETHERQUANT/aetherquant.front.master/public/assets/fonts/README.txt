@@ -1,26 +1,32 @@
-Lexend Deca Variable Font
-=========================
+Rubik Variable Font
+===================
 
-This download contains Lexend Deca as both a variable font and static fonts.
+This download contains Rubik as both variable fonts and static fonts.
 
-Lexend Deca is a variable font with this axis:
+Rubik is a variable font with this axis:
   wght
 
-This means all the styles are contained in a single file:
-  LexendDeca-VariableFont_wght.ttf
+This means all the styles are contained in these files:
+  Rubik-VariableFont_wght.ttf
+  Rubik-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Lexend Deca:
-  static/LexendDeca-Thin.ttf
-  static/LexendDeca-ExtraLight.ttf
-  static/LexendDeca-Light.ttf
-  static/LexendDeca-Regular.ttf
-  static/LexendDeca-Medium.ttf
-  static/LexendDeca-SemiBold.ttf
-  static/LexendDeca-Bold.ttf
-  static/LexendDeca-ExtraBold.ttf
-  static/LexendDeca-Black.ttf
+in those cases you can use the static font files for Rubik:
+  static/Rubik-Light.ttf
+  static/Rubik-Regular.ttf
+  static/Rubik-Medium.ttf
+  static/Rubik-SemiBold.ttf
+  static/Rubik-Bold.ttf
+  static/Rubik-ExtraBold.ttf
+  static/Rubik-Black.ttf
+  static/Rubik-LightItalic.ttf
+  static/Rubik-Italic.ttf
+  static/Rubik-MediumItalic.ttf
+  static/Rubik-SemiBoldItalic.ttf
+  static/Rubik-BoldItalic.ttf
+  static/Rubik-ExtraBoldItalic.ttf
+  static/Rubik-BlackItalic.ttf
 
 Get started
 -----------
