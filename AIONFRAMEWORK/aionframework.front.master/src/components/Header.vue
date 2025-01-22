@@ -17,10 +17,10 @@ const changeMenu = (menu) => {
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }" class="logo d-flex align-items-center">
-        <img src="/assets/img/aegesix-lg.png" class="lg" alt="aegesix" />
-        <!-- <h1 class="sitename">aegesix</h1> -->
+        <img src="/assets/img/aion@4x.png" class="lg" alt="aion" />
+        <!-- <h1 class="sitename">aion</h1> -->
       </router-link>
-      <nav id="navmenu-center" class="navmenu ps-6">
+      <nav id="navmenu-center" class="navmenu">
         <ul class="gap-3">
           <li>
             <router-link @click.prevent="changeMenu('home')" :class="{'is-active': is_menu == 'home'}" class="fs-13px" :to="{ name: 'home' }">HOME</router-link>
@@ -45,7 +45,7 @@ const changeMenu = (menu) => {
             <a @click.prevent="changeMenu('feature')" class="fs-13px" href="#">Feature</a>
           </li>
           <li class="action"><router-link :to="{ name: 'ai' }"
-              class="btn btn-sm bg-transparent rounded fs-13px 14px">Try Demo Version</router-link></li>
+              class="btn btn-sm bg-transparent rounded fs-13px">Try Demo Version</router-link></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

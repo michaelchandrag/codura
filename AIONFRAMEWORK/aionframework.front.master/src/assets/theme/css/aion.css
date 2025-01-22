@@ -1,10 +1,10 @@
 :root {
     --orange-color: #FBB138;
     --dark-color: #000000;
-    --app-color: #28D198;
+    --app-color: #C21E37;
     --app-dark-lighter: #313D52;
     --app-dark-light: #1D1D1F;
-    --app-font: 'IBMPlexMono', sans-serif;
+    --app-font: 'Josefin Sans', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -103,6 +103,10 @@ img.lg{
     max-height: 64px !important;
 }
 
+.header .logo img.lg{
+    max-width: 250px;
+}
+
 #header {
     background: transparent;
     padding: 0.5rem 0 !important;
@@ -121,18 +125,22 @@ img.lg{
 .navmenu a.is-active,
 .navmenu a:hover,
 .navmenu a:active {
-    color: var(--dark-color) !important;
+    color: var(--app-color) !important;
 }
 
 #navmenu li.action a {
-    color: var(--dark-color);
-    border: 1px solid var(--dark-color)
+    color: var(--app-color);
+    border: 1px solid var(--app-color);
+    padding-top: .35rem !important;
+    padding-bottom: .35rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
 }
 
 #navmenu li.action a:hover,
 #navmenu li.action a:active {
     color: #ffffff !important;
-    background: var(--dark-color) !important;
+    background: var(--app-color) !important;
 }
 
 #hero::before,
@@ -211,8 +219,9 @@ img.lg{
 }
 
 .feature-card {
-    background: var(--app-dark-lighter);
+    background: #01002A;
     border: none;
+    outline: none;
 }
 
 .feature-card:hover, .feature-card:active {
@@ -224,9 +233,16 @@ img.lg{
     background-size: cover !important;
 }
 
-#footer {
+#footer{
+    position: relative;
+    background: transparent;
+    padding-top: 10rem !important;
+}
+
+#footer .footer-content {
     background: var(--dark-color) !important;
     border-radius: 64px 64px 0px 0px !important;
+    padding-top: 8rem;
 }
 
 .ai-card {
@@ -446,18 +462,23 @@ img.lg{
     overflow-wrap: anywhere !important;
 }
 
+#section-try{
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+}
+
 #section-try .card-body{
     padding-top: 4rem;
     padding-bottom: 4rem;
-    background: url('/assets/img/bg-try.png') center center no-repeat !important;
-    background-size: cover;
+    background: var(--app-color);
 }
 
 .try-request button{
-    background: #EE3A3A;
+    background: #01002A;
 }
 .try-request button:hover, .try-request button:active{
-    color: #EE3A3A !important;
+    color: var(--app-color) !important;
     background: transparent;
     border: none;
     box-shadow: none;

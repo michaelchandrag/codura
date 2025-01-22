@@ -17,29 +17,64 @@ export const company = {
 };
 
 export const featureList = [
-    { title: 'Parametric Risk Assessment', icon: 'risk', description: `Harnessing deep learning models and predictive analytics to quantify, segment, and dynamically recalibrate risk metrics for DeFi protocols, wallets, and multi-chain` },
-    { title: 'Autonomous Claim Execution', icon: 'claim', description: `Smart contract-based claim validation leverages decentralized oracles and on-chain telemetry to ensure instantaneous and immutable resolutions.` },
-    { title: 'Dynamic Coverage Pricing', icon: 'pricing', description: `Adaptive algorithms leverage stochastic modeling to optimize premium-to-risk ratios, aligning coverage with real-time market volatility` },
-    { title: 'Cross-Chain Coverage Interoperability', icon: 'chain', description: `Our multi-protocol architecture facilitates seamless protection across heterogeneous blockchain ecosystems, including EVM-compatible and non-EVM chains` },
-    { title: 'Machine-Learning-Powered Portfolio Safeguards', icon: 'learning', description: `AI-driven simulations analyze liquidation probabilities, impermanent loss trajectories, and systemic vulnerabilities to construct resilient safety nets for liquidity providers` },
-    { title: 'Decentralized Governance Framework', icon: 'desentralized', description: `Aegisix's tokenized ecosystem empowers stakeholders to influence policy upgrades, risk recalibration algorithms, and fund allocations through consensus-driven governance
-` },
+    {
+        title: 'Treasury Optimization Engine', icon: 'risk', content: [
+            `Deep-learning models dynamically allocate multi-chain capital for liquidity provisioning, asset diversification, and yield maximization`,
+            `Advanced simulations for sustainable treasury strategies under evolving DeFi conditions`
+        ]
+    },
+    {
+        title: 'Governance Proposal Evaluator', icon: 'claim', content: [
+            `AI-driven clustering and sentiment analytics predict proposal outcomes and align with DAO objectives`,
+            `Blockchain-native simulations assess impact on treasury health and stakeholder engagement`
+        ]
+    },
+    {
+        title: 'Risk Mitigation Dashboard', icon: 'pricing', content: [
+            `Graph neural networks detect anomalies and vulnerabilities across on-chain ecosystems in real time`,
+            `Predictive algorithms provide proactive threat mitigation and exploit resistance`
+        ]
+    },
+    {
+        title: 'Customizable DAO Strategies', icon: 'chain', content: [
+            `Modular intelligence tools tailored to specific DAO operational requirements`,
+            `Scenario-testing environments to optimize tokenomics and treasury reallocations in a risk-free framework`
+        ]
+    },
 ];
 
 export const potentialList = [
-    { title: 'Protocol Exploit Hedging', description: 'Safeguard deployed capital against zero-day vulnerabilities and governance manipulation risks with AI-curated exploit coverage'},
-    { title: 'Liquidation Shielding for Leveraged Trades', description: 'Mitigate margin-call exposure with collateralization buffers dynamically reweighted via predictive AI models'},
-    { title: 'Impermanent Loss Mitigation for LPs', description: 'Enable liquidity providers to neutralize volatile pair imbalances with algorithmic underwriting tailored to pool-specific dynamics'},
-    { title: 'Smart Wallet Defense', description: 'Protect digital assets against phishing vectors, private key breaches, and unauthorized transactions using heuristic anomaly detection'},
-    { title: 'Multi-Chain Market Integrity', description: 'Cover cross-chain operational risks, including bridge failures and asset de-pegging scenarios, with holistic policy mechanisms'},
+    {
+        title: 'Treasury Management', content: [
+            `AI-optimized strategies for sustainable liquidity management and capital deployment`,
+            `Enhanced multi-chain treasury diagnostics for operational efficiency`
+        ]
+    },
+    {
+        title: 'Governance Decision Support', content: [
+            `Predictive analytics for proposal alignment with tokenomics and DAO goals`,
+            `Insights into member behavior trends, voting patterns, and sentiment clustering`
+        ]
+    },
+    {
+        title: 'Risk Analysis and Prevention', content: [
+            `Real-time monitoring and anomaly detection for on-chain security.`,
+            `AI-driven intelligence pipelines to mitigate systemic risks`
+        ]
+    },
+    {
+        title: 'Scenario Testing', content: [
+            `Simulate advanced tokenomics and treasury models to assess long-term viability`,
+            `AI-backed recommendations for navigating volatile DeFi ecosystems`
+        ]
+    },
 ];
 
 export const keyDifferentList = [
-    { title: 'Neural-Network Risk Stratification', icon: '', description: 'Our AI models employ clustering and gradient-boosted decision trees to deliver granular, probabilistic risk stratification for DeFi instruments' },
-    { title: 'Zero-Latency Claims Validation', icon: '', description: 'Real-time oracle feeds and event-driven smart contracts ensure frictionless execution of claims, with zero human intervention' },
-    { title: 'Holistic Coverage Dynamics', icon: '', description: 'Beyond static insurance models, Aegisix deploys modular and composable risk matrices that adapt to evolving market conditions' },
-    { title: 'Decentralized Risk Liquidity Architecture', icon: '', description: 'Multi-party staking pools are tokenized for hyper-efficient capital allocation, enabling transparent ROI distribution for underwriters' },
-    { title: 'Technological Scalability', icon: '', description: 'Aegisix operates on a sharded, multi-chain architecture, ensuring optimal throughput and decentralized execution efficiency' },
+    { title: 'Adaptive AI Governance Models', icon: '', content: `Continuously evolving machine learning algorithms tailored to blockchain environments`},
+    { title: 'Integrated Governance Intelligence', icon: '', content: `Unified dashboards combining simulations, sentiment analysis, and treasury modeling` },
+    { title: 'Real-Time Threat Prevention', icon: '', content: `Proactive anomaly detection leveraging graph neural networks for instant threat mitigation` },
+    { title: 'Modular Scalability', icon: '', content: `Flexible architecture designed for seamless integration across diverse DAOs` },
 ];
 
 export const emptyMessage = [
