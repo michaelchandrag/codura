@@ -33,8 +33,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
     rel="stylesheet">
-  <script type="module" crossorigin src="/app/js/index-4juJrB4f.js"></script>
-  <link rel="stylesheet" crossorigin href="/app/css/index-Bt59U61k.css">
+  <script type="module" crossorigin src="/app/js/index-CGeeSYTP.js"></script>
+  <link rel="stylesheet" crossorigin href="/app/css/index-B7kSNWNW.css">
 </head>
 
 <body class="index-page">
