@@ -261,7 +261,7 @@ img.lg{
 }
 
 .ai-history-header .btn{
-    background: linear-gradient(90deg, #313D52 0%, #000000 100%);
+    background: var(--app-color);
 }
 
 #ai-message-body, #ai-message-footer{
@@ -345,7 +345,7 @@ img.lg{
 .ai-action-message{
     border: none !important;
     outline: none !important;
-    background: #313D52;
+    background: var(--app-color);
     border-radius: 80px;
     width: 40px;
     height: 40px;
@@ -490,5 +490,5 @@ img.lg{
 }
 
 .potential-item:hover .potential-badge, .potential-item:active .potential-badge{
-    background: linear-gradient(to bottom, #313D52 70%, #FF6A6A 85%, #EE3A3A);
+    background: linear-gradient(to bottom, var(--app-color) 70%, #FF6A6A 85%, #ffffff) !important;
 }

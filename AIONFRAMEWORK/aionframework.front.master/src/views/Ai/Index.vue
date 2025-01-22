@@ -208,8 +208,7 @@ async function clearHistory() {
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar p-0" :class="{ 'is-show': show_history }">
           <div class="ai-history-header mb-2 d-flex align-items-center justify-content-between px-4 pt-2">
-            <router-link :to="{ name: 'home' }"><img src="/assets/img/aion-lg.png" class="lg" /></router-link>
-            <a @click.prevent="addNewChat" class="btn btn-sm rounded text-white px-3"><i class="bi bi-plus"></i><span class="fs-13px">New
+            <a @click.prevent="addNewChat" class="btn btn-sm rounded text-white px-3 py-1 ws-80 align-items-center d-inline-flex justify-content-center"><i class="bi bi-plus fs-20px lh-normal"></i><span class="fs-13px">New
                 Chat</span></a>
             <a @click.prevent="setShowSearch" class="btn btn-sm rounded text-white"><i class="bi bi-search"></i></a>
           </div>
@@ -235,7 +234,7 @@ async function clearHistory() {
             <div id="ai-history-body" class="card-body text-start pt-0">
               <div v-for="(his, idh) in histories" :key="his.key" :class="{ 'bg-dark': is_history == idh }"
                 class="ai-history-item d-flex mb-1 align-items-center justify-content-between py-1 px-0 rounded-sm">
-                <div class="d-inline-flex gap-1 ws-5 ps-1">
+                <div class="d-inline-flex gap-1 ws-5 ps-2">
                   <i class="bi bi-chat-dots"></i>
                 </div>
                 <a href="#" @click.prevent="selectHistory(idh)" class="ps-3 ws-70">

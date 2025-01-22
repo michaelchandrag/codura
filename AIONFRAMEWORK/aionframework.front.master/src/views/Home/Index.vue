@@ -109,7 +109,7 @@ onMounted(() => {
             class="potential-item d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="100">
             <div
               class="potential-badge bg-app d-inline-flex align-items-center ws-5 justify-content-center rounded-sm hs-40px">
-              <span class="badge fs-14px fw-bold">{{ idp + 1 }}</span>
+              <span class="badge fs-16px fw-bold">{{ idp + 1 }}</span>
             </div>
             <div class="potential-info ws-95 ps-3">
               <h6 class="text-dark fw-bold text-capitalize fs-14px mb-1">{{ potential.title }}</h6>
