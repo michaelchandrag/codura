@@ -151,7 +151,7 @@ const changeDifferentOption = (option = '') => {
               <p class="text-dark fw-300 fs-13px ls-xs">Step into the future of liquidity aggregation with Interlinc
                 Protocol — where innovation meets sophistication.</p>
               <a class="btn btn-sm py-1 px-3 fs-13px text-white bg-dark-light rounded mt-4 actived-orange"><span
-                  class="me-2">Explor
+                  class="me-2">Explore
                   Now</span><i class="bi bi-arrow-up-right"></i></a>
             </div>
           </div>
