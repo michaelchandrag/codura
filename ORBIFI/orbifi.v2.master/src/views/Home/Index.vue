@@ -23,7 +23,7 @@ const changeHoveredLine = (index) => {
       <source src="/assets/video/orbifi.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <div class="container key-ca">
+    <div v-if="company.key_ca" class="container key-ca">
       <div class="col-lg-6 m-auto">
         <div class="input-group input-group-lg bg-white rounded-sm">
           <input disabled :value="company.key_ca"
