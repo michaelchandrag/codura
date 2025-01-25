@@ -1,26 +1,34 @@
-Lexend Deca Variable Font
-=========================
+Nunito Variable Font
+====================
 
-This download contains Lexend Deca as both a variable font and static fonts.
+This download contains Nunito as both variable fonts and static fonts.
 
-Lexend Deca is a variable font with this axis:
+Nunito is a variable font with this axis:
   wght
 
-This means all the styles are contained in a single file:
-  LexendDeca-VariableFont_wght.ttf
+This means all the styles are contained in these files:
+  Nunito-VariableFont_wght.ttf
+  Nunito-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Lexend Deca:
-  static/LexendDeca-Thin.ttf
-  static/LexendDeca-ExtraLight.ttf
-  static/LexendDeca-Light.ttf
-  static/LexendDeca-Regular.ttf
-  static/LexendDeca-Medium.ttf
-  static/LexendDeca-SemiBold.ttf
-  static/LexendDeca-Bold.ttf
-  static/LexendDeca-ExtraBold.ttf
-  static/LexendDeca-Black.ttf
+in those cases you can use the static font files for Nunito:
+  static/Nunito-ExtraLight.ttf
+  static/Nunito-Light.ttf
+  static/Nunito-Regular.ttf
+  static/Nunito-Medium.ttf
+  static/Nunito-SemiBold.ttf
+  static/Nunito-Bold.ttf
+  static/Nunito-ExtraBold.ttf
+  static/Nunito-Black.ttf
+  static/Nunito-ExtraLightItalic.ttf
+  static/Nunito-LightItalic.ttf
+  static/Nunito-Italic.ttf
+  static/Nunito-MediumItalic.ttf
+  static/Nunito-SemiBoldItalic.ttf
+  static/Nunito-BoldItalic.ttf
+  static/Nunito-ExtraBoldItalic.ttf
+  static/Nunito-BlackItalic.ttf
 
 Get started
 -----------

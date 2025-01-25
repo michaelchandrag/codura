@@ -1,2 +1,0 @@
-# aetherquant.front
-Aetherquant Front

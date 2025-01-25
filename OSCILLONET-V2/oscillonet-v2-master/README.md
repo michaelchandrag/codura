@@ -1,2 +1,0 @@
-# oscillonet.front
-Oscillonet Front
