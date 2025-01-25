@@ -812,6 +812,7 @@ section,
     position: relative;
 }
 
+/*
 .section-title h2 {
     font-size: 32px;
     font-weight: 700;
@@ -845,6 +846,7 @@ section,
     bottom: 0;
     margin: auto;
 }
+*/
 
 .section-title p {
     margin-bottom: 0;

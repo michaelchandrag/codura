@@ -2,7 +2,7 @@
     --app-color: #2ECC71;
     --app-color-light: #58db8f;
     --app-color-gradient: linear-gradient(100.87deg, #2ECC71 -25.11%, rgba(3, 25, 38, 0.3) 44.88%, #2060A6 114.87%);
-    --dark-color: #000000;
+    --dark-color: #030303;
     --app-dark-lighter: #1D1D1F;
     --app-dark-light: #141316;
     --orange-color: #FFAE01;
@@ -60,6 +60,10 @@ button {
 
 .ps-6 {
     padding-left: 5rem !important;
+}
+
+.text-justify{
+    text-align: justify !important;
 }
 
 .bg-dark {
@@ -168,8 +172,8 @@ img.lg {
 }
 
 #navmenu li.action a, .custom-button {
-    background-color: var(--app-color);
-    color: var(--white-color) !important;
+    background-color: var(--white-color-lighter);
+    color: var(--dark-color) !important;
     border: none;
     padding-top: .45rem !important;
     padding-bottom: .45rem !important;
@@ -185,7 +189,7 @@ img.lg {
 
 @keyframes colorBtnTransition {
     0% {
-      background-color: var(--app-color) !important;
+      background-color: var(--white-color-light) !important;
     }
     50% {
       background-color: yellow !important;
@@ -218,7 +222,7 @@ img.lg {
 }
 
 .scroll-top {
-    background: var(--app-color) !important;
+    background: var(--dark-color) !important;
 }
 
 .text-semi-white {
@@ -432,10 +436,7 @@ img.lg {
     overflow: hidden;
 }
 
-.main-hero video{
-    position: absolute;
-    left: 0;
-    top: 0;
+.main-hero video {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -447,20 +448,20 @@ img.lg {
     z-index: -1;
 }
 
-.main-hero .key-ca{
+.main-hero .key-ca {
     position: absolute;
     transform: translate(-50%, -50%);
     bottom: 0;
     left: 50%;
 }
 
-.key-ca .input-group{
-    min-height: calc(2em + 1rem + calc(var(--bs-border-width)* 2));
-    background-color: #ffffff40 !important;
+.key-ca .input-group {
+    min-height: calc(1.5em + 1rem + calc(var(--bs-border-width)* 2));
+    background-color: #FFFFFF26 !important;
 }
 
-.key-ca a{
-    background: #ffffff3b !important;
+.key-ca a {
+    background: #FFFFFF26 !important;
 }
 
 .footer .footer-newsletter {
@@ -589,12 +590,12 @@ img.lg {
 }
 
 .try-request button {
-    background: var(--app-color);
+    background: var(--white-color-lighter);
 }
 
 .try-request button:hover,
 .try-request button:active {
-    color: var(--app-color) !important;
+    color: var(--dark-color) !important;
     background: transparent;
     border: none;
     box-shadow: none;

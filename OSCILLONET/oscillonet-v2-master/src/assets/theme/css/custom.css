@@ -86,11 +86,6 @@ section,
     padding-bottom: 30px;
 }
 
-.section-title h2 {
-    margin-bottom: 10px !important;
-    padding-bottom: 10px !important;
-}
-
 .features .features-item+.features-item {
     margin-top: 15px !important;
 }

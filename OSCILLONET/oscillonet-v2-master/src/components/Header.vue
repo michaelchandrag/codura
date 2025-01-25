@@ -50,9 +50,9 @@ const changeMenu = (menu) => {
           </li>
           <li class="d-inline-flex">
               <a v-if="company.twitter_url || company.tw" target="_blank"
-              :href="company.twitter_url || company.tw" class="btn btn-sm"><i class="bi bi-twitter-x fs-22px"></i></a>
+              :href="company.twitter_url || company.tw" class="btn btn-sm social text-white"><i class="bi bi-twitter-x fs-18px m-0"></i></a>
               <a v-if="company.github_url || company.github" target="_blank"
-              :href="company.github_url || company.github" class="btn btn-sm"><i class="bi bi-github fs-22px"></i></a>
+              :href="company.github_url || company.github" class="btn btn-sm social text-white"><i class="bi bi-github fs-18px m-0"></i></a>
           </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

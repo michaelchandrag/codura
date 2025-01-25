@@ -239,7 +239,7 @@ async function clearHistory() {
           <div class="card h-100 card-conversation border-0 bg-white rounded-md">
             <div
               class="ai-content-header card-header bg-white py-3 d-flex justify-content-between align-items-center rounded-md shadow border-0 bottom-shadow">
-              <a @click.prevent="addNewChat" class="btn btn-sm rounded text-app border px-3 gap-1 d-inline-flex align-items-center fs-16px lh-normal"><i class="bi bi-plus fs-18px"></i><span class="fs-12px">New
+              <a @click.prevent="addNewChat" class="btn btn-sm rounded text-dark border px-3 gap-1 d-inline-flex align-items-center fs-16px lh-normal"><i class="bi bi-plus fs-18px"></i><span class="fs-12px">New
                 Chat</span></a>
               <div class="d-inline-flex gap-3 align-items-center">
                 <a class="btn btn-sm py-1 px-1 text-dark fs-11px border">
@@ -285,7 +285,7 @@ async function clearHistory() {
                       placeholder="Start typing your prompt ...">
                     <div class="input-group-text border-0 bg-transparent">
                       <button id="ai-send-message" type="submit" :disabled="isSending"
-                        :class="{ 'disabled': isSending }" class="text-white btn btn-sm bg-app ai-action-message rounded-sm">
+                        :class="{ 'disabled': isSending }" class="text-white btn btn-sm bg-dark ai-action-message rounded-sm">
                         <span v-if="isSending" class="spinner-border spinner-border-sm text-secondary"
                           role="status"></span>
                           <i v-else class="bi bi-arrow-up"></i>

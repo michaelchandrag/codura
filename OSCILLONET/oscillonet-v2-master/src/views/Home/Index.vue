@@ -26,7 +26,8 @@ const sendRequestTry = () => {
     <div v-if="company.key_ca" class="container key-ca">
       <div class="col-lg-6 m-auto">
         <div class="input-group input-group-lg bg-white rounded-sm">
-          <input disabled :value="company.key_ca" class="form-control text-white bg-transparent no-shadow fs-14px ls-xs no-border">
+          <input disabled :value="company.key_ca"
+            class="form-control text-white bg-transparent no-shadow fs-14px ls-xs no-border">
           <a @click.prevent="copyToClipboard(company.key_ca)"
             class="input-group-text text-white btn btn-sm fs-14px ls-xs d-inline-flex align-items-center gap-2">
             <img src="/assets/img/copy-white-sm.png" />
@@ -37,11 +38,34 @@ const sendRequestTry = () => {
     </div>
   </section>
 
-  <section id="section-feature" class="section bg-transparent pt-5">
+  <section id="section-about" class="section bg-transparent">
+    <div class="col-12 col-lg-10 m-auto">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-7">
+            <div class="container section-title text-start pb-2">
+              <h2 class="text-white fw-bold text-capitalize ls-xs pb-4 mb-0">About Us</h2>
+              <h5 class="text-white fw-bold text-capitalize ls-xs">Dynamic Markets, Precision Liquidity</h5>
+            </div>
+            <div class="container">
+              <p class="text-white fw-300 fs-14px text-justify">OscilloNet transforms DEFAI with a hyper-intelligent Automated Market Maker (AMM) tailored for fluid adaptability. Leveraging advanced algorithmic frameworks and decentralized computation, OscilloNet optimizes liquidity orchestration, minimizes transactional inefficiencies, and elevates ROI for liquidity providers and traders. Designed for cross-chain synergy, OscilloNet heralds a new epoch of composability and scalability in decentralized finance.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="about-img">
+              <img src="/assets/img/about.gif" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-feature" class="section bg-transparent">
     <div class="col-12 col-lg-10 m-auto">
       <div class="container section-title pb-5">
         <div class="col-lg-5 m-auto">
-          <h6 class="text-app fw-bold text-capitalize ls-xs">Our Core Feature</h6>
+          <h6 class="text-white fw-bold text-capitalize ls-xs">Our Core Feature</h6>
           <p class="text-white fw-normal fs-15px ls-xs">Revolutionary Tools That Power the Future of Decentralized
             Intelligence</p>
         </div>
@@ -79,16 +103,16 @@ const sendRequestTry = () => {
                 seamless cross-chain integration through immersive demos</p>
               <div class="explore-item ps-3 pt-2 pb-3" data-aos="fade-right" data-aos-delay="100">
                 <div class="d-flex gap-3 mb-1">
-                  <i class="bi bi-check2-all text-app"></i>
+                  <i class="bi bi-check2-all text-white"></i>
                   <p class="m-0 text-white fs-13px fw-200 ls-xs">Explore advanced liquidity strategies</p>
                 </div>
                 <div class="d-flex gap-3 mb-1">
-                  <i class="bi bi-check2-all text-app"></i>
+                  <i class="bi bi-check2-all text-white"></i>
                   <p class="m-0 text-white fs-13px fw-200 ls-xs">Decode cross-chain complexities with tailored guidance.
                   </p>
                 </div>
                 <div class="d-flex gap-3 mb-1">
-                  <i class="bi bi-check2-all text-app"></i>
+                  <i class="bi bi-check2-all text-white"></i>
                   <p class="m-0 text-white fs-13px fw-200 ls-xs">Receive instant troubleshooting for seamless user
                     experiences
                   </p>
@@ -130,7 +154,7 @@ const sendRequestTry = () => {
                 tailored for every DeFi participant</p>
               <div class="empowering-item ps-3 pt-2 pb-3" data-aos="fade-left" data-aos-delay="100">
                 <div class="d-flex gap-3 mb-2">
-                  <i class="bi bi-check2-all text-app"></i>
+                  <i class="bi bi-check2-all text-white"></i>
                   <div>
                     <div class="fw-400 fs-13px text-white ls-xs">Algorithmic Arbitrage</div>
                     <p class="m-0 text-white fs-13px fw-200 ls-xs">OscilloNet’s real-time fee recalibration enables
@@ -138,7 +162,7 @@ const sendRequestTry = () => {
                   </div>
                 </div>
                 <div class="d-flex gap-3 mb-2">
-                  <i class="bi bi-check2-all text-app"></i>
+                  <i class="bi bi-check2-all text-white"></i>
                   <div>
                     <div class="fw-400 fs-13px text-white ls-xs">Institutional Yield Engineering</div>
                     <p class="m-0 text-white fs-13px fw-200 ls-xs">Institutional participants harness OscilloNet’s
@@ -146,7 +170,7 @@ const sendRequestTry = () => {
                   </div>
                 </div>
                 <div class="d-flex gap-3 mb-2">
-                  <i class="bi bi-check2-all text-app"></i>
+                  <i class="bi bi-check2-all text-white"></i>
                   <div>
                     <div class="fw-400 fs-13px text-white ls-xs">Inter-Chain Liquidity Arbitrage</div>
                     <p class="m-0 text-white fs-13px fw-200 ls-xs">OscilloNet unlocks unique opportunities across
@@ -154,7 +178,7 @@ const sendRequestTry = () => {
                   </div>
                 </div>
                 <div class="d-flex gap-3 mb-2">
-                  <i class="bi bi-check2-all text-app"></i>
+                  <i class="bi bi-check2-all text-white"></i>
                   <div>
                     <div class="fw-400 fs-13px text-white ls-xs">Enhanced Retail DeFi Experience</div>
                     <p class="m-0 text-white fs-13px fw-200 ls-xs">Retail traders gain streamlined access to advanced
@@ -242,7 +266,7 @@ const sendRequestTry = () => {
             <div class="input-group input-group-lg bg-white rounded-sm">
               <input required type="email" v-model="try_request.email"
                 class="form-control bg-transparent no-shadow fs-12px" placeholder="Enter your email address">
-              <button type="submit" class="input-group-text text-white btn btn-sm fs-12px">SUBMIT</button>
+              <button type="submit" class="input-group-text text-dark btn btn-sm fs-12px">SUBMIT</button>
             </div>
           </form>
         </div>
