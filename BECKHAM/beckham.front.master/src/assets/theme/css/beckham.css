@@ -1,0 +1,54 @@
+:root {
+    --app-font: 'Inter', sans-serif;
+    --app-color-blue-dark: #070735;
+    --app-color-red: #C41220;
+    --app-color-gold: #AC8734;
+    --app-color-blue: #131384;
+    --app-color-orange: #FFAE01;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    font-family: var(--app-font);
+    font-weight: normal;
+    font-style: normal;
+    background: var(--app-color);
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a,
+li,
+input,
+button,
+textarea,
+button {
+    font-family: var(--app-font);
+}

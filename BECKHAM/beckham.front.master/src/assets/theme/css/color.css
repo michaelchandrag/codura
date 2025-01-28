@@ -1,0 +1,200 @@
+:root {
+    --dark-color: #1C1C1C;
+    --dark-color-light: #2A2A2A;
+    --dark-color-lighter: #3C3C3C;
+    --white-color: #FFFFFF;
+    --white-color-light: #F1F1F1;
+    --white-color-lighter: #E8E8E8;
+    --gray-color: #A7A7A7;
+    --blue-color: #007BFF;
+    --blue-color-light: #66B3FF;
+    --blue-color-lighter: #99CCFF;
+    --green-color: #28A745;
+    --green-color-light: #66D39A;
+    --green-color-lighter: #A2E1B3;
+    --red-color: #DC3545;
+    --red-color-light: #FF6F74;
+    --red-color-lighter: #FF8C91;
+    --yellow-color: #FFC107;
+    --yellow-color-light: #FFDC65;
+    --yellow-color-lighter: #FFED90;
+    --purple-color: #6F42C1;
+    --purple-color-light: #9B7FE0;
+    --purple-color-lighter: #D0A9F2;
+}
+
+.text-dark {
+    color: var(--dark-color);
+}
+
+.text-dark-light {
+    color: var(--dark-color-light);
+}
+
+.text-dark-lighter {
+    color: var(--dark-color-lighter);
+}
+
+.bg-dark {
+    background-color: var(--dark-color);
+}
+
+.bg-dark-light {
+    background-color: var(--dark-color-light);
+}
+
+.bg-dark-lighter {
+    background-color: var(--dark-color-lighter);
+}
+
+.text-white {
+    color: var(--white-color);
+}
+
+.text-white-light {
+    color: var(--white-color-light);
+}
+
+.text-white-lighter {
+    color: var(--white-color-lighter);
+}
+
+.bg-white {
+    background-color: var(--white-color);
+}
+
+.bg-white-light {
+    background-color: var(--white-color-light);
+}
+
+.bg-white-lighter {
+    background-color: var(--white-color-lighter);
+}
+
+.text-gray {
+    color: var(--gray-color);
+}
+
+.bg-gray {
+    background-color: var(--gray-color);
+}
+
+.text-blue {
+    color: var(--blue-color);
+}
+
+.text-blue-light {
+    color: var(--blue-color-light);
+}
+
+.text-blue-lighter {
+    color: var(--blue-color-lighter);
+}
+
+.bg-blue {
+    background-color: var(--blue-color);
+}
+
+.bg-blue-light {
+    background-color: var(--blue-color-light);
+}
+
+.bg-blue-lighter {
+    background-color: var(--blue-color-lighter);
+}
+
+.text-green {
+    color: var(--green-color);
+}
+
+.text-green-light {
+    color: var(--green-color-light);
+}
+
+.text-green-lighter {
+    color: var(--green-color-lighter);
+}
+
+.bg-green {
+    background-color: var(--green-color);
+}
+
+.bg-green-light {
+    background-color: var(--green-color-light);
+}
+
+.bg-green-lighter {
+    background-color: var(--green-color-lighter);
+}
+
+.text-red {
+    color: var(--red-color);
+}
+
+.text-red-light {
+    color: var(--red-color-light);
+}
+
+.text-red-lighter {
+    color: var(--red-color-lighter);
+}
+
+.bg-red {
+    background-color: var(--red-color);
+}
+
+.bg-red-light {
+    background-color: var(--red-color-light);
+}
+
+.bg-red-lighter {
+    background-color: var(--red-color-lighter);
+}
+
+.text-yellow {
+    color: var(--yellow-color);
+}
+
+.text-yellow-light {
+    color: var(--yellow-color-light);
+}
+
+.text-yellow-lighter {
+    color: var(--yellow-color-lighter);
+}
+
+.bg-yellow {
+    background-color: var(--yellow-color);
+}
+
+.bg-yellow-light {
+    background-color: var(--yellow-color-light);
+}
+
+.bg-yellow-lighter {
+    background-color: var(--yellow-color-lighter);
+}
+
+.text-purple {
+    color: var(--purple-color);
+}
+
+.text-purple-light {
+    color: var(--purple-color-light);
+}
+
+.text-purple-lighter {
+    color: var(--purple-color-lighter);
+}
+
+.bg-purple {
+    background-color: var(--purple-color);
+}
+
+.bg-purple-light {
+    background-color: var(--purple-color-light);
+}
+
+.bg-purple-lighter {
+    background-color: var(--purple-color-lighter);
+}
