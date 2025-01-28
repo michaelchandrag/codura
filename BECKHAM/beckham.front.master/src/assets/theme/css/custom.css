@@ -20,6 +20,11 @@
     padding-left: 5rem !important;
 }
 
+.px-6{
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+}
+
 .br-0 {
     border-radius: 0px !important;
 }

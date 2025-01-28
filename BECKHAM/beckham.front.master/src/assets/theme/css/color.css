@@ -1,5 +1,5 @@
 :root {
-    --dark-color: #1C1C1C;
+    --dark-color: #000000;
     --dark-color-light: #2A2A2A;
     --dark-color-lighter: #3C3C3C;
     --white-color: #FFFFFF;
@@ -24,75 +24,75 @@
 }
 
 .text-dark {
-    color: var(--dark-color);
+    color: var(--dark-color) !important;
 }
 
 .text-dark-light {
-    color: var(--dark-color-light);
+    color: var(--dark-color-light) !important;
 }
 
 .text-dark-lighter {
-    color: var(--dark-color-lighter);
+    color: var(--dark-color-lighter) !important;
 }
 
 .bg-dark {
-    background-color: var(--dark-color);
+    background-color: var(--dark-color) !important;
 }
 
 .bg-dark-light {
-    background-color: var(--dark-color-light);
+    background-color: var(--dark-color-light) !important;
 }
 
 .bg-dark-lighter {
-    background-color: var(--dark-color-lighter);
+    background-color: var(--dark-color-lighter) !important;
 }
 
 .text-white {
-    color: var(--white-color);
+    color: var(--white-color) !important;
 }
 
 .text-white-light {
-    color: var(--white-color-light);
+    color: var(--white-color-light) !important;
 }
 
 .text-white-lighter {
-    color: var(--white-color-lighter);
+    color: var(--white-color-lighter) !important;
 }
 
 .bg-white {
-    background-color: var(--white-color);
+    background-color: var(--white-color) !important;
 }
 
 .bg-white-light {
-    background-color: var(--white-color-light);
+    background-color: var(--white-color-light) !important;
 }
 
 .bg-white-lighter {
-    background-color: var(--white-color-lighter);
+    background-color: var(--white-color-lighter) !important;
 }
 
 .text-gray {
-    color: var(--gray-color);
+    color: var(--gray-color) !important;
 }
 
 .bg-gray {
-    background-color: var(--gray-color);
+    background-color: var(--gray-color) !important;
 }
 
 .text-blue {
-    color: var(--blue-color);
+    color: var(--blue-color) !important;
 }
 
 .text-blue-light {
-    color: var(--blue-color-light);
+    color: var(--blue-color-light) !important;
 }
 
 .text-blue-lighter {
-    color: var(--blue-color-lighter);
+    color: var(--blue-color-lighter) !important;
 }
 
 .bg-blue {
-    background-color: var(--blue-color);
+    background-color: var(--blue-color) !important;
 }
 
 .bg-blue-light {

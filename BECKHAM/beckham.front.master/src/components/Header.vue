@@ -55,7 +55,7 @@ const changeMenu = (menu) => {
             <a @click.prevent="changeMenu('howbuy')" class="fs-13px" href="#">How To Buy</a>
           </li>
           <li>
-            <a @click.prevent="changeMenu('buynow')" class="btn btn-sm rounded bg-app-red py-1 px-3 fs-13px">Buy Now</a>
+            <a @click.prevent="changeMenu('buynow')" class="btn btn-sm rounded bg-app-red py-2 px-4 fs-14px">Buy Now</a>
           </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

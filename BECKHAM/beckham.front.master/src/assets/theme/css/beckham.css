@@ -4,7 +4,7 @@
     --app-color-red: #C41220;
     --app-color-gold: #AC8734;
     --app-color-blue: #131384;
-    --app-color-orange: #FFAE01;
+    --app-color-orange: #D3B137;
 }
 
 ::-webkit-scrollbar {
@@ -18,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--app-color-gold);
     border-radius: 8px;
 }
 
@@ -27,10 +27,10 @@
 }
 
 body {
-    font-family: var(--app-font);
+    background-color: #E3E3E3 !important;
+    font-family: var(--app-font) !important;
     font-weight: normal;
     font-style: normal;
-    background: var(--app-color);
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
 }
@@ -50,35 +50,96 @@ input,
 button,
 textarea,
 button {
-    font-family: var(--app-font);
+    font-family: var(--app-font) !important;
 }
 
-.header-container{
+.header-container {
     background-color: var(--app-color-gold);
     border-radius: 50px;
 }
 
-.bg-app-red{
+.bg-app-red {
     background-color: var(--app-color-red) !important;
 }
-.text-app-red{
+
+.text-app-red {
     color: var(--app-color-red) !important;
 }
-.bg-app-gold{
+
+.bg-app-gold {
     background-color: var(--app-color-gold) !important;
 }
 
-.scrolled .header{
+.text-app-gold {
+    color: var(--app-color-gold) !important;
+}
+
+.border-app-gold{
+    border:1px solid var(--app-color-gold) !important;
+}
+
+.bg-app-blue-dark {
+    background-color: var(--app-color-blue-dark);
+}
+
+.text-app-orange {
+    color: var(--app-color-orange) !important;
+}
+
+.scrolled .header {
     background-color: transparent;
 }
 
-.first-section{
-    margin-top: 3rem;
+.first-section {
+    padding-top: 7rem;
 }
-.join-info{
+
+.join-info {
     position: absolute;
     bottom: 25%;
 }
-.signature-info{
+
+.signature-info {
     margin-top: -5%;
+}
+
+.border-top-section {
+    border-top: 8px solid var(--app-color-red);
+}
+
+.border-bottom-section {
+    border-bottom: 8px solid var(--app-color-red);
+}
+
+.has-bg-section {
+    background: url('/assets/images/bg-gold.png') center center no-repeat;
+    background-size: cover;
+}
+
+#accordionFaq .accordion-button {
+    background: transparent;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    background-image: url('/assets/images/plus.png');
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url('/assets/images/minus.png');
+}
+
+.scroll-top{
+    background-color: var(--app-color-gold);
+}
+
+.section-gallery-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.avatar-info{
+    background: linear-gradient(180deg, #D18F22 26.72%, #E0B85A 100%);
 }
