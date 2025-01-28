@@ -25,7 +25,7 @@
   font-family: 'Inter';
   font-style: italic;
   font-weight: 900;
-  src: url('/assets/fonts/static/Inter_18pt-Blackltalic.ttf') format('truetype');
+  src: url('/assets/fonts/static/Inter_18pt-BlackItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -46,7 +46,7 @@
   font-family: 'Inter';
   font-style: italic;
   font-weight: 500;
-  src: url('/assets/fonts/static/Inter_24pt-Mediumltalic.ttf') format('truetype');
+  src: url('/assets/fonts/static/Inter_24pt-MediumItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -102,7 +102,7 @@
   font-family: 'Inter';
   font-style: italic;
   font-weight: 200;
-  src: url('/assets/fonts/static/Inter_24pt-Thinltalic.ttf') format('truetype');
+  src: url('/assets/fonts/static/Inter_24pt-ThinItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -116,7 +116,7 @@
   font-family: 'Inter';
   font-style: italic;
   font-weight: 900;
-  src: url('/assets/fonts/static/Inter_28pt-Blackltalic.ttf') format('truetype');
+  src: url('/assets/fonts/static/Inter_28pt-BlackItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -193,7 +193,7 @@
   font-family: 'Inter';
   font-style: italic;
   font-weight: 500;
-  src: url('/assets/fonts/static/Inter_28pt-Mediumltalic.ttf') format('truetype');
+  src: url('/assets/fonts/static/Inter_28pt-MediumItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -228,7 +228,7 @@
   font-family: 'Inter';
   font-style: italic;
   font-weight: 200;
-  src: url('/assets/fonts/static/Inter_28pt-Thinltalic.ttf') format('truetype');
+  src: url('/assets/fonts/static/Inter_28pt-ThinItalic.ttf') format('truetype');
 }
 
 .my-font {

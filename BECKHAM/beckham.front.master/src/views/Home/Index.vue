@@ -13,16 +13,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="section first-section">
+  <section id="main-section" class="section first-section bg-transparent">
     <div class="container bg-app-gold rounded-xl p-4">
-      <div class="row justify-content-between mb-5">
+      <div class="row justify-content-between mb-4">
         <div class="col-lg-6">
           <div class="card bg-transparent no-border h-100 is-relative">
             <div class="card-body">
               <div class="title">
-                <h1 class="text-white fw-bold m-0 fs-48px">THE ONLY</h1>
-                <h1 class="text-white fw-bold m-0 text-app-red fs-48px">OFFICIAL</h1>
-                <h1 class="text-white fw-bold m-0 fs-48px">DAVID BECKHAM MEME</h1>
+                <h1 class="text-white fw-bold m-0 fs-50px ls-xs">THE ONLY</h1>
+                <h1 class="text-white fw-bold m-0 text-app-red fs-50px ls-xs">OFFICIAL</h1>
+                <h1 class="text-white fw-bold m-0 fs-50px ls-xs">DAVID BECKHAM MEME</h1>
               </div>
               <div class="info join-info">
                 <p class="m-0 text-white fw-300 fs-18px">Join the Becks Community!</p>
@@ -33,13 +33,13 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5 p-0">
           <div class="card bg-transparent no-border h-100">
             <div class="card-body text-center">
-              <div class="box-image mb-3">
+              <div class="box-image mb-3 px-2">
                 <img src="/assets/images/backham-dream@4x.png" />
               </div>
-              <p class="m-0 text-white fw-300 fs-18px text-start lh-normal"><i>“Don't be like most people, Most people
+              <p class="m-0 text-white fw-300 fs-16px text-justify lh-normal"><i>“Don't be like most people, Most people
                   give up on their
                   dreams”</i>
               </p>
@@ -52,9 +52,9 @@ onMounted(() => {
       </div>
       <div class="text-center col-lg-6 m-auto mb-4">
         <h5 class="text-white mb-3">Solana Contract Address</h5>
-        <div class="input-group">
-          <input disabled class="form-control disabled">
-          <a class="input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
+        <div class="input-group custom-input-group">
+          <input :value="company.key_ca" disabled class="form-control disabled">
+          <a @click.prebtn="copyToClipboard(company.key_ca)" class="input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
             <img src="/assets/images/copy-white.png" />
             <span class="ps-2 text-white">Copy CA</span>
           </a>
@@ -70,16 +70,20 @@ onMounted(() => {
       </div>
     </div>
   </section>
-  <section id="section-dream" class="section bg-dark border-top-section">
-    <div class="d-flex align-items-center">
-        <div class="card no-border bg-transaprent">
-            <div class="d-flex">
-                <div class="avatar">
-                    <img src="/assets/images/backham-dream-becks-2.png"/>
-                </div>
-                <div class="avatar-info">DREAM DREAM DREAM</div>
+  <section id="section-dream" class="section bg-dark border-top-section py-3">
+    <div class="dream-item-container row align-items-center gap-5">
+      <div v-for="dream in 10" class="dream-item card no-border bg-transparent">
+        <div class="card-body w-100">
+          <div class="item d-flex align-items-center">
+            <div class="avatar bg-white rounded box-image hs-150px ws-150px p-2">
+              <img src="/assets/images/backham-dream-becks-2.png" />
             </div>
+            <div class="avatar-info ps-4 w-auto">
+              <h1 class="m-0 title fw-bold">{{ (dream % 2) ? '$BECKS' : 'DREAM DREAM DREAM' }}</h1>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 
@@ -162,13 +166,13 @@ onMounted(() => {
       </div>
     </div>
   </section>
-  <section id="section-buy" class="section bg-dark border-top-section has-bg-section">
+  <section id="section-address" class="section bg-dark border-top-section has-bg-section">
     <div class="container">
       <div class="text-center col-lg-6 m-auto mb-4">
         <h2 class="text-white mb-3 fw-bold">Solana Contract Address</h2>
-        <div class="input-group">
-          <input disabled class="form-control disabled">
-          <a class="input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
+        <div class="input-group custom-input-group">
+          <input :value="company.key_ca" disabled class="form-control disabled">
+          <a @click.prebtn="copyToClipboard(company.key_ca)" class="input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
             <img src="/assets/images/copy-white.png" />
             <span class="ps-2 text-white">Copy CA</span>
           </a>
@@ -185,9 +189,9 @@ onMounted(() => {
     </div>
   </section>
 
-  <section class="section first-section">
+  <section class="section bg-transparent">
     <div class="container">
-      <div class="row justify-content-between mb-5">
+      <div class="row justify-content-between">
         <div class="col-lg-6">
           <div class="card bg-transparent no-border h-100 is-relative">
             <div class="card-body">

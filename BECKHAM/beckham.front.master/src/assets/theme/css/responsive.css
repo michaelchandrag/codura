@@ -14,6 +14,32 @@
     #navmenu-center {
         display: none;
     }
+
+    .first-section {
+        padding-top: 6rem !important;
+    }
+
+    #main-section .title h1{
+        font-size: 30px !important;
+    }
+
+    #main-section .card-body{
+        padding: 0px !important;
+    }
+
+    .join-info{
+        margin: 1rem 0 !important;
+        position: relative !important;
+        bottom: unset !important;
+    }
+
+    .section-gallery-image{
+        padding: 0px !important;
+    }
+
+    #section-about .card-body{
+        padding: 1rem !important;
+    }
 }
 
 /* Responsif untuk Desktop */

@@ -2,6 +2,7 @@
 @import "width.css";
 @import "height.css";
 @import "color.css";
+@import "animation.css";
 
 :root {
     --line-clamp-3: 3;
@@ -67,7 +68,7 @@ h6 {
 }
 
 .rounded {
-    border-radius: 80px !important;
+    border-radius: 50% !important;
 }
 
 .rounded-sm {
@@ -88,4 +89,18 @@ h6 {
 
 .is-relative{
     position: relative !important;
+}
+
+.box-image{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box-image img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }

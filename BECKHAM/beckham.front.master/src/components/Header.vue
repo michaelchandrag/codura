@@ -15,7 +15,7 @@ const changeMenu = (menu) => {
 
 <template>
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid header-container col-lg-8 m-auto container-xl position-relative d-flex align-items-center justify-content-between py-2 px-4">
+    <div class="shadow container-fluid header-container col-lg-8 m-auto container-xl position-relative d-flex align-items-center justify-content-between py-2 px-4">
       <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }" class="logo d-flex align-items-center">
         <img src="/assets/images/$becks-lg.png" class="lg m-0" alt="$becks" />
         <!-- <h1 class="sitename">$becks</h1> -->
@@ -27,7 +27,7 @@ const changeMenu = (menu) => {
               :to="{ name: 'home' }">Home</router-link>
           </li>
           <li>
-            <a @click.prevent="changeMenu('contact')" :class="{ 'is-active': is_menu == 'contact' }" class="fs-13px"
+            <a @click.prevent="changeMenu('about')" :class="{ 'is-active': is_menu == 'about' }" class="fs-13px"
               href="#">Contact</a>
           </li>
           <li>
@@ -35,7 +35,7 @@ const changeMenu = (menu) => {
               href="#">Address</a>
           </li>
           <li>
-            <a @click.prevent="changeMenu('howbuy')" :class="{ 'is-active': is_menu == 'howbuy' }" class="fs-13px"
+            <a @click.prevent="changeMenu('buy')" :class="{ 'is-active': is_menu == 'buy' }" class="fs-13px"
               href="#">How To Buy</a>
           </li>
         </ul>
@@ -46,16 +46,16 @@ const changeMenu = (menu) => {
             <router-link @click.prevent="changeMenu('home')" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li class="d-xl-none d-lg-none">
-            <a @click.prevent="changeMenu('contact')" class="fs-13px" href="#">Contact</a>
+            <a @click.prevent="changeMenu('about')" class="fs-13px" href="#">Contact</a>
           </li>
           <li class="d-xl-none d-lg-none">
             <a @click.prevent="changeMenu('address')" class="fs-13px" href="#">Address</a>
           </li>
           <li class="d-xl-none d-lg-none">
-            <a @click.prevent="changeMenu('howbuy')" class="fs-13px" href="#">How To Buy</a>
+            <a @click.prevent="changeMenu('buy')" class="fs-13px" href="#">How To Buy</a>
           </li>
           <li>
-            <a @click.prevent="changeMenu('buynow')" class="btn btn-sm rounded bg-app-red py-2 px-4 fs-14px">Buy Now</a>
+            <a @click.prevent="changeMenu('buy')" class="btn btn-sm rounded-xl bg-app-red py-1 px-3 fs-14px">Buy Now</a>
           </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

@@ -27,7 +27,7 @@
 }
 
 body {
-    background-color: #E3E3E3 !important;
+    background-color: #E5E5E5 !important;
     font-family: var(--app-font) !important;
     font-weight: normal;
     font-style: normal;
@@ -56,6 +56,16 @@ button {
 .header-container {
     background-color: var(--app-color-gold);
     border-radius: 50px;
+    transition: width 0.3s ease;
+}
+
+.scrolled .header {
+    background-color: #E5E5E5 !important;
+    padding: 10px 0;
+}
+
+.scrolled .header .header-container {
+    width: 100%;
 }
 
 .bg-app-red {
@@ -74,8 +84,8 @@ button {
     color: var(--app-color-gold) !important;
 }
 
-.border-app-gold{
-    border:1px solid var(--app-color-gold) !important;
+.border-app-gold {
+    border: 1px solid var(--app-color-gold) !important;
 }
 
 .bg-app-blue-dark {
@@ -129,17 +139,61 @@ button {
     background-image: url('/assets/images/minus.png');
 }
 
-.scroll-top{
+.scroll-top {
     background-color: var(--app-color-gold);
 }
 
-.section-gallery-image{
+.scroll-top:hover,
+.scroll-top:active {
+    background-color: var(--app-color-red);
+}
+
+.section-gallery-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.avatar-info{
+.dream-item-container {
+    flex-wrap: nowrap;
+    animation: marqueeLeft 15s linear infinite;
+}
+
+.dream-item {
+    width: auto;
+}
+
+.dream-item .avatar-info .title {
     background: linear-gradient(180deg, #D18F22 26.72%, #E0B85A 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dream-item .item {
+    flex-wrap: nowrap;
+}
+
+.custom-input-group {
+    border-radius: 8px;
+}
+
+.custom-input-group input {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.custom-input-group .btn {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#section-buy {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#section-address {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
