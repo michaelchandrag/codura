@@ -15,49 +15,47 @@ const changeMenu = (menu) => {
 
 <template>
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div class="container-fluid header-container col-lg-8 m-auto container-xl position-relative d-flex align-items-center justify-content-between py-2 px-4">
       <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }" class="logo d-flex align-items-center">
-        <img src="/assets/img/$becks@4x.png" class="lg" alt="$becks" />
+        <img src="/assets/images/$becks-lg.png" class="lg m-0" alt="$becks" />
         <!-- <h1 class="sitename">$becks</h1> -->
       </router-link>
-      <nav id="navmenu-center" class="navmenu ps-6">
-        <ul class="gap-3">
+      <nav id="navmenu-center" class="navmenu">
+        <ul>
           <li>
             <router-link @click.prevent="changeMenu('home')" :class="{ 'is-active': is_menu == 'home' }" class="fs-13px"
-              :to="{ name: 'home' }">HOME</router-link>
+              :to="{ name: 'home' }">Home</router-link>
           </li>
           <li>
-            <a @click.prevent="changeMenu('about')" :class="{ 'is-active': is_menu == 'about' }" class="fs-13px"
-              href="#">ABOUT</a>
+            <a @click.prevent="changeMenu('contact')" :class="{ 'is-active': is_menu == 'contact' }" class="fs-13px"
+              href="#">Contact</a>
           </li>
           <li>
-            <a @click.prevent="changeMenu('feature')" :class="{ 'is-active': is_menu == 'feature' }" class="fs-13px"
-              href="#">FEATURE</a>
+            <a @click.prevent="changeMenu('address')" :class="{ 'is-active': is_menu == 'address' }" class="fs-13px"
+              href="#">Address</a>
+          </li>
+          <li>
+            <a @click.prevent="changeMenu('howbuy')" :class="{ 'is-active': is_menu == 'howbuy' }" class="fs-13px"
+              href="#">How To Buy</a>
           </li>
         </ul>
       </nav>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li class="d-xl-none">
+          <li class="d-xl-none d-lg-none">
             <router-link @click.prevent="changeMenu('home')" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
-          <li class="d-xl-none">
-            <a @click.prevent="changeMenu('about')" class="fs-13px" href="#">About</a>
+          <li class="d-xl-none d-lg-none">
+            <a @click.prevent="changeMenu('contact')" class="fs-13px" href="#">Contact</a>
           </li>
-          <li class="d-xl-none">
-            <a @click.prevent="changeMenu('feature')" class="fs-13px" href="#">Feature</a>
+          <li class="d-xl-none d-lg-none">
+            <a @click.prevent="changeMenu('address')" class="fs-13px" href="#">Address</a>
           </li>
-          <li class="action d-none">
-            <router-link :to="{ name: 'ai' }" class="btn btn-sm bg-white rounded fs-13px 14px">
-              <span>Try Our Demo</span>
-              <i class="bi bi-arrow-up-right"></i>
-            </router-link>
+          <li class="d-xl-none d-lg-none">
+            <a @click.prevent="changeMenu('howbuy')" class="fs-13px" href="#">How To Buy</a>
           </li>
-          <li class="d-inline-flex">
-            <a v-if="company.twitter_url || company.tw" target="_blank" :href="company.twitter_url || company.tw"
-              class="btn btn-sm text-white"><i class="bi bi-twitter-x fs-20px"></i></a>
-            <a v-if="company.github_url || company.github" target="_blank" :href="company.github_url || company.github"
-              class="btn btn-sm text-white"><i class="bi bi-github fs-20px"></i></a>
+          <li>
+            <a @click.prevent="changeMenu('buynow')" class="btn btn-sm rounded bg-app-red py-1 px-3 fs-13px">Buy Now</a>
           </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

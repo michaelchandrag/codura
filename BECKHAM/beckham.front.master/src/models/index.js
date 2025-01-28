@@ -17,9 +17,24 @@ export const company = {
 };
 
 export const faqList = [
-  { title: 'What makes your platform uniquen', content: 'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.' },
-  { title: 'Do I need coding skills to use the platform?', content: 'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.' },
-  { title: 'Which blockchains are supported?', content: 'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.' },
-  { title: 'How does the platform ensure security?', content: 'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.' },
-  { title: 'What is AI-powered alpha generation?', content: 'Our platform combines AI-driven automation, real-time analytics, and cross-chain compatibility to deliver a seamless and intelligent DeFi experience for users of all levels.' },
+  {
+    title: 'Is this an official $BECKS product?',
+    content: 'Yes, this is the official $BECKS product, curated and designed to bring value to the community and fans of $BECKS.'
+  },
+  {
+    title: 'How can I get $BECKS Memes?',
+    content: 'You can get $BECKS Memes by visiting our official platform or participating in our events and campaigns. Ensure you follow our verified channels for updates.'
+  },
+  {
+    title: 'What is a meme?',
+    content: 'A meme is a piece of media, often humorous or satirical, that spreads quickly online, usually in the form of an image, video, or text.'
+  },
+  {
+    title: 'Which blockchain network are the $BECKS Memes minted?',
+    content: 'The $BECKS Memes are minted on the Ethereum blockchain, ensuring security, transparency, and decentralized ownership.'
+  },
+  {
+    title: 'What are the $BECKS Memes?',
+    content: '$BECKS Memes are exclusive digital collectibles created to represent the culture and humor of the $BECKS community. They are unique, tradable, and stored securely on the blockchain.'
+  },
 ];

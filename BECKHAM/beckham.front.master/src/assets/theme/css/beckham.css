@@ -52,3 +52,33 @@ textarea,
 button {
     font-family: var(--app-font);
 }
+
+.header-container{
+    background-color: var(--app-color-gold);
+    border-radius: 50px;
+}
+
+.bg-app-red{
+    background-color: var(--app-color-red) !important;
+}
+.text-app-red{
+    color: var(--app-color-red) !important;
+}
+.bg-app-gold{
+    background-color: var(--app-color-gold) !important;
+}
+
+.scrolled .header{
+    background-color: transparent;
+}
+
+.first-section{
+    margin-top: 3rem;
+}
+.join-info{
+    position: absolute;
+    bottom: 25%;
+}
+.signature-info{
+    margin-top: -5%;
+}
