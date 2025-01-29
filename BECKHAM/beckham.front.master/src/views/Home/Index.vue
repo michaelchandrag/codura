@@ -154,7 +154,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="text-center">
-          <a class="btn btn-lg bg-app-red text-white fw-bold ls-xs py-3 px-6">BUY NOW</a>
+          <a :href="company.key_ca_url || '#'" class="btn btn-lg bg-app-red text-white fw-bold ls-xs py-3 px-6">BUY NOW</a>
         </div>
       </div>
       <div class="text-center col-lg-10 m-auto">

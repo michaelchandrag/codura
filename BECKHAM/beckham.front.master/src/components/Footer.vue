@@ -21,8 +21,6 @@ onMounted(() => {
             <div class="social-links d-flex justify-content-center">
               <a class="rounded-sm fs-18px text-app-gold border-app-gold" v-if="company.tw" target="_blank" :href="company.tw"><i
                   class="bi bi-twitter-x"></i></a>
-              <a class="rounded-sm fs-18px text-app-gold border-app-gold" v-if="company.github" target="_blank" :href="company.github"><i
-                  class="bi bi-github"></i></a>
             </div>
           </div>
         </div>
