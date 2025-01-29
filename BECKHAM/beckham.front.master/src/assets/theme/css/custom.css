@@ -9,6 +9,10 @@
     --line-clamp-2: 2;
 }
 
+a.decoration {
+    text-decoration: underline;
+}
+
 .vs-modal__close-button button {
     top: 15px !important;
 }
@@ -21,7 +25,7 @@
     padding-left: 5rem !important;
 }
 
-.px-6{
+.px-6 {
     padding-right: 5rem !important;
     padding-left: 5rem !important;
 }
@@ -87,18 +91,18 @@ h6 {
     border-radius: 32px !important;
 }
 
-.is-relative{
+.is-relative {
     position: relative !important;
 }
 
-.box-image{
+.box-image {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
 
-.box-image img{
+.box-image img {
     width: auto;
     height: auto;
     max-width: 100%;

@@ -36,14 +36,14 @@ onMounted(() => {
         <div class="col-lg-5 p-0">
           <div class="card bg-transparent no-border h-100">
             <div class="card-body text-center">
-              <div class="box-image mb-3 px-2">
+              <div class="box-image mb-3 has-red-glow" data-aos="fade-left" data-aos-delay="100">
                 <img src="/assets/images/backham-dream@4x.png" />
               </div>
               <p class="m-0 text-white fw-300 fs-16px text-justify lh-normal"><i>“Don't be like most people, Most people
                   give up on their
                   dreams”</i>
               </p>
-              <div class="box-image signature-info">
+              <div class="box-image signature-info" data-aos="fade-down" data-aos-delay="100">
                 <img src="/assets/images/signature.png" />
               </div>
             </div>
@@ -52,9 +52,9 @@ onMounted(() => {
       </div>
       <div class="text-center col-lg-6 m-auto mb-4">
         <h5 class="text-white mb-3">Solana Contract Address</h5>
-        <div class="input-group custom-input-group">
+        <div class="input-group custom-input-group bg-white">
           <input :value="company.key_ca" disabled class="form-control disabled">
-          <a @click.prebtn="copyToClipboard(company.key_ca)" class="input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
+          <a @click.prebtn="copyToClipboard(company.key_ca)" class="on-shink input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
             <img src="/assets/images/copy-white.png" />
             <span class="ps-2 text-white">Copy CA</span>
           </a>
@@ -99,7 +99,7 @@ onMounted(() => {
                   Innovation, Inspired by
                   Greatness</h2>
               </div>
-              <div class="box-image">
+              <div class="box-image has-red-glow" data-aos="fade-up" data-aos-delay="100">
                 <img src="/assets/images/backham-dream-becks@4x.png" />
               </div>
             </div>
@@ -109,19 +109,19 @@ onMounted(() => {
                 <h2 class="text-white fw-bold m-0">Token ($BECKS):</h2>
               </div>
               <div class="info mb-4">
-                <p class="text-white fs-300 fs-15px text-justify">The $BECKS token celebrates the incredible journey of
+                <p class="text-white fs-300 fs-16px text-justify">The <b>$BECKS</b> token celebrates the incredible journey of
                   David Beckham, an icon of football, fashion, and philanthropy. It's more than a cryptocurrency – it's
                   a tribute to his legacy, combining his values of determination, style, and global impact with the
                   innovation of blockchain technology.</p>
               </div>
-              <div class="info">
-                <div class="info-title text-white fs-15px fw-bold">A Token of Hope for UNICEF</div>
-                <p class="text-white fs-300 fs-15px text-justify">The launch of $BECKS is inspired by David Beckham's
+              <div class="info" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-title text-white fs-16px fw-bold">A Token of Hope for UNICEF</div>
+                <p class="text-white fs-300 fs-16px text-justify">The launch of <b>$BECKS</b> is inspired by David Beckham's
                   lifelong commitment to making a positive difference, both on and off the pitch. As a UNICEF Goodwill
                   Ambassador, Beckham has dedicated years to advocating for vulnerable children worldwide. With the
-                  creation of $BECKS, fans can now join this mission and contribute to global change in a revolutionary
+                  creation of <b>$BECKS</b>, fans can now join this mission and contribute to global change in a revolutionary
                   way. For more details about UNICEF’s emergency response programs and how they make a difference in the
-                  lives of children affected by crises, please visit UNICEF Emergencies.</p>
+                  lives of children affected by crises, please visit <a class="decoration text-white" href="https://www.unicef.org/emergencies">UNICEF Emergencies</a>.</p>
               </div>
             </div>
           </div>
@@ -137,24 +137,24 @@ onMounted(() => {
           <h2 class="text-white m-0 fw-bold">Debit Card or Crypto!</h2>
         </div>
         <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
-          <div class="box-image">
+          <div class="box-image on-shink has-gold-glow rounded-md" data-aos="fade-right" data-aos-delay="100">
             <img src="/assets/images/apple-pay.png" />
           </div>
-          <div class="box-image">
+          <div class="box-image on-shink has-gold-glow rounded-md" data-aos="fade-right" data-aos-delay="100">
             <img src="/assets/images/visa-pay.png" />
           </div>
-          <div class="box-image">
+          <div class="box-image on-shink has-gold-glow rounded-md" data-aos="fade-down" data-aos-delay="100">
             <img src="/assets/images/venmo-pay.png" />
           </div>
-          <div class="box-image">
+          <div class="box-image on-shink has-gold-glow rounded-md" data-aos="fade-left" data-aos-delay="100">
             <img src="/assets/images/dollar-pay.png" />
           </div>
-          <div class="box-image">
+          <div class="box-image on-shink has-gold-glow rounded-md" data-aos="fade-left" data-aos-delay="100">
             <img src="/assets/images/s-pay.png" />
           </div>
         </div>
-        <div class="text-center">
-          <a :href="company.key_ca_url || '#'" class="btn btn-lg bg-app-red text-white fw-bold ls-xs py-3 px-6">BUY NOW</a>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <a :href="company.key_ca_url || '#'" class="btn btn-lg bg-app-red text-white fw-bold ls-xs py-3 px-6 on-grow">BUY NOW</a>
         </div>
       </div>
       <div class="text-center col-lg-10 m-auto">
@@ -170,9 +170,9 @@ onMounted(() => {
     <div class="container">
       <div class="text-center col-lg-6 m-auto mb-4">
         <h2 class="text-white mb-3 fw-bold">Solana Contract Address</h2>
-        <div class="input-group custom-input-group">
+        <div class="input-group custom-input-group bg-white">
           <input :value="company.key_ca" disabled class="form-control disabled">
-          <a @click.prebtn="copyToClipboard(company.key_ca)" class="input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
+          <a @click.prebtn="copyToClipboard(company.key_ca)" class="on-shink input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
             <img src="/assets/images/copy-white.png" />
             <span class="ps-2 text-white">Copy CA</span>
           </a>
@@ -200,7 +200,7 @@ onMounted(() => {
                 <h1 class="text-white fw-bold m-0 text-app-red fs-48px">Meme Community!</h1>
               </div>
               <div class="info">
-                <div class="card no-border rounded-md bg-app-blue-dark">
+                <div class="card no-border rounded-md bg-app-blue-dark has-gold-glow" data-aos="fade-right" data-aos-delay="100">
                   <div class="card-body">
                     <div class="title text-app-orange fw-bold ls-xs fs-16px mb-2">Misssion</div>
                     <p class="m-0 text-white fs-14px">$BECKS is not just a cryptocurrency; it’s a symbol of hope and
@@ -216,7 +216,7 @@ onMounted(() => {
         <div class="col-lg-5">
           <div class="card bg-transparent no-border h-100">
             <div class="card-body text-center">
-              <div class="box-image mb-3">
+              <div class="box-image mb-3 has-gold-glow" data-aos="fade-left" data-aos-delay="100">
                 <img src="/assets/images/backham-dream@4x.png" />
               </div>
             </div>
@@ -230,11 +230,11 @@ onMounted(() => {
     <div class="text-center is-relative mb-5">
       <img src="/assets/images/backham-dream-galerry@4x.png" />
       <div class="section-gallery-image box-image p-5">
-        <img src="/assets/images/backham-dream@4x.png" />
+        <img class="on-shake" src="/assets/images/backham-dream@4x.png" />
       </div>
     </div>
     <div class="container">
-      <div class="title text-center">
+      <div class="title text-center" data-aos="fade-down" data-aos-delay="100">
         <h2 class="text-white fw-bold m-0">JOIN $BECKS SPECIAL COMMUNITY.</h2>
         <h2 class="text-white fw-bold m-0 text-app-red">$BECKS</h2>
         <h2 class="text-white fw-bold m-0">Together, we can change the game—for good</h2>
@@ -251,7 +251,7 @@ onMounted(() => {
         </div>
         <div class="accordion" id="accordionFaq">
           <div v-for="(faq, idfq) in faqList" :key="idfq"
-            class="accordion-item mb-2 rounded-sm no-border bg-transparent">
+            class="accordion-item mb-2 rounded-sm no-border bg-transparent rounded-md">
             <h2 class="accordion-header rounded-sm border-0" :id="`headingFaq${idfq}`">
               <button class="collapsed accordion-button rounded-sm border-0 text-dark fs-15px ls-xs py-3 fw-bold"
                 type="button" data-bs-toggle="collapse" :data-bs-target="`#collapseFaq${idfq}`" aria-expanded="false"

@@ -27,12 +27,8 @@ const changeMenu = (menu) => {
               :to="{ name: 'home' }">Home</router-link>
           </li>
           <li>
-            <a @click.prevent="changeMenu('about')" :class="{ 'is-active': is_menu == 'about' }" class="fs-13px"
-              href="#">Contact</a>
-          </li>
-          <li>
             <a @click.prevent="changeMenu('address')" :class="{ 'is-active': is_menu == 'address' }" class="fs-13px"
-              href="#">Address</a>
+              href="#">Contract Address</a>
           </li>
           <li>
             <a @click.prevent="changeMenu('buy')" :class="{ 'is-active': is_menu == 'buy' }" class="fs-13px"
@@ -46,17 +42,14 @@ const changeMenu = (menu) => {
             <router-link @click.prevent="changeMenu('home')" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li class="d-xl-none d-lg-none">
-            <a @click.prevent="changeMenu('about')" class="fs-13px" href="#">Contact</a>
-          </li>
-          <li class="d-xl-none d-lg-none">
-            <a @click.prevent="changeMenu('address')" class="fs-13px" href="#">Address</a>
+            <a @click.prevent="changeMenu('address')" class="fs-13px" href="#">Contract Address</a>
           </li>
           <li class="d-xl-none d-lg-none">
             <a @click.prevent="changeMenu('buy')" class="fs-13px" href="#">How To Buy</a>
           </li>
           <li>
-            <a v-if="company.key_ca_url" :href="company.key_ca_url" class="btn btn-sm rounded-xl bg-app-red py-1 px-3 fs-14px">Buy Now</a>
-            <a v-else @click.prevent="changeMenu('buy')" class="btn btn-sm rounded-xl bg-app-red py-1 px-3 fs-14px">Buy Now</a>
+            <a v-if="company.key_ca_url" :href="company.key_ca_url" class="btn btn-sm rounded-xl bg-app-red py-1 px-3 fs-14px on-grow">Buy Now</a>
+            <a v-else @click.prevent="changeMenu('buy')" class="btn btn-sm rounded-xl bg-app-red py-1 px-3 fs-14px on-grow">Buy Now</a>
           </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

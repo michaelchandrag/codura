@@ -6,35 +6,37 @@ export const company = {
   phone_label: '',
   email: '',
   address: '',
+  copyright:'DB Ventures',
   wa: '',
-  yt: '',
-  ig: '',
-  fb: '',
-  tw: '#',
-  github: '#',
-  linkedin: '',
-  key_ca: '#',
+  youtube_url: '',
+  instagram_url: '',
+  facebook_url: '',
+  twitter_url: '',
+  github_url: '',
+  linkedin_url: '',
+  key_ca: '',
+  key_ca_url:'',
 };
 
 export const faqList = [
   {
     title: 'Is this an official $BECKS product?',
-    content: 'Yes, this is the official $BECKS product, curated and designed to bring value to the community and fans of $BECKS.'
+    content: 'Yes, this is the only Official $BECKS Meme, by David Robert Joseph Beckham.'
   },
   {
     title: 'How can I get $BECKS Memes?',
-    content: 'You can get $BECKS Memes by visiting our official platform or participating in our events and campaigns. Ensure you follow our verified channels for updates.'
+    content: '<a class="text-dark" href="Pump.fun">Pump.fun</a> is the easiest way. Users sign up with an email / connect a Phantom wallet address (Solana), and buy your $BECKS within minutes.'
   },
   {
     title: 'What is a meme?',
-    content: 'A meme is a piece of media, often humorous or satirical, that spreads quickly online, usually in the form of an image, video, or text.'
+    content: `Merriam-Webster's meme noun: 1: an idea, behavior, style, or usage that spreads from person to person within a culture.`
   },
   {
     title: 'Which blockchain network are the $BECKS Memes minted?',
-    content: 'The $BECKS Memes are minted on the Ethereum blockchain, ensuring security, transparency, and decentralized ownership.'
+    content: `Solana`
   },
   {
     title: 'What are the $BECKS Memes?',
-    content: '$BECKS Memes are exclusive digital collectibles created to represent the culture and humor of the $BECKS community. They are unique, tradable, and stored securely on the blockchain.'
+    content: `$BECKS Memes are fungible crypto assets created and tracked on the Solana blockchain.`
   },
 ];

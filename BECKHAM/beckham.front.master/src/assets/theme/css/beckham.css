@@ -102,6 +102,7 @@ button {
 
 .first-section {
     padding-top: 7rem;
+    min-height: 80vh;
 }
 
 .join-info {
@@ -196,4 +197,32 @@ button {
 #section-address {
     padding-top: 8rem;
     padding-bottom: 8rem;
+}
+
+.has-gold-glow {
+    transition: all 0.3s ease-in-out;
+}
+
+.has-gold-glow:hover,
+.has-gold-glow:active {
+    box-shadow: 0 0 15px 5px var(--app-color-gold);
+    filter: brightness(1.2);
+}
+
+.has-red-glow {
+    transition: all 0.3s ease-in-out;
+}
+
+.has-red-glow:hover,
+.has-red-glow:active {
+    box-shadow: 0 0 15px 5px var(--app-color-red);
+    filter: brightness(1.2);
+}
+
+.accordion-item, .accordion-button{
+    transition: all 0.3s ease;
+}
+
+.accordion-item:has(.accordion-collapse.show){
+    box-shadow: 0 0 15px 5px var(--app-color-gold) !important;
 }

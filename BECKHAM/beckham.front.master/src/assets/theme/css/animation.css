@@ -7,3 +7,68 @@
         transform: translateX(-100%);
     }
 }
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-3px);
+    }
+
+    40% {
+        transform: translateX(3px);
+    }
+
+    60% {
+        transform: translateX(-3px);
+    }
+
+    80% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.on-shake {
+    transition: all 0.3s ease;
+}
+
+.on-shake:hover,
+.on-shake:active {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes sinkText {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+}
+
+.on-shink {
+    transition: all 0.3s ease;
+}
+
+.on-shink:hover,
+.on-shink:active {
+    animation: sinkText 0.3s ease-in-out forwards;
+}
+
+.on-grow {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.on-grow:hover,
+.on-grow:active {
+    transform: scale(1.1);
+}
