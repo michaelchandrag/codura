@@ -17,17 +17,17 @@ onMounted(() => {
     <div class="container bg-app-gold rounded-xl p-4">
       <div class="row justify-content-between mb-4">
         <div class="col-lg-6">
-          <div class="card bg-transparent no-border h-100 is-relative">
+          <div class="card bg-transparent no-border h-100 is-relative pt-3">
             <div class="card-body">
               <div class="title">
-                <h1 class="text-white fw-bold m-0 fs-50px ls-xs">THE ONLY</h1>
-                <h1 class="text-white fw-bold m-0 text-app-red fs-50px ls-xs">OFFICIAL</h1>
-                <h1 class="text-white fw-bold m-0 fs-50px ls-xs">DAVID BECKHAM MEME</h1>
+                <h1 class="text-white fw-bold m-0 fs-60px ls-xs">THE ONLY</h1>
+                <h1 class="text-white fw-bold m-0 text-app-red fs-60px ls-xs">OFFICIAL</h1>
+                <h1 class="text-white fw-bold m-0 fs-60px ls-xs">DAVID BECKHAM MEME</h1>
               </div>
               <div class="info join-info">
-                <p class="m-0 text-white fw-300 fs-18px">Join the Becks Community!</p>
-                <p class="m-0 text-white fw-300 fs-18px">Be part of a movement inspired by</p>
-                <p class="m-0 text-white fw-300 fs-18px">Beckham’s
+                <p class="m-0 text-white fw-300 fs-22px">Join the Becks Community!</p>
+                <p class="m-0 text-white fw-300 fs-22px">Be part of a movement inspired by</p>
+                <p class="m-0 text-white fw-300 fs-22px">Beckham’s
                   career and his influence beyond football</p>
               </div>
             </div>
@@ -39,7 +39,7 @@ onMounted(() => {
               <div class="box-image mb-3 has-red-glow" data-aos="fade-left" data-aos-delay="100">
                 <img src="/assets/images/backham-dream@4x.png" />
               </div>
-              <p class="m-0 text-white fw-300 fs-16px text-justify lh-normal"><i>“Don't be like most people, Most people
+              <p class="m-0 text-white fw-300 fs-20px text-justify lh-normal"><i>“Don't be like most people, Most people
                   give up on their
                   dreams”</i>
               </p>
@@ -51,9 +51,9 @@ onMounted(() => {
         </div>
       </div>
       <div class="text-center col-lg-6 m-auto mb-4">
-        <h5 class="text-white mb-3">Solana Contract Address</h5>
+        <h3 class="text-white mb-3 ls-xs">Solana Contract Address</h3>
         <div class="input-group custom-input-group bg-white">
-          <input :value="company.key_ca" disabled class="form-control disabled">
+          <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs">
           <a @click.prebtn="copyToClipboard(company.key_ca)" class="on-shink input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
             <img src="/assets/images/copy-white.png" />
             <span class="ps-2 text-white">Copy CA</span>
@@ -61,7 +61,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="text-center col-lg-10 m-auto">
-        <p class="text-white fw-300 fs-14px">Becks Memes are intended to function as an expression of support for,
+        <p class="text-white fw-300 fs-16px">Becks Memes are intended to function as an expression of support for,
           and
           engagement with, the ideals and beliefs embodied by the symbol "$BECKS" and the associated artwork, and are
           not intended to be, or to be the subject of, an investment opportunity, investment contract, or security of
@@ -94,8 +94,8 @@ onMounted(() => {
           <div class="row justify-content-between">
             <div class="col-lg-5">
               <div class="title mb-4">
-                <h2 class="text-white fw-bold m-0">$BECKS:</h2>
-                <h2 class="text-white fw-bold m-0">Where Legacy Meets
+                <h2 class="text-white fw-bold m-0 ls-xs">$BECKS:</h2>
+                <h2 class="text-white fw-bold m-0 ls-xs">Where Legacy Meets
                   Innovation, Inspired by
                   Greatness</h2>
               </div>
@@ -105,23 +105,23 @@ onMounted(() => {
             </div>
             <div class="col-lg-6">
               <div class="title mb-4">
-                <h2 class="text-white fw-bold m-0">About Becks</h2>
-                <h2 class="text-white fw-bold m-0">Token ($BECKS):</h2>
+                <h2 class="text-white fw-bold m-0 ls-xs">About Becks</h2>
+                <h2 class="text-white fw-bold m-0 ls-xs">Token ($BECKS):</h2>
               </div>
               <div class="info mb-4">
-                <p class="text-white fs-300 fs-16px text-justify">The <b>$BECKS</b> token celebrates the incredible journey of
+                <p class="text-white fs-300 fs-20px text-justify">The <b>$BECKS</b> token celebrates the incredible journey of
                   David Beckham, an icon of football, fashion, and philanthropy. It's more than a cryptocurrency – it's
                   a tribute to his legacy, combining his values of determination, style, and global impact with the
                   innovation of blockchain technology.</p>
               </div>
               <div class="info" data-aos="fade-up" data-aos-delay="100">
-                <div class="info-title text-white fs-16px fw-bold">A Token of Hope for UNICEF</div>
-                <p class="text-white fs-300 fs-16px text-justify">The launch of <b>$BECKS</b> is inspired by David Beckham's
+                <div class="info-title text-white ls-xs fs-20px fw-bold">A Token of Hope for UNICEF</div>
+                <p class="text-white fs-300 fs-20px text-justify">The launch of <b>$BECKS</b> is inspired by David Beckham's
                   lifelong commitment to making a positive difference, both on and off the pitch. As a UNICEF Goodwill
                   Ambassador, Beckham has dedicated years to advocating for vulnerable children worldwide. With the
                   creation of <b>$BECKS</b>, fans can now join this mission and contribute to global change in a revolutionary
                   way. For more details about UNICEF’s emergency response programs and how they make a difference in the
-                  lives of children affected by crises, please visit <a class="decoration text-white" href="https://www.unicef.org/emergencies">UNICEF Emergencies</a>.</p>
+                  lives of children affected by crises, please visit <a class="decoration text-white fw-bold ls-xs" href="https://www.unicef.org/emergencies">UNICEF Emergencies</a>.</p>
               </div>
             </div>
           </div>
@@ -133,8 +133,8 @@ onMounted(() => {
     <div class="container">
       <div class="text-center col-lg-6 m-auto mb-5">
         <div class="title mb-4">
-          <h2 class="text-white m-0 fw-bold">Buy Now with a</h2>
-          <h2 class="text-white m-0 fw-bold">Debit Card or Crypto!</h2>
+          <h2 class="text-white m-0 fw-bold ls-xs">Buy Now with a</h2>
+          <h2 class="text-white m-0 fw-bold ls-xs">Debit Card or Crypto!</h2>
         </div>
         <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
           <div class="box-image on-shink has-gold-glow rounded-md" data-aos="fade-right" data-aos-delay="100">
@@ -158,7 +158,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="text-center col-lg-10 m-auto">
-        <p class="m-0 text-white fw-300 fs-14px">Becks Memes are intended to function as an expression of support for,
+        <p class="m-0 text-white fw-300 fs-16px">Becks Memes are intended to function as an expression of support for,
           and engagement with, the ideals and beliefs embodied by the symbol "$BECKS" and the associated artwork, and
           are not intended to be, or to be the subject of, an investment opportunity, investment contract, or security
           of any type. Becks Meme is not political and has nothing to do with any political campaign or any political
@@ -168,10 +168,10 @@ onMounted(() => {
   </section>
   <section id="section-address" class="section bg-dark border-top-section has-bg-section">
     <div class="container">
-      <div class="text-center col-lg-6 m-auto mb-4">
-        <h2 class="text-white mb-3 fw-bold">Solana Contract Address</h2>
+      <div class="text-center col-lg-6 m-auto mb-5">
+        <h2 class="text-white mb-3 fw-bold ls-xs">Solana Contract Address</h2>
         <div class="input-group custom-input-group bg-white">
-          <input :value="company.key_ca" disabled class="form-control disabled">
+          <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs">
           <a @click.prebtn="copyToClipboard(company.key_ca)" class="on-shink input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
             <img src="/assets/images/copy-white.png" />
             <span class="ps-2 text-white">Copy CA</span>
@@ -179,7 +179,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="text-center col-lg-10 m-auto">
-        <p class="m-0 text-white fw-300 fs-14px">Becks Memes are intended to function as an expression of support for,
+        <p class="m-0 text-white fw-300 fs-16px">Becks Memes are intended to function as an expression of support for,
           and
           engagement with, the ideals and beliefs embodied by the symbol "$BECKS" and the associated artwork, and are
           not intended to be, or to be the subject of, an investment opportunity, investment contract, or security of
@@ -193,17 +193,17 @@ onMounted(() => {
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-lg-6">
-          <div class="card bg-transparent no-border h-100 is-relative">
+          <div class="card bg-transparent no-border h-100 is-relative pt-3">
             <div class="card-body">
-              <div class="title mb-4">
-                <h1 class="text-white fw-bold m-0 text-app-red fs-48px">Join the $BECKS</h1>
-                <h1 class="text-white fw-bold m-0 text-app-red fs-48px">Meme Community!</h1>
+              <div class="title mb-5">
+                <h1 class="text-white fw-bold m-0 text-app-red fs-50px ls-xs">Join the $BECKS</h1>
+                <h1 class="text-white fw-bold m-0 text-app-red fs-50px ls-xs">Meme Community!</h1>
               </div>
               <div class="info">
                 <div class="card no-border rounded-md bg-app-blue-dark has-gold-glow" data-aos="fade-right" data-aos-delay="100">
-                  <div class="card-body">
-                    <div class="title text-app-orange fw-bold ls-xs fs-16px mb-2">Misssion</div>
-                    <p class="m-0 text-white fs-14px">$BECKS is not just a cryptocurrency; it’s a symbol of hope and
+                  <div class="card-body p-4">
+                    <div class="title text-app-orange fw-bold ls-xs fs-24px mb-2 ls-xs">Misssion</div>
+                    <p class="m-0 text-white fs-22px">$BECKS is not just a cryptocurrency; it’s a symbol of hope and
                       unity. By combining the power of blockchain with Beckham’s influence, this token creates a new
                       avenue for fans to make a difference in the lives of millions of children affected by emergencies
                     </p>
@@ -235,9 +235,9 @@ onMounted(() => {
     </div>
     <div class="container">
       <div class="title text-center" data-aos="fade-down" data-aos-delay="100">
-        <h2 class="text-white fw-bold m-0">JOIN $BECKS SPECIAL COMMUNITY.</h2>
-        <h2 class="text-white fw-bold m-0 text-app-red">$BECKS</h2>
-        <h2 class="text-white fw-bold m-0">Together, we can change the game—for good</h2>
+        <h2 class="text-white fw-bold m-0 ls-xs">JOIN $BECKS SPECIAL COMMUNITY.</h2>
+        <h1 class="text-white fw-bold m-0 text-app-red ls-xs">$BECKS</h1>
+        <h2 class="text-white fw-bold m-0 ls-xs">Together, we can change the game—for good</h2>
       </div>
     </div>
   </section>
@@ -253,13 +253,13 @@ onMounted(() => {
           <div v-for="(faq, idfq) in faqList" :key="idfq"
             class="accordion-item mb-2 rounded-sm no-border bg-transparent rounded-md">
             <h2 class="accordion-header rounded-sm border-0" :id="`headingFaq${idfq}`">
-              <button class="collapsed accordion-button rounded-sm border-0 text-dark fs-15px ls-xs py-3 fw-bold"
+              <button class="collapsed accordion-button rounded-sm border-0 text-dark fs-18px ls-xs py-3 fw-bold"
                 type="button" data-bs-toggle="collapse" :data-bs-target="`#collapseFaq${idfq}`" aria-expanded="false"
                 :aria-controls="`collapseFaq${idfq}`">{{ faq.title }}</button>
             </h2>
             <div :id="`collapseFaq${idfq}`" class="accordion-collapse collapse" :aria-labelledby="`headingFaq${idfq}`"
               data-bs-parent="#accordionFaq">
-              <div class="accordion-body text-dark fs-14px ls-xs pt-0" v-html="faq.content"></div>
+              <div class="accordion-body text-dark fs-16px ls-xs pt-0" v-html="faq.content"></div>
             </div>
           </div>
         </div>

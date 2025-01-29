@@ -110,10 +110,6 @@ button {
     bottom: 25%;
 }
 
-.signature-info {
-    margin-top: -5%;
-}
-
 .border-top-section {
     border-top: 8px solid var(--app-color-red);
 }

@@ -409,11 +409,236 @@
   font-size: 50px !important;
 }
 
+.fs-45px {
+  font-size: 45px !important;
+}
+
+.fs-46px {
+  font-size: 46px !important;
+}
+
+.fs-47px {
+  font-size: 47px !important;
+}
+
+.fs-48px {
+  font-size: 48px !important;
+}
+
+.fs-49px {
+  font-size: 49px !important;
+}
+
+.fs-50px {
+  font-size: 50px !important;
+}
+
+.fs-51px {
+  font-size: 51px !important;
+}
+
+.fs-52px {
+  font-size: 52px !important;
+}
+
+.fs-53px {
+  font-size: 53px !important;
+}
+
+.fs-54px {
+  font-size: 54px !important;
+}
+
+.fs-55px {
+  font-size: 55px !important;
+}
+
+.fs-56px {
+  font-size: 56px !important;
+}
+
+.fs-57px {
+  font-size: 57px !important;
+}
+
+.fs-58px {
+  font-size: 58px !important;
+}
+
+.fs-59px {
+  font-size: 59px !important;
+}
+
+.fs-60px {
+  font-size: 60px !important;
+}
+
+.fs-61px {
+  font-size: 61px !important;
+}
+
+.fs-62px {
+  font-size: 62px !important;
+}
+
+.fs-63px {
+  font-size: 63px !important;
+}
+
+.fs-64px {
+  font-size: 64px !important;
+}
+
+.fs-65px {
+  font-size: 65px !important;
+}
+
+.fs-66px {
+  font-size: 66px !important;
+}
+
+.fs-67px {
+  font-size: 67px !important;
+}
+
+.fs-68px {
+  font-size: 68px !important;
+}
+
+.fs-69px {
+  font-size: 69px !important;
+}
+
+.fs-70px {
+  font-size: 70px !important;
+}
+
+.fs-71px {
+  font-size: 71px !important;
+}
+
+.fs-72px {
+  font-size: 72px !important;
+}
+
+.fs-73px {
+  font-size: 73px !important;
+}
+
+.fs-74px {
+  font-size: 74px !important;
+}
+
+.fs-75px {
+  font-size: 75px !important;
+}
+
+.fs-76px {
+  font-size: 76px !important;
+}
+
+.fs-77px {
+  font-size: 77px !important;
+}
+
+.fs-78px {
+  font-size: 78px !important;
+}
+
+.fs-79px {
+  font-size: 79px !important;
+}
+
+.fs-80px {
+  font-size: 80px !important;
+}
+
+.fs-81px {
+  font-size: 81px !important;
+}
+
+.fs-82px {
+  font-size: 82px !important;
+}
+
+.fs-83px {
+  font-size: 83px !important;
+}
+
+.fs-84px {
+  font-size: 84px !important;
+}
+
+.fs-85px {
+  font-size: 85px !important;
+}
+
+.fs-86px {
+  font-size: 86px !important;
+}
+
+.fs-87px {
+  font-size: 87px !important;
+}
+
+.fs-88px {
+  font-size: 88px !important;
+}
+
+.fs-89px {
+  font-size: 89px !important;
+}
+
+.fs-90px {
+  font-size: 90px !important;
+}
+
+.fs-91px {
+  font-size: 91px !important;
+}
+
+.fs-92px {
+  font-size: 92px !important;
+}
+
+.fs-93px {
+  font-size: 93px !important;
+}
+
+.fs-94px {
+  font-size: 94px !important;
+}
+
+.fs-95px {
+  font-size: 95px !important;
+}
+
+.fs-96px {
+  font-size: 96px !important;
+}
+
+.fs-97px {
+  font-size: 97px !important;
+}
+
+.fs-98px {
+  font-size: 98px !important;
+}
+
+.fs-99px {
+  font-size: 99px !important;
+}
+
+.fs-100px {
+  font-size: 100px !important;
+}
+
 
 
 /* Font-weight CSS dari 100 hingga 900 */
 .fw-100 {
-  font-weight: 100; /* Tipis */
+  font-weight: 100;
+  /* Tipis */
 }
 
 .fw-200 {
@@ -425,7 +650,8 @@
 }
 
 .fw-400 {
-  font-weight: 400; /* Normal */
+  font-weight: 400;
+  /* Normal */
 }
 
 .fw-500 {
@@ -437,7 +663,8 @@
 }
 
 .fw-700 {
-  font-weight: 700; /* Tebal */
+  font-weight: 700;
+  /* Tebal */
 }
 
 .fw-800 {
@@ -445,5 +672,6 @@
 }
 
 .fw-900 {
-  font-weight: 900; /* Sangat tebal */
+  font-weight: 900;
+  /* Sangat tebal */
 }

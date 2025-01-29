@@ -31,7 +31,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="container copyright text-center py-2">
-      <p class="ls-xs fs-12px fw-normal">
+      <p class="ls-xs fs-14px fw-normal">
         © <span>{{ new Date().getFullYear() }}</span>
         <span class="px-1 sitename">{{ `${company.copyright || company.name}.` }}</span>
         <span class="sitename">All rights reserved.</span>

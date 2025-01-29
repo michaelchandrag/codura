@@ -23,15 +23,15 @@ const changeMenu = (menu) => {
       <nav id="navmenu-center" class="navmenu">
         <ul>
           <li>
-            <router-link @click.prevent="changeMenu('home')" :class="{ 'is-active': is_menu == 'home' }" class="fs-13px"
+            <router-link @click.prevent="changeMenu('home')" :class="{ 'is-active': is_menu == 'home' }" class="fs-14px on-shake"
               :to="{ name: 'home' }">Home</router-link>
           </li>
           <li>
-            <a @click.prevent="changeMenu('address')" :class="{ 'is-active': is_menu == 'address' }" class="fs-13px"
+            <a @click.prevent="changeMenu('address')" :class="{ 'is-active': is_menu == 'address' }" class="fs-14px on-shake"
               href="#">Contract Address</a>
           </li>
           <li>
-            <a @click.prevent="changeMenu('buy')" :class="{ 'is-active': is_menu == 'buy' }" class="fs-13px"
+            <a @click.prevent="changeMenu('buy')" :class="{ 'is-active': is_menu == 'buy' }" class="fs-14px on-shake"
               href="#">How To Buy</a>
           </li>
         </ul>
@@ -39,13 +39,13 @@ const changeMenu = (menu) => {
       <nav id="navmenu" class="navmenu">
         <ul>
           <li class="d-xl-none d-lg-none">
-            <router-link @click.prevent="changeMenu('home')" class="fs-13px" :to="{ name: 'home' }">Home</router-link>
+            <router-link @click.prevent="changeMenu('home')" class="fs-14px" :to="{ name: 'home' }">Home</router-link>
           </li>
           <li class="d-xl-none d-lg-none">
-            <a @click.prevent="changeMenu('address')" class="fs-13px" href="#">Contract Address</a>
+            <a @click.prevent="changeMenu('address')" class="fs-14px" href="#">Contract Address</a>
           </li>
           <li class="d-xl-none d-lg-none">
-            <a @click.prevent="changeMenu('buy')" class="fs-13px" href="#">How To Buy</a>
+            <a @click.prevent="changeMenu('buy')" class="fs-14px" href="#">How To Buy</a>
           </li>
           <li>
             <a v-if="company.key_ca_url" :href="company.key_ca_url" class="btn btn-sm rounded-xl bg-app-red py-1 px-3 fs-14px on-grow">Buy Now</a>
