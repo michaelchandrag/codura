@@ -20,7 +20,7 @@ export const company = {
 
 export const faqList = [
   {
-    title: 'Is this an official $BECKS product?',
+    title: 'Is this an official Becks product?',
     content: 'Yes, this is the only Official $BECKS Meme, by David Robert Joseph Beckham.'
   },
   {
