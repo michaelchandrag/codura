@@ -25,8 +25,8 @@ onMounted(() => {
                   </h1>
                   <h1 class="text-white fw-800 m-0 fs-40px ls-xs">DAVID BECKHAM MEME</h1>
                 </div>
-                <div class="info pt-5">
-                  <p class="text-white fw-bold ls-xs fs-20px">Join the Becks Community!</p>
+                <div class="info pt-5 info-join-v2">
+                  <p class="text-white fw-bold ls-xs fs-22px">Join the Becks Community!</p>
                   <p class="text-white fw-300 fs-20px">$BECKS is more than just a meme coin-it’s
                     a movement inspired by legendary
                     David Beckham to unite football, crypto
@@ -38,18 +38,18 @@ onMounted(() => {
               </div>
             </div>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-5 p-0">
             <div class="card bg-transparent no-border h-100">
               <div class="card-body text-center">
-                <div class="box-image px-4" data-aos="fade-left" data-aos-delay="100">
+                <div class="box-image p-3 ps-5" data-aos="fade-left" data-aos-delay="100">
                   <img src="/assets/images/backham-dream@4x.png" />
                 </div>
-                <p class="m-0 text-white fw-300 fs-16px text-start lh-normal"><i>“Don't be like most people, Most people
+                <p class="m-0 text-white fw-300 fs-14px text-start lh-normal"><i>“Don't be like most people, Most
+                    people
                     give up on their
                     dreams”</i>
                 </p>
-                <div class="box-image signature-info d-flex justify-content-end" data-aos="fade-down"
-                  data-aos-delay="100">
+                <div class="box-image signature-info d-flex justify-content-end" data-aos="fade-down" data-aos-delay="100">
                   <img src="/assets/images/signature-sm.png" />
                 </div>
               </div>
@@ -206,7 +206,7 @@ onMounted(() => {
 
     <section class="section bg-transparent py-4">
       <div class="container">
-        <div class="banner">
+        <div class="banner text-center">
           <img src="/assets/images/banner@4x.png" />
         </div>
       </div>

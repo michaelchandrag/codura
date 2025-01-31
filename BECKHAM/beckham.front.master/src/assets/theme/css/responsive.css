@@ -40,6 +40,10 @@
     #section-about .card-body{
         padding: 1rem !important;
     }
+
+    .info-join-v2{
+        padding: 0px !important;
+    }
 }
 
 /* Responsif untuk Desktop */
