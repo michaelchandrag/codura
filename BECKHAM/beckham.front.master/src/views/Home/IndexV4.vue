@@ -223,7 +223,7 @@ onMounted(() => {
                   <div class="card no-border rounded-md bg-app-blue-dark has-gold-glow" data-aos="fade-right"
                     data-aos-delay="100">
                     <div class="card-body p-4">
-                      <div class="title text-app-orange fw-bold ls-xs fs-20px mb-2 ls-xs">Misssion</div>
+                      <div class="title text-app-orange fw-bold ls-xs fs-20px mb-2 ls-xs">Mission</div>
                       <p class="m-0 text-white fs-18px">$BECKS is not just a cryptocurrency; it’s a symbol of hope and
                         unity. By combining the power of blockchain with Beckham’s influence, this token creates a new
                         avenue for fans to make a difference in the lives of millions of children affected by
