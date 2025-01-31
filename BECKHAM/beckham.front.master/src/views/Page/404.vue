@@ -18,8 +18,8 @@ import AlertContent from '@/components/AlertContent';
         <section id="starter-section" class="starter-section section">
             <div class="container section-title aos-init aos-animate" data-aos="fade-up">
                 <AlertContent :type="'danger'" :title="'Page Not Found!'"
-                    :msg="'Maaf, kami tidak dapat menemukan halaman yang Anda cari. Halaman tersebut mungkin sudah tidak tersedia atau sedang dalam perbaikan.'"
-                    :info="'Silakan periksa kembali URL atau kembali ke halaman utama.'" />
+                    :msg="`Sorry, we couldn't find the page you were looking for. The page may no longer be available or may be under construction.`"
+                    :info="`Please double check the URL or return to the main page.`" />
             </div>
         </section>
     </div>

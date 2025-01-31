@@ -23,7 +23,7 @@ onMounted(() => {
           <h1 class="text-white fw-800 m-0 fs-50px ls-xs">MEME</h1>
         </div>
         <div class="text-center col-lg-11 m-auto">
-          <div class="banner">
+          <div class="banner has-gold-glow on-grow">
             <img src="/assets/images/bannerv3@4x.png" />
           </div>
         </div>
@@ -36,10 +36,11 @@ onMounted(() => {
                   <p class="text-white fw-300 fs-22px">$BECKS is more than just a meme coin-it’s
                     a movement inspired by legendary
                     David Beckham to unite football, crypto
-                    and philantrophy</p>
+                    and philantrophy.</p>
                   <p class="text-white fw-300 fs-22px">100% of proceeds from $BECKS will be
-                    donated to UNICEF’s <a href="7.org" class="decoration text-white">7.org</a>, helping children
-                    worldwide</p>
+                    donated to UNICEF’s <a href="https://7.org/" class="decoration text-white">7.org</a>, helping
+                    children
+                    worldwide.</p>
                 </div>
               </div>
             </div>
@@ -47,13 +48,11 @@ onMounted(() => {
           <div class="col-lg-4">
             <div class="card bg-transparent no-border">
               <div class="card-body text-center pb-0">
-                <div class="box-image" data-aos="fade-left" data-aos-delay="100">
+                <div class="box-image has-red-glow" data-aos="fade-left" data-aos-delay="100">
                   <img src="/assets/images/backham-dream@4x.png" />
                 </div>
-                <p class="m-0 text-white fw-300 fs-16px text-start lh-normal"><i>“Don't be like most people, Most
-                    people
-                    give up on their
-                    dreams”</i>
+                <p class="m-0 text-white fw-300 fs-16px text-start lh-normal"><i>“Don't be like most people. most people
+                    give up on their dreams”</i>
                 </p>
               </div>
             </div>

@@ -30,10 +30,11 @@ onMounted(() => {
                   <p class="text-white fw-300 fs-20px">$BECKS is more than just a meme coin-it’s
                     a movement inspired by legendary
                     David Beckham to unite football, crypto
-                    and philantrophy</p>
+                    and philantrophy.</p>
                   <p class="text-white fw-300 fs-20px">100% of proceeds from $BECKS will be
-                    donated to UNICEF’s <a href="7.org" class="decoration text-white">7.org</a>, helping children
-                    worldwide</p>
+                    donated to UNICEF’s <a href="https://7.org/" class="decoration text-white">7.org</a>, helping
+                    children
+                    worldwide.</p>
                 </div>
               </div>
             </div>
@@ -42,12 +43,10 @@ onMounted(() => {
             <div class="card bg-transparent no-border h-100">
               <div class="card-body text-center">
                 <div class="box-image p-3 ps-5" data-aos="fade-left" data-aos-delay="100">
-                  <img src="/assets/images/backham-dream@4x.png" />
+                  <img class="has-red-glow" src="/assets/images/backham-dream@4x.png" />
                 </div>
-                <p class="m-0 text-white fw-300 fs-14px text-start lh-normal"><i>“Don't be like most people, Most
-                    people
-                    give up on their
-                    dreams”</i>
+                <p class="m-0 text-white fw-300 fs-14px text-start lh-normal"><i>“Don't be like most people. most people
+                    give up on their dreams”</i>
                 </p>
                 <div class="box-image signature-info" data-aos="fade-down" data-aos-delay="100">
                   <img src="/assets/images/signature.png" />
@@ -57,7 +56,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="text-center col-lg-11 m-auto mb-5">
-          <div class="banner">
+          <div class="banner has-gold-glow on-grow">
             <img src="/assets/images/bannerv3@4x.png" />
           </div>
         </div>
