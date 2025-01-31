@@ -1,7 +1,7 @@
 export const company = {
-  name: 'BECKHAM',
-  alias: 'Beckham',
-  slug: 'beckham',
+  name: 'Official BECKS Coin',
+  alias: 'Official BECKS Coin',
+  slug: 'official-becks-coin',
   phone: '',
   phone_label: '',
   email: '',

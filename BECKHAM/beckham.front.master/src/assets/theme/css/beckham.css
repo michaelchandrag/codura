@@ -222,3 +222,8 @@ button {
 .accordion-item:has(.accordion-collapse.show){
     box-shadow: 0 0 15px 5px var(--app-color-gold) !important;
 }
+
+/*CSS V2*/
+.content-v2 .container-join-community{
+    margin-top: -5%;
+}

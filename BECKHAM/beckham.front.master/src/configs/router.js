@@ -11,10 +11,62 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'BECKHAM',
+      title: 'Official BECKS Coin',
+      description: ''
+    },
+    component: () => import('@/views/Home/IndexV2.vue')
+  },
+  {
+    path: '/v1',
+    alias: '/homev1',
+    name: 'home.v1',
+    meta: {
+      is_ready: true,
+      require_auth: false,
+      is_auth: false,
+      title: 'Official BECKS Coin',
       description: ''
     },
     component: () => import('@/views/Home/Index.vue')
+  },
+  {
+    path: '/v2',
+    alias: '/homev2',
+    name: 'home.v2',
+    meta: {
+      is_ready: true,
+      require_auth: false,
+      is_auth: false,
+      title: 'Official BECKS Coin',
+      description: ''
+    },
+    component: () => import('@/views/Home/IndexV2.vue')
+  },
+  {
+    path: '/v3',
+    alias: '/homev3',
+    name: 'home.v3',
+    meta: {
+      is_ready: true,
+      require_auth: false,
+      is_auth: false,
+      title: 'Official BECKS Coin',
+      description: ''
+    },
+    component: () => import('@/views/Home/IndexV3.vue')
+  },
+  {
+    path: '/v4',
+    alias: '/homev4',
+    name: 'home.v4',
+    meta: {
+      is_ready: true,
+      require_auth: false,
+      is_auth: false,
+      title: 'Official BECKS Coin',
+      description: ''
+    },
+    component: () => import('@/views/Home/IndexV4.vue')
   },
   {
     path: '/404',
@@ -24,7 +76,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: 'BECKHAM | 404',
+      title: 'Official BECKS Coin | 404',
       description:
         'Halaman yang Anda cari tidak ditemukan. Mohon periksa kembali alamat URL atau kembali ke halaman utama.'
     },
