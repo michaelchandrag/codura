@@ -16,17 +16,17 @@ onMounted(() => {
   <div class="content-v2">
     <section id="main-section" class="section first-section bg-transparent">
       <div class="container bg-app-gold rounded-xl p-4">
-        <div class="row justify-content-between mb-4">
+        <div class="row justify-content-between">
           <div class="col-lg-5">
             <div class="card bg-transparent no-border h-100 is-relative pt-3">
               <div class="card-body">
                 <div class="title mb-5">
-                  <h1 class="text-white fw-800 m-0 fs-40px ls-xs">THE ONLY <span class="text-app-red">OFFICIAL</span>
-                  </h1>
-                  <h1 class="text-white fw-800 m-0 fs-40px ls-xs">DAVID BECKHAM MEME</h1>
+                  <h1 class="text-white fw-800 m-0 fs-45px ls-xs">THE ONLY</h1>
+                  <h1 class="text-white fw-800 m-0 text-app-red fs-45px ls-xs">OFFICIAL</h1>
+                  <h1 class="text-white fw-800 m-0 fs-45px ls-xs">DAVID BECKHAM MEME</h1>
                 </div>
-                <div class="info pt-5 info-join-v2">
-                  <p class="text-white fw-bold ls-xs fs-22px">Join the Becks Community!</p>
+                <div class="info info-join-v2 pt-4">
+                  <p class="text-white fw-300 mb-0 ls-xs fs-22px">Join the Becks Community!</p>
                   <p class="text-white fw-300 fs-20px">$BECKS is more than just a meme coin-it’s
                     a movement inspired by legendary
                     David Beckham to unite football, crypto
@@ -49,14 +49,19 @@ onMounted(() => {
                     give up on their
                     dreams”</i>
                 </p>
-                <div class="box-image signature-info d-flex justify-content-end" data-aos="fade-down" data-aos-delay="100">
-                  <img src="/assets/images/signature-sm.png" />
+                <div class="box-image signature-info" data-aos="fade-down" data-aos-delay="100">
+                  <img src="/assets/images/signature.png" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-center col-lg-6 m-auto mb-4">
+        <div class="text-center col-lg-11 m-auto mb-5">
+          <div class="banner">
+            <img src="/assets/images/bannerv3@4x.png" />
+          </div>
+        </div>
+        <div class="text-center col-lg-6 m-auto mb-4 pt-4">
           <h3 class="text-white mb-3 ls-xs">Solana Contract Address</h3>
           <div class="input-group custom-input-group bg-white">
             <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs">
@@ -204,14 +209,9 @@ onMounted(() => {
       </div>
     </section>
 
-    <section class="section bg-transparent py-4">
+    <section class="section bg-transparent">
       <div class="container">
-        <div class="banner text-center">
-          <img src="/assets/images/banner@4x.png" />
-        </div>
-      </div>
-      <div class="container container-join-community">
-        <div class="row justify-content-between align-items-center">
+        <div class="row justify-content-between">
           <div class="col-lg-6">
             <div class="card bg-transparent no-border h-100 is-relative pt-3">
               <div class="card-body">
@@ -223,8 +223,8 @@ onMounted(() => {
                   <div class="card no-border rounded-md bg-app-blue-dark has-gold-glow" data-aos="fade-right"
                     data-aos-delay="100">
                     <div class="card-body p-4">
-                      <div class="title text-app-orange fw-bold ls-xs fs-20px mb-2 ls-xs">Misssion</div>
-                      <p class="m-0 text-white fs-18px">$BECKS is not just a cryptocurrency; it’s a symbol of hope and
+                      <div class="title text-app-orange fw-bold ls-xs fs-24px mb-2 ls-xs">Misssion</div>
+                      <p class="m-0 text-white fs-22px">$BECKS is not just a cryptocurrency; it’s a symbol of hope and
                         unity. By combining the power of blockchain with Beckham’s influence, this token creates a new
                         avenue for fans to make a difference in the lives of millions of children affected by
                         emergencies

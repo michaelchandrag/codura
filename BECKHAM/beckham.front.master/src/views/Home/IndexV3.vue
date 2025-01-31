@@ -16,51 +16,55 @@ onMounted(() => {
   <div class="content-v3">
     <section id="main-section" class="section first-section bg-transparent">
       <div class="container bg-app-gold rounded-xl p-4">
-        <div class="row justify-content-between">
-          <div class="col-lg-5">
-            <div class="card bg-transparent no-border h-100 is-relative pt-3">
+        <div class="title mb-5">
+          <h1 class="text-white fw-800 m-0 fs-50px ls-xs">THE ONLY <span class="text-app-red">OFFICIAL</span>
+          </h1>
+          <h1 class="text-white fw-800 m-0 fs-50px ls-xs">DAVID BECKHAM</h1>
+          <h1 class="text-white fw-800 m-0 fs-50px ls-xs">MEME</h1>
+        </div>
+        <div class="text-center col-lg-11 m-auto">
+          <div class="banner">
+            <img src="/assets/images/bannerv3@4x.png" />
+          </div>
+        </div>
+        <div class="row justify-content-between align-items-center join-info-v3">
+          <div class="col-lg-8">
+            <div class="card bg-transparent no-border is-relative">
               <div class="card-body">
-                <div class="title mb-5">
-                  <h1 class="text-white fw-800 m-0 fs-45px ls-xs">THE ONLY</h1>
-                  <h1 class="text-white fw-800 m-0 text-app-red fs-45px ls-xs">OFFICIAL</h1>
-                  <h1 class="text-white fw-800 m-0 fs-45px ls-xs">DAVID BECKHAM MEME</h1>
-                </div>
-                <div class="info info-join-v3 pt-4">
-                  <p class="text-white fw-300 mb-0 ls-xs fs-22px">Join the Becks Community!</p>
-                  <p class="text-white fw-300 fs-20px">$BECKS is more than just a meme coin-it’s
+                <div class="info info-join-v3 ps-4 pt-5">
+                  <p class="text-white fw-300 mb-0 ls-xs fs-24px">Join the Becks Community!</p>
+                  <p class="text-white fw-300 fs-22px">$BECKS is more than just a meme coin-it’s
                     a movement inspired by legendary
                     David Beckham to unite football, crypto
                     and philantrophy</p>
-                  <p class="text-white fw-300 fs-20px">100% of proceeds from $BECKS will be
+                  <p class="text-white fw-300 fs-22px">100% of proceeds from $BECKS will be
                     donated to UNICEF’s <a href="7.org" class="decoration text-white">7.org</a>, helping children
                     worldwide</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-5 p-0">
-            <div class="card bg-transparent no-border h-100">
-              <div class="card-body text-center">
-                <div class="box-image p-3 ps-5" data-aos="fade-left" data-aos-delay="100">
+          <div class="col-lg-4">
+            <div class="card bg-transparent no-border">
+              <div class="card-body text-center pb-0">
+                <div class="box-image" data-aos="fade-left" data-aos-delay="100">
                   <img src="/assets/images/backham-dream@4x.png" />
                 </div>
-                <p class="m-0 text-white fw-300 fs-14px text-start lh-normal"><i>“Don't be like most people, Most
+                <p class="m-0 text-white fw-300 fs-16px text-start lh-normal"><i>“Don't be like most people, Most
                     people
                     give up on their
                     dreams”</i>
                 </p>
-                <div class="box-image signature-info" data-aos="fade-down" data-aos-delay="100">
-                  <img src="/assets/images/signature.png" />
-                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="text-center col-lg-11 m-auto mb-5">
-          <div class="banner">
-            <img src="/assets/images/bannerv3@4x.png" />
+          <div class="col-lg-12 text-end">
+            <div class="box-image signature-info" data-aos="fade-down" data-aos-delay="100">
+              <img src="/assets/images/signature-sm.png" />
+            </div>
           </div>
         </div>
+
         <div class="text-center col-lg-6 m-auto mb-4 pt-4">
           <h3 class="text-white mb-3 ls-xs">Solana Contract Address</h3>
           <div class="input-group custom-input-group bg-white">
