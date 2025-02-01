@@ -45,7 +45,7 @@ onMounted(() => {
                 <div class="box-image p-3 ps-5" data-aos="fade-left" data-aos-delay="100">
                   <img class="has-red-glow" src="/assets/images/backham-dream@4x.png" />
                 </div>
-                <p class="m-0 text-white fw-300 fs-14px text-start lh-normal"><i>“Don't be like most people. most people
+                <p class="m-0 text-white fw-300 fs-14px text-start lh-normal"><i>“Don't be like most people, most people
                     give up on their dreams”</i>
                 </p>
                 <div class="box-image signature-info d-flex justify-content-end" data-aos="fade-down"
