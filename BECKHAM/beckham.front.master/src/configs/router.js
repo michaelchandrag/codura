@@ -14,7 +14,7 @@ const routes = [
       title: 'Official BECKS Coin',
       description: ''
     },
-    component: () => import('@/views/Home/Index.vue')
+    component: () => import('@/views/Home/IndexV4.vue')
   },
   {
     path: '/v1',
