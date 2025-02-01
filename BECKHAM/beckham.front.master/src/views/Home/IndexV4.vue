@@ -36,6 +36,19 @@ onMounted(() => {
                     children
                     worldwide.</p>
                 </div>
+
+        <div v-if="company.key_ca" class="info info-join-v4 text-center">
+          <h3 class="text-white mb-3 ls-xs">Solana Contract Address</h3>
+          <div class="input-group custom-input-group bg-white">
+            <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs text-center">
+            <a @click.prebtn="copyToClipboard(company.key_ca)"
+              class="on-shink input-group-text btn btn-sm bg-app-red d-inline-flex align-items-center">
+              <img src="/assets/images/copy-white.png" />
+              <span class="ps-2 text-white">Copy CA</span>
+            </a>
+          </div>
+        </div>
+
               </div>
             </div>
           </div>
@@ -56,7 +69,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div v-if="company.key_ca" class="text-center col-lg-6 m-auto mb-4">
+        <<!-- div v-if="company.key_ca" class="text-center col-lg-6 m-auto mb-4">
           <h3 class="text-white mb-3 ls-xs">Solana Contract Address</h3>
           <div class="input-group custom-input-group bg-white">
             <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs">
@@ -66,7 +79,7 @@ onMounted(() => {
               <span class="ps-2 text-white">Copy CA</span>
             </a>
           </div>
-        </div>
+        </div> -->
         <div class="text-center col-lg-10 m-auto">
           <p class="text-white fw-300 fs-16px">Becks Memes are intended to function as an expression of support for,
             and
