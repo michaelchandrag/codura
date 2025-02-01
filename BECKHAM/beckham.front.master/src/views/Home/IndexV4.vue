@@ -17,15 +17,15 @@ onMounted(() => {
     <section id="main-section" class="section first-section bg-transparent">
       <div class="container bg-app-gold rounded-xl p-4">
         <div class="row justify-content-between mb-4">
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <div class="card bg-transparent no-border h-100 is-relative pt-3">
               <div class="card-body">
                 <div class="title mb-5">
-                  <h1 class="text-white fw-800 m-0 fs-40px ls-xs">THE ONLY <span class="text-app-red">OFFICIAL</span>
+                  <h1 class="text-white fw-800 m-0 fs-50px ls-xs">THE ONLY <span class="text-app-red">OFFICIAL</span>
                   </h1>
-                  <h1 class="text-white fw-800 m-0 fs-40px ls-xs">DAVID BECKHAM MEME</h1>
+                  <h1 class="text-white fw-800 m-0 fs-50px ls-xs">DAVID BECKHAM MEME</h1>
                 </div>
-                <div class="info pt-5 info-join-v4">
+                <div class="info info-join-v4">
                   <p class="text-white fw-bold ls-xs fs-22px">Join the Becks Community!</p>
                   <p class="text-white fw-300 fs-20px">$BECKS is more than just a meme coin-it’s
                     a movement inspired by legendary
@@ -42,13 +42,13 @@ onMounted(() => {
           <div class="col-lg-5 p-0">
             <div class="card bg-transparent no-border h-100">
               <div class="card-body text-center">
-                <div class="box-image p-3 ps-5" data-aos="fade-left" data-aos-delay="100">
+                <div class="box-image p-3" data-aos="fade-left" data-aos-delay="100">
                   <img class="has-red-glow" src="/assets/images/backham-dream@4x.png" />
                 </div>
-                <p class="m-0 text-white fw-300 fs-14px text-start lh-normal"><i>“Don't be like most people, most people
+                <p class="m-0 text-white fw-300 fs-14px text-center lh-normal"><i>“Don't be like most people, most people
                     give up on their dreams”</i>
                 </p>
-                <div class="box-image signature-info d-flex justify-content-end" data-aos="fade-down"
+                <div class="box-image signature-info d-flex justify-content-center" data-aos="fade-down"
                   data-aos-delay="100">
                   <img src="/assets/images/signature-sm.png" />
                 </div>
@@ -56,7 +56,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="text-center col-lg-6 m-auto mb-4">
+        <div v-if="company.key_ca" class="text-center col-lg-6 m-auto mb-4">
           <h3 class="text-white mb-3 ls-xs">Solana Contract Address</h3>
           <div class="input-group custom-input-group bg-white">
             <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs">
@@ -182,7 +182,7 @@ onMounted(() => {
     </section>
     <section id="section-address" class="section bg-dark border-top-section has-bg-section">
       <div class="container">
-        <div class="text-center col-lg-6 m-auto mb-5">
+        <div v-if="company.key_ca" class="text-center col-lg-6 m-auto mb-5">
           <h2 class="text-white mb-3 fw-bold ls-xs">Solana Contract Address</h2>
           <div class="input-group custom-input-group bg-white">
             <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs">

@@ -39,7 +39,7 @@ onMounted(() => {
               <div class="box-image mb-3 has-red-glow" data-aos="fade-left" data-aos-delay="100">
                 <img src="/assets/images/backham-dream@4x.png" />
               </div>
-              <p class="m-0 text-white fw-300 fs-20px text-justify lh-normal"><i>“Don't be like most people, Most people
+              <p class="m-0 text-white fw-300 fs-20px text-justify lh-normal"><i>“Don't be like most people, most people
                   give up on their
                   dreams”</i>
               </p>
@@ -50,7 +50,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="text-center col-lg-6 m-auto mb-4">
+      <div v-if="company.key_ca" class="text-center col-lg-6 m-auto mb-4">
         <h3 class="text-white mb-3 ls-xs">Solana Contract Address</h3>
         <div class="input-group custom-input-group bg-white">
           <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs">
@@ -168,7 +168,7 @@ onMounted(() => {
   </section>
   <section id="section-address" class="section bg-dark border-top-section has-bg-section">
     <div class="container">
-      <div class="text-center col-lg-6 m-auto mb-5">
+      <div v-if="company.key_ca" class="text-center col-lg-6 m-auto mb-5">
         <h2 class="text-white mb-3 fw-bold ls-xs">Solana Contract Address</h2>
         <div class="input-group custom-input-group bg-white">
           <input :value="company.key_ca" disabled class="form-control disabled fs-18px ls-xs">
