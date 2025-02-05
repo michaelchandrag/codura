@@ -17,6 +17,13 @@ const hideBackgroundAndPlayVideo = () => {
   showBgVideo.value = false;
   videoPlayer.value.play();
 };
+
+const togglePlayPause = () => {
+  if (!videoPlayer.value.paused) {
+    videoPlayer.value.pause();
+    showBgVideo.value = true;
+  }
+};
 </script>
 
 <template>
@@ -32,8 +39,9 @@ const hideBackgroundAndPlayVideo = () => {
           </div>
           <div class="container-ca mt-5">
             <div class="input-group input-group-lg">
-              <input value="9kEcnFj9vwjUkjdsL89fGhKloP76qseTuv7" class="form-control ls-sm fs-15px">
-              <a class="input-group-text px-3 d-inline-flex align-items-center bg-app pink border-0">
+              <input :value="company.key_ca" class="form-control ls-sm fs-15px">
+              <a @click.prevent="copyToClipboard(company.key_ca)"
+                class="input-group-text px-3 d-inline-flex align-items-center bg-app pink border-0">
                 <img src="/assets/images/copy.png" />
                 <span class="ps-2 text-white ls-xs fs-15px">Copy CA</span>
               </a>
@@ -57,10 +65,10 @@ const hideBackgroundAndPlayVideo = () => {
   </section>
   <section id="section-video" class="section p-0 bg-app dark">
     <div class="video-content is-relative">
-      <video ref="videoPlayer">
+      <video ref="videoPlayer" @click="togglePlayPause" @ended="showBgVideo = true">
         <source src="/assets/videos/nba.mp4" />
       </video>
-      <div  @click.prevent="hideBackgroundAndPlayVideo" v-if="showBgVideo" class="video-play h-100 w-100"></div>
+      <div @click.prevent="hideBackgroundAndPlayVideo" v-if="showBgVideo" class="video-play h-100 w-100"></div>
     </div>
   </section>
   <section class="section nba-run py-4">
@@ -76,7 +84,7 @@ const hideBackgroundAndPlayVideo = () => {
     </div>
   </section>
   <section id="section-player" class="section py-0 bg-app dark">
-    <div class="row">
+    <div class="row row-custom">
       <div class="col-lg-6 p-0">
         <div class="info card border-0 bg-transparent h-100">
           <div class="card-body bg-transparent p-5 content">
@@ -102,16 +110,16 @@ const hideBackgroundAndPlayVideo = () => {
       </div>
       <div class="col-lg-6 p-0">
         <div class="car border-0 h-100">
-          <img class="ws-100" src="/assets/images/nba-player@4x.png" />
+          <img class="ws-100 hs-100" src="/assets/images/nba-player@4x.png" />
         </div>
       </div>
     </div>
   </section>
   <section id="section-player-2" class="section py-0 bg-app dark">
-    <div class="row">
+    <div class="row row-custom">
       <div class="col-lg-6 p-0">
         <div class="crad h-100 border-0">
-          <img class="ws-100" src="/assets/images/nba-player-2@4x.png" />
+          <img class="ws-100 hs-100" src="/assets/images/nba-player-2@4x.png" />
         </div>
       </div>
       <div class="col-lg-6 p-0">
@@ -135,7 +143,7 @@ const hideBackgroundAndPlayVideo = () => {
     </div>
   </section>
   <section id="section-special" class="section py-0 bg-white">
-    <div class="row align-items-center justify-content-between">
+    <div class="row align-items-center justify-content-between row-custom">
       <div class="col-lg-6 p-0">
         <div class="info card border-0 bg-transparent h-100">
           <div class="card-body bg-transparent content d-flex justify-content-end">
