@@ -101,18 +101,65 @@ button {
 .border-app.pink {
     border: 1px solid var(--app-color-pink);
 }
-.scrolled .header{
+
+.scrolled .header {
     background-color: var(--app-color-dark);
 }
+
 #main-section {
     padding-top: 2rem;
     padding-bottom: 0px;
 }
 
-#main-section .container-section{
+#main-section .container-section {
     width: 100%;
     height: 100vh;
     background: url('/assets/images/hero-img-transparent.png') center center no-repeat;
     background-size: cover;
     padding-top: 12rem;
+}
+
+.nba-run-line {
+    width: 150px;
+}
+
+.nba-run-line hr {
+    width: 100%;
+    border-top: 2px solid var(--app-color-dark);
+}
+
+#section-video .video-content {
+    width: 100%;
+    height: 800px;
+    background: url('/assets/images/bg-video.png') center center no-repeat;
+    background-size: cover;
+}
+
+#section-video .video-content video {
+    width: 100%;
+    height: 100%;
+}
+
+.nba-run-content {
+    flex-wrap: nowrap;
+}
+
+.nba-run-item {
+    width: 28%;
+}
+
+.nba-run-img{
+    height: 100px;
+}
+
+#section-player .info{
+    background: url('/assets/images/content-bg.png') top right no-repeat;
+}
+
+#section-player-2 .info{
+    background: url('/assets/images/content-bg-2.png') bottom left no-repeat;
+}
+
+#section-player .info .content, #section-player-2 .info .content{
+    padding: 6rem 5rem !important;
 }
