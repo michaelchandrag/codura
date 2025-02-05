@@ -1,0 +1,21 @@
+export const company = {
+  name: 'NBA MEDIA VENTURES',
+  alias: 'NBA Media Ventures',
+  slug: 'nba-media-ventures',
+  phone: '',
+  phone_label: '',
+  email: '',
+  address: '',
+  copyright:'NBA MEDIA VENTURES, LLC',
+  description:'NBA MEDIA VENTURES',
+  whatsapp: '',
+  youtube_url: '',
+  instagram_url: '',
+  facebook_url: '',
+  twitter_url: '',
+  github_url: '',
+  linkedin_url: '',
+  key_ca: '',
+  key_ca_url:'',
+};
+

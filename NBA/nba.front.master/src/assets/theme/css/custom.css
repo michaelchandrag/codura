@@ -1,0 +1,114 @@
+@import "font.css";
+@import "width.css";
+@import "height.css";
+@import "color.css";
+@import "animation.css";
+
+
+a.decoration {
+    text-decoration: underline;
+}
+
+a.custom{
+    color: inherit;
+}
+
+.vs-modal__close-button button {
+    top: 15px !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.ps-6 {
+    padding-left: 5rem !important;
+}
+
+.px-6 {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+}
+
+.br-0 {
+    border-radius: 0px !important;
+}
+
+.lh-normal {
+    line-height: normal;
+}
+
+.ls-xs {
+    letter-spacing: 0.5px;
+}
+
+.ls-sm {
+    letter-spacing: 1px;
+}
+
+.no-shadow {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.no-border,
+.border-0 {
+    border: none !important;
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: normal;
+}
+
+.rounded {
+    border-radius: 50% !important;
+}
+
+.rounded-sm {
+    border-radius: 4px !important;
+}
+
+.rounded-md {
+    border-radius: 8px !important;
+}
+
+.rounded-lg {
+    border-radius: 16px !important;
+}
+
+.rounded-xl {
+    border-radius: 32px !important;
+}
+
+.rounded-xxl {
+    border-radius: 80px !important;
+}
+
+.is-relative {
+    position: relative !important;
+}
+
+.box-image {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box-image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
