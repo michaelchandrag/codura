@@ -123,4 +123,92 @@ onMounted(() => {
       </div>
     </div>
   </section>
+  <section id="section-special" class="section py-0 bg-white">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-lg-6 p-0">
+        <div class="info card border-0 bg-transparent h-100">
+          <div class="card-body bg-transparent content d-flex justify-content-end">
+            <div class="title pb-5">
+              <h1 class="text-app dark ls-sm fs-80px m-0 text-uppercase">what makes</h1>
+              <h1 class="text-app dark ls-sm fs-80px m-0 text-uppercase"><span class="text-app red fw-bold">$nba</span>
+                special?</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 p-0">
+        <div class="car border-0 h-100">
+          <img class="ws-100" src="/assets/images/nba-special@4x.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section-feature" class="section py-4 bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card border-0 h-100">
+            <div class="card-body text-center">
+              <div class="title fw-bold text-app dark fs-18px ls-xs text-uppercase mb-4">A Coin for the Culture</div>
+              <div class="desc px-3">
+                <p class="text-uppercase fs-16px">More than just a cryptocurrency, $NBA is a movement. It's a tribute to
+                  legendary moments, viral highlights, and the global basketball community.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card border-0 h-100">
+            <div class="card-body text-center">
+              <div class="title fw-bold text-app dark fs-18px ls-xs text-uppercase mb-4">Exclusive Fan Rewards</div>
+              <div class="desc px-3">
+                <p class="text-uppercase fs-16px">Holding $NBA unlocks benefits like game tickets, signed merchandise,
+                  premium content, and meet-and-greets with NBA players.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card border-0 h-100">
+            <div class="card-body text-center">
+              <div class="title fw-bold text-app dark fs-18px ls-xs text-uppercase mb-4">Decentralized &
+                Community-Driven</div>
+              <div class="desc px-3">
+                <p class="text-uppercase fs-16px">This is not just another rewards program; it’s a blockchain-powered
+                  ecosystem where fans have a voice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card border-0 h-100">
+            <div class="card-body text-center">
+              <div class="title fw-bold text-app dark fs-18px ls-xs text-uppercase mb-4">Fantasy & Gaming Utility</div>
+              <div class="desc px-3">
+                <p class="text-uppercase fs-16px">Use $NBA for fantasy leagues, on-chain game betting, virtual
+                  collectibles, and Web3-powered gaming experiences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section-join" class="section py-0 is-relative">
+    <div class="join-img w-100">
+      <img class="w-100" src="/assets/images/join-img.jfif" />
+    </div>
+    <div class="join-bg"></div>
+    <div class="join-info text-center">
+      <div class="container py-5">
+        <div class="title text-white ls-sm fs-30px fw-500 text-uppercase mb-1">JOIN THE future of the nba</div>
+        <div class="desc text-white text-uppercase fs-20px ls-xs mb-5">$NBA isn’t just a meme coin—it’s the future of sports fandom.
+          Whether you’re a casual fan or a die-hard supporter, this is your chance to be part of an exclusive digital
+          economy built by the NBA, for the fans.</div>
+        <div class="desc text-white text-uppercase ls-xs fs-20px">
+          Get ready to <b>earn, trade, and play with $NBA!</b>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>

@@ -12,14 +12,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <footer id="footer" class="footer dark-background bg-dark">
-    <div  v-if="company.twitter_url || company.github_url || company.instagram_url" class="container footer-top pb-3">
+  <footer id="footer" class="footer dark-background bg-app red">
+    <div class="footer-top pb-3">
       <div class="row gy-4 justify-content-center">
         <div class="col-lg-12 col-md-12 footer-about mt-1">
           <div class="footer-contact pt-3">
-            <h4 class="m-0 fw-bold fs-13px ls-xs text-center text-app-gold">Follow Us :</h4>
+            <h4 class="m-0 fs-16px ls-sm text-center text-white fw-normal text-uppercase">Follow Us :</h4>
             <div class="social-links d-flex justify-content-center">
-              <a class="rounded-md fs-18px text-app-gold border-app-gold" v-if="company.twitter_url"
+              <a class="rounded-md fs-16px text-white border-0 fw-normal"
                 target="_blank" :href="company.twitter_url"><i class="bi bi-twitter-x"></i></a>
               <a class="rounded-md fs-18px text-app-gold border-app-gold" v-if="company.github_url"
                 target="_blank" :href="company.github_url"><i class="bi bi-github"></i></a>
@@ -30,8 +30,8 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <div class="container copyright text-center py-2">
-      <p class="ls-xs fs-14px fw-normal">
+    <div class="copyright text-center py-3">
+      <p class="ls-xs fs-14px fw-normal text-uppercase">
         © <span>{{ new Date().getFullYear() }}</span>
         <span class="px-1 sitename">{{ `${company.copyright || company.name}.` }}</span>
         <span class="sitename">All rights reserved.</span>

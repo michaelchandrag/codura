@@ -163,3 +163,19 @@ button {
 #section-player .info .content, #section-player-2 .info .content{
     padding: 6rem 5rem !important;
 }
+
+.join-bg{
+    background: linear-gradient(180deg, rgba(102, 102, 102, 0.4) 0%, rgba(0, 0, 0, 0.8) 77.45%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.join-info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
