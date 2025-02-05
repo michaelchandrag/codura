@@ -6,9 +6,17 @@ const { company } = defineProps({
   company: { type: Object, default: {} },
 })
 
+const showBgVideo = ref(true);
+const videoPlayer = ref(null);
+
 onMounted(() => {
 
 })
+
+const hideBackgroundAndPlayVideo = () => {
+  showBgVideo.value = false;
+  videoPlayer.value.play();
+};
 </script>
 
 <template>
@@ -47,11 +55,12 @@ onMounted(() => {
       </div>
     </div>
   </section>
-  <section id="section-video" class="section py-4 bg-app dark">
-    <div class="container video-content is-relative">
-      <video class="d-none">
+  <section id="section-video" class="section p-0 bg-app dark">
+    <div class="video-content is-relative">
+      <video ref="videoPlayer">
         <source src="/assets/videos/nba.mp4" />
       </video>
+      <div  @click.prevent="hideBackgroundAndPlayVideo" v-if="showBgVideo" class="video-play h-100 w-100"></div>
     </div>
   </section>
   <section class="section nba-run py-4">
