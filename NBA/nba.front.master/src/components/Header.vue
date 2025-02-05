@@ -15,45 +15,12 @@ const changeMenu = (menu) => {
 
 <template>
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="shadow container-fluid header-container col-lg-8 m-auto container-xl position-relative d-flex align-items-center justify-content-between py-2 px-4">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="btn btn-sm text-white ls-sm fs-16px">ABOUT</a>
       <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }" class="logo d-flex align-items-center">
         <img src="/assets/images/nba.png" class="lg m-0" :alt="company.slug" />
-        <!-- <h1 class="sitename">NBA</h1> -->
       </router-link>
-      <nav id="navmenu-center" class="navmenu">
-        <ul>
-          <li>
-            <router-link @click.prevent="changeMenu('home')" :class="{ 'is-active': is_menu == 'home' }" class="fs-14px on-shake"
-              :to="{ name: 'home' }">Home</router-link>
-          </li>
-          <li>
-            <a @click.prevent="changeMenu('address')" :class="{ 'is-active': is_menu == 'address' }" class="fs-14px on-shake"
-              href="#">Contract Address</a>
-          </li>
-          <li>
-            <a @click.prevent="changeMenu('buy')" :class="{ 'is-active': is_menu == 'buy' }" class="fs-14px on-shake"
-              href="#">How To Buy</a>
-          </li>
-        </ul>
-      </nav>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li class="d-xl-none d-lg-none">
-            <router-link @click.prevent="changeMenu('home')" class="fs-14px" :to="{ name: 'home' }">Home</router-link>
-          </li>
-          <li class="d-xl-none d-lg-none">
-            <a @click.prevent="changeMenu('address')" class="fs-14px" href="#">Contract Address</a>
-          </li>
-          <li class="d-xl-none d-lg-none">
-            <a @click.prevent="changeMenu('buy')" class="fs-14px" href="#">How To Buy</a>
-          </li>
-          <li>
-            <a v-if="company.key_ca_url" :href="company.key_ca_url" class="btn btn-sm rounded-xl bg-app-red py-1 px-3 fs-14px on-grow">Buy Now</a>
-            <a v-else @click.prevent="changeMenu('buy')" class="btn btn-sm rounded-xl bg-app-red py-1 px-3 fs-14px on-grow">Buy Now</a>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      <a class="btn btn-sm text-white fs-16px"><i class="bi bi-twitter-x"></i></a>
     </div>
   </header>
 </template>

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, useRouter } from 'vue-router'
-import company from '@/models'
+import { company } from '@/models'
 import store from '@/configs/store'
 
 //define a routes
