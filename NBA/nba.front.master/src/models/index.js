@@ -1,6 +1,6 @@
 export const company = {
   name: 'NBA MEDIA VENTURES',
-  alias: 'NBA Media Ventures',
+  alias: 'NBA MEME COIN',
   slug: 'nba-media-ventures',
   phone: '',
   phone_label: '',

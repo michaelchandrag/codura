@@ -12,7 +12,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: company.name,
+      title: company.alias,
       description: company.description,
     },
     component: () => import('@/views/Home/Index.vue')
@@ -25,7 +25,7 @@ const routes = [
       is_ready: true,
       require_auth: false,
       is_auth: false,
-      title: `${company.name} | 404`,
+      title: `${company.alias} | 404`,
       description: `Sorry, we couldn't find the page you were looking for. The page may no longer be available or may be under construction.`
     },
     component: () => import('@/views/Page/404.vue')
@@ -82,7 +82,7 @@ router.afterEach((to, from) => {
     } else {
       metaDescription.setAttribute(
         'content',
-        company.name
+        company.alias
       )
     }
   } else {

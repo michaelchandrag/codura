@@ -7,23 +7,26 @@ const { company } = defineProps({
 })
 
 const showBgVideo = ref(true);
-const videoPlayer = ref(null);
+//const videoPlayer = ref(null);
+const video_url = ref('https://www.youtube.com/embed/SRdCOG2bcn0?rel=0&modestbranding=1&controls=1');
 
 onMounted(() => {
 
 })
 
 const hideBackgroundAndPlayVideo = () => {
+  video_url.value += "&autoplay=1";
   showBgVideo.value = false;
-  videoPlayer.value.play();
+  //videoPlayer.value.play();
 };
 
+/*
 const togglePlayPause = () => {
   if (!videoPlayer.value.paused) {
     videoPlayer.value.pause();
     showBgVideo.value = true;
   }
-};
+};*/
 </script>
 
 <template>
@@ -37,7 +40,7 @@ const togglePlayPause = () => {
             <h1 class="text-white fw-700 ls-sm fs-70px m-0">($NBA)</h1>
             <p class="text-white fs-20px ls-xs">THE FUTURE OF FAN ENGAGEMENT</p>
           </div>
-          <div class="container-ca mt-5">
+          <div v-if="company.key_ca" class="container-ca mt-5">
             <div class="input-group input-group-lg">
               <input :value="company.key_ca" class="form-control ls-sm fs-15px">
               <a @click.prevent="copyToClipboard(company.key_ca)"
@@ -65,9 +68,7 @@ const togglePlayPause = () => {
   </section>
   <section id="section-video" class="section p-0 bg-app dark">
     <div class="video-content is-relative">
-      <video ref="videoPlayer" @click="togglePlayPause" @ended="showBgVideo = true">
-        <source src="/assets/videos/nba.mp4" />
-      </video>
+      <iframe :src="video_url" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <div @click.prevent="hideBackgroundAndPlayVideo" v-if="showBgVideo" class="video-play h-100 w-100"></div>
     </div>
   </section>
@@ -84,7 +85,7 @@ const togglePlayPause = () => {
     </div>
   </section>
   <section id="section-player" class="section py-0 bg-app dark">
-    <div class="row row-custom">
+    <div class="row row-custom section-player-content">
       <div class="col-lg-6 p-0">
         <div class="info card border-0 bg-transparent h-100">
           <div class="card-body bg-transparent p-5 content">
@@ -109,17 +110,17 @@ const togglePlayPause = () => {
         </div>
       </div>
       <div class="col-lg-6 p-0">
-        <div class="car border-0 h-100">
-          <img class="ws-100 hs-100" src="/assets/images/nba-player@4x.png" />
+        <div class=" card border-0 bg-transparent h-100 card-image">
+          <img src="/assets/images/nba-player-transparent.png" />
         </div>
       </div>
     </div>
   </section>
   <section id="section-player-2" class="section py-0 bg-app dark">
-    <div class="row row-custom">
+    <div class="row row-custom section-player-2-content">
       <div class="col-lg-6 p-0">
-        <div class="crad h-100 border-0">
-          <img class="ws-100 hs-100" src="/assets/images/nba-player-2@4x.png" />
+        <div class="card border-0 bg-transparent h-100 card-image">
+          <img src="/assets/images/nba-player-2-transparent.png" />
         </div>
       </div>
       <div class="col-lg-6 p-0">
