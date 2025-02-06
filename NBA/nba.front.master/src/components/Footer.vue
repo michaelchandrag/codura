@@ -19,7 +19,7 @@ onMounted(() => {
           <div class="footer-contact pt-3">
             <h4 class="m-0 fs-16px ls-sm text-center text-white fw-normal text-uppercase pb-1">Follow Us :</h4>
             <div class="social-links d-flex justify-content-center">
-              <a class="rounded-md fs-16px text-white border-0 fw-normal" target="_blank" :href="company.twitter_url"><i
+              <a class="rounded-md fs-16px text-white border-0 fw-normal on-grow" target="_blank" :href="company.twitter_url"><i
                   class="bi bi-twitter-x"></i></a>
             </div>
           </div>

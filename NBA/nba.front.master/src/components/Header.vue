@@ -16,11 +16,11 @@ const changeMenu = (menu) => {
 <template>
   <header id="header" class="header d-flex align-items-center fixed-top py-3">
     <div class="container d-flex align-items-center justify-content-between">
-      <a @click.prevent="changeMenu('player')" class="btn btn-sm text-white ls-sm fs-16px">ABOUT</a>
-      <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }" class="logo d-flex align-items-center">
+      <a @click.prevent="changeMenu('player')" class="btn btn-sm text-white ls-sm fs-16px on-grow">ABOUT</a>
+      <router-link @click.prevent="changeMenu('home')" :to="{ name: 'home' }" class="logo d-flex align-items-center on-shake">
         <img src="/assets/images/nba@4x.png" class="lg m-0" :alt="company.slug" />
       </router-link>
-      <a target="_blank" :href="company.twitter_url" class="btn btn-sm text-white fs-16px"><i
+      <a target="_blank" :href="company.twitter_url" class="btn btn-sm text-white fs-16px on-grow"><i
           class="bi bi-twitter-x"></i></a>
     </div>
   </header>

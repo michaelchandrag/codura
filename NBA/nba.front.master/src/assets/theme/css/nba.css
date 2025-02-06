@@ -26,7 +26,7 @@
 }
 
 body {
-    background-color: #E5E5E5 !important;
+    background-color: var(--app-color-dark) !important;
     font-family: var(--app-font) !important;
     font-weight: normal;
     font-style: normal;
@@ -196,6 +196,7 @@ a{
     height: 100px;
 }
 
+/*
 #section-player .section-player-content{
     background: url('/assets/images/content-bg.png') center center no-repeat;
     background-size: cover;
@@ -205,18 +206,26 @@ a{
     background: url('/assets/images/content-bg-2.png') center center no-repeat;
     background-size: cover;
 }
+    */
 
-#section-player .card-image, #section-player-2 .card-image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+#section-player .card-image{
+    height: 800px;
+    background: url('/assets/images/nba-player-transparent.png') center center no-repeat;
+    background-size: cover;
 }
 
-#section-player img, #section-player-2 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#section-player-2 .card-image{
+    height: 500px;
+    background: url('/assets/images/nba-player-2-transparent.png') center center no-repeat;
+    background-size: cover;
+}
+
+#section-player .info{
+    padding-left: 2rem !important;
+}
+
+#section-player-2 .info{
+    padding-right: 2rem !important;
 }
 
 .join-bg{
@@ -237,4 +246,61 @@ a{
 
 .footer .copyright{
     border-top: 1px solid #FFFFFF !important;
+}
+
+.has-red-glow {
+    transition: all 0.3s ease-in-out;
+}
+
+.has-red-glow:hover,
+.has-red-glow:active {
+    box-shadow: 0 0 15px 5px var(--app-color-red);
+    filter: brightness(1.2);
+}
+
+.has-pink-glow {
+    transition: all 0.3s ease-in-out;
+}
+
+.has-pink-glow:hover,
+.has-pink-glow:active {
+    box-shadow: 0 0 15px 5px var(--app-color-pink);
+    filter: brightness(1.2);
+}
+
+.has-red-text-glow {
+    transition: all 0.3s ease-in-out;
+}
+
+.has-red-text-glow:hover,
+.has-red-text-glow:active {
+    text-shadow: 5px 5px 5px var(--app-color-red);
+    filter: brightness(1.2);
+}
+
+.has-pink-text-glow {
+    transition: all 0.3s ease-in-out;
+}
+
+.has-pink-text-glow:hover,
+.has-pink-text-glow:active {
+    text-shadow: 5px 5px 5px var(--app-color-pink);
+    filter: brightness(1.2);
+}
+
+#main-section h1{
+    transition: all 0.3s ease-in-out;
+}
+
+#main-section .info:hover h1, #main-section .info:active h1{
+    text-shadow: 5px 5px 5px var(--app-color-red);
+    filter: brightness(1.2);
+}
+
+.has-box-hover{
+    transition: all 0.3s ease;
+}
+.has-box-hover:hover{
+    border-radius: 8px;
+    padding: .5rem;
 }
