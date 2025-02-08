@@ -203,13 +203,13 @@ async function clearHistory() {
 </script>
 
 <template>
-  <section class="section bg-dark ai-section section-content p-0">
+  <section class="bg-app ai-section section-content p-0">
     <div class="container-ai px-3">
       <div class="row gy-4 justify-content-center content-ai">
         <div class="col-lg-3 ai-history-sidebar p-0" :class="{ 'is-show': show_history }">
           <div class="ai-history-header mb-2 pt-2 d-flex align-items-center justify-content-center">
             <router-link class="bg-transparent rounded-sm p-1" :to="{ name: 'home' }">
-              <img class="lg" src="/assets/img/oscillonet@4x.png" />
+              <img class="lg" src="/assets/img/ecliptoris-icon@4x.png" />
             </router-link>
           </div>
           <div class="card border-0 ai-history-content">

@@ -13,59 +13,26 @@ onMounted(() => {
 
 <template>
   <footer id="footer" class="footer dark-background">
-    <div class="container footer-top pb-3">
-      <div class="row gy-4 justify-content-center">
-        <div class="col-lg-3 col-md-3 footer-links mb-0 d-none">
-          <!-- <h4>Support</h4>
-          <ul>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Walkthrough</router-link>
-            </li>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Blog</router-link>
-            </li>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Contact</router-link>
-            </li>
-          </ul> -->
+    <div class="container footer-top py-5">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-4">
+                <img src="/assets/img/ecliptoris@4x.png"/>
+            </div>
+            <div class="col-lg-4 text-center">
+             <p class="m-0">Unifying the Cosmos of DeFi with AI Precision</p>
+            </div>
+            <div class="col-lg-2 text-center">
+                <p class="m-0 text-secondary fs-13px">Follow Us on X</p>
+                <p class="m-0">@EclipseToris</p>
+            </div>
         </div>
-        <div class="col-lg-3 col-md-3 footer-links mb-0 d-none">
-          <!-- <h4>Legal</h4>
-          <ul>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Terms of Service</router-link>
-            </li>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Refung Policy</router-link>
-            </li>
-            <li>
-              <i class="bi bi-chevron-right pe-2"></i>
-              <router-link :to="{ name: 'home' }">Privacy Policy</router-link>
-            </li>
-          </ul> -->
-        </div>
-      </div>
     </div>
-    <div class="container copyright d-flex align-items-center justify-content-between">
-      <div class="footer-contact">
-        <div class="social-links d-flex justify-content-center align-items-center">
-          <span class="m-0 fw-normal fs-12px ls-xs text-center me-3">Follow Us :</span>
-          <a class="rounded-sm fs-18px" v-if="company.twitter_url || company.tw" target="_blank"
-            :href="company.twitter_url || company.tw"><i class="bi bi-twitter-x"></i></a>
-          <a class="rounded-sm fs-18px" v-if="company.github_url || company.github" target="_blank"
-            :href="company.github_url || company.github"><i class="bi bi-github"></i></a>
-        </div>
-      </div>
+    <div class="container copyright d-flex align-items-center justify-content-center">
       <div class="copyright-info">
         <p class="ls-xs fs-12px fw-300">
-          © <span>{{ new Date().getFullYear() }}</span>
-          <span class="px-1 sitename">{{ `${company.name}.` }}</span>
-          <span class="sitename">All rights reserved.</span>
+          Copyright © <span>2024-25</span>
+          <span class="px-1 sitename">{{ `${company.copyright}.` }}</span>
+          <span class="sitename d-none">All rights reserved.</span>
         </p>
       </div>
     </div>

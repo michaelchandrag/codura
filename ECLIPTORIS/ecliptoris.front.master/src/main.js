@@ -3,6 +3,7 @@ import '@/assets/theme/css/style'
 import '@/assets/theme/css/custom'
 import '@/assets/theme/css/ecliptoris'
 import '@/assets/theme/css/responsive'
+import '@/assets/theme/css/animation'
 import { initScripts } from '@/assets/theme/script'
 import VueLazyload from 'vue3-lazyload';
 
@@ -23,5 +24,3 @@ app.use(VueLazyload, {
 app.mount('#app')
 
 initScripts()
-
-store.dispatch('checkAuthExpiration')

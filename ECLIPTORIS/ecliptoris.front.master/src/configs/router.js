@@ -22,7 +22,7 @@ const routes = [
     alias: '/chatbot',
     name: 'ai',
     meta: {
-      is_ready: true,
+      is_ready: false,
       require_auth: false,
       is_auth: false,
       title: `${company.alias} | AI`,

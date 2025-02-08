@@ -1,13 +1,13 @@
 export const company = {
-    name: 'NBA MEDIA VENTURES',
-    alias: 'NBA MEME COIN',
-    slug: 'nba-media-ventures',
+    name: 'ECLIPTORIS',
+    alias: 'ECLIPTORIS',
+    slug: 'ecliptoris',
     phone: '',
     phone_label: '',
     email: '',
     address: '',
-    copyright:'NBA MEDIA VENTURES, LLC',
-    description:'NBA MEDIA VENTURES',
+    copyright:'EclipseToris',
+    description:'ECLIPTORIS',
     whatsapp: '',
     youtube_url: '',
     instagram_url: '',
@@ -20,12 +20,10 @@ export const company = {
   };
 
 export const featureList = [
-    { title: 'Dynamic Fee Modulation', icon: 'module', content: `Enabled by machine-learning oracle systems, OscilloNet’s adaptive fee architecture synchronizes with market volatility, maximizing capital efficiency while reducing trading costs` },
-    { title: 'AI-Powered Liquidity Stratification', icon: 'powered', content: `Proprietary neural algorithms dynamically reallocate liquidity, optimizing capital efficiency and minimizing opportunity loss across volatile pairs` },
-    { title: 'Cross-Chain Liquidity Nexus', icon: 'chain', content: `Using next-gen inter-chain communication protocols, OscilloNet integrates liquidity pools across multi-chain networks, ensuring seamless asset mobility` },
-    { title: 'Advanced Impermanent Loss Mitigation', icon: 'advanced', content: `Utilizing stochastic analytics and on-chain hedging frameworks, OscilloNet safeguards liquidity providers with innovative loss-offset mechanisms` },
-    { title: 'Quantum Performance Dashboard:', icon: 'quantum', content: `An interactive, zero-latency analytics interface delivers real-time forecasting tools, modular visualization, and market insights` },
-    { title: 'DAO-Driven Evolutionary Protocol', icon: 'driven', content: `Community-driven governance ensures that OscilloNet evolves through decentralized consensus, fostering inclusive innovation` },
+    { title: 'Eclipse AI Interface', icon: 'eclipse', content: `At the heart of Ecliptoris is Eclipse AI, a conversational assistant that translates natural language commands into powerful DeFi actions. Users can say, “Optimize my portfolio” or “Stake ETH for the highest APY,” and Eclipse AI takes care of the rest.` },
+    { title: 'Automated Financial Synergy', icon: 'automated', content: `Maximize your potential with AI-driven automation tools, including dynamic rebalancing, automated yield farming, and liquidity management. Ecliptoris ensures your assets are always working at peak efficiency` },
+    { title: 'Secure Celestial Framework', icon: 'secure', content: `Ecliptoris employs cutting-edge security protocols, including Trusted Execution Environments (TEEs) and zero-knowledge proofs, to guarantee transaction integrity. Your assets are safeguarded under the watchful eyes of our AI guardians` },
+    { title: 'Intuitive Dashboard:', icon: 'dashboard', content: `Designed for both beginners and advanced users, the Ecliptoris Dashboard provides a fully customizable experience. Tailor your interface to highlight your favorite protocols, monitor key performance metrics, and set up automated strategies with ease` },
 ];
 
 const useCaseContent = `<div>

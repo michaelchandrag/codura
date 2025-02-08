@@ -5,7 +5,7 @@ import store from '@/configs/store'
 
 const is_production = true
 export const api_url = is_production
-  ? 'https://api.botfood.id/api/v1/solana/oscillonet'
+  ? 'https://api.botfood.id/api/v1/solana/ecliptoris'
   : 'http://localhost/fotivault.api'
 
 const openAiConfig = {
