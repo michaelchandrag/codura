@@ -123,6 +123,15 @@
     animation: bounce 0.5s ease-in-out infinite;
 }
 
+@keyframes bounceH {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+}
+
+.on-bounce-h {
+    animation: bounceH 0.5s ease-in-out infinite;
+}
+
 /* =================== */
 /* WIGGLE EFFECT  */
 /* =================== */

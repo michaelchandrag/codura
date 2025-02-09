@@ -59,7 +59,7 @@ const openTryModal = () => {
 
   <section id="section-about" class="section py-5">
     <div class="container">
-      <div class="container section-title text-start pb-2 on-bounce">
+      <div class="container section-title text-start pb-2" data-aos="fade-right" data-aos-delay="100">
         <h1 class="text-dark fw-bold text-capitalize ls-xs mb-0 fs-50px ls-xs">OUR</h1>
         <h1 class="text-dark fw-bold text-capitalize ls-xs mb-0 fs-50px ls-xs">MISSION</h1>
       </div>
@@ -78,12 +78,12 @@ const openTryModal = () => {
     <div class="has-blur-content">
       <div class="container pb-5">
         <div class="row gy-4 justify-content-start">
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
             <h1 class="text-white fw-bold text-capitalize ls-xs text-left mb-3">Our Core Feature</h1>
             <p class="text-white fs-24px ls-xs text-justify lh-normal">Simplify your DeFi experience with advanced AI,
               cross-chain connectivity, and robust security features</p>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
             <div class="feature-item card border-0 rounded-sm h-100 bg-transparent card-fade-top">
               <div class="card-body">
                 <div class="feature-icon mb-4">
@@ -122,12 +122,12 @@ const openTryModal = () => {
 
   <section id="section-try" class="section bg-transparent py-5">
     <div class="container">
-      <div class="col-lg-6 mb-5 on-shake">
+      <div class="col-lg-6 mb-5 on-shake" data-aos="fade-right" data-aos-delay="100">
         <h1 class="text-white fw-bold text-capitalize ls-xs text-left mb-0 fs-45px">Try It Yourself:</h1>
         <h1 class="text-white fw-bold text-capitalize ls-xs text-left mb-0 fs-45px">Interactive Walkthroughs of Our DeFi
           Platform</h1>
       </div>
-      <div class="col-lg-6 m-auto pt-5">
+      <div class="col-lg-6 m-auto pt-5" data-aos="fade-left" data-aos-delay="100">
         <h1 class="text-white fw-normal text-capitalize ls-xs text-left mb-0 fs-28px mb-5 on-shake">The beta demo is
           launching
           soon! Join our early access program to be the first to experience the future of DeFi strategy-building.</h1>
