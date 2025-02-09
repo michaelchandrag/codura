@@ -23,7 +23,7 @@ onMounted(() => {
             </div>
             <div class="col-lg-2 text-center">
                 <p class="m-0 text-secondary fs-13px">Follow Us on X</p>
-                <p class="m-0">@EclipseToris</p>
+                <p class="m-0">@ecliptoris</p>
             </div>
         </div>
     </div>

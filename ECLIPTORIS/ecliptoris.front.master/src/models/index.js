@@ -6,7 +6,7 @@ export const company = {
     phone_label: '',
     email: '',
     address: '',
-    copyright:'EclipseToris',
+    copyright:'Ecliptoris',
     description:'ECLIPTORIS',
     whatsapp: '',
     youtube_url: '',
